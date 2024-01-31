@@ -1,0 +1,14 @@
+owner = ENG
+controller = ENG
+add_core = SRI
+add_core = HND
+trade_goods = fruit
+life_rating = 32
+terrain = urban_colombo
+1880.1.1 = {
+	trade_goods = rubber
+}
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+}

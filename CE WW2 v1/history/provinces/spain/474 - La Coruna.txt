@@ -1,0 +1,24 @@
+owner = SPA
+controller = SPA
+add_core = SPA
+add_core = GLC
+trade_goods = fish
+life_rating = 35
+naval_base = 2
+1861.1.1 = { 
+	railroad = 3 
+	naval_base = 2
+}
+1912.1.1 = {
+        railroad = 4
+	
+}
+
+
+1936.1.1 = {
+state_building = {
+	level = 2
+	building = canned_food_factory
+	upgrade = yes
+}
+}

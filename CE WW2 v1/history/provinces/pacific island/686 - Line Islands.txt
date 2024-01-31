@@ -1,0 +1,12 @@
+owner = KHI
+controller = KHI
+add_core = KHI
+add_core = TKM
+terrain = desert
+trade_goods = opium
+life_rating = 15
+1912.1.1 = {
+        owner = RUS
+	controller = RUS
+        add_core = RUS
+}

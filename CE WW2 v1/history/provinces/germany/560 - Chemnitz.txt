@@ -1,0 +1,17 @@
+owner = SAX
+controller = SAX
+add_core = SAX
+add_core = GER
+trade_goods = iron
+life_rating = 40
+1867.4.16 = { owner = NGF controller = NGF add_core = NGF } 1871.1.18 = { remove_core = NGF
+	owner = GER
+	controller = GER
+	remove_core = SAX
+        railroad = 4
+	
+}
+1946.1.1 = {
+	owner = RUS
+	controller = RUS
+}

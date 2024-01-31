@@ -1,0 +1,16 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+trade_goods = iron
+life_rating = 35
+1920.5.5 = {
+        add_core = KDS
+	owner = KDS
+	controller = KDS
+}
+
+
+1923.10.29 = {
+	owner = TUR
+	controller = TUR
+}

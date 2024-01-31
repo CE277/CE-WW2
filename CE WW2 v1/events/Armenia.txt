@@ -1,0 +1,70 @@
+#########################################################
+#														#
+#      			   Armenia Events						#
+#														#
+#########################################################
+
+#Treaty of Moscow 1921
+country_event = {
+	id = 40001
+	title = "Treaty of Moscow 1921"
+	desc = "EVTDESC325465"
+	picture = "treaty_of_moscow_1921"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ARM
+		RUS = { has_country_flag = treaty_of_moscow_1921 }
+		TUR = { has_country_flag = treaty_of_moscow_1921 }
+		NOT = { has_country_flag = treaty_of_moscow_1921 }
+	}
+
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "This is bad."
+		prestige = 10
+	relation = { who = RUS value = 50 }
+	1101 = {
+			secede_province = AZB
+		}
+	AZB = {  country_event = { id=40002 days=0 } }
+	set_country_flag = treaty_of_moscow_1921
+
+	ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We don't recognize the Treaty!"
+		prestige = -20
+		relation = { who = RUS value = -100 }
+		RUS = {  country_event = { id=325466 days=0 } }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Treaty of Moscow 1921 - Azerbaijan
+country_event = {
+	id = 40002
+	title = "Treaty of Moscow 1921"
+	desc = "EVTDESC325465"
+	picture = "treaty_of_moscow_1921"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		prestige = 10
+	relation = { who = RUS value = 50 }
+	release_vassal = NAK
+	NAK = { government = proletarian_dictatorship }
+	RUS = {
+		diplomatic_influence = { who = NAK value = 200 }
+	}
+	set_country_flag = treaty_of_moscow_1921
+	}
+}

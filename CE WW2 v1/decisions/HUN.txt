@@ -1,0 +1,58 @@
+political_decisions = {
+
+	secret_rearmament = {
+		picture = "secret_rearmament"
+		potential = {
+			tag = HUN
+			NOT = { has_country_flag = secret_rearmament }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = secret_rearmament
+			prestige = 15
+			badboy = 2
+			add_country_modifier = {
+				name = secret_rearmament
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	announce_the_gyor_program = {
+		picture = "gyor_program"
+		potential = {
+			tag = HUN
+			year = 1938
+			NOT = { has_country_flag = announce_the_gyor_program }
+		}
+		
+		allow = {
+			war = no
+			money = 100000
+		}
+
+		effect = {
+			set_country_flag = announce_the_gyor_program
+			prestige = 20
+			treasury = -50000
+			add_country_modifier = {
+				name = gyor_program
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+}

@@ -1,0 +1,37 @@
+owner = SIN
+controller = SIN
+add_core = PAK
+add_core = SIN
+add_core = HND
+trade_goods = fruit
+life_rating = 35
+terrain = urban_karachi
+1861.1.1 = {
+	owner = ENG
+	controller = ENG
+}
+1861.1.1 = { railroad = 2 }
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+        colonial = 0
+}
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = fabric_factory
+	upgrade = yes
+}
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = regular_clothes_factory
+	upgrade = yes
+}
+}

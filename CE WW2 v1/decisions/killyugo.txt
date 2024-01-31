@@ -1,0 +1,19 @@
+political_decisions = {
+
+	killyugo = {
+                picture = killyugo 
+		potential = {
+			NOT = { has_country_flag = killyugo }
+                        tag = GER
+		}
+		allow = {
+            GER = { war_with = YUG }
+			YUG = { national_provinces_occupied = 1 }
+		}
+		effect = {
+			set_country_flag = killyugo        
+            YUG = { country_event = 1947194845 }
+		}
+		
+		}
+		

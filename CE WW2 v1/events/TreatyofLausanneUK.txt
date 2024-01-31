@@ -1,0 +1,199 @@
+country_event = {
+	title = "The Istanbul Question"
+	desc = "We've defeated The Turks and we want our old capital."
+	id = 5000001
+	picture = "young_turks"
+
+	trigger = {
+		tag = GRE
+		war = no		
+		ENG = {
+			owns = 860
+		}
+		GRE = {
+			owns = 867
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Request Istanbul to The United Kingdom."
+		ENG = {
+			country_event = { id=5000002 days=1 }
+		}
+		prestige = 15
+		TUR_855 = { remove_core = TUR }
+		ai_chance = {
+			factor = 100
+		}
+		any_pop = {
+			limit = {
+				culture = turkish
+			}
+			militancy = 2
+		}
+	}
+
+	option = {
+		name = "Better not."
+		badboy = -1
+		ai_chance = {
+			factor = 0
+		}
+		any_pop = {
+			limit = {
+				culture = turkish
+			}
+			militancy = -1
+		}
+	}
+}
+
+country_event = {
+	title = "The Istanbul Question"
+	desc = "We've defeated The Greeks and we want our old capital."
+	id = 6000001
+	picture = "young_turks"
+
+	trigger = {
+		tag = TUR
+		war = no		
+		ENG = {
+			owns = 860
+		}
+		TUR = {
+			owns = 869
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Request Istanbul to The United Kingdom."
+		ENG = {
+			country_event = { id=6000002 days=1 }
+		}
+		prestige = 15
+		ai_chance = {
+			factor = 100
+		}
+		any_pop = {
+			limit = {
+				culture = greek
+			}
+			militancy = 2
+		}
+	}
+
+	option = {
+		name = "Better not."
+		badboy = -1
+		ai_chance = {
+			factor = 0
+		}
+		any_pop = {
+			limit = {
+				culture = greek
+			}
+			militancy = -1
+		}
+	}
+}
+
+country_event = {
+	title = "Greece wants Istanbul!"
+	desc = "They've defeated The Turks and they want their ancient capital."
+	id = 5000002
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Istanbul will return to Greeks, now."
+		860 = {
+			secede_province = GRE
+		}
+		861 = {
+			secede_province = GRE
+		}
+		865 = {
+			secede_province = GRE
+		}
+		prestige = 15
+		any_pop = {
+			limit = {
+				religion = sunni
+			}
+			militancy = 0.5
+		}
+		GRE = {
+			country_event = { id=5000003 days=0 }
+		}
+	}
+
+}
+
+country_event = {
+	title = "Turkey wants Istanbul!"
+	desc = "They've defeated The Greeks and they want their old capital."
+	id = 6000002
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Istanbul will return to Turks, now."
+		860 = {
+			secede_province = TUR
+		}
+		861 = {
+			secede_province = TUR
+		}
+		865 = {
+			secede_province = TUR
+		}
+		prestige = 15
+		any_pop = {
+			limit = {
+				religion = orthodox
+			}
+			militancy = 0.5
+		}
+		TUR = {
+			country_event = { id=6000003 days=0 }
+		}
+	}
+
+}
+
+
+country_event = {
+	title = "The United Kingdom accepted!"
+	desc = "The United Kingdom give to Greece Istanbul!"
+	id = 5000003
+	picture = "greek_smyrna"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}
+
+country_event = {
+	title = "The United Kingdom accepted!"
+	desc = "The United Kingdom give to Turkey Istanbul!"
+	id = 6000003
+	picture = "greek_smyrna"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}

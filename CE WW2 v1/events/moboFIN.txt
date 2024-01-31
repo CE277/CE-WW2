@@ -1,0 +1,22 @@
+#Bulgaria mobo
+country_event = {
+	id = 24
+	title = "The Defense of Finland"
+	desc = "Perkelle."
+
+	trigger = {
+		tag = FIN
+                year = 1936
+                month = 1
+		is_vassal = no
+		NOT = {
+			has_country_modifier = fin_mobo
+		}
+	}
+
+	option = {
+		name = "Perkelle"
+		FIN = { add_country_modifier = { name = fin_mobo duration = 4000 } }
+
+	}
+}

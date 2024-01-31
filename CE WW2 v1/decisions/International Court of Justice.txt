@@ -1,0 +1,109 @@
+political_decisions = {
+
+	begin_territory_talk = {
+		picture = "begin_territory_talk"
+		potential = {
+			is_vassal = no
+			has_country_flag = international_court_of_justice
+			NOT = { has_country_modifier = territory_talk }
+			any_neighbor_country = { 
+				war = no 
+				is_vassal = no 
+				exists = yes 
+				any_owned_province = { is_core = THIS } 
+				NOT = { any_owned_province = { is_capital = yes is_core = THIS } } 
+			}
+
+		}
+		allow = {
+			has_country_flag = international_court_of_justice
+			war = no
+			NOT = { is_disarmed = yes }
+			election = no
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = reactionary ruling_party_ideology = fascist ai = no }
+			any_neighbor_country = { war = no is_vassal = no exists = yes any_owned_province = { is_core = THIS } NOT = { any_owned_province = { is_capital = yes is_core = THIS } } relation = { who = THIS value = 150 } }
+		}
+		effect = {
+			add_country_modifier = { name = territory_talk duration = 3650 }
+			random_country = { limit = { NOT = { any_owned_province = { is_capital = yes is_core = THIS } } neighbour = THIS war = no is_vassal = no exists = yes any_owned_province = { is_core = THIS } relation = { who = THIS value = 150 } } country_event = 1412160 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	icj_start = {
+		picture = "icj_start"
+		potential = {
+			NOT = { has_country_modifier = icj_timer_land }			
+			has_country_flag = international_court_of_justice
+			NOT = { has_country_modifier = icj_in_process }	
+			NOT = { has_country_flag = icj_in_process }		
+			any_neighbor_country = { 
+				NOT = { has_country_modifier = icj_timer_land } 
+				has_country_flag = international_court_of_justice 
+				NOT = { has_country_flag = icj_marker } 
+				is_vassal = no 
+				war = no 
+				any_owned_province = { is_capital = no is_core = THIS 
+				is_colonial = no } 
+				NOT = { any_owned_province = { is_capital = yes 
+				is_core = THIS } }
+			}
+			
+		}
+
+		allow = { 
+			NOT = { has_country_flag = neutrality }
+			NOT = { has_country_modifier = icj_timer_land }			
+			has_country_flag = international_court_of_justice
+			NOT = { has_country_modifier = icj_in_process }	
+			NOT = { has_country_flag = icj_in_process }		
+			war = no
+			is_vassal = no
+			election = no
+			is_disarmed = no
+			has_recently_lost_war = no
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = reactionary ruling_party_ideology = fascist ai = no }
+			OR = { ai = no any_owned_province = { state_scope = { flashpoint_tension = 25 has_flashpoint = yes } } }
+			any_neighbor_country = {
+				NOT = { has_country_modifier = icj_in_process } 
+				NOT = { has_country_modifier = icj_timer_land }
+				has_country_flag = international_court_of_justice 
+				NOT = { has_country_flag = icj_marker } 
+				is_vassal = no 
+				war = no 
+				any_owned_province = { is_capital = no is_core = THIS 
+				is_colonial = no } 
+				NOT = { any_owned_province = { is_capital = yes is_core = THIS } }
+			}
+		}
+		
+		effect = {
+			badboy = 2.5
+			random_country = { 
+				limit = { 
+					NOT = { has_country_modifier = icj_in_process }
+					NOT = { has_country_modifier = icj_timer_land }has_country_flag = international_court_of_justice 
+					NOT = { has_country_flag = icj_marker } 
+					is_vassal = no 
+					war = no 
+					any_owned_province = { is_capital = no is_core = THIS 
+					is_colonial = no } 
+					NOT = { any_owned_province = { is_capital = yes is_core = THIS } }
+					neighbour = THIS 
+				} 
+			country_event = 1512010
+			}
+		set_country_flag = icj_in_process
+		add_country_modifier = { name = icj_in_process duration = 1825 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 badboy = 0.5 }
+		}
+
+	}
+
+}

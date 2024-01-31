@@ -1,0 +1,63 @@
+political_decisions = {
+
+	open_eu_geopolitical_negotiations = {
+		picture = "eu_geopolitical_negotiations"
+		potential = {
+			AND = {
+				has_country_modifier = xeu_member
+				has_global_flag = maastricht_treaty
+			}		
+			any_neighbor_country = { 
+				has_country_flag = xeu_member_compliance
+				is_vassal = no 
+				war = no 
+				any_owned_province = { is_capital = no is_core = THIS 
+				is_colonial = no } 
+				NOT = { any_owned_province = { is_capital = yes 
+				is_core = THIS } }
+			}
+			
+		}
+
+		allow = { 
+			NOT = { has_country_flag = neutrality }		
+			AND = {
+				has_country_modifier = xeu_member
+				has_global_flag = maastricht_treaty
+			}		
+			war = no
+			is_vassal = no
+			election = no
+			is_disarmed = no
+			any_neighbor_country = { 
+				has_country_flag = xeu_member_compliance
+				is_vassal = no 
+				war = no 
+				any_owned_province = { is_capital = no is_core = THIS 
+				is_colonial = no } 
+				NOT = { any_owned_province = { is_capital = yes is_core = THIS } }
+			}
+		}
+		
+		effect = {
+			random_country = { 
+				limit = { 
+					has_country_flag = xeu_member_compliance
+					is_vassal = no 
+					war = no 
+					any_owned_province = { is_capital = no is_core = THIS 
+					is_colonial = no } 
+					NOT = { any_owned_province = { is_capital = yes is_core = THIS } }
+					neighbour = THIS 
+				} 
+			country_event = 600101
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+}

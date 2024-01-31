@@ -1,0 +1,78 @@
+army = { 
+
+name = "Erzurum HQ" location = 888
+
+leader = {
+	name = "Kazim Karabekir"
+	date = "1909.1.1"
+        prestige = 0.375
+        picture ="arab_general_3"
+	type = land
+	personality = fanatic
+	background = warmonger
+  }
+
+regiment = { name = "Turk Asker" type = cavalry home = 895 } 
+regiment = { name = "Turk Asker" type = cavalry home = 880 } 
+regiment = { name = "Tatar Asker" type = artillery home = 881 } 
+regiment = { name = "Turk Asker" type = artillery home = 873 } 
+regiment = { name = "Turk Asker" type = infantry home = 895 } 
+regiment = { name = "Turk Asker" type = infantry home = 879 }  
+regiment = { name = "Kazak Asker" type = infantry home = 877 }
+regiment = { name = "Turk Asker" type = infantry home = 867 }
+regiment = { name = "Turk Asker" type = infantry home = 867 } 
+}
+
+army = {
+
+name = "Ankara HQ" location = 876
+
+leader = {
+	name = "Mustafa Kemal"
+	date = "1906.1.1"
+        prestige = 0.500
+        picture ="tur_gen_ataturk"
+	type = land
+	personality = fanatic
+	background =  school_of_the_bayonet
+   }
+
+regiment = { name = "Turk Asker" type = cavalry home = 868 } 
+regiment = { name = "Turk Asker" type = cavalry home = 879 } 
+regiment = { name = "Turk Asker" type = artillery home = 877 } 
+regiment = { name = "Turk Asker" type = artillery home = 876 } 
+regiment = { name = "Turk Asker" type = artillery home = 878 } 
+regiment = { name = "Turk Asker" type = infantry home = 873 } 
+regiment = { name = "Tatar Asker" type = infantry home = 876 }  
+regiment = { name = "Turk Asker" type = infantry home = 881 } 
+regiment = { name = "Turk Asker" type = infantry home = 868 } 
+regiment = { name = "Turk Asker" type = infantry home = 866 } 
+}
+
+army = {
+
+name = "Bolu Çetesi" location = 881
+
+regiment = { name = "Turk Irregulars" type = irregular home = 876 } 
+regiment = { name = "Turk Irregulars" type = irregular home = 876 } 
+regiment = { name = "Turk Irregulars" type = irregular home = 876 } 
+regiment = { name = "Turk Irregulars" type = irregular home = 876 } 
+}
+
+army = {
+
+name = "Konya Çetesi" location = 873
+
+regiment = { name = "Turk Irregulars" type = irregular home = 873 } 
+regiment = { name = "Turk Irregulars" type = irregular home = 873 } 
+}
+
+leader = {
+	name = "Ismet Inonu"
+	date = "1915.1.1"
+        prestige = 0.375
+        picture ="tur_gen_inonu"
+	type = land
+	personality = diplomatic
+	background = amateur
+  }

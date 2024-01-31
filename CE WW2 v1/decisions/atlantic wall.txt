@@ -1,0 +1,66 @@
+political_decisions = {
+
+	atlantic_wall= {
+		picture = promote_ideology_in_sphere
+		potential = {
+			NOT = { has_country_flag = atlantic_wall }
+                        tag = GER
+		}
+		allow = {
+                        FRA  = { war_with = GER }
+			government = fascist_dictatorship
+			NOT = { FRA = { controls = 425 } }
+			NOT = { FRA = { controls = 468 } }
+			NOT = { FRA = { controls = 458 } }
+			NOT = { DEN = { controls = 367 } }
+                        money = 6000000
+		}
+		
+		effect = {
+			set_country_flag = atlantic_wall
+                        money = -6000000
+                        FRA = { 460 = { fort = 5 } }
+                        FRA = { 458 = { fort = 5 } }
+                        FRA = { 442 = { fort = 5 } }
+                        FRA = { 437 = { fort = 5 } }
+                        FRA = { 423 = { fort = 5 } }
+                        FRA = { 422 = { fort = 5 } }
+                        FRA = { 420 = { fort = 5 } }
+                        FRA = { 421 = { fort = 5 } }
+                        FRA = { 424 = { fort = 5 } }
+                        FRA = { 418 = { fort = 5 } }
+                        FRA = { 415 = { fort = 5 } }
+                        FRA = { 402 = { fort = 5 } }
+                        FRA = { 400 = { fort = 5 } }
+                        BEL = { 388 = { fort = 5 } }
+                        NET = { 378 = { fort = 5 } }
+                        NET = { 376 = { fort = 5 } }
+                        NET = { 375 = { fort = 5 } }
+                        NET = { 377 = { fort = 5} }
+                        NET = { 382 = { fort = 5} }
+                        NET = { 384 = { fort = 5} }
+                        NET = { 385 = { fort = 5} }
+                        NET = { 383 = { fort = 5} }
+                        GER = { 543 = { fort = 5} }
+                        GER = { 540 = { fort = 5} }
+                        GER = { 539 = { fort = 5} }
+                        GER = { 528 = { fort = 5} }
+                        GER = { 531 = { fort = 5} }
+                        GER = { 369 = { fort = 5} }
+                        GER = { 370 = { fort = 5} }
+                        DEN = { 371 = { fort = 5} }
+                        DEN = { 2557 = { fort = 5} }
+                        DEN = { 367 =  { fort = 5} }
+                        DEN = { 368 =  { fort = 5} }
+                        NOR = { 316 = { fort = 5} }
+                        NOR = { 313 = { fort = 5} }
+                        NOR = { 312 = { fort = 5} }
+                        NOR = { 311 = { fort = 5} }
+                        NOR = { 310 = { fort = 5} }
+                        NOR = { 309 = { fort = 5} }
+                        NOR = { 308 = { fort = 5} }
+                        NOR = { 305 = { fort = 5} }
+                        NOR = { 306 = { fort = 5} }
+                        NOR = { 307 = { fort = 5} }
+		}
+	}

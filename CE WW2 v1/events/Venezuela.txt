@@ -1,0 +1,209 @@
+#The Death of Gomez
+country_event = {
+	id = 3003001
+  	title = "EVTNAME3003001"
+  	desc = "EVTDESC3003001"
+	picture = "vnz_gomez_death"
+
+	trigger = {
+    		tag = VNZ
+    		year = 1935 NOT = { year = 1936 }
+		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "The government will organize the funeral."
+		add_country_modifier = { name = no_more_war duration = 720 }
+	}
+}
+
+#Relaxation of Gomecista dictatorship
+country_event = {
+	id = 3003002
+  	title = "EVTNAME3003002"
+  	desc = "EVTDESC3003002"
+	picture = "gomecista_relaxation"
+
+	trigger = {
+    		tag = VNZ
+    		year = 1941 NOT = { year = 1945 }
+		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "It's time for more reforms."
+		any_pop = { militancy = -3 consciousness = 1 }
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#Civilian-military coup of year
+country_event = {
+	id = 3003003
+  	title = "EVTNAME3003003"
+  	desc = "EVTDESC3003003"
+	picture = "vnz_civilian_military_coup"
+
+	trigger = {
+    		tag = VNZ
+    		year = 1945 NOT = { year = 1948 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "It's time for democracy!"
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 6 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1948 Venezuelan coup d'etat
+country_event = {
+	id = 3003004
+  	title = "EVTNAME3003004"
+  	desc = "EVTDESC3003004"
+	picture = "1948_venezuelan_coup"
+
+	trigger = {
+    		tag = VNZ
+    		year = 1948 NOT = { year = 1949 }
+		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1958 Venezuelan coup d'etat
+country_event = {
+	id = 3003005
+  	title = "EVTNAME3003005"
+  	desc = "EVTDESC3003005"
+	picture = "1958_venezuelan_coup"
+
+	trigger = {
+    		tag = VNZ
+    		year = 1958 NOT = { year = 1960 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Return to Constitutionalism!"
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_weighted_voting
+		political_reform = appointed
+		political_reform = gerrymandering
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 6 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Bolivarian Revolution of 1999
+country_event = {
+	id = 3003006
+  	title = "EVTNAME3003006"
+  	desc = "EVTDESC3003006"
+	picture = "1999_bolivarian_revolution"
+
+	trigger = {
+    		tag = VNZ
+    		year = 1999 NOT = { year = 2005 }
+    		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Vida la libertad!"
+		country_event = 810056
+		ruling_party_ideology = socialist
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = secret_ballots
+		political_reform = state_controlled
+		any_pop = {
+			ideology = {
+				value = socialist
+				factor = 0.5
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 6 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}

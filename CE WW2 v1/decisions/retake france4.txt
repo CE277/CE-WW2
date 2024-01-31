@@ -1,0 +1,29 @@
+political_decisions = {
+
+	franceretake4 = {
+                picture = egalite_Liberte_solidarite
+		potential = {
+			NOT = { has_country_flag = franceretake4 }
+                        tag = FRA
+                        exists = VFR
+		}
+		allow = {
+                        FRA = { war_with = VFR }
+                        IVC = { all_core = { NOT = { controlled_by = VFR } } }
+                        NIG = { all_core = { NOT = { controlled_by = VFR } } }
+                        TOG = { all_core = { NOT = { controlled_by = VFR } } }
+                        MLI = { all_core = { NOT = { controlled_by = VFR } } }
+                        BEN = { all_core = { NOT = { controlled_by = VFR } } }
+                        TRZ = { all_core = { NOT = { controlled_by = VFR } } }
+                        SNG = { all_core = { NOT = { controlled_by = VFR } } }
+                        GNE = { all_core = { NOT = { controlled_by = VFR } } }
+                        BKF = { all_core = { NOT = { controlled_by = VFR } } }
+		}
+		
+		effect = {
+			set_country_flag = franceretake4
+			VFR = { country_event = 1947194894 }
+		}
+         }
+		 
+}

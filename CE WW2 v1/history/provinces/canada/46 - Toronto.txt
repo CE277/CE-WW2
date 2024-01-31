@@ -1,0 +1,63 @@
+owner = ENG
+controller = ENG
+add_core = CAN
+trade_goods = grain
+life_rating = 35
+terrain = urban_toronto
+1861.1.1 = {
+	state_building = {
+		level = 1
+		building = small_arms_factory
+		upgrade = yes
+	}
+	state_building = {
+		level = 1
+		building = lumber_mill
+		upgrade = yes
+	}
+}
+1861.1.1 = { railroad = 3 }
+1912.10.7 = {
+	controller = CAN
+	owner = CAN
+}
+1920.1.1 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = explosives_factory 
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = ammunition_factory 
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = regular_clothes_factory 
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = steel_factory
+	upgrade = yes
+}
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = machine_parts_factory
+	upgrade = yes
+}
+}
+

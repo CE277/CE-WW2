@@ -1,0 +1,17 @@
+army = {
+
+name = "Kurdish Rebels" location = 893
+
+leader = {
+	name = "Alisan Bey"
+	date = "1919.1.1"
+        prestige = 0.10
+        picture ="arab_general_5"
+	type = land
+	personality = fanatic
+	background = warmonger
+  }
+
+regiment = { name = "Kurdish Rebels" type = irregular home = 899 } 
+regiment = { name = "Kurdish Rebels" type = irregular home = 893 }
+}

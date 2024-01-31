@@ -1,0 +1,16 @@
+owner = BUK
+controller = BUK
+add_core = BUK
+trade_goods = grain
+life_rating = 35
+1912.10.7 = {
+	owner = RUS
+	controller = RUS
+}
+1920.5.5 = {
+state_building = {
+	level = 2
+	building = steel_factory
+	upgrade = yes
+}
+}

@@ -1,0 +1,30 @@
+political_decisions = {
+
+	colombian_military_forces = {
+		picture = "colombian_military_forces"
+		potential = {
+			tag = CLM
+			NOT = { has_country_flag = colombian_military_forces }
+		}
+		
+		allow = {
+			war = no
+			deep_defense_system = 1
+			army_risk_management = 1
+		}
+
+		effect = {
+			set_country_flag = colombian_military_forces
+			prestige = 30
+			add_country_modifier = {
+				name = colombian_military_forces
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+political_decisions = {
+
+	japan_siam = {
+                picture = siamjapan
+		potential = {
+			NOT = { has_country_flag = japansiam}
+                        tag = JAP
+		}
+		allow = {
+                        SIA = { in_sphere = JAP }
+			has_country_flag = takeindochina
+		}
+		
+		effect = {
+			set_country_flag = japansiam
+                               	JAP = {
+			create_vassal = SIA 
+		}
+         }

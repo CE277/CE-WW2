@@ -1,0 +1,38 @@
+#Appointment of Gombos as Prime Minister
+country_event = {
+	id = 900201
+	title = "Appointment of Gombos as Prime Minister"
+	desc = "EVTDESC900201"
+	picture = "gombos_hungary"
+
+	trigger = {
+    		tag = HUN
+    		year = 1932
+		NOT = { year = 1933 }
+    		OR = { 
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = { ruling_party_ideology = fascist }
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Appoint Gombos as Prime Minister."
+		ruling_party_ideology = fascist
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 4 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}

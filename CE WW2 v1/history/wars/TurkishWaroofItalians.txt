@@ -1,0 +1,31 @@
+name = "Turkish War for the Withdraw of Italians"
+
+1919.5.5 = {
+	add_attacker = TUR
+	add_defender = ITA
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+
+        war_goal = {
+		casus_belli = acquire_core_state
+		actor = TUR
+		receiver = ITA
+                country = ITA
+                state_province_id = 872
+	}
+
+	war_goal = {
+		casus_belli = status_quo
+		actor = ITA
+		receiver = TUR
+	}
+
+}
+
+1923.1.1 = {
+	rem_attacker = TUR
+	rem_defender = ITA
+}

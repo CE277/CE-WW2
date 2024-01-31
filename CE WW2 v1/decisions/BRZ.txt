@@ -1,0 +1,111 @@
+political_decisions = {
+
+	construction_of_brasilia = {
+		picture = "brasilia"
+		potential = {
+			tag = BRZ
+			year = 1936
+			BRZ = {
+				owns = 2421
+			}
+			NOT = { has_country_flag = construction_of_brasilia_begun }
+		}
+
+		allow = {
+			war = no
+			AND = {
+				year = 1956
+				iron_railroad = 1
+			}
+			owns = 2421
+			money = 2100000
+			OR = { 
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
+			}
+		}
+
+		effect = {
+			set_country_flag = construction_of_brasilia_begun
+			prestige = 100
+			money = -2000000
+			any_pop = {
+				limit = { is_primary_culture = yes is_accepted_culture = yes }
+				militancy = -3
+			}
+			2421 = {
+				add_province_modifier = { name = brasilia_under_construction duration = 1460 }
+			}			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brazilian_armed_forces = {
+		picture = "brazilian_armed_forces"
+		potential = {
+			tag = BRZ
+			NOT = { has_country_flag = brazilian_armed_forces }
+		}
+		
+		allow = {
+			war = no
+			deep_defense_system = 1
+			army_risk_management = 1
+		}
+
+		effect = {
+			set_country_flag = brazilian_armed_forces
+			prestige = 30
+			add_country_modifier = {
+				name = brazilian_armed_forces
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brz_estado_novo = {
+		picture = "brz_estado_novo"
+		potential = {
+			tag = BRZ
+			year = 1937
+			government = presidential_dictatorship
+			NOT = { has_country_flag = brz_estado_novo }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = brz_estado_novo
+			prestige = 40
+			add_country_modifier = {
+				name = estado_novo
+				duration = 3650
+			}
+			any_pop = {
+        			ideology = {
+        				value = fascist
+        				factor = 0.05
+        			}
+				ideology = {
+        				value = reactionary
+        				factor = 0.05
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

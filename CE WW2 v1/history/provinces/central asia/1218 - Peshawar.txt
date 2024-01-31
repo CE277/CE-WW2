@@ -1,0 +1,16 @@
+owner = PAN
+controller = PAN
+add_core = PAK
+add_core = PAN
+add_core = AFG
+trade_goods = grain
+life_rating = 35
+1861.1.1 = {
+	owner = AFG
+	controller = AFG
+}
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+	add_core = HND
+}

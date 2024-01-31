@@ -1,0 +1,17 @@
+owner = MGL
+controller = MGL
+add_core = MGL
+add_core = RUS
+trade_goods = coal
+life_rating = 35
+1912.10.7 = {
+	owner = RUS
+	controller = RUS
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = cement_factory
+	upgrade = yes
+}
+}

@@ -1,0 +1,10 @@
+owner = MAD
+controller = MAD
+add_core = MAD
+trade_goods = fruit
+life_rating = 35
+1912.10.7 = {
+	controller = FRA
+	owner = FRA
+        colonial = 2
+}

@@ -1,0 +1,31 @@
+owner = BRE
+controller = BRE
+add_core = BRE
+add_core = GER
+trade_goods = fish
+life_rating = 40
+naval_base = 2
+1861.1.1 = { railroad = 3 }
+1867.4.16 = { owner = NGF controller = NGF add_core = NGF } 1871.1.18 = { remove_core = NGF
+	owner = GER
+	controller = GER
+	remove_core = BRE
+        railroad = 4
+	
+}
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = clipper_shipyard
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = steel_factory
+	upgrade = yes
+}
+}
+1946.1.1 = {
+	owner = USA
+	controller = USA
+}

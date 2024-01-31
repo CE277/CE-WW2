@@ -1,0 +1,188 @@
+#Fascist Propaganda effects
+country_event = {
+	id = 70010
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = fascist
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = fascist
+        			factor = 0.05
+        		}
+       		}
+	}
+}
+
+#Reactionary Propaganda effects
+country_event = {
+	id = 70011
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = reactionary
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = reactionary
+        			factor = 0.05
+        		}
+       		}
+	}
+}
+
+#Conservative Propaganda effects
+country_event = {
+	id = 70012
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = conservative
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = conservative
+        			factor = 0.05
+        		}
+       		}
+	}
+}
+
+#Socialist Propaganda effects
+country_event = {
+	id = 70013
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = socialist
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = socialist
+        			factor = 0.05
+        		}
+       		}
+	}
+}
+
+#Communist Propaganda effects
+country_event = {
+	id = 70014
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = communist
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = communist
+        			factor = 0.05
+        		}
+       		}
+	}
+}
+
+#Liberal Propaganda effects
+country_event = {
+	id = 70015
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = liberal
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = liberal
+        			factor = 0.05
+        		}
+       		}
+	}
+}
+
+#Anarcho_liberal Propaganda effects
+country_event = {
+	id = 70016
+	title = "EVTNAME70010"
+	desc = "EVTDESC70010"
+	picture = "gov_propaganda"
+	
+	trigger = {
+		has_country_modifier = gov_propaganda
+		ruling_party_ideology = anarcho_liberal
+	}
+
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "Our method of propaganda brings results."
+		 any_pop = {
+        	 	ideology = {
+        			value = anarcho_liberal
+        			factor = 0.05
+        		}
+       		}
+	}
+}

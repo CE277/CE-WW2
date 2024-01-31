@@ -1,0 +1,20 @@
+army = {
+
+name = "Haykakan Banak" location = 1098
+
+leader = {
+	name = "Drastamat Kanayan"
+	date = "1919.1.1"
+        prestige = 0.3
+        picture ="russian_general_2"
+	type = land
+	personality = aristocrat
+	background = charismatic
+   }
+
+regiment = { name = "Armenian Cavalry" type = cavalry home = 1106 } 
+regiment = { name = "Armenian Artillery" type = artillery home = 1100 }  
+regiment = { name = "Armenian Infantry" type = infantry home = 1098 } 
+regiment = { name = "Armenian Infantry" type = infantry home = 887 } 
+regiment = { name = "Armenian Infantry" type = infantry home = 890 } 
+}

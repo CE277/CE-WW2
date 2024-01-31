@@ -1,0 +1,42 @@
+owner = PRU
+
+controller = PRU
+
+add_core = PRU
+
+add_core = GER
+
+add_core = BEL
+
+add_core = WLL
+
+trade_goods = coal
+life_rating = 35
+
+1861.1.1 = { railroad = 3 }
+1867.4.16 = {
+	owner = NGF
+	controller = NGF
+	add_core = NGF
+	remove_core = PRU
+}
+1871.1.18 = {
+	remove_core = NGF
+	owner = GER
+	controller = GER
+        railroad = 4
+}
+1912.1.1 = {
+
+        railroad = 5
+	
+}
+
+1920.5.5 = {
+
+owner = BEL
+
+controller = BEL
+
+}
+

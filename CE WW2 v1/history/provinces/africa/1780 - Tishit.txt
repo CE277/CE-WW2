@@ -1,0 +1,26 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = MCD
+add_core = BUL
+add_core = SER
+add_core = ALB
+trade_goods = fruit
+life_rating = 35
+1878.3.3 = {
+	owner = BUL
+	controller = BUL
+	remove_core = TUR
+}
+1912.10.7 = {
+	owner = SER
+	controller = SER
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = YUG
+	controller = YUG
+        add_core = YUG
+        remove_core = SER
+}

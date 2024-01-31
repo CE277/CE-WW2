@@ -1,0 +1,32 @@
+country_event = { 
+
+id = 1947194742
+
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "First Vienna Award"
+desc= "We can decide the fate of Czechoslovakia"
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	option = {
+		name = "Damn"
+                        633 = { secede_province = HUN }
+			635 = { secede_province = HUN }
+			634 = { secede_province = HUN }
+			636 = { secede_province = HUN }
+			637 = { secede_province = HUN }
+			638 = { secede_province = HUN }
+			950 = { secede_province = HUN }
+			625 = { secede_province = GER}
+			626 = { secede_province = GER}
+			631 = { secede_province = GER}
+			689 = { secede_province = GER}
+                        635 = { add_core = HUN}
+                        637 = { add_core = HUN }
+                        950 = { add_core = HUN }
+		}
+	}

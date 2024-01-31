@@ -1,0 +1,132 @@
+#Soviet Ultimatum for Bessarabia
+country_event = {
+	id = 21100
+	title = "Soviet Ultimatum for Bessarabia"
+	desc = "EVTDESC21100"
+	picture = "soviet_ultimatum"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Accept the terms."
+		prestige = -20
+		relation = { who = RUS value = 100 }
+		MOL_676 = { add_core = MOL }
+		676 = {
+			secede_province = RUS
+		}
+		677 = {
+			secede_province = RUS
+		}
+		678 = {
+			secede_province = RUS
+		}
+
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Ignore this scum."
+		prestige = 20
+		relation = { who = RUS value = -100 }
+		MOL_676 = { add_core = RUS }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Demands of Soviet Union
+country_event = {
+	id = 21101
+	title = "Demands of Soviet Union"
+	desc = "EVTDESC21101"
+	picture = "rom_soviet_legation"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Accept the terms."
+		prestige = -10
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = state_controlled
+		political_reform = underground_parties
+		political_reform = no_slavery
+		political_reform = culture_voting_only
+		social_reform = good_minimum_wage
+		social_reform = eight_hours
+		social_reform = good_subsidies
+		social_reform = good_pensions
+		relation = { who = RUS value = 200 }
+		FROM = { diplomatic_influence = { who = THIS value = 100 } }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We refuse to follow this plan."
+		prestige = 20
+		relation = { who = RUS value = -200 }
+		diplomatic_influence = {
+			who = RUS
+			value = -150
+		}
+		RUS = {
+			add_casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Romanian Revolution of 1989
+country_event = {
+	id = 21102
+	title = "Romanian Revolution of 1989"
+	desc = "EVTDESC21102"
+	picture = "romanian_revolution"
+
+	trigger = {
+		tag = ROM
+		year = 1989
+		government = proletarian_dictatorship
+		NOT = { year = 1992 }
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 2
+	}
+
+	option = {
+		name = "Execute Communist leader Nicolae Ceausescu!"
+		prestige = -10
+		badboy = 1
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = free_press
+		political_reform = non_secret_ballots
+		diplomatic_influence = {
+			who = RUS
+			value = -100
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We still be communists."
+		any_pop = { militancy = 6 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}

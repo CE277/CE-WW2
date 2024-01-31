@@ -1,0 +1,21 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = IRQ
+trade_goods = fruit
+life_rating = 35
+
+1912.1.1 = {
+        railroad = 4
+	
+}
+1920.5.5 = {
+	controller = IRQ
+	owner = IRQ
+	remove_core = TUR
+state_building = {
+	level = 3
+	building = cement_factory
+	upgrade = yes
+}
+}

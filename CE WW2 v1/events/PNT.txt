@@ -1,0 +1,122 @@
+country_event = {
+  id = 9006226
+  title = "Liberation of Crypto-Christians"
+  desc = "Crypto-Christians are reported to many parts of the Ottoman Balkans and Anatolia. They can pray to his God now. They are so glad with this situation." 
+  picture = "crypto_christianity_pontus"
+  fire_only_once = yes
+
+  trigger = {
+	primary_culture = greek
+	owns = 880
+	year = 1922
+	NOT = { year = 1936 }
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+   option = {
+    name = "Liberty!"
+	prestige = 20
+	882 = { 
+		
+any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.4
+
+
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.7
+			}
+
+		}
+	883 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.5
+
+
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.6
+
+
+			}
+
+		}
+	884 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.5
+
+
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.6
+
+
+			}
+
+		}
+	880 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.6
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.5
+
+
+			}
+
+		}
+	881 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.6
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.5
+
+
+			}
+
+		}
+	}
+	ai_chance = { factor = 1 }
+}

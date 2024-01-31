@@ -1,0 +1,125 @@
+political_decisions = {
+
+	preserve_greater_romania = {
+		picture = "greater_romania"
+		potential = {
+			tag = ROM
+			year = 1920
+			NOT = { has_country_flag = preserve_greater_romania }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = preserve_greater_romania
+			prestige = 30
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	approach_the_soviet_union = {
+		picture = "approach_the_soviet_union"
+		potential = {
+			tag = ROM
+			year = 1936
+			NOT = { has_country_flag = demand_a_western_guarantee }
+			NOT = { has_country_flag = invite_german_advisors }
+			NOT = { has_country_flag = approach_the_soviet_union }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = approach_the_soviet_union
+			prestige = 50
+			RUS = {
+				relation = { who = THIS value = 150 }
+				diplomatic_influence = { who = THIS value = 50 }
+			}
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.1
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	invite_german_advisors = {
+		picture = "german_advisors"
+		potential = {
+			tag = ROM
+			year = 1936
+			NOT = { has_country_flag = demand_a_western_guarantee }
+			NOT = { has_country_flag = approach_the_soviet_union }
+			NOT = { has_country_flag = invite_german_advisors }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = invite_german_advisors
+			prestige = 10
+			GER = {
+				relation = { who = THIS value = 150 }
+				diplomatic_influence = { who = THIS value = 100 }
+			}
+			any_pop = {
+        			ideology = {
+        				value = fascist
+        				factor = 0.1
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	demand_a_western_guarantee = {
+		picture = "western_guarantee"
+		potential = {
+			tag = ROM
+			year = 1936
+			NOT = { has_country_flag = approach_the_soviet_union }
+			NOT = { has_country_flag = invite_german_advisors }
+			NOT = { has_country_flag = demand_a_western_guarantee }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = demand_a_western_guarantee
+			prestige = 40
+			ENG = {
+				relation = { who = THIS value = 150 }
+				diplomatic_influence = { who = THIS value = 100 }
+			}
+			FRA = {
+				relation = { who = THIS value = 150 }
+				diplomatic_influence = { who = THIS value = 100 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

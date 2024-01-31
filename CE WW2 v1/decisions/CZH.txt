@@ -1,0 +1,81 @@
+political_decisions = {
+	czechoslovak_legion = {
+		picture = "czechoslovak_legion"
+		potential = {
+			tag = CZH
+			year = 1920
+			NOT = { has_country_flag = czechoslovak_legion }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = czechoslovak_legion
+			prestige = 10
+			add_country_modifier = {
+				name = czechoslovak_legion
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	german_technology = {
+		picture = "german_technology"
+		potential = {
+			tag = CZH
+			NOT = { has_country_flag = german_technology }
+		}
+		
+		allow = {
+			war = no
+			in_sphere = GER
+			alliance_with = GER
+		}
+
+		effect = {
+			set_country_flag = german_technology
+			prestige = 10
+			add_country_modifier = {
+				name = german_technology
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	expulsion_of_sudeten_germans = {
+		picture = "deportation_of_germans"
+		potential = {
+			tag = CZH
+			year = 1947
+			owns = 631
+			GER = { has_country_flag = sudeteland_treaty }
+			NOT = { has_country_flag = expulsion_of_sudeten_germans }
+		}
+
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			set_country_flag = expulsion_of_sudeten_germans
+			relation = { who = GER value = -200 } 
+			any_pop = { limit = { location = { province_id = 633 } culture = german } move_pop = 619 } # Bratislava -> Vienna
+			any_pop = { limit = { location = { state_id = 631 } culture = german } move_pop = 595 }  # Moravia -> Nurenberg
+			any_pop = { limit = { location = { state_id = 630 } culture = german } move_pop = 599 }  # Moravia -> Munich
+			any_pop = { limit = { location = { state_id = 689 } culture = polish } move_pop = 683 }  # Tesin -> Liegniz
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}

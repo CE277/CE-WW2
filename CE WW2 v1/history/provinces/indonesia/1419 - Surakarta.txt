@@ -1,0 +1,6 @@
+owner = NET
+controller = NET
+add_core = JAV
+colonial = 2
+trade_goods = fruit
+life_rating = 30

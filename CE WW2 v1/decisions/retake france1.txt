@@ -1,0 +1,23 @@
+political_decisions = {
+
+	franceretake1 = {
+                picture = egalite_Liberte_solidarite
+		potential = {
+			NOT = { has_country_flag = franceretake1 }
+                        tag = FRA
+                        exists = VFR
+		}
+		allow = {
+                        FRA = { war_with = VFR }
+                        ALD = { all_core = { NOT = { controlled_by = VFR } } }
+                        MOR = { all_core = { NOT = { controlled_by = VFR } } }
+                        TUN = { all_core = { NOT = { controlled_by = VFR } } }
+		}
+		
+		effect = {
+			set_country_flag = franceretake1
+			VFR = { country_event = 1947194891 }
+		}
+         }
+		 
+}

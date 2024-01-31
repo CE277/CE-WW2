@@ -1,0 +1,22 @@
+political_decisions = {
+
+	chineseunify = {
+                picture = form_china
+		potential = {
+			NOT = { has_country_flag = chineseunify }
+                        tag = KMT
+		}
+		allow = {
+                        		AND = { 
+		GXI = { all_core = { owned_by = THIS } }
+		YNN = { all_core = { owned_by = THIS } }
+		XBI = { all_core = { owned_by = THIS } }
+		SXI = { all_core = { owned_by = THIS } }
+		}
+		}
+		
+		effect = {
+			set_country_flag = chineseunify
+                        PRC = { all_core = { add_core = KMT } }
+		}
+         }

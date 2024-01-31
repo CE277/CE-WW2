@@ -1,0 +1,441 @@
+country_event = { 
+
+id = 19471948
+
+major = yes
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "Fall of France"
+desc= "Sacre Bleu"
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	option = {
+		name = "Fight for the Free French and Liberty!"
+                        government = bourgeois_dictatorship
+		        430 = { change_province_name = "Vichy" }
+                        412 = { secede_province = GER }
+                        409 = { secede_province = GER }
+                        410 = { secede_province = GER }
+                        1363 = { secede_province = VFR }
+                        457 = { secede_province = VFR }
+			455 = { secede_province = VFR }
+			456 = { secede_province = VFR }
+			464 = { secede_province = VFR }
+			463 = { secede_province = VFR }
+			461 = { secede_province = VFR }
+                        467 = { secede_province = VFR }
+			468 = { secede_province = VFR }
+			470 = { secede_province = VFR }
+			471 = { secede_province = VFR }
+			469 = { secede_province = VFR }
+			461 = { secede_province = VFR }
+                        472 = { secede_province = ITA }
+                        454 = { secede_province = VFR }
+                        466 = { secede_province = ITA }
+                        465 = { secede_province = ITA }
+                        451 = { secede_province = VFR }
+                        452 = { secede_province = VFR }
+                        448 = { secede_province = VFR }
+                        449 = { secede_province = VFR }
+                        473 = { secede_province = VFR }
+                        449 = { secede_province = VFR }
+                        453 = { secede_province = VFR }
+                        462 = { secede_province = VFR }
+                        450 = { secede_province = VFR }
+                        447 = { secede_province = VFR }
+                        445 = { secede_province = VFR }
+                        450 = { secede_province = VFR }
+                        433 = { secede_province = VFR }
+                        431 = { secede_province = VFR }
+                        446 = { secede_province = VFR }
+                        430 = { secede_province = VFR }
+                        446 = { secede_province = VFR }
+                        2241 = { secede_province = VFR }
+                        2246 = { secede_province = VFR }
+                        2230 = { secede_province = VFR }
+                        2280 = { secede_province = VFR }
+                        2126 = { secede_province = VFR }
+                        2123 = { secede_province = VFR }
+                        2124 = { secede_province = VFR }
+                        2632 = { secede_province = VFR }
+                        1711 = { secede_province = VFR }
+                        1712 = { secede_province = VFR }
+                        1713 = { secede_province = VFR }
+                        1715 = { secede_province = VFR }
+                        1716 = { secede_province = VFR }
+                        1717 = { secede_province = VFR }
+                        1718 = { secede_province = VFR }
+                        1719 = { secede_province = VFR }
+                        1720 = { secede_province = VFR }
+                        1721 = { secede_province = VFR }
+                        1722 = { secede_province = VFR }
+                        1775 = { secede_province = VFR }
+                        1776 = { secede_province = VFR }
+                        1777 = { secede_province = VFR }
+                        1778 = { secede_province = VFR }
+                        1779 = { secede_province = VFR }
+                        1781 = { secede_province = VFR }
+                        1782 = { secede_province = VFR }
+                        1783 = { secede_province = VFR }
+                        1784 = { secede_province = VFR }
+                        1786 = { secede_province = VFR }
+                        1787 = { secede_province = VFR }
+                        1788 = { secede_province = VFR }
+                        1789 = { secede_province = VFR }
+                        1790 = { secede_province = VFR }
+                        1791 = { secede_province = VFR }
+                        1792 = { secede_province = VFR }
+                        1793 = { secede_province = VFR }
+                        1794 = { secede_province = VFR }
+                        1795 = { secede_province = VFR }
+                        1796 = { secede_province = VFR }
+                        1797 = { secede_province = VFR }
+                        1798 = { secede_province = VFR }
+                        1799 = { secede_province = VFR }
+                        1800 = { secede_province = VFR }
+                        1801 = { secede_province = VFR }
+                        1802 = { secede_province = VFR }
+                        1803 = { secede_province = VFR }
+                        1804 = { secede_province = VFR }
+                        1805 = { secede_province = VFR }
+                        1807 = { secede_province = VFR }
+                        1808 = { secede_province = VFR }
+                        1809 = { secede_province = VFR }
+                        1811 = { secede_province = VFR }
+                        1812 = { secede_province = VFR }
+                        1814 = { secede_province = VFR }
+                        1813 = { secede_province = VFR }
+                        1815 = { secede_province = VFR }
+                        1816 = { secede_province = VFR }
+                        1817 = { secede_province = VFR }
+                        1875 = { secede_province = VFR }
+                        1878 = { secede_province = VFR }
+                        1879 = { secede_province = VFR }
+                        1880 = { secede_province = VFR }
+                        1881 = { secede_province = VFR }
+                        1882 = { secede_province = VFR }
+                        1883 = { secede_province = VFR }
+                        1885 = { secede_province = VFR }
+                        1886 = { secede_province = VFR }
+                        1892 = { secede_province = VFR }
+                        1893 = { secede_province = VFR }
+                        1894 = { secede_province = VFR }
+                        1895 = { secede_province = VFR }
+                        1896 = { secede_province = VFR }
+                        1897 = { secede_province = VFR }
+                        1898 = { secede_province = VFR }
+                        1900 = { secede_province = VFR }
+                        1901 = { secede_province = VFR }
+                        1902 = { secede_province = VFR }
+                        1903 = { secede_province = VFR }
+                        1904 = { secede_province = VFR }
+                        1905 = { secede_province = VFR }
+                        1914 = { secede_province = VFR }
+                        1917 = { secede_province = VFR }
+                        1918 = { secede_province = VFR }
+                        1919 = { secede_province = VFR }
+                        1920 = { secede_province = VFR }
+                        1921 = { secede_province = VFR }
+                        1922 = { secede_province = VFR }
+						2609 = { secede_province = VFR }
+						1810 = { secede_province = VFR }
+						1906 = { secede_province = VFR }
+						1899 = { secede_province = VFR }
+						2573 = { secede_province = VFR }
+						2228 = { secede_province = VFR }
+						
+
+
+		any_owned = { 
+			limit = {
+					is_core = DAI
+					}
+				secede_province = VFR
+				}
+						any_owned = { 
+			limit = {
+					is_core = LBN
+					}
+				secede_province = VFR
+				}
+										any_owned = { 
+			limit = {
+					is_core = SYR
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = LUA 
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = ALD
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = MOR 
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = TUN
+					}
+				secede_province = ITA
+				}
+						any_owned = { 
+			limit = {
+					is_core = CAM 
+					}
+				secede_province = VFR
+				}
+							any_owned = { 
+			limit = {
+					is_core = MAD 
+					}
+				secede_province = VFR
+				}
+						VFR = {
+			capital = 430
+		}
+						GER = {
+			create_vassal = VFR
+		}
+                VFR = {     
+                add_country_modifier = {
+				name = unwilling_population
+				duration = -1
+			    }         
+                political_reform = none_voting
+                political_reform = party_appointed
+	        political_reform = no_meeting
+	        political_reform = state_press
+	        political_reform = state_controlled
+		political_reform = underground_parties }
+                 
+                }
+
+	option = {
+		name = "Fight as Vichy"
+                        government = bourgeois_dictatorship
+		        430 = { change_province_name = "Vichy" }
+                        412 = { secede_province = GER }
+                        409 = { secede_province = GER }
+                        410 = { secede_province = GER }
+                        1363 = { secede_province = VFR }
+                        457 = { secede_province = VFR }
+			455 = { secede_province = VFR }
+			456 = { secede_province = VFR }
+			464 = { secede_province = VFR }
+			463 = { secede_province = VFR }
+			461 = { secede_province = VFR }
+                        467 = { secede_province = VFR }
+			468 = { secede_province = VFR }
+			470 = { secede_province = VFR }
+			471 = { secede_province = VFR }
+			469 = { secede_province = VFR }
+			461 = { secede_province = VFR }
+                        472 = { secede_province = ITA }
+                        454 = { secede_province = VFR }
+                        466 = { secede_province = ITA }
+                        465 = { secede_province = ITA }
+                        451 = { secede_province = VFR }
+                        452 = { secede_province = VFR }
+                        448 = { secede_province = VFR }
+                        449 = { secede_province = VFR }
+                        473 = { secede_province = VFR }
+                        449 = { secede_province = VFR }
+                        453 = { secede_province = VFR }
+                        462 = { secede_province = VFR }
+                        450 = { secede_province = VFR }
+                        447 = { secede_province = VFR }
+                        445 = { secede_province = VFR }
+                        450 = { secede_province = VFR }
+                        433 = { secede_province = VFR }
+                        431 = { secede_province = VFR }
+                        446 = { secede_province = VFR }
+                        430 = { secede_province = VFR }
+                        446 = { secede_province = VFR }
+                        2241 = { secede_province = VFR }
+                        2246 = { secede_province = VFR }
+                        2230 = { secede_province = VFR }
+                        2280 = { secede_province = VFR }
+                        2126 = { secede_province = VFR }
+                        2123 = { secede_province = VFR }
+                        2124 = { secede_province = VFR }
+                        2632 = { secede_province = VFR }
+                        1711 = { secede_province = VFR }
+                        1712 = { secede_province = VFR }
+                        1713 = { secede_province = VFR }
+                        1715 = { secede_province = VFR }
+                        1716 = { secede_province = VFR }
+                        1717 = { secede_province = VFR }
+                        1718 = { secede_province = VFR }
+                        1719 = { secede_province = VFR }
+                        1720 = { secede_province = VFR }
+                        1721 = { secede_province = VFR }
+                        1722 = { secede_province = VFR }
+                        1775 = { secede_province = VFR }
+                        1776 = { secede_province = VFR }
+                        1777 = { secede_province = VFR }
+                        1778 = { secede_province = VFR }
+                        1779 = { secede_province = VFR }
+                        1781 = { secede_province = VFR }
+                        1782 = { secede_province = VFR }
+                        1783 = { secede_province = VFR }
+                        1784 = { secede_province = VFR }
+                        1786 = { secede_province = VFR }
+                        1787 = { secede_province = VFR }
+                        1788 = { secede_province = VFR }
+                        1789 = { secede_province = VFR }
+                        1790 = { secede_province = VFR }
+                        1791 = { secede_province = VFR }
+                        1792 = { secede_province = VFR }
+                        1793 = { secede_province = VFR }
+                        1794 = { secede_province = VFR }
+                        1795 = { secede_province = VFR }
+                        1796 = { secede_province = VFR }
+                        1797 = { secede_province = VFR }
+                        1798 = { secede_province = VFR }
+                        1799 = { secede_province = VFR }
+                        1800 = { secede_province = VFR }
+                        1801 = { secede_province = VFR }
+                        1802 = { secede_province = VFR }
+                        1803 = { secede_province = VFR }
+                        1804 = { secede_province = VFR }
+                        1805 = { secede_province = VFR }
+                        1807 = { secede_province = VFR }
+                        1808 = { secede_province = VFR }
+                        1809 = { secede_province = VFR }
+                        1811 = { secede_province = VFR }
+                        1812 = { secede_province = VFR }
+                        1814 = { secede_province = VFR }
+                        1813 = { secede_province = VFR }
+                        1815 = { secede_province = VFR }
+                        1816 = { secede_province = VFR }
+                        1817 = { secede_province = VFR }
+                        1875 = { secede_province = VFR }
+                        1878 = { secede_province = VFR }
+                        1879 = { secede_province = VFR }
+                        1880 = { secede_province = VFR }
+                        1881 = { secede_province = VFR }
+                        1882 = { secede_province = VFR }
+                        1883 = { secede_province = VFR }
+                        1885 = { secede_province = VFR }
+                        1886 = { secede_province = VFR }
+                        1892 = { secede_province = VFR }
+                        1893 = { secede_province = VFR }
+                        1894 = { secede_province = VFR }
+                        1895 = { secede_province = VFR }
+                        1896 = { secede_province = VFR }
+                        1897 = { secede_province = VFR }
+                        1898 = { secede_province = VFR }
+                        1900 = { secede_province = VFR }
+                        1901 = { secede_province = VFR }
+                        1902 = { secede_province = VFR }
+                        1903 = { secede_province = VFR }
+                        1904 = { secede_province = VFR }
+                        1905 = { secede_province = VFR }
+                        1914 = { secede_province = VFR }
+                        1917 = { secede_province = VFR }
+                        1918 = { secede_province = VFR }
+                        1919 = { secede_province = VFR }
+                        1920 = { secede_province = VFR }
+                        1921 = { secede_province = VFR }
+                        1922 = { secede_province = VFR }
+						2609 = { secede_province = VFR }
+						1810 = { secede_province = VFR }
+						1906 = { secede_province = VFR }
+						1899 = { secede_province = VFR }
+						2573 = { secede_province = VFR }
+						2228 = { secede_province = VFR }
+						
+
+
+		any_owned = { 
+			limit = {
+					is_core = DAI
+					}
+				secede_province = VFR
+				}
+						any_owned = { 
+			limit = {
+					is_core = LBN
+					}
+				secede_province = VFR
+				}
+										any_owned = { 
+			limit = {
+					is_core = SYR
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = LUA 
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = ALD
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = MOR 
+					}
+				secede_province = VFR
+				}
+		any_owned = { 
+			limit = {
+					is_core = TUN
+					}
+				secede_province = ITA
+				}
+						any_owned = { 
+			limit = {
+					is_core = CAM 
+					}
+				secede_province = VFR
+				}
+							any_owned = { 
+			limit = {
+					is_core = MAD 
+					}
+				secede_province = VFR
+				}
+						VFR = {
+			capital = 430
+		}
+						GER = {
+			create_vassal = VFR
+		}
+                change_tag_no_core_switch = VFR
+                VFR = {    
+                add_country_modifier = {
+				name = unwilling_population
+				duration = -1
+			    } 				
+                political_reform = none_voting
+                political_reform = party_appointed
+	        political_reform = no_meeting
+	        political_reform = state_press
+	        political_reform = state_controlled
+		political_reform = underground_parties }
+                 
+                }
+		
+		
+		}
+	}

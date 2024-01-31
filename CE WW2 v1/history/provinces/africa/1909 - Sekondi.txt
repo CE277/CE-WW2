@@ -1,0 +1,11 @@
+owner = NET
+controller = NET
+add_core = NET
+trade_goods = cattle
+life_rating = 35
+1912.10.7 = {
+	owner = ENG
+	controller = ENG
+        remove_core = NET
+        colonial = 2
+}

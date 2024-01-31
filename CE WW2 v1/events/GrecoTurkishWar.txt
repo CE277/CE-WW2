@@ -1,0 +1,98 @@
+#Financial contribution to Greco-Turkish War
+country_event = {
+	id = 1500001
+title = "Greco-Turkish War of 1920"
+	desc = "EVTDESC1500001"
+	picture = "greco_turkish_war"
+
+trigger = {
+OR = { tag = RUS tag = ITA }
+year = 1920
+NOT = { year = 1922 }
+GRE = { war_with = TUR }
+NOT = { has_country_flag = support_turkish_side }
+NOT = { has_country_flag = support_greek_side }
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "Support the Turkish Government!"
+set_country_flag = support_turkish_side
+treasury = -40000
+TUR = { 
+treasury = 40000
+add_country_modifier = { name = support_government duration = 730 } 
+}
+ai_chance = { factor = 1 }
+		}
+
+option = {
+name = "Support the Greek Government!"
+set_country_flag = support_greek_side
+treasury = -40000
+GRE = { 
+treasury = 40000
+add_country_modifier = { name = support_government duration = 730 } 
+}
+ai_chance = { factor = 0 }
+		}
+
+option = {
+name = "Stay out of the crisis"
+set_country_flag = support_greek_side
+relation = { who =TUR value = -20 }
+relation = { who = GRE value = -20 }
+ai_chance = { factor = 0 }
+		}
+}
+
+country_event = {
+	id = 1500002
+title = "Greco-Turkish War of 1920"
+	desc = "EVTDESC1500001"
+	picture = "greco_turkish_war"
+
+trigger = {
+tag = ENG
+year = 1920
+NOT = { year = 1922 }
+GRE = { war_with = TUR }
+NOT = { has_country_flag = support_turkish_side }
+NOT = { has_country_flag = support_greek_side }
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "Support the Turkish Government!"
+set_country_flag = support_turkish_side
+treasury = -20000
+TUR = { 
+treasury = 20000
+}
+ai_chance = { factor = 0 }
+		}
+
+option = {
+name = "Support the Greek Government!"
+set_country_flag = support_greek_side
+treasury = -20000
+GRE = { 
+treasury = 20000 
+}
+ai_chance = { factor = 0 }
+		}
+
+option = {
+name = "Stay out of the crisis"
+set_country_flag = support_greek_side
+relation = { who =TUR value = -20 }
+relation = { who = GRE value = -20 }
+ai_chance = { factor = 1 }
+		}
+}

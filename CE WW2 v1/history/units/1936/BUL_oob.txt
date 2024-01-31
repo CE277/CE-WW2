@@ -1,0 +1,18 @@
+army = {
+
+name = "Bulgarian Land Forces" location = 809
+
+leader = {
+	name = "Nikola Zhekov"
+	date = "1919.1.1"
+        prestige = 0.3
+        picture ="european_general_7"
+	type = land
+	personality = heroic
+	background = expert_raider
+   }
+
+regiment = { name = "Hussars Brigada" type = cavalry home = 809 } 
+regiment = { name = "Purva Brigada" type = infantry home = 815 }
+regiment = { name = "Vtora Brigada" type = infantry home = 816 }
+}

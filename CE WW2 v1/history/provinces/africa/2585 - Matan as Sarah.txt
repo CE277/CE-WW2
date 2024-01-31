@@ -1,0 +1,17 @@
+trade_goods = wool
+life_rating = 10
+1912.10.7 = {
+	owner = ITA
+	controller = ITA
+        colonial = 2
+}
+1922.5.5 = {
+	owner = ITA
+	controller = ITA
+        colonial = 2
+}
+1946.1.1 = {
+        owner = ENG
+	controller = ENG
+        colonial = 2
+}

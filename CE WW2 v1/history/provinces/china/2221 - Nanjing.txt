@@ -1,0 +1,52 @@
+owner = CHI
+controller = CHI
+add_core = CHI
+add_core = TPG
+trade_goods = tea
+life_rating = 32
+railroad = 2
+1861.1.1 = {
+	controller = TPG
+	owner = TPG
+	
+}
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+state_building = {
+	level = 2
+	building = canned_food_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = cement_factory
+	upgrade = yes
+}
+}
+1920.1.1 = {
+	owner = ZHI
+	controller = ZHI
+	add_core = KMT
+}
+1928.1.1 = {
+	owner = KMT
+	controller = KMT
+	add_core = PRC
+	remove_core = CHI
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+}
+1938.3.28 = {
+	owner = JAP
+	controller = JAP
+}
+1947.1.1 = {
+	owner = CHI
+	controller = CHI
+}

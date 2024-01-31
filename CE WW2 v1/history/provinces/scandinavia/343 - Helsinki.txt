@@ -1,0 +1,19 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = FIN
+add_core = SWE
+trade_goods = grain
+life_rating = 35
+terrain = urban_helsinki
+1861.1.1 = { railroad = 1 }
+1912.10.7 = {
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = FIN
+	controller = FIN
+	remove_core = RUS
+	remove_core = SWE
+}

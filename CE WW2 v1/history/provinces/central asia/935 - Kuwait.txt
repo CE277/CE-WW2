@@ -1,0 +1,28 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = IRQ
+trade_goods = fruit
+life_rating = 35
+1912.10.7 = {
+	owner = ENG
+	controller = ENG
+        colonial = 2
+        
+}
+1920.5.5 = {
+	controller = ENG
+	owner = ENG
+	remove_core = TUR
+        colonial = 2
+state_building = {
+	level = 1
+	building = fabric_factory 
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = fertilizer_factory 
+	upgrade = yes
+}
+}

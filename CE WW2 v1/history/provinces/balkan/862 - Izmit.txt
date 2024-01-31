@@ -1,0 +1,11 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+trade_goods = fruit
+life_rating = 35
+1920.5.5 = {
+	add_core = GRE
+}
+1923.10.29 = {
+	remove_core = GRE
+}

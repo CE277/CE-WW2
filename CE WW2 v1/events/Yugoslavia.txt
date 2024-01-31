@@ -1,0 +1,993 @@
+country_event = {
+
+	id = 34000
+	title = "EVTNAME34000"
+	desc = "EVTDESC34000"
+	picture = "antifascist_council_yug"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		year = 1939
+		NOT = { year = 1952 }
+		NOT = { has_country_flag = antifascist_council_yug }
+		OR = {
+			AND = {
+				GER = { government = fascist_dictatorship }
+				war_with = GER
+			}
+			AND = {
+				ITA = { government = fascist_dictatorship }
+				war_with = ITA
+			}
+		}
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "Resistance to enemies!"
+		set_country_flag = antifascist_council_yug
+        any_pop = {
+        	ideology = {
+        		value = communist
+        		factor = 0.1
+        	}
+        	consciousness = 2
+        }
+    }
+}
+
+country_event = {
+
+	id = 34001
+	title = "EVTNAME34001"
+	desc = "EVTDESC34001"
+	picture = "josip_broz_tito"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		year = 1942
+		NOT = { year = 1953 }
+		has_country_flag = antifascist_council_yug
+		war = no
+	}
+
+	mean_time_to_happen =  {
+		months = 2
+	}
+
+	option = {
+		name = "Tito in government!"
+		set_country_flag = tito_in_government
+		country_event = 60000
+	ai_chance = { factor = 1 }        
+    	}
+
+	option = {
+		name = "Stop this man now!"
+		set_country_flag = stop_tito
+		any_pop = {
+			scaled_militancy = {
+				ideology = communist
+				factor = 8
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 7
+			}
+		}
+		any_pop = {
+			limit = { has_pop_culture = croat }
+				militancy = 6
+		}
+		any_pop = {
+			limit = { has_pop_culture = slovene }
+				militancy = 5
+		}
+		any_pop = {
+			limit = { has_pop_culture = bosniak }
+				militancy = 4
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 34002
+	title = "EVTNAME34002"
+	desc = "EVTDESC34002"
+	picture = "ustashe_troops"
+
+	trigger = {
+		tag = YUG
+		year = 1936
+		NOT = { year = 1945 }
+		NOT = { government = proletarian_dictatorship }
+		OR = {
+			AND = {
+				GER = { government = fascist_dictatorship }
+				war_with = GER
+			}
+			AND = {
+				ITA = { government = fascist_dictatorship }
+				war_with = ITA
+			}
+		}
+	}
+
+	mean_time_to_happen =  {
+		months = 3
+	}
+
+	option = {
+		name = "They will pay for what they have done!"
+        	AUS_771 = { 
+		
+		any_pop = {
+			limit = { culture = serb }
+			militancy = 8
+			consciousness = 8
+			random_list = {
+				25 = { reduce_pop = 0.9 }
+				25 = { reduce_pop = 0.85 }
+				25 = { reduce_pop = 0.8 }
+				25 = { reduce_pop = 0.75 }
+			}
+		}
+		}
+		AUS_777 = { 
+		
+		any_pop = {
+			limit = { culture = serb }
+			militancy = 8
+			consciousness = 8
+			random_list = {
+				25 = { reduce_pop = 0.9 }
+				25 = { reduce_pop = 0.85 }
+				25 = { reduce_pop = 0.8 }
+				25 = { reduce_pop = 0.75 }
+			}
+		}
+		}
+		AUS_780 = { 
+		
+		any_pop = {
+			limit = { culture = serb }
+			militancy = 8
+			consciousness = 8
+			random_list = {
+				25 = { reduce_pop = 0.9 }
+				25 = { reduce_pop = 0.85 }
+				25 = { reduce_pop = 0.8 }
+				25 = { reduce_pop = 0.75 }
+			}
+		}
+		}
+
+		TUR_788 = { 
+		
+		any_pop = {
+			limit = { culture = serb }
+			militancy = 6
+			consciousness = 7
+			random_list = {
+				50 = { reduce_pop = 0.9 }
+				50 = { reduce_pop = 0.85 }
+			}
+		}
+		}
+	}
+}
+
+country_event = {
+
+	id = 34003
+	title = "EVTNAME34003"
+	desc = "EVTDESC34003"
+	picture = "broz_tito_death"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		year = 1980
+		NOT = { year = 1981 }
+		has_country_flag = tito_in_government
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "Rest in Peace..."
+		set_country_flag = titos_death
+		any_pop = {
+			limit = { has_pop_culture = croat }
+				consciousness = 6
+		}
+		any_pop = {
+			limit = { has_pop_culture = slovene }
+				consciousness = 5
+		}
+		any_pop = {
+			limit = { has_pop_culture = bosniak }
+				consciousness = 4
+		}
+	ai_chance = { factor = 1 }        
+    	}
+}
+
+country_event = {
+
+	id = 34004
+	title = "EVTNAME34004"
+	desc = "EVTDESC34004"
+	picture = "yug_political_tension"
+
+	trigger = {
+		tag = YUG
+		year = 1982
+		NOT = { year = 1990 }
+		AUS_771 = { NOT = { flashpoint_tension = 80 } }
+		has_country_flag = titos_death
+	}
+
+	mean_time_to_happen =  {
+		months = 10
+		modifier = {
+			factor = 0.7
+			average_consciousness = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 9
+		}
+	}
+
+	option = {
+		name = "Ok."
+		any_pop = {
+			limit = { has_pop_culture = croat }
+				consciousness = 2
+		}
+		AUS_771 = { flashpoint_tension = 40 }
+	ai_chance = { factor = 1 }        
+    	}
+}
+
+country_event = {
+
+	id = 34005
+	title = "EVTNAME34005"
+	desc = "EVTDESC34004"
+	picture = "yug_political_tension"
+
+	trigger = {
+		tag = YUG
+		year = 1982
+		NOT = { year = 1990 }
+		AUS_768 = { NOT = { flashpoint_tension = 80 } }
+		has_country_flag = titos_death
+	}
+
+	mean_time_to_happen =  {
+		months = 10
+		modifier = {
+			factor = 0.7
+			average_consciousness = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 9
+		}
+	}
+
+	option = {
+		name = "Ok."
+		any_pop = {
+			limit = { has_pop_culture = slovene }
+				consciousness = 2
+		}
+		AUS_768 = { flashpoint_tension = 40 }
+	ai_chance = { factor = 1 }        
+    	}
+}
+
+country_event = {
+
+	id = 34006
+	title = "EVTNAME34006"
+	desc = "EVTDESC34004"
+	picture = "yug_political_tension"
+
+	trigger = {
+		tag = YUG
+		year = 1982
+		NOT = { year = 1990 }
+		TUR_788 = { NOT = { flashpoint_tension = 80 } }
+		has_country_flag = titos_death
+	}
+
+	mean_time_to_happen =  {
+		months = 10
+		modifier = {
+			factor = 0.7
+			average_consciousness = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 9
+		}
+	}
+
+	option = {
+		name = "Ok."
+		any_pop = {
+			limit = { has_pop_culture = bosniak }
+				consciousness = 2
+		}
+		TUR_788 = { flashpoint_tension = 40 }
+	ai_chance = { factor = 1 }        
+    	}
+}
+
+country_event = {
+
+	id = 34007
+	title = "EVTNAME34007"
+	desc = "EVTDESC34004"
+	picture = "yug_political_tension"
+
+	trigger = {
+		tag = YUG
+		year = 1982
+		NOT = { year = 1990 }
+		TUR_806 = { NOT = { flashpoint_tension = 80 } }
+		has_country_flag = titos_death
+	}
+
+	mean_time_to_happen =  {
+		months = 10
+		modifier = {
+			factor = 0.7
+			average_consciousness = 7
+		}
+		modifier = {
+			factor = 0.8
+			average_consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 9
+		}
+	}
+
+	option = {
+		name = "Ok."
+		any_pop = {
+			limit = { has_pop_culture = bulgarian }
+				consciousness = 2
+		}
+		TUR_806 = { flashpoint_tension = 40 }
+	ai_chance = { factor = 1 }        
+    	}
+}
+
+country_event = {
+
+	id = 34008
+	title = "EVTNAME34008"
+	desc = "EVTDESC34008"
+	picture = "croatian_war"
+
+	trigger = {
+		tag = YUG
+		year = 1991
+		OR = {
+			NOT = { military_score = 45 }
+			has_country_flag = titos_death
+			is_disarmed = yes
+		}
+		OR = {
+			owns = 771
+			owns = 780
+		}
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "We will not allow it!"
+		ai_chance = { factor = 1 }
+		prestige = 10
+		badboy = 5
+		set_country_flag = croatian_war_of_independence
+		779 = { secede_province = CRO } 
+		793 = { secede_province = CRO }
+		777 = { secede_province = CRO }
+		771 = { secede_province = CRO } 
+		772 = { secede_province = CRO }
+		773 = { secede_province = CRO }
+		775 = { secede_province = CRO }
+		776 = { secede_province = CRO }
+		780 = { secede_province = CRO }
+		781 = { secede_province = CRO }
+		782 = { secede_province = CRO }
+		774 = { secede_province = CRO }
+		770 = { secede_province = CRO }
+		778 = { secede_province = CRO }
+		CRO = { 
+			government = democracy
+			capital = 771
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 80
+		} 
+		war = {
+			target = CRO
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+	option = {
+		name = "Respect their decision."
+		prestige = -10
+		set_country_flag = croatian_independence
+		779 = { secede_province = CRO	remove_core = YUG } 
+		793 = { secede_province = CRO	remove_core = YUG }
+		777 = { secede_province = CRO	remove_core = YUG }
+		771 = { secede_province = CRO	remove_core = YUG }
+		772 = { secede_province = CRO	remove_core = YUG }
+		773 = { secede_province = CRO	remove_core = YUG }
+		775 = { secede_province = CRO	remove_core = YUG }
+		776 = { secede_province = CRO	remove_core = YUG }
+		780 = { secede_province = CRO	remove_core = YUG }
+		781 = { secede_province = CRO	remove_core = YUG }
+		782 = { secede_province = CRO	remove_core = YUG }
+		774 = { secede_province = CRO	remove_core = YUG }
+		CRO = { 
+			government = democracy
+			capital = 771
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 30
+		} 
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 34009
+	title = "EVTNAME34009"
+	desc = "EVTDESC34009"
+	picture = "slovenian_war"
+
+	trigger = {
+		tag = YUG
+		year = 1991
+		OR = {
+			NOT = { military_score = 45 }
+			has_country_flag = titos_death
+			is_disarmed = yes
+		}
+		owns = 768
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "We will not allow it!"
+		ai_chance = { factor = 1 }
+		prestige = 10
+		badboy = 5
+		set_country_flag = ten_day_war
+		767 = { secede_province = SLO } 
+		768 = { secede_province = SLO }
+		737 = { secede_province = SLO } 
+		769 = { secede_province = SLO }
+		736 = { secede_province = TRE	remove_core = YUG }
+		SLO = { 
+			government = democracy
+			capital = 768
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 80
+		} 
+		war = {
+			target = SLO
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+	option = {
+		name = "Respect their decision."
+		set_country_flag = slovenian_independence
+		prestige = -10
+		767 = { secede_province = SLO	remove_core = YUG } 
+		768 = { secede_province = SLO	remove_core = YUG }
+		737 = { secede_province = SLO	remove_core = YUG }
+		769 = { secede_province = SLO	remove_core = YUG }
+		736 = { secede_province = TRE	remove_core = YUG }
+		SLO = { 
+			government = democracy
+			capital = 768
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 30
+		} 
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 34010
+	title = "EVTNAME34010"
+	desc = "EVTDESC34010"
+	picture = "macedonian_independence"
+
+	trigger = {
+		tag = YUG
+		year = 1991
+		OR = {
+			NOT = { military_score = 45 }
+			has_country_flag = titos_death
+			is_disarmed = yes
+		}
+		owns = 806
+		OR = {
+			has_country_flag = croatian_war_of_independence
+			has_country_flag = croatian_independence
+		}
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "We will not allow it!"
+		ai_chance = { factor = 0 }
+		prestige = 5
+		badboy = 15
+		set_country_flag = macedonian_war_of_independence
+		806 = { secede_province = MCD } 
+		807 = { secede_province = MCD }
+		1780 = { secede_province = MCD }
+		MCD = { 
+			government = democracy
+			capital = 806
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 40
+		} 
+		war = {
+			target = MCD
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+	option = {
+		name = "Respect their decision."
+		set_country_flag = macedonian_independence
+		prestige = 10
+		806 = { secede_province = MCD	remove_core = YUG } 
+		807 = { secede_province = MCD	remove_core = YUG }
+		1780 = { secede_province = MCD	remove_core = YUG }
+		MCD = { 
+			government = democracy
+			capital = 806
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 10
+		} 
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+
+	id = 34011
+	title = "EVTNAME34011"
+	desc = "EVTDESC34011"
+	picture = "bosniak_independence"
+
+	trigger = {
+		tag = YUG
+		year = 1992
+		OR = {
+			NOT = { military_score = 55 }
+			has_country_flag = titos_death
+			is_disarmed = yes
+		}
+		owns = 783
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "Support Republika Srpska!"
+		set_country_flag = bosniak_war_of_independence
+		badboy = 5
+		788 = { secede_province = RSR	add_core = RSR }
+		787 = { secede_province = RSR	add_core = RSR }
+		786 = { secede_province = RSR	add_core = RSR }
+		785 = { secede_province = RSR	add_core = RSR }
+		relation = { who = RSR value = 200 }
+		RSR = { 
+			government = presidential_dictatorship
+			capital = 785
+			ruling_party_ideology = conservative
+		}
+		
+		#Release Bosnia
+		783 = { secede_province = BOS } 
+		789 = { secede_province = BOS }
+		784 = { secede_province = BOS }
+		BOS = { 
+			government = democracy
+			capital = 783
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 50
+		} 	
+		#Start Bosnian Wars
+		BOS = { 
+
+			war = { 
+				target = RSR 
+				attacker_goal = { casus_belli = annex_core_country } 
+				defender_goal = { casus_belli = humiliate } 
+			} 
+
+		}
+		
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We will not allow it!"
+		ai_chance = { factor = 0 }
+		prestige = 5
+		badboy = 10
+		set_country_flag = bosniak_war_of_independence
+		783 = { secede_province = BOS } 
+		787 = { secede_province = BOS }
+		789 = { secede_province = BOS }
+		788 = { secede_province = BOS } 
+		786 = { secede_province = BOS }
+		785 = { secede_province = BOS }
+		784 = { secede_province = BOS }
+		BOS = { 
+			government = democracy
+			capital = 783
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 50
+		} 
+		war = {
+			target = BOS
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+	option = {
+		name = "Respect their decision."
+		set_country_flag = bosniak_independence
+		prestige = 10
+		badboy = -3
+		783 = { secede_province = BOS	remove_core = YUG } 
+		787 = { secede_province = BOS	remove_core = YUG } 
+		789 = { secede_province = BOS	remove_core = YUG } 
+		788 = { secede_province = BOS	remove_core = YUG } 
+		786 = { secede_province = BOS	remove_core = YUG } 
+		785 = { secede_province = BOS	remove_core = YUG } 
+		784 = { secede_province = BOS	remove_core = YUG } 
+		BOS = { 
+			government = democracy
+			capital = 783
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 10
+		} 
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 34012
+	title = "EVTNAME34012"
+	desc = "EVTDESC34012"
+	picture = "montenegrin_independence"
+
+	trigger = {
+		tag = YUG
+		year = 2006
+		exists = BOS
+		exists = MCD
+		owns = 800
+		NOT = { exists = MON }
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "Respect their decision."
+		set_country_flag = montenegrin_independence
+		prestige = 20
+		badboy = -5
+		2583 = { secede_province = MON	remove_core = YUG } 
+		2569 = { secede_province = MON	remove_core = YUG } 
+		2577 = { secede_province = MON	remove_core = YUG } 
+		800 = { secede_province = MON	remove_core = YUG } 
+		2582 = { secede_province = MON	remove_core = YUG } 
+		MON = { 
+			government = democracy
+			capital = 800
+			political_reform = wealth_voting
+			political_reform = appointed
+			political_reform = non_secret_ballots
+			leadership = 10
+		} 
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+
+	id = 34013
+	title = "EVTNAME34013"
+	desc = "EVTDESC34013"
+	picture = "the_vance_plan"
+
+	trigger = {
+		OR = {
+			tag = YUG
+			tag = SER
+		}
+		year = 1991
+		war_with = CRO
+		has_country_flag = croatian_war_of_independence
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "Withdraw from Croatia."
+		ai_chance = { factor = 1 }
+		badboy = -5
+		end_war = CRO
+		set_country_flag = vance_plan_YUG
+	}
+	option = {
+		name = "The war continues!"
+		badboy = 5
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 34014
+	title = "EVTNAME34014"
+	desc = "EVTDESC34014"
+	picture = "brioni_agreement"
+
+	trigger = {
+		OR = {
+			tag = YUG
+			tag = SER
+		}
+		year = 1991
+		war_with = SLO
+		has_country_flag = ten_day_war
+	}
+
+	mean_time_to_happen =  {
+		days = 10
+	}
+
+	option = {
+		name = "Accept Slovenian independence!"
+		ai_chance = { factor = 1 }
+		badboy = -5
+		end_war = SLO
+		set_country_flag = brioni_agreement
+	}
+	option = {
+		name = "The war continues!"
+		badboy = 5
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 34015
+	title = "EVTNAME34015"
+	desc = "EVTDESC34015"
+	picture = "serbian_krajina"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CRO
+		year = 1991
+		war_with = YUG
+		is_vassal = no
+	}
+
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	option = {
+		name = "We have to suppress those Serbs!"
+		ai_chance = { factor = 1 }
+		793 = { secede_province = SRK	add_core = SRK }
+		772 = { secede_province = SRK	add_core = SRK }
+		773 = { secede_province = SRK	add_core = SRK }
+		774 = { secede_province = SRK	add_core = SRK }
+		SRK = { 
+			create_alliance = YUG
+			relation = { who = YUG value = 200 }
+		}
+		SRK = { 
+			government = presidential_dictatorship
+			ruling_party_ideology = conservative
+			capital = 774
+		}
+		war = {
+			target = SRK
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = humiliate } #Auto added make puppet CB
+			call_ally = no
+		}
+	}
+}
+
+country_event = {
+	id = 34016
+	title = "EVTNAME34016"
+	desc = "EVTDESC34016"
+	picture = "norwegian_storting"
+
+	trigger = {
+    		tag = YUG
+    		year = 1992
+		OR = { 
+			government = proletarian_dictatorship 
+			government = democracy
+		}
+		is_vassal = no
+		has_country_flag = croatian_war_of_independence
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Become a new Federal Republic under a dominant party!"
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Mantain the same rule."
+		add_country_modifier = { name = national_confusion duration = 3650 }
+		any_pop = { militancy = 1 consciousness = 1 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+	id = 34017
+	title = "EVTNAME34017"
+	desc = "EVTDESC34017"
+	picture = "norwegian_storting"
+
+	trigger = {
+    		tag = YUG
+    		year = 2003
+		OR = {
+			government = presidential_dictatorship
+			government = hms_government
+		}
+		war = no
+		is_vassal = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Restore the democratic constitution."
+		country_event = 60050
+		badboy = -5
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Stick to the status quo."
+		any_owned = {
+			limit = { is_core = MON }
+			add_province_modifier = { name = nationalist_agitation duration = 1825 }
+			any_pop = { ideology = { factor = 0.10 value = reactionary } }
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}

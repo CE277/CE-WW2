@@ -1,0 +1,24 @@
+owner = KOK
+controller = KOK
+add_core = KOK
+add_core = KAZ
+trade_goods = wool
+life_rating = 35
+1912.10.7 = {
+	owner = RUS
+	controller = RUS
+}
+1920.5.5 = {
+state_building = {
+	level = 2
+	building = small_arms_factory 
+	upgrade = yes
+}
+}
+1936.1.1 = {
+state_building = {
+	level = 2
+	building = artillery_factory 
+	upgrade = yes
+}
+}

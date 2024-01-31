@@ -1,0 +1,133 @@
+#1923 Bulgarian coup d'etat
+country_event = {
+	id = 10010
+	title = "1923 Bulgarian coup d'etat"
+	desc = "EVTDESC10010"
+	picture = "1923_bulgarian_coup"
+
+	trigger = {
+    		tag = BUL
+    		year = 1923 NOT = { year = 1924 }
+		government = hms_government
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "The government of country will change."
+		ruling_party_ideology = conservative
+		any_pop = {
+				scaled_militancy = {
+					ideology = liberal
+					factor = 4
+				}
+				scaled_militancy = {
+					ideology = socialist
+					factor = 3
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = 2
+				}
+			}
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#Boris the III opposed the government 1935
+country_event = {
+	id = 10011
+	title = "Boris the III opposed the government"
+	desc = "EVTDESC10011"
+	picture = "boris_monarchy"
+
+	trigger = {
+    		tag = BUL
+    		year = 1935 NOT = { year = 1936 }
+		government = hms_government
+		is_vassal = no
+ 		war = no
+		NOT = { has_country_flag = boris_monarchy }
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "The King of our country overthrew the regime."
+		set_country_flag = boris_monarchy
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		political_reform = first_past_the_post
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#1944 Bulgarian coup d'etat
+country_event = {
+	id = 10012
+	title = "Bulgarian coup d'etat event of 1944"
+	desc = "EVTDESC10012"
+	picture = "bulgarian_partisans"
+
+	trigger = {
+    		tag = BUL
+		is_vassal = no
+ 		war = no
+		has_country_modifier = overthrow_the_tsar
+		NOT = { has_country_flag = communist_bulgaria }
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "The King of our country overthrew the regime."
+		set_country_flag = communist_bulgaria
+		remove_country_modifier = overthrow_the_tsar
+		country_event = 60000
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#Bulgarian Military Dictatorship
+country_event = {
+	id = 10013
+	title = "EVTNAME10013"
+	desc = "EVTDESC10013"
+	picture = "bulgarian_paratroopers"
+
+	trigger = {
+    		tag = BUL
+		is_vassal = no
+ 		war = no
+		has_country_flag = depose_the_tsar
+		NOT = { has_country_flag = presidental_bulgaria }
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "The King of our country overthrew the regime."
+		set_country_flag = presidental_bulgaria
+		country_event = 60010
+		ai_chance = { factor = 1 }
+	}
+
+}

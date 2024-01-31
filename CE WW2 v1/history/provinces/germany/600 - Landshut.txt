@@ -1,0 +1,17 @@
+owner = BAV
+controller = BAV
+add_core = BAV
+add_core = GER
+trade_goods = cattle
+life_rating = 40
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	remove_core = BAV
+        railroad = 3
+	
+}
+1946.1.1 = {
+	owner = USA
+	controller = USA
+}

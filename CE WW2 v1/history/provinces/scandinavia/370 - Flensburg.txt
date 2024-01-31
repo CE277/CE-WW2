@@ -1,0 +1,41 @@
+owner = DEN
+controller = DEN
+add_core = DEN
+add_core = SCH
+add_core = GER
+add_core = SCA
+trade_goods = cattle
+life_rating = 35
+
+1861.1.1 = { railroad = 2 }
+1866.1.1 = {
+	owner = PRU
+	controller = PRU
+}
+1867.4.16 = {
+	owner = NGF
+	controller = NGF
+	add_core = NGF
+}
+1871.1.18 = {
+	remove_core = NGF
+	owner = GER
+	controller = GER
+	remove_core = DEN
+	remove_core = SCA
+}
+1912.10.7 = {
+        railroad = 4
+	
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = machine_parts_factory
+	upgrade = yes
+}
+}
+1946.1.1 = {
+	owner = ENG
+	controller = ENG
+}

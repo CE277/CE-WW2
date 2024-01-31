@@ -1,0 +1,144 @@
+country_event = { 
+
+id = 1947194833
+
+major = yes
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "Collapse of Kuomingtang Government"
+desc= "The last Chinese stronghold has fallen"
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	option = {
+		name = "Very humiliating..."
+
+                        release_vassal = GXI
+                        release_vassal = PRC
+                        release_vassal = SXI
+                        release_vassal = XBI
+                        release_vassal = YNN
+                        1612 = { secede_province = ZUL }
+                        1617 = { secede_province = ZUL }
+                        1615 = { secede_province = ZUL }
+                        1614 = { secede_province = ZUL }
+                        1618 = { secede_province = ZUL }
+			1515 = { secede_province = ZUL }
+			1563 = { secede_province = ZUL }
+			1570 = { secede_province = ZUL }
+			1564 = { secede_province = ZUL }
+			1568 = { secede_province = ZUL }
+                        1567 = { secede_province = ZUL }
+			1571 = { secede_province = ZUL }
+			1565 = { secede_province = ZUL }
+			1566 = { secede_province = ZUL }
+			1569 = { secede_province = ZUL }
+			1542 = { secede_province = ZUL }
+                        1536 = { secede_province = ZUL }
+                        2221 = { secede_province = ZUL }
+                        1543 = { secede_province = ZUL }
+                        1544 = { secede_province = ZUL }
+                        1541 = { secede_province = ZUL }
+                        1537 = { secede_province = ZUL }
+                        1539 = { secede_province = ZUL }
+                        1540 = { secede_province = ZUL }
+                        1538 = { secede_province = ZUL }
+                        1475 = { secede_province = ZUL }
+                        1471 = { secede_province = ZUL }
+                        1473 = { secede_province = ZUL }
+                        1551 = { secede_province = ZUL }
+                        1605 = { secede_province = ZUL }
+                        1606 = { secede_province = ZUL }
+                        1604 = { secede_province = ZUL }
+                        1609 = { secede_province = ZUL }
+                        1608 = { secede_province = ZUL }
+                        1607 = { secede_province = ZUL }
+                        1610 = { secede_province = ZUL }
+                        1546 = { secede_province = ZUL }
+                        1611 = { secede_province = ZUL }
+                        1483 = { secede_province = ZUL }
+                        1486 = { secede_province = ZUL }
+                        1482 = { secede_province = ZUL }
+                        1484 = { secede_province = ZUL }
+                        1487 = { secede_province = ZUL }
+			1494 = {
+			secede_province = ZUL
+			}
+			1497 = {
+			secede_province = ZUL
+			}
+			1493 = {
+			secede_province = ZUL
+			}
+			1501 = {
+			secede_province = ZUL
+			}
+			1495 = {
+			secede_province = ZUL
+			}
+			1499 = {
+			secede_province = ZUL
+			}
+			1502 = {
+			secede_province = ZUL
+			}
+			1504 = {
+			secede_province = ZUL
+			}
+			
+			
+						1476  = { secede_province = HUI }
+                        1477  = { secede_province = HUI }
+                        1474 = { secede_province = HUI }
+                        1470  = { secede_province = HUI }
+                        1478  = { secede_province = HUI }
+                        1518 = { secede_province = HUI }
+                        1522  = { secede_province = HUI }
+                        1516 = { secede_province = HUI }
+                        1517 = { secede_province = HUI }
+						1514  = { secede_province = HUI }
+                        1512 = { secede_province = HUI }
+                        1509 = { secede_province = HUI }
+						1508  = { secede_province = HUI }
+                        1511 = { secede_province = HUI }
+                        1510 = { secede_province = HUI }
+						1472 = { secede_province = HUI }
+						1513 = { secede_province = HUI }
+						
+						GXI = { 1494 = { secede_province = ZUL } }
+						
+						
+		any_owned = { 
+			limit = {
+					is_core = GXI
+					}
+				secede_province = HNN
+				}
+						any_owned = { 
+			limit = {
+					is_core = YNN
+					}
+				secede_province = SZC
+				}
+			any_owned = { 
+			limit = {
+					is_core = XBI
+					}
+				secede_province = XBI
+				}
+		any_owned = { 
+			limit = {
+					is_core = SXI
+					}
+				secede_province = MJG
+				}
+				ZUL = {inherit = GXI}
+				JAP = {inherit = ZUL}
+				MCK = {inherit = MJG}
+		
+		}
+		
+	}

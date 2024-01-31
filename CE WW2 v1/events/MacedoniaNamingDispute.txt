@@ -1,0 +1,541 @@
+#Macedonia's position on the Macedonian Dispute
+country_event = {
+	id = 20001
+	title = "EVTNAME20001"
+	desc = "EVTDESC20001"
+	picture = "greek_government_1992"
+	
+	trigger = {
+		tag = MCD
+		has_global_flag = macedonian_naming_dispute
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "We reject their demands."
+		clr_country_flag = open_to_negotiations
+		clr_country_flag = accept_greek_demands
+		set_country_flag = reject_greek_demands
+		prestige = -10
+		GRE = { country_event = 20002 } #Skopje reject our demands
+		relation = { who = GRE value = -50 }
+		ai_chance = {
+			factor = 1
+			modifier = { ruling_party_ideology = socialist factor = 0 }
+		}
+	}
+
+	option = {
+		name = "We are open to negotiations."
+		clr_country_flag = reject_greek_demands
+		clr_country_flag = accept_greek_demands
+		set_country_flag = open_to_negotiations
+		prestige = 10
+		GRE = { country_event = 20002 } #Skopje is open to negotiations
+		relation = { who = GRE value = 25 }
+		ai_chance = {
+			factor = 0
+			modifier = { ruling_party_ideology = socialist factor = 1 }
+		}
+	}
+
+	option = {
+		name = "We accept the Greek demands."
+		clr_country_flag = reject_greek_demands
+		clr_country_flag = open_to_negotiations
+		set_country_flag = accept_greek_demands
+		prestige = -20
+		badboy = -5
+		GRE = { country_event = 20002 } #Skopje accept our demands
+		relation = { who = GRE value = 100 }
+		change_tag = VRD
+		all_core = { remove_core = MCD }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Skopje reject our demands
+country_event = {
+	id = 20002
+	title = "Skopje reject our demands"
+	desc = "The government in Skopje rejected our proposals for a solution."
+	picture = "macedonian_dispute"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Their decision will bring problems."
+	}
+}
+
+#Skopje is open to negotiations
+country_event = {
+	id = 20003
+	title = "Skopje is open to negotiations"
+	desc = "The government in Skopje is open to negotiations to find a bilateral solution."
+	picture = "macedonian_dispute"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Good."
+	}
+}
+
+#Skopje accept our demands
+country_event = {
+	id = 20004
+	title = "Skopje accept our demands"
+	desc = "The government in Skopje decided to accept our demands for their name and changed the name of the country to Vardaria."
+	picture = "macedonian_dispute"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+	}
+}
+
+#Mass Rally for Macedonia
+country_event = {
+	id = 20005
+	title = "EVTNAME20005"
+	desc = "EVTDESC20005"
+	picture = "greekmac_rally_1992"
+	
+	trigger = {
+		tag = GRE
+		year = 1992
+		has_global_flag = macedonian_naming_dispute
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Great! Greek people fight for their history."
+		any_pop = { militancy = -2 }
+		ai_chance = {
+			factor = 1
+			modifier = { war_policy = pacifism factor = 0 }
+		}
+	}
+
+	option = {
+		name = "These actions are unnecessary."
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = {
+			factor = 0
+			modifier = { ruling_party_ideology = communist factor = 1 }
+		}
+	}
+
+	option = {
+		name = "This crowd is a mob..."
+		any_pop = { militancy = 3 consciousness = 2 }
+		ai_chance = {
+			factor = 0
+			modifier = { war_policy = pacifism factor = 100 }
+		}
+	}
+
+}
+
+#UN recognized Republic of Macedonia as FYROM
+country_event = {
+	id = 20006
+	title = "EVTNAME20006"
+	desc = "EVTDESC20006"
+	picture = "un_security_council"
+	
+	trigger = {
+		OR = {
+			tag = GRE
+			tag = MCD
+		}
+		year = 1993
+		exists = MCD
+		MCD = { has_country_flag = reject_greek_demands }
+		has_global_flag = macedonian_naming_dispute
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Ok."
+	}
+
+}
+
+#Interim Accord between Greece and the FYROM
+country_event = {
+	id = 20007
+	title = "EVTNAME20007"
+	desc = "EVTDESC20007"
+	picture = "greek_fyrom_accord"
+	
+	trigger = {
+		tag = GRE
+		year = 1995
+		exists = MCD
+		MCD = { has_country_flag = reject_greek_demands }
+		has_global_flag = macedonian_naming_dispute
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Sign the agreement."
+		prestige = 20
+		relation = { who = MCD value = 50 }
+		MCD = { country_event = 20008 } #Interim Accord between Greece and the FYROM - MCD
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "Refuse to sign the agreement."
+		prestige = -50
+		relation = { who = MCD value = -75 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
+
+#Interim Accord between Greece and the FYROM
+country_event = {
+	id = 20008
+	title = "EVTNAME20007"
+	desc = "EVTDESC20007"
+	picture = "greek_fyrom_accord"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sign the agreement."
+		prestige = 20
+		relation = { who = GRE value = 50 }
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "Refuse to sign the agreement."
+		prestige = -50
+		relation = { who = GRE value = -75 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
+
+#Macedonia's position on the Macedonian Dispute
+country_event = {
+	id = 20009
+	title = "EVTNAME20009"
+	desc = "EVTDESC20009"
+	picture = "tsipras_kotzias"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We reject their demands."
+		clr_country_flag = open_to_negotiations
+		set_country_flag = reject_greek_demands
+		prestige = -10
+		GRE = { country_event = 20002 } #Skopje reject our demands
+		relation = { who = GRE value = -50 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "We are open to negotiations."
+		clr_country_flag = reject_greek_demands
+		set_country_flag = open_to_negotiations
+		prestige = 10
+		GRE = { country_event = 20002 } #Skopje is open to negotiations
+		relation = { who = GRE value = 25 }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Rally for Macedonia in Thessaloniki
+country_event = {
+	id = 20010
+	title = "EVTNAME20010"
+	desc = "EVTDESC20010"
+	picture = "greekmac_rally_salonika"
+	
+	trigger = {
+		tag = GRE
+		has_country_flag = gre_fyrom_negotiations
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Great! Greek people fight for their history."
+		any_pop = { militancy = -2 }
+		ai_chance = {
+			factor = 1
+			modifier = { war_policy = pacifism factor = 0 }
+		}
+	}
+
+	option = {
+		name = "These actions are unnecessary."
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = {
+			factor = 0
+			modifier = { ruling_party_ideology = communist factor = 1 }
+		}
+	}
+
+	option = {
+		name = "This crowd is a mob..."
+		any_pop = { militancy = 3 consciousness = 2 }
+		ai_chance = {
+			factor = 0
+			modifier = { war_policy = pacifism factor = 100 }
+		}
+	}
+
+}
+
+#Rally for Macedonia in Athens
+country_event = {
+	id = 20011
+	title = "EVTNAME20011"
+	desc = "EVTDESC20010"
+	picture = "greekmac_rally_athens"
+	
+	trigger = {
+		tag = GRE
+		has_country_flag = gre_fyrom_negotiations
+	}
+		
+	mean_time_to_happen = { months = 3 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Great! Greek people fight for their history."
+		any_pop = { militancy = -2 }
+		ai_chance = {
+			factor = 1
+			modifier = { war_policy = pacifism factor = 0 }
+		}
+	}
+
+	option = {
+		name = "These actions are unnecessary."
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = {
+			factor = 0
+			modifier = { ruling_party_ideology = communist factor = 1 }
+		}
+	}
+
+	option = {
+		name = "This crowd is a mob..."
+		any_pop = { militancy = 3 consciousness = 2 }
+		ai_chance = {
+			factor = 0
+			modifier = { war_policy = pacifism factor = 100 }
+		}
+	}
+
+}
+
+#Rally for Macedonia in Skopje
+country_event = {
+	id = 20012
+	title = "EVTNAME20012"
+	desc = "EVTDESC20012"
+	picture = "greekmac_rally_skopje"
+	
+	trigger = {
+		tag = MCD
+		has_country_flag = open_to_negotiations
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Great! Macedonian people fight for their history."
+		any_pop = { militancy = -2 }
+		ai_chance = {
+			factor = 1
+			modifier = { war_policy = pacifism factor = 0 }
+		}
+	}
+
+	option = {
+		name = "These actions are unnecessary."
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = {
+			factor = 0
+			modifier = { ruling_party_ideology = communist factor = 1 }
+		}
+	}
+
+	option = {
+		name = "This crowd is a mob..."
+		any_pop = { militancy = 3 consciousness = 2 }
+		ai_chance = {
+			factor = 0
+			modifier = { war_policy = pacifism factor = 100 }
+		}
+	}
+
+}
+
+#Supporters of Prespa Agreement in Skopje
+country_event = {
+	id = 20013
+	title = "EVTNAME20013"
+	desc = "EVTDESC20013"
+	picture = "mac_rally_skopje"
+	
+	trigger = {
+		tag = MCD
+		has_country_flag = open_to_negotiations
+	}
+		
+	mean_time_to_happen = { months = 3 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Great! Macedonian people fight for their future."
+		any_pop = { militancy = -2 consciousness = 1 }
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "These actions are unnecessary."
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "This crowd is a mob..."
+		any_pop = { militancy = 3 consciousness = 2 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
+	
+#Prespa Agreement
+country_event = {
+	id = 20014
+	title = "EVTNAME20014"
+	desc = "EVTDESC20014"
+	picture = "prespa_agreement"
+	
+	trigger = {
+		tag = GRE
+		exists = MCD
+		MCD = { has_country_flag = open_to_negotiations }
+		has_country_flag = gre_fyrom_negotiations
+		NOT = { has_country_flag = sign_prespa_agreement }
+		NOT = { has_country_flag = refuse_prespa_agreement }
+	}
+		
+	mean_time_to_happen = { months = 24 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Sign the agreement."
+		set_country_flag = sign_prespa_agreement
+		prestige = 20
+		any_pop = {
+			scaled_militancy = { ideology = conservative factor = 2 }
+			scaled_militancy = { ideology = reactionary factor = 3 }
+			scaled_militancy = { ideology = fascist factor = 4 }
+		}
+		relation = { who = MCD value = 75 }
+		MCD = { country_event = 20015 } #Prespa Agreement - MCD
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "Refuse to sign the agreement."
+		set_country_flag = refuse_prespa_agreement
+		prestige = -75
+		any_pop = {
+			scaled_militancy = { ideology = communist factor = 2 }
+			scaled_militancy = { ideology = socialist factor = 3 }
+		}
+		relation = { who = MCD value = -100 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
+
+#Prespa Agreement
+country_event = {
+	id = 20015
+	title = "EVTNAME20014"
+	desc = "EVTDESC20014"
+	picture = "prespa_agreement"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sign the agreement."
+		prestige = 20
+		change_tag = NMC
+		all_core = { remove_core = MCD }
+		relation = { who = GRE value = 75 }
+		ai_chance = {
+			factor = 1
+			modifier = { ruling_party_ideology = fascist factor = 0 }
+		}
+	}
+
+	option = {
+		name = "Refuse to sign the agreement."
+		prestige = -50
+		relation = { who = GRE value = -100 }
+		ai_chance = {
+			factor = 0
+			modifier = { ruling_party_ideology = fascist factor = 1 }
+		}
+	}
+
+}

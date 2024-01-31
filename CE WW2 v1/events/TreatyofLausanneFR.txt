@@ -1,0 +1,95 @@
+country_event = {
+	title = "The Anatolian Question"
+	desc = "We've defeated The Greeks and we want our old land."
+	id = 7000011
+	picture = "young_turks"
+
+	trigger = {
+		tag = TUR
+		war = no		
+		FRA = {
+			owns = 900
+		}
+		TUR = {
+			owns = 869
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Request Cilicia to France."
+		FRA = {
+			country_event = { id=7000012 days=1 }
+		}
+		prestige = 10
+		ai_chance = {
+			factor = 100
+		}
+		any_pop = {
+			limit = {
+				culture = greek
+			}
+			militancy = 2
+		}
+	}
+
+	option = {
+		name = "Better not."
+		badboy = -1
+		ai_chance = {
+			factor = 0
+		}
+		any_pop = {
+			limit = {
+				culture = greek
+			}
+			militancy = -1
+		}
+	}
+}
+
+country_event = {
+	title = "Turkey wants Cilicia!"
+	desc = "They've defeated The Greeks and they want their old land."
+	id = 7000012
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Cilicia will return to Turks, now."
+		898 = {
+			secede_province = TUR
+		}
+		900 = {
+			secede_province = TUR
+		}
+		prestige = 15
+		any_pop = {
+			limit = {
+				religion = orthodox
+			}
+			militancy = 0.5
+		}
+		TUR = {
+			country_event = { id=7000013 days=0 }
+		}
+	}
+
+}
+
+country_event = {
+	title = "France accepted!"
+	desc = "France give to Turkey Cilicia!"
+	id = 7000013
+	picture = "greek_smyrna"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}

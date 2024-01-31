@@ -1,0 +1,10 @@
+owner = ENG
+controller = ENG
+add_core = ORI
+add_core = HND
+trade_goods = tobacco
+life_rating = 32
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+}

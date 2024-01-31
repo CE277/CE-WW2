@@ -1,0 +1,65 @@
+#Egyptian Revolution
+country_event = {
+	id = 1004901
+	title = "Egyptian Revolution of 1952"
+	desc = "EVTDESC1004901"
+	picture = "nasser_revolution"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		NOT = { 1755 = { owned_by = THIS } }
+		OR = {
+			government = democracy
+			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+		}
+		year = 1952 NOT = { year = 1953 }
+		is_vassal = yes
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "Long live the Revolution!"
+		leave_alliance = ENG
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = underground_parties
+		country_event = 800050
+		add_country_modifier = {
+			name = economic_boom
+			duration = 365
+		}
+		relation = { who = RUS value = 100 }
+		RUS = { diplomatic_influence = { who = EGY value = 50 } }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Keep the infant King Fuad II."
+		prestige = -100
+		country_event = 800050
+		government = absolute_monarchy
+		ruling_party_ideology = socialist
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Stop the unconstitutional changes."
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		any_pop = {
+			consciousness = 2
+			militancy = 8
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+}

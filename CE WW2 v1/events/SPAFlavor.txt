@@ -1,0 +1,2888 @@
+country_event = {
+
+	id = 37700
+	news = yes
+	news_desc_long = "EVTDESC37700_NEWS_LONG"
+	news_desc_medium = "EVTDESC37700_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37700_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		year = 1837
+		NOT = { year = 1840 }
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1839
+		}
+	}
+
+	title = "EVTNAME37700"
+	desc = "EVTDESC37700"
+	picture = "Upperhouse"
+
+	option = {
+		name = "EVTOPTA37700"
+		clergymen = {
+			scaled_militancy = {
+				factor = -2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_militancy = {
+				factor = -3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = -2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = -3
+				ideology = reactionary
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB37700"
+		clergymen = {
+			scaled_militancy = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_militancy = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+	}
+}
+
+country_event = {
+
+	id = 37701
+	news = yes
+	news_desc_long = "EVTDESC37701_NEWS_LONG"
+	news_desc_medium = "EVTDESC37701_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37701_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		year = 1851
+		owns = 2209 #Havana
+		NOT = {
+			year = 1854
+			war_with = USA
+			}
+		}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1852
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1853
+		}
+	}
+
+	title = "EVTNAME37701"
+	desc = "EVTDESC37701"
+	picture = "Execution"
+
+	option = {
+		name = "EVTOPTA37701"
+		relation = { who = USA value = -50 }
+	}
+
+}
+
+country_event = {
+
+	id = 37702
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		year = 1851
+		owns = 2209 #Havana
+		NOT = {
+			year = 1885
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1886
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1887
+		}
+	}
+
+	title = "EVTNAME37702"
+	desc = "EVTDESC37702"
+	picture = "Cubanrebels"
+
+	option = {
+		name = "EVTOPTA37702"
+		relation = { who = USA value = -75 }
+		SPA_2209 = {
+			any_pop = {
+				limit = {
+					has_pop_culture = caribeno
+					}
+				militancy = 3
+				}
+			any_pop = {
+				limit = {
+					has_pop_culture = afro_caribeno
+					}
+				militancy = 3
+			}
+			any_pop = {
+				limit = {
+					has_pop_culture = caribeno
+					}
+				consciousness = 3
+			}
+			any_pop = {
+				limit = {
+					has_pop_culture = afro_caribeno
+					}
+				consciousness = 3
+			}
+		}
+	}
+}
+
+country_event = {
+
+	id = 37706
+	news = yes
+	news_desc_long = "EVTDESC37706_NEWS_LONG"
+	news_desc_medium = "EVTDESC37706_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37706_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		year = 1907
+		expressionism = 1
+		NOT = {
+			year = 1915
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1908
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1910
+		}
+	}
+
+	title = "EVTNAME37706"
+	desc = "EVTDESC37706"
+	picture = "picaso"
+
+	option = {
+		name = "EVTOPTA37706" 
+		prestige = 10
+	}
+
+}
+
+#Treaty of Paris, if USA is winning the war with Spain
+country_event = {
+	id = 37740
+	title = "EVTNAME37740" #The American Demand
+	desc = "EVTDESC37750"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT37740OPTA"
+		USA = { end_war = THIS }
+		money = 1000000
+		prestige = -40
+		random_owned = {
+			limit = {
+				province_id = 2209
+				NOT = { exists = CUB }
+			}
+			owner = { release = CUB }
+		}
+		random_country = {
+			limit = {
+				tag = CUB
+				vassal_of = THIS
+			}
+			THIS = { release_vassal = CUB }
+		}
+		CUB = {
+			any_pop = { militancy = -6 }
+		}
+		random_owned = {
+			limit = { province_id = 2222 }
+			secede_province = USA
+		}
+		random_country = {
+			limit = {
+				tag = PRI
+				vassal_of = THIS
+			}
+			FROM = { create_vassal = PRI }
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = SPA_1455
+					region = SPA_1459
+					region = SPA_1463
+					province_id = 2517
+				}
+			}
+			secede_province = USA
+		}
+		random_country = {
+			limit = {
+				tag = PHL
+				vassal_of = THIS
+			}
+			FROM = { create_vassal = PHL }
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 4
+		}
+		FROM = { country_event = 37741 }
+		any_country = {
+			limit = {
+				alliance_with = USA
+				war_with = THIS
+			}
+			end_war = THIS
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "EVT37740OPTB"
+		war_exhaustion = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -4
+		}
+		FROM = { country_event = 37742 }
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 37741
+	title = "EVTNAME37741" #Spain Has Agreed
+	desc = "EVTDESC37741"
+	news = yes
+	news_desc_long = "EVTDESC37741_NEWS_LONG"
+	news_desc_medium = "EVTDESC37741_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37741_NEWS_SHORT"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT37741OPTA"
+		prestige = 40
+		money = -1000000
+		relation = {
+			who = FROM
+			value = 200
+		}
+		relation = {
+			who = CUB
+			value = 200
+		}
+		diplomatic_influence = {
+			who = CUB
+			value = 200
+		}
+	}
+}
+
+country_event = {
+	id = 37742
+	title = "EVTNAME37742" #Spain Has Refused
+	desc = "EVTDESC37742"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT37742OPTA"
+		war_exhaustion = -20
+		random_country = {
+			limit = {
+				tag = FROM
+				owns = 2209
+			}
+			any_pop = {
+				limit = {
+					location = { is_core = CUB }
+				}
+				militancy = 6
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CUB
+				vassal_of = FROM
+			}
+			any_pop = { militancy = 6 }
+		}
+		any_pop = {
+			dominant_issue = {
+				value = jingoism
+				factor = 0.05
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "EVT37742OPTB"
+		badboy = 5		
+		FROM = {
+			any_owned = {
+				limit = {
+					OR = {
+						region = SPA_2209
+						region = SPA_1455
+						region = SPA_1459
+						region = SPA_1463
+						province_id = 2517
+						province_id = 2222
+					}
+				}
+				add_core = USA
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				OR = {
+					is_our_vassal = PHL
+					is_our_vassal = CUB
+					is_our_vassal = PRI
+				}
+			}
+			add_casus_belli = {
+				target = THIS
+				type = release_puppet
+				months = 240
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				owns = 2209
+			}
+			any_pop = {
+				limit = {
+					location = { is_core = CUB }
+				}
+				militancy = 6
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CUB
+				vassal_of = FROM
+			}
+			any_pop = { militancy = 6 }
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+}
+
+#Treaty of Paris, if USA wins the war
+country_event = {
+	id = 37750
+	title = "EVTNAME37740" ##The American Demand
+	desc = "EVTDESC37750"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT37750OPTA"
+		money = 1000000
+		prestige = -40
+		random_owned = {
+			limit = { province_id = 2222 }
+			secede_province = USA
+		}
+		random_country = {
+			limit = {
+				tag = PRI
+				vassal_of = THIS
+			}
+			FROM = { create_vassal = PRI }
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = SPA_1455
+					region = SPA_1459
+					region = SPA_1463
+					province_id = 2517
+				}
+			}
+			secede_province = USA
+		}
+		random_country = {
+			limit = {
+				tag = PHL
+				vassal_of = THIS
+			}
+			FROM = { create_vassal = PHL }
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 4
+		}
+		FROM = { country_event = 37741 }
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "EVT37750OPTB"
+		war_exhaustion = 10
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -4
+		}
+		FROM = { country_event = 37742 }
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+#If the USA loses the Spanish-American War
+country_event = {
+	id = 37751
+	title = "EVTNAME37751" #We Have Lost The War
+	desc = "EVTDESC37751"
+	picture = "senate_debate"
+	
+	trigger = {
+		tag = USA
+		OR = {
+			truce_with = SPA
+			truce_with = SPC
+		}
+		has_global_flag = spanish_american_war
+		NOT = {
+			has_country_flag = treaty_of_paris_1898
+			war_with = SPA
+			war_with = SPC
+		}
+		SPA = {
+			OR = {
+				exists = no
+				owns = 2209
+				is_our_vassal = CUB
+			}
+		}
+		SPC = {
+			OR = {
+				exists = no
+				owns = 2209
+				is_our_vassal = CUB
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = "EVT37751OPTA"
+		set_country_flag = treaty_of_paris_1898
+		prestige = -30
+		any_pop = {
+			scaled_militancy = {
+				issue = jingoism
+				factor = 5
+			}
+			dominant_issue = {
+				value = pacifism
+				factor = 0.20
+			}
+		}
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 1.5
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0
+				war_policy = pacifism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT37751OPTB"
+		set_country_flag = treaty_of_paris_1898
+		prestige = -30
+		badboy = 10
+		random_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+				exists = yes
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						region = SPA_2209
+						region = SPA_1455
+						region = SPA_1459
+						region = SPA_1463
+						province_id = 2517
+						province_id = 2222
+					}
+				}
+				add_core = USA
+			}
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+				exists = yes
+				OR = {
+					is_our_vassal = PHL
+					is_our_vassal = CUB
+					is_our_vassal = PRI
+				}
+			}
+			add_casus_belli = {
+				target = THIS
+				type = release_puppet
+				months = 240
+			}
+		}
+		random_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+				exists = yes
+				owns = 2209
+			}
+			any_pop = {
+				limit = {
+					location = { is_core = CUB }
+				}
+				militancy = 6
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CUB
+				OR = {
+					vassal_of = SPA
+					vassal_of = SPC
+				}
+			}
+			any_pop = { militancy = 6 }
+		}
+		any_pop = {
+			consciousness = -4
+			dominant_issue = {
+				value = jingoism
+				factor = 0.25
+			}
+		}
+		any_country = {
+			limit = {
+				capital_scope = { continent = europe }
+				any_owned_province = { is_colonial = yes }
+				NOT = { in_sphere = THIS }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = {
+				target = THIS
+				type = place_in_the_sun
+				months = 300
+			}
+			add_casus_belli = {
+				target = THIS
+				type = free_peoples
+				months = 300
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 300
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 300
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0.5
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 0
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0
+				badboy = 0.6
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+			}
+		}
+	}
+}
+	
+#events regarding the Chincha Islands War
+country_event = {
+	id = 97150
+	title = "EVTNAME97150" #The Talambó Incident
+	desc = "EVTDESC97150"
+	picture = "arrested"
+	
+	trigger = {
+		capital_scope = { continent = south_america }
+		owns = 2297
+		war = no
+		is_disarmed = no
+		is_vassal = no
+		year = 1863
+		NOT = { has_global_flag = talambo_incident_happened }
+		SPA = {
+			OR = {
+				exists = no
+				AND = {
+					war = no
+					is_greater_power = yes
+					OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+			}
+		}
+		SPC = {
+			OR = {
+				exists = no
+				AND = {
+					war = no
+					is_greater_power = yes
+					OR = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		set_global_flag = talambo_incident_happened
+	}
+	
+	option = {
+		name = "EVT97150OPTA"
+		random_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+				exists = yes
+			}
+			country_event = 97151
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 6
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = {
+		name = "EVT97150OPTB"
+		random_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+				exists = yes
+			}
+			country_event = 97152
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -3
+			dominant_issue = {
+				factor = 0.10
+				value = pro_military
+			}
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+}
+
+country_event = {
+	id = 97151
+	title = "EVTNAME97150" #The Talambó Incident - Peru Apologizes
+	desc = "EVTDESC97151"
+	news = yes
+	news_desc_long = "EVTDESC97151_NEWS_LONG"
+	news_desc_medium = "EVTDESC97151_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC97151_NEWS_SHORT"
+	picture = "arrested"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97151OPTA"
+		prestige = 5
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			consciousness = 2
+			dominant_issue = {
+				factor = 0.05
+				value = pacifism
+			}
+		}
+		ai_chance = {
+			factor = 0.95
+			modifier = {
+				factor = 0.1
+				tag = SPC
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT97151OPTB"
+		set_country_flag = restore_the_spanish_empire
+		prestige = -10
+		diplomatic_influence = { who = FROM value = -200 }
+		FROM = { set_country_flag = resisting_spanish_rule }
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = north_andean
+					primary_culture = south_andean
+					primary_culture = platinean
+				}
+			}
+			set_country_flag = resisting_spanish_rule
+			relation = { who = FROM value = -100 }
+			relation = { who = THIS value = 50 }
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = make_puppet
+			}
+		}
+		ai_chance = {
+			factor = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = 97152
+	title = "EVTNAME97150" #The Talambó Incident - Peru Refuses to Apologize
+	desc = "EVTDESC97152"
+	news = yes
+	news_desc_long = "EVTDESC97152_NEWS_LONG"
+	news_desc_medium = "EVTDESC97152_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC97152_NEWS_SHORT"
+	picture = "administration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97152OPTA"
+		prestige = -25
+		badboy = -2
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 2
+			dominant_issue = {
+				factor = 0.05
+				value = pacifism
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0.1
+				tag = SPC
+			}
+		}		
+	}
+	
+	option = {
+		name = "EVT97152OPTB"
+		set_country_flag = restore_the_spanish_empire
+		prestige = -25
+		badboy = 2
+		diplomatic_influence = { who = FROM value = -200 }
+		FROM = { set_country_flag = resisting_spanish_rule }
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			dominant_issue = {
+				factor = 0.05
+				value = jingoism
+			}
+		}
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = north_andean
+					primary_culture = south_andean
+					primary_culture = platinean
+				}
+			}
+			set_country_flag = resisting_spanish_rule
+			relation = { who = FROM value = -100 }
+			relation = { who = THIS value = 50 }
+		}
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 30
+		}
+		ai_chance = { factor = 60 }
+	}
+}
+
+country_event = {
+	id = 97155
+	title = "EVTNAME97155" #Submitting to Spain
+	desc = "EVTDESC97155"
+	picture = "treaty"
+	
+	trigger = {
+		has_country_flag = resisting_spanish_rule
+		war = no
+		OR = {
+			vassal_of = SPA
+			vassal_of = SPC
+		}
+		NOT = { has_country_flag = submitting_to_the_spanish }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	immediate = {
+		set_country_flag = submitting_to_the_spanish
+	}
+	
+	option = {
+		name = "EVT97155OPTA"
+		clr_country_flag = resisting_spanish_rule
+		prestige = -10
+		random_country = {
+			limit = { has_country_flag = restore_the_spanish_empire }
+			country_event = 97156
+		}
+	}
+}
+
+country_event = {
+	id = 97156
+	title = "EVTNAME97156" #Peru Submits
+	desc = "EVTDESC97156"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97156OPTA"
+		clr_country_flag = restore_the_spanish_empire
+		release_vassal = FROM
+		random_country = {
+			limit = { is_sphere_leader_of = FROM }
+			diplomatic_influence = { who = FROM value = -200 }
+		}
+		relation = { who = FROM value = 100 }
+		diplomatic_influence = { who = FROM value = 200 }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				tag = SPC
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT97156OPTB"
+		prestige = 10
+		random_country = {
+			limit = { is_sphere_leader_of = FROM }
+			diplomatic_influence = { who = FROM value = -200 }
+		}
+		relation = { who = FROM value = 200 }
+		diplomatic_influence = { who = FROM value = 400 }
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
+
+country_event = {
+	id = 97160
+	title = "EVTNAME97160" #The Return of the Imperialists
+	desc = "EVTDESC97160"
+	picture = "administration"
+	
+	trigger = {
+		has_country_flag = resisting_spanish_rule
+		war = no
+		NOT = { any_core = { country_units_in_province = REB } }
+		NOT = { has_country_flag = protested_the_spanish }
+		any_neighbor_country = {
+			has_country_flag = resisting_spanish_rule
+			OR = {
+				war_with = SPA
+				war_with = SPC
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_country_flag = protested_the_spanish
+	}
+	
+	option = {
+		name = "EVT97160OPTA"
+		prestige = -5
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = 3
+			dominant_issue = {
+				factor = 0.05
+				value = pacifism
+			}
+		}
+		any_neighbor_country = {
+			limit = { has_country_flag = resisting_spanish_rule }
+			relation = { who = THIS value = -50 }
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "EVT97160OPTB"
+		prestige = 5
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -3
+			dominant_issue = {
+				factor = 0.10
+				value = pro_military
+			}
+		}
+		any_neighbor_country = {
+			limit = { has_country_flag = resisting_spanish_rule }
+			relation = { who = THIS value = 50 }
+		}
+		random_country = {
+			limit = { has_country_flag = restore_the_spanish_empire }
+			country_event = 97161
+		}
+		ai_chance = {
+			factor = 75
+		}		
+	}
+}
+
+country_event = {
+	id = 97161
+	title = "EVTNAME97161" #Protest to Spain
+	desc = "EVTDESC97161"
+	picture = "administration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97161OPTA" #So be it.
+		diplomatic_influence = { who = FROM value = -200 }
+		relation = { who = FROM value = -200 }
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 120
+		}		
+	}
+}
+
+country_event = {
+	id = 97165
+	title = "EVTNAME97165" #Appeal to America?
+	desc = "EVTDESC97165"
+	picture = "administration"
+	
+	trigger = {
+		has_country_flag = resisting_spanish_rule
+		OR = {
+			war = no
+			war_with = SPC
+			war_with = SPA
+		}
+		OR = {
+			any_neighbor_country = {
+				OR = {
+					vassal_of = SPC
+					vassal_of = SPA
+					tag = SPA
+					tag = SPC
+				}
+			}
+			AND = {
+				OR = {
+					SPA = { has_country_flag = restore_the_spanish_empire }
+					SPC = { has_country_flag = restore_the_spanish_empire }
+				}
+				OR = {
+					war_with = SPC
+					war_with = SPA
+				}
+			}
+		}
+		NOT = { has_country_flag = appealed_to_americans }
+		USA = {
+			war = no
+			is_greater_power = yes
+			relation = { who = THIS value = 0 }
+			NOT = {
+				alliance_with = THIS
+				is_sphere_leader_of = THIS
+				truce_with = THIS
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	
+	immediate = {
+		set_country_flag = appealed_to_americans
+	}
+	
+	option = {
+		name = "EVT97165OPTA"
+		prestige = 5
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -3
+			dominant_issue = {
+				factor = 0.10
+				value = pro_military
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}		
+	}
+	
+	option = {
+		name = "EVT97165OPTB"
+		prestige = -5
+		USA = { country_event = 97166 }
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				war = yes
+				NOT = {
+					any_greater_power = { war_with = THIS }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 97166
+	title = "EVTNAME97166" #Request for Aid
+	desc = "EVTDESC97166"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97166OPTA"
+		prestige = -10
+		relation = { who = FROM value = -50 }
+		diplomatic_influence = { who = FROM value = -50 }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "EVT97166OPTB"
+		create_alliance = FROM
+		relation = { who = FROM value = 200 }
+		random_country = {
+			limit = {
+				is_sphere_leader_of = FROM
+				NOT = { tag = THIS }
+			}
+			diplomatic_influence = { who = FROM value = -100 }
+			relation = { who = THIS value = -50 }
+		}
+		diplomatic_influence = { who = FROM value = 200 }
+		random_country = {
+			limit = {
+				tag = SPA
+				has_country_flag = restore_the_spanish_empire
+				is_greater_power = no
+			}
+			THIS = {
+				diplomatic_influence = { who = SPA value = -100 }
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SPC
+				has_country_flag = restore_the_spanish_empire
+				is_greater_power = no
+			}
+			THIS = {
+				diplomatic_influence = { who = SPC value = -100 }
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = restore_the_spanish_empire }
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = {
+				target = THIS
+				type = free_peoples
+				months = 24
+			}
+			add_casus_belli = {
+				target = THIS
+				type = release_puppet
+				months = 24
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
+
+country_event = {
+	id = 97167
+	title = "EVTNAME97167" #Beginning of the Hispano-Moroccan War 
+	desc = "EVTDESC97167"
+	picture = "spanish_moroccan_war"
+
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+			}
+		owns = 1689
+		OR = {
+			government = hms_government
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			}
+		MOR = {
+			NOT = { has_leader = "Sultan Abd al-Rahman" }
+			owns = 1695
+			exists = yes
+			ai = yes
+			civilized = no
+			}
+		NOT = {
+			truce_with = THIS
+			owns = 1695 }
+		}
+		
+	mean_time_to_happen = { days = 30 }
+		
+	option = {
+		name = "EVT97167OPTA"
+		prestige = -2
+		random_country = {
+			limit = { is_sphere_leader_of = MOR }
+			diplomatic_influence = { who = MOR value = -300 }
+			relation = { who = MOR value = -300 }
+			leave_alliance = MOR
+			casus_belli = {
+				target = MOR
+				type = add_to_sphere
+				months = 120
+			}
+		}
+		MOR = { define_general = {
+				name = "Sultan Muhammad IV"
+				personality = coolminded
+				background = aristocrat
+				}
+			}
+		relation = {
+			who = MOR
+			value = -300
+			}
+		diplomatic_influence = {
+			who = MOR
+			value = -200
+		}
+		casus_belli = { target = MOR type = treaty_port_casus_belli months = 40 }
+		1689 = {
+			add_province_modifier = { name = nationalist_agitation duration = 365 }
+			any_pop = {
+				random_list = {
+						34 = { }
+						33 = { }
+						33 = { reduce_pop = 0.99 }
+					}
+				}
+			}
+		ai_chance = {
+			factor = 0.05
+			modifier = {
+				factor = 100
+				MOR = {
+				part_of_sphere = yes
+				NOT = { in_sphere = THIS }
+					}
+				}
+			}
+		}
+	option = {
+		name = "EVT97167OPTB"
+		prestige = -2
+		random_country = { limit = { is_sphere_leader_of = MOR }
+			diplomatic_influence = { who = MOR value = -300 }
+			relation = { who = MOR value = -300 }
+			leave_alliance = MOR
+			casus_belli = {
+				target = MOR
+				type = add_to_sphere
+				months = 120
+			}
+		}
+		diplomatic_influence = {
+			who = MOR
+			value = -300
+		}
+		MOR = { define_general = {
+				name = "Sultan Muhammad IV"
+				personality = coolminded
+				background = aristocrat
+				}
+			}
+		1689 = { add_province_modifier = {
+				name = nationalist_agitation
+				duration = 3650
+				}
+			any_pop = {
+				random_list = {
+					34 = { reduce_pop = 0.99 }
+					33 = { reduce_pop = 0.98 }
+					33 = { reduce_pop = 0.97 }
+				}	}
+			}
+			ai_chance = {
+			factor = 0.01
+			}
+		}
+		
+	option = {
+		name = "EVT98641OPTB"
+		prestige = -2
+		random_country = { limit = { is_sphere_leader_of = MOR }
+			diplomatic_influence = { who = MOR value = -300 }
+			relation = { who = MOR value = -300 }
+			leave_alliance = MOR
+			casus_belli = {
+				target = MOR
+				type = add_to_sphere
+				months = 120
+			}
+		}
+		MOR = { define_general = {
+				name = "Sultan Muhammad IV"
+				personality = coolminded
+				background = aristocrat
+				}
+			}
+		relation = {
+			who = MOR
+			value = -300
+			}
+		diplomatic_influence = {
+			who = MOR
+			value = -300
+		}
+		 casus_belli = {
+			target = MOR
+			type = humiliate
+			months = 100
+			}
+		war = {
+			target = MOR
+				attacker_goal = { casus_belli = treaty_port_casus_belli }
+				defender_goal = {
+					casus_belli = acquire_core_state
+					state_province_id = 1689
+			}
+		 }
+		1689 = { add_province_modifier = {
+				name = nationalist_agitation
+				duration = 365
+				}
+			any_pop = {
+				random_list = {
+						34 = { }
+						33 = { }
+						33 = { reduce_pop = 0.99 }
+					}
+				}
+			}
+		ai_chance = {
+			factor = 0.94
+			modifier = { 
+				factor = 0
+				MOR = {
+				part_of_sphere = yes
+				NOT = { in_sphere = THIS }
+					}
+				}
+			}
+		}
+	}
+
+	
+country_event = {
+	id = 971700
+	title = "EVTNAME971700" #The Moroccan Question
+	desc = "EVTDESC971700"
+	picture = "tangier_photo"
+
+	is_triggered_only = yes
+		
+	option = {
+		name = "EVT971700OPTA" #Agree
+		badboy = -1
+		relation = { who = FROM value = 50 }
+		FROM = { country_event = 971710 }
+		ai_chance = { 
+			factor = 80 
+			modifier = {
+				factor = 40
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 90
+				FROM = { is_greater_power = yes }
+			}
+			
+			modifier = {
+				factor = 90
+				alliance_with = FROM
+			}
+			
+			modifier = {
+				factor = 90
+				is_sphere_leader_of = FROM
+			}
+		}
+	}
+	option = {
+		name = "EVT971700OPTB"
+		relation = { who = FROM value = -150 }
+		FROM = {
+			leave_alliance = THIS
+			end_military_access = THIS
+			casus_belli = {
+				target = THIS
+				type = take_from_sphere
+				months = 36
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 36
+			}
+		}
+		random_country = {
+			limit = { is_greater_power = yes }
+			relation = { who = THIS value = -75 }
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 36
+			}
+		}
+		diplomatic_influence = { who = FROM value = -400 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 10
+				FROM = { is_greater_power = yes }
+				}
+			}
+		}
+	}
+	
+country_event = {
+	id = 971710
+	title = "EVTNAME971710" #The Partition of Morocco
+	desc = "EVTDESC971710"
+	picture = "carlistas_en_miranda"
+
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = { inherit = MOR }
+		any_owned = { limit = { is_core = MOR NOT = { province_id = 1689 province_id = 2590 region = MOR_1696 } } secede_province = FROM }
+	}
+		
+	option = {
+		name = "EVT971710OPTA"
+		FROM = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1686
+						province_id = 1687
+						province_id = 1688
+						province_id = 1695
+					}
+				}
+				secede_province = THIS
+			}
+			any_owned = { limit = { province_id = 1686 } secede_province = MOR }
+		}
+		1696 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
+		1773 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
+		1774 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
+		MOR = {
+			civilized = yes
+			nationalvalue = nv_autocracy
+			capital = 1686
+			government = hms_government
+			prestige = -50
+			tech_school =  unciv_tech_school
+		}
+		FROM = {
+			create_vassal = MOR
+			create_alliance = MOR
+			diplomatic_influence = { who = MOR value = 400 }
+			relation = { who = MOR value = 400 }
+		}
+		diplomatic_influence = { who = MOR value = 50 }
+	}
+}
+
+#Effects of current Constitution
+country_event = {
+	id = 8014714
+	title = "Effects of current Constitution"
+	desc = "EVTDESC8014714"
+	picture = "spanish_constitution"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1920
+		NOT = { year = 1921 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Ok."
+		any_pop = {
+        		ideology = {
+        			value = liberal
+        			factor = 0.25
+        		}
+        	}
+		ai_chance = { factor = 1 }
+	}
+	
+}
+
+#People's Consciousness
+country_event = {
+	id = 8014715
+	title = "People's Consciousness"
+	desc = "EVTDESC8014715"
+	picture = "spanish_people"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1922
+		NOT = { year = 1924 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Ok."
+		any_pop = {
+        		ideology = {
+        			value = liberal
+        			factor = 0.25
+        		}
+        		consciousness = 3
+        	}
+		ai_chance = { factor = 1 }
+	}
+	
+}
+
+#1923 Spanish General Election
+country_event = {
+	id = 8014716
+	title = "1923 Spanish General Election"
+	desc = "EVTDESC8014716"
+	picture = "spanish_general_election"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1923
+		NOT = { year = 1924 }
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = "Let the election campaign begin."
+		set_country_flag = spanish_election
+		election = yes
+		ai_chance = { factor = 1 }
+	}
+	
+}
+
+#The coup of Miguel Primo de Rivera
+country_event = {
+	id = 8014717
+	title = "The coup of Miguel Primo de Rivera"
+	desc = "EVTDESC8014717"
+	picture = "spanish_coup_1923"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1923
+		NOT = { year = 1925 }
+		election = no
+		has_country_flag = spanish_election
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = "Ok."
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Stick to the status quo."
+		any_pop = { militancy = 1 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#The deposition of Alfonso XIII
+country_event = {
+	id = 8014718
+	title = "The Deposition of Alfonso XIII"
+	desc = "EVTDESC8014718"
+	picture = "spanish_second_republic"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1931
+		NOT = { year = 1932 }
+		government = absolute_monarchy
+		has_country_flag = spanish_election
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Viva la libertad!"
+		country_event = 60050
+		ruling_party_ideology = socialist
+		political_reform = wealth_voting
+		political_reform = state_equal_weight
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		any_pop = {
+        		ideology = {
+        			value = socialist
+        			factor = 0.35
+        		}
+		militancy = -4
+        	}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Spanish Civil War
+country_event = {
+	id = 8014719
+	title = "Spanish Civil War"
+	desc = "EVTDESC8014730"
+	picture = "spanish_civil_war"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1936
+		NOT = { year = 1937 }
+		government = democracy
+		has_country_flag = spanish_election
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Stay in power at any cost!"
+		set_country_flag = spanish_civil_war2
+		ai_chance = { factor = 100 }
+		prestige = 10
+		badboy = 5
+		474 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		} 
+		476 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		477 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		479 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		480 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		481 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		482 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		483 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		486 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		493 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		494 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		495 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		497 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		502 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		509 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		510 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		511 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		512 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		513 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		2136 = { 
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		any_pop = {
+        		ideology = {
+        			value = fascist
+        			factor = 0.15
+        		}
+        	}
+	}
+	option = {
+		name = "Surrender"
+		country_event = 60030
+		prestige = -5
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Siege of Alcazar
+country_event = {
+ 	id = 8014720
+	title = "Siege of Alcazar"
+	desc = "EVTDESC8014720"
+ 	picture = "siege_of_alcazar"
+
+	trigger = {
+		tag = SPA
+		owns = 489
+		year = 1936 NOT = { year = 1937 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			85 = { country_event = 80147201 } #We lost the battle
+			15 = { country_event = 80147202 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		set_country_flag = nationalist_alcazar
+		489 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147201
+	picture = "siege_of_alcazar"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		set_country_flag = nationalist_alcazar
+		prestige = -5
+		489 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147202
+	picture = "siege_of_alcazar"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		}
+}
+
+#Battle of Irun
+country_event = {
+ 	id = 8014721
+	title = "Battle of Irun"
+	desc = "EVTDESC8014721"
+ 	picture = "battle_of_irun"
+
+	trigger = {
+		tag = SPA
+		year = 1936 NOT = { year = 1937 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			80 = { country_event = 80147211 } #We lost the battle
+			20 = { country_event = 80147212 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		prestige = -10
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147211
+	picture = "battle_of_irun"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -5
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147212
+	picture = "battle_of_irun"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		}
+}
+
+#Siege of Madrid
+country_event = {
+ 	id = 8014722
+	title = "Siege of Madrid"
+	desc = "EVTDESC8014722"
+ 	picture = "siege_of_madrid"
+
+	trigger = {
+		tag = SPA
+		year = 1936 NOT = { year = 1938 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Resist!"
+		set_country_flag = siege_of_madrid
+		487 = {
+			add_province_modifier = {
+				name = siege_of_madrid
+				duration = 1095
+			}
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+}
+
+#Battle of Malaga
+country_event = {
+ 	id = 8014723
+	title = "Battle of Malaga"
+	desc = "EVTDESC8014723"
+ 	picture = "battle_of_malaga"
+
+	trigger = {
+		tag = SPA
+		owns = 514
+		year = 1937 NOT = { year = 1938 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 15 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			85 = { country_event = 80147231 } #We lost the battle
+			15 = { country_event = 80147232 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		514 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147231
+	picture = "battle_of_malaga"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -5
+		514 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147232
+	picture = "battle_of_malaga"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		}
+}
+
+#Battle of Guadalajara
+country_event = {
+ 	id = 8014724
+	title = "Battle of Guadalajara"
+	desc = "EVTDESC8014724"
+ 	picture = "battle_of_guadalajara"
+
+	trigger = {
+		tag = SPA
+		owns = 488
+		year = 1937 NOT = { year = 1938 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			20 = { country_event = 80147241 } #We lost the battle
+			80 = { country_event = 80147242 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		488 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147241
+	picture = "battle_of_guadalajara"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -5
+		488 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147242
+	picture = "battle_of_guadalajara"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		}
+}
+
+#Battle of Bilbao
+country_event = {
+ 	id = 8014725
+	title = "Battle of Bilbao"
+	desc = "EVTDESC8014725"
+ 	picture = "battle_of_bilbao"
+
+	trigger = {
+		tag = SPA
+		owns = 492
+		year = 1937 NOT = { year = 1938 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			80 = { country_event = 80147251 } #We lost the battle
+			20 = { country_event = 80147252 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		492 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		478 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		475 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147251
+	picture = "battle_of_bilbao"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -5
+		492 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		478 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+		475 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 730
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147252
+	picture = "battle_of_bilbao"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		}
+}
+
+#Battle of Brunete
+country_event = {
+ 	id = 8014726
+	title = "Battle of Brunete"
+	desc = "EVTDESC8014726"
+ 	picture = "battle_of_brunete"
+
+	trigger = {
+		tag = SPA
+		year = 1937 NOT = { year = 1938 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			80 = { country_event = 80147261 } #We lost the battle
+			20 = { country_event = 80147262 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		prestige = -15
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147261
+	picture = "battle_of_brunete"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -5
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147262
+	picture = "battle_of_brunete"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		}
+}
+
+#Battle of the Ebro
+country_event = {
+ 	id = 8014727
+	title = "Battle of the Ebro"
+	desc = "EVTDESC8014727"
+ 	picture = "battle_of_ebro"
+
+	trigger = {
+		tag = SPA
+		year = 1938 NOT = { year = 1939 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			85 = { country_event = 80147271 } #We lost the battle
+			15 = { country_event = 80147272 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		prestige = -25
+		set_country_flag = nationalist_ebro
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147271
+	picture = "battle_of_ebro"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -10
+		set_country_flag = nationalist_ebro
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147272
+	picture = "battle_of_ebro"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 10
+		}
+}
+
+#Battle of Teruel
+country_event = {
+ 	id = 8014728
+	title = "Battle of Teruel"
+	desc = "EVTDESC8014728"
+ 	picture = "battle_of_teruel"
+
+	trigger = {
+		tag = SPA
+		year = 1938 NOT = { year = 1939 }
+		government = democracy
+		has_country_flag = spanish_civil_war2
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			85 = { country_event = 80147281 } #We lost the battle
+			15 = { country_event = 80147282 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		prestige = -25
+		set_country_flag = nationalist_teruel
+		497 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 365
+			}
+		}
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle and we are retreating..."
+	id = 80147281
+	picture = "battle_of_teruel"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -10
+		set_country_flag = nationalist_teruel
+		497 = {
+			add_province_modifier = {
+				name = spanish_nationalists
+				duration = 365
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and we enforce them to retreat!"
+	id = 80147282
+	picture = "battle_of_teruel"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 10
+		}
+}
+
+#Nationalists Victory in Spanish Civil War
+country_event = {
+	id = 8014729
+	title = "Nationalists Victory in Spanish Civil War"
+	desc = "EVTDESC8007568"
+	picture = "spa_nationalists"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1939
+		NOT = { year = 1940 }
+		has_country_flag = spanish_civil_war2
+		has_country_flag = nationalist_alcazar
+		has_country_flag = nationalist_ebro
+		has_country_flag = nationalist_teruel
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+    		name = "The new regime."
+		set_country_flag = nationalists_victory
+		any_pop = { militancy = 5 consciousness = 5 }
+		change_tag = SPC
+		prestige = 20
+		any_owned = {
+			limit = {
+				is_core = SPA
+			}
+			remove_core = SPA
+		}
+		country_event = 60030
+	}
+}
+
+#Spanish Civil War
+country_event = {
+	id = 8014730
+	title = "Spanish Civil War"
+	desc = "EVTDESC8014730"
+	picture = "spanish_civil_war"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		year = 1936
+		NOT = { year = 1937 }
+		government = democracy
+		NOT = { has_country_flag = spanish_election }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "Stay in power at any cost!"
+		ai_chance = { factor = 100 }
+		prestige = 10
+		badboy = 5
+		set_global_flag = spanish_civil_war
+		474 = { secede_province = SPC } 
+		476 = { secede_province = SPC }
+		477 = { secede_province = SPC }
+		479 = { secede_province = SPC }
+		480 = { secede_province = SPC }
+		481 = { secede_province = SPC }
+		482 = { secede_province = SPC }
+		483 = { secede_province = SPC }
+		486 = { secede_province = SPC }
+		493 = { secede_province = SPC }
+		494 = { secede_province = SPC }
+		495 = { secede_province = SPC }
+		497 = { secede_province = SPC }
+		502 = { secede_province = SPC }
+		509 = { secede_province = SPC }
+		510 = { secede_province = SPC }
+		511 = { secede_province = SPC }
+		512 = { secede_province = SPC }
+		513 = { secede_province = SPC }
+		2136 = { secede_province = SPC }
+		SPC = { 
+			government = fascist_dictatorship
+			leadership = 80
+		} 
+		casus_belli = { target = SPC type = civil_war months = 12 }
+		war = {
+			target = SPC 
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+	}
+	option = {
+		name = "Surrender"
+		country_event = 60030
+		prestige = -5
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Lead the Nationalists"
+		set_global_flag = spanish_civil_war
+		474 = { secede_province = SPC } 
+		476 = { secede_province = SPC }
+		477 = { secede_province = SPC }
+		479 = { secede_province = SPC }
+		480 = { secede_province = SPC }
+		481 = { secede_province = SPC }
+		482 = { secede_province = SPC }
+		483 = { secede_province = SPC }
+		486 = { secede_province = SPC }
+		493 = { secede_province = SPC }
+		494 = { secede_province = SPC }
+		495 = { secede_province = SPC }
+		497 = { secede_province = SPC }
+		502 = { secede_province = SPC }
+		509 = { secede_province = SPC }
+		510 = { secede_province = SPC }
+		511 = { secede_province = SPC }
+		512 = { secede_province = SPC }
+		513 = { secede_province = SPC }
+		2136 = { secede_province = SPC }
+		SPC = { 
+			government = fascist_dictatorship
+			leadership = 80
+		} 
+		change_tag_no_core_switch = SPC 
+		casus_belli = { target = SPA type = civil_war months = 12 }
+		war = {
+			target = SPA 
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}	
+	}
+}
+
+country_event = {
+	id = 8007567
+	title = "Republicans Victory in Spanish Civil War"
+	desc = "EVTDESC8007567"
+	picture = "spa_republicans"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+	        NOT = { exists = SPC }
+		owns = 474
+		has_global_flag = spanish_civil_war
+		NOT = { has_country_flag = republicans_victory }
+		NOT = { has_country_flag = spanish_election }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+    		name = "Victoria!"
+		set_country_flag = republicans_victory
+		any_pop = { militancy = -7.5 consciousness = -5 }
+		prestige = 20
+		clr_global_flag = spanish_civil_war
+	}
+}
+
+country_event = {
+	id = 8007568
+	title = "Nationalists Victory in Spanish Civil War"
+	desc = "EVTDESC8007568"
+	picture = "spa_nationalists"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPC
+	        NOT = { exists = SPA }
+		owns = 487 
+		has_global_flag = spanish_civil_war
+		NOT = { has_country_flag = nationalists_victory }
+		NOT = { has_country_flag = spanish_election }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+    		name = "Victoria!"
+		set_country_flag = nationalists_victory
+		any_pop = { militancy = 5 consciousness = 5 }
+		prestige = 20
+		any_owned = {
+			limit = {
+				is_core = SPA
+			}
+			remove_core = SPA
+			add_core = SPC
+		}
+		capital = 487
+		clr_global_flag = spanish_civil_war
+	}
+}
+
+country_event = {
+  id = 8006217
+  title = "Spanish transition to Democracy"
+  desc = "EVTDESC8006217"
+  picture = "spanish_child"
+  fire_only_once = yes
+
+  trigger = {
+  OR = {
+    tag = SPA
+    tag = SPC
+	}
+	year = 1975 NOT = { year = 1976 }
+	government = fascist_dictatorship
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "Return to Constitutionalism"
+	government = hms_government
+	ruling_party_ideology = liberal
+	political_reform = universal_weighted_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = free_press
+	political_reform = state_controlled
+	political_reform = secret_ballots
+	political_reform = culture_voting_only
+	prestige = 5
+	random_country = {
+            limit = {
+                tag = POR
+                exists = yes
+                vassal_of = THIS
+            }
+           release_vassal = POR
+        }
+	POR = { 
+		government = democracy 
+		ruling_party_ideology = conservative
+		political_reform = universal_weighted_voting
+		political_reform = appointed
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = state_controlled
+		political_reform = secret_ballots
+		political_reform = culture_voting_only
+	} 
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = "No!"
+	any_pop = { militancy = 5.0 consciousness = 4 }
+	prestige = -25
+	ai_chance = { factor = 0 }
+  }
+
+}

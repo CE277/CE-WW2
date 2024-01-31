@@ -1,0 +1,9 @@
+owner = UCAcontroller = UCAadd_core = UCAadd_core = HON
+trade_goods = fruitlife_rating = 30terrain = urban_tegucigalpa1861.1.1 = {	owner = HON	controller = HON}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = fabric_factory
+	upgrade = yes
+}
+}

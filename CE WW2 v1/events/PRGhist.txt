@@ -1,0 +1,28 @@
+#Event to normalize a small paraguay relations
+country_event = {
+	id = 700017
+	title = "EVTNAME700016"
+	desc = "EVTDESC700016"
+	picture = "greatpowers"
+	
+	trigger = {
+		tag = PRG
+		NOT = { owns = 2420 }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVTOPT700016A"
+		BRZ = { relation = { who = THIS value = 210 } }
+		2420 = { remove_core = PRG }
+		ai_chance = { factor = 100 }
+		}
+	option = {
+		name = "EVTOPT700016B"
+		any_neighbor_country = { relation = { who = THIS value = -400 } }
+		ai_chance = { factor = 0 }
+		}
+	}

@@ -1,0 +1,272 @@
+political_decisions = {
+
+	colonial_assimilation_policy = {
+		picture = "por_colonial_policy"
+		potential = {
+			tag = POR
+			year = 1920
+			NOT = { has_country_flag = colonial_assimilation_policy }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = colonial_assimilation_policy
+			prestige = 20
+			any_owned = {
+				limit = {
+			   		is_colonial = yes
+				}
+				add_province_modifier = {
+					name = colonial_assimilation_policy
+					duration = 3650
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	army_reorganization = {
+		picture = "army_reorganization"
+		potential = {
+			tag = POR
+			year = 1920
+			NOT = { has_country_flag = army_reorganization }
+		}
+		
+		allow = {
+			war = no
+			money = 500000
+			breech_loaded_rifles = 1
+			army_risk_management = 1
+			steam_turbine = 1
+		}
+
+		effect = {
+			set_country_flag = army_reorganization
+			prestige = 50
+			treasury = -250000
+			add_country_modifier = {
+				name = military_reorganization
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	endless_sea = {
+		picture = "endless_sea"
+		potential = {
+			tag = POR
+			year = 1920
+			NOT = { has_country_flag = endless_sea }
+		}
+		
+		allow = {
+			war = no
+			money = 50000
+			naval_risk_management = 1
+			owns = 1303
+			owns = 1303
+			owns = 1446
+		}
+
+		effect = {
+			set_country_flag = endless_sea
+			treasury = -25000
+			prestige = 70
+			1303 = { fort = 1 }
+			1303 = { fort = 1 }
+			1446 = { fort = 1 }
+			add_country_modifier = {
+				name = endless_sea
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	popular_front = {
+		picture = "popular_front"
+		potential = {
+			tag = POR
+			year = 1936
+			NOT = { has_country_flag = proudly_alone }
+			NOT = { has_country_flag = estado_novo }
+			NOT = { has_country_flag = popular_front }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = popular_front
+			prestige = 40
+			add_country_modifier = {
+				name = popular_front
+				duration = -1
+			}
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.05
+        			}
+				ideology = {
+        				value = socialist
+        				factor = 0.05
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	support_the_spanish_republicans = {
+		picture = "spanish_republicans"
+		potential = {
+			tag = POR
+			has_country_flag = popular_front
+			has_global_flag = spanish_civil_war
+			NOT = { has_country_flag = support_the_spanish_republicans }
+		}
+		
+		allow = {
+			money = 7000
+			SPA = { war_with = SPC }
+		}
+
+		effect = {
+			set_country_flag = support_the_spanish_republicans
+			prestige = 40
+			treasury = -5000
+			SPA = { 
+				treasury = 5000
+				add_country_modifier = { name = support_government duration = 730 } 
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	estado_novo = {
+		picture = "estado_novo"
+		potential = {
+			tag = POR
+			year = 1936
+			NOT = { has_country_flag = proudly_alone }
+			NOT = { has_country_flag = estado_novo }
+			NOT = { has_country_flag = popular_front }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = estado_novo
+			prestige = 40
+			add_country_modifier = {
+				name = estado_novo
+				duration = -1
+			}
+			any_pop = {
+        			ideology = {
+        				value = fascist
+        				factor = 0.05
+        			}
+				ideology = {
+        				value = reactionary
+        				factor = 0.05
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	support_the_spanish_nationalists = {
+		picture = "spanish_nationalists"
+		potential = {
+			tag = POR
+			has_country_flag = estado_novo
+			has_global_flag = spanish_civil_war
+			NOT = { has_country_flag = support_the_spanish_nationalists }
+		}
+		
+		allow = {
+			money = 7000
+			SPC = { war_with = SPA }
+		}
+
+		effect = {
+			set_country_flag = support_the_spanish_nationalists
+			prestige = -5
+			treasury = -5000
+			SPC = { 
+				treasury = 5000
+				add_country_modifier = { name = support_government duration = 730 } 
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	proudly_alone = {
+		picture = "proudly_alone"
+		potential = {
+			tag = POR
+			year = 1936
+			NOT = { has_country_flag = proudly_alone }
+			NOT = { has_country_flag = estado_novo }
+			NOT = { has_country_flag = popular_front }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = proudly_alone
+			prestige = 50
+			add_country_modifier = {
+				name = proudly_alone
+				duration = -1
+			}
+			any_pop = {
+        			ideology = {
+        				value = conservative
+        				factor = 0.05
+        			}
+				ideology = {
+        				value = liberal
+        				factor = 0.05
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

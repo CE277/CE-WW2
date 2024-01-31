@@ -1,0 +1,12 @@
+political_decisions = {
+	prc_communist = {
+		potential = {
+                        tag = PRC
+		        government = presidential_dictatorship
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			government = proletarian_dictatorship 

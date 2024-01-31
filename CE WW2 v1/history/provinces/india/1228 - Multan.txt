@@ -1,0 +1,15 @@
+owner = PAN
+controller = PAN
+add_core = PAK
+add_core = PAN
+add_core = HND
+trade_goods = tea
+life_rating = 32
+1861.1.1 = {
+	owner = ENG
+	controller = ENG
+}
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+}

@@ -1,0 +1,64 @@
+political_decisions = {
+
+	high_education = {
+		picture = modern_university
+		potential = {
+			NOT = { has_country_flag = high_education }
+		}
+		
+		allow = {
+			money = 800000
+			school_reforms = good_schools
+			OR = { AND = {
+					civilized = yes
+					social_science = 1
+				}
+				
+			}
+			literacy = 0.3
+			
+		}
+		
+		effect = {
+			money = -500000
+			prestige = 50
+			plurality = 10
+			militancy = -2
+			consciousness = 1.5
+			add_country_modifier = { name = high_education duration = -1 }
+			set_country_flag = high_education
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+	high_health = {
+		picture = modern_hospital
+		potential = {
+			NOT = { has_country_flag = high_health }
+		}
+		
+		allow = {
+			money = 800000
+			health_care = good_health_care
+			OR = { AND = {
+					civilized = yes
+					synthetic_polymers = 1
+				}
+				
+			}
+			
+		}
+		
+		effect = {
+			money = -500000
+			prestige = 50
+			plurality = 10
+			militancy = -2
+			consciousness = 1.5
+			add_country_modifier = { name = high_health duration = -1 }
+			set_country_flag = high_health
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,22 @@
+owner = YNN
+controller = YNN
+add_core = CHI
+add_core = YNN
+trade_goods = tea
+life_rating = 32
+railroad = 2
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+}
+1920.1.1 = {
+	owner = ZHI
+	controller = ZHI
+	add_core = KMT
+}
+1928.1.1 = {
+	owner = KMT
+	controller = KMT
+	add_core = PRC
+	remove_core = CHI
+}

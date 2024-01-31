@@ -1,0 +1,10 @@
+owner = UCA
+controller = UCA
+add_core = UCA
+add_core = GUA
+trade_goods = fish
+life_rating = 31
+1861.10.7 = {
+	controller = GUA
+	owner = GUA
+}

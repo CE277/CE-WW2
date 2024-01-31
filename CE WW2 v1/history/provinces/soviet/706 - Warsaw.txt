@@ -1,0 +1,37 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = POL
+trade_goods = cattle
+life_rating = 35
+terrain = urban_warsaw
+#state_building = {
+#	level = 1
+#	building = fabric_factory
+#	upgrade = yes
+#}
+1861.1.1 = { 
+	state_building = {
+		level = 1
+		building = regular_clothes_factory
+		upgrade = yes
+	} 
+}
+1861.1.1 = { railroad = 3 }1912.10.7 = {
+        railroad = 5
+	
+}
+1920.5.5 = {
+	owner = POL
+	controller = POL
+	remove_core = RUS
+        railroad = 3
+	
+}
+1936.1.1 = {
+state_building = {
+	level = 4
+	building = regular_clothes_factory
+	upgrade = yes
+}
+}

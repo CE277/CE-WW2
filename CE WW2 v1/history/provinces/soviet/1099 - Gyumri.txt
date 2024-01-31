@@ -1,0 +1,18 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = ARM
+trade_goods = wool
+life_rating = 35
+1912.10.7 = {
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = ARM
+	controller = ARM
+}
+1920.11.29 = {
+	owner = RUS
+	controller = RUS
+}

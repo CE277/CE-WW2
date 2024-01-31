@@ -1,0 +1,19 @@
+owner = QNG
+controller = QNG
+add_core = CHI
+trade_goods = tea
+terrain = urban_taipei
+life_rating = 35
+1912.1.1 = {
+        owner = JAP
+        controller = JAP
+	add_core = KMT
+        colonial = 2
+	naval_base = 2
+}
+1936.1.1 = {
+	owner = JAP
+	controller = JAP
+	remove_core = CHI
+        colonial = 2
+}

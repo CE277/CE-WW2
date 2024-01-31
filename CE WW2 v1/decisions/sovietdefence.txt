@@ -1,0 +1,28 @@
+political_decisions = {
+	soviet_defence = {
+		picture = "sov1"
+		potential = {
+                        tag = RUS
+                        RUS = { war_with = GER }
+			NOT = { has_country_flag = sov_defence }
+		}
+		
+		allow = {
+			has_country_flag = the_turning_tide
+                        }
+
+		effect = {
+			set_country_flag = sov_defence
+			prestige = 50
+                        war_exhaustion = -10
+                        activate_technology = deep_defense_system
+			add_country_modifier = {
+				name = desperate_defence
+				duration = 200
+			}
+			
+			}
+			
+			}
+			
+}

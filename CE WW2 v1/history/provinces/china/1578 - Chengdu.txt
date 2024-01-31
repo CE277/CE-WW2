@@ -1,0 +1,21 @@
+owner = YNN
+controller = YNN
+add_core = YNN
+add_core = CHI
+trade_goods = wool
+life_rating = 32
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+}
+1920.1.1 = {
+	owner = SZC
+	controller = SZC
+	add_core = KMT
+}
+1928.1.1 = {
+	owner = KMT
+	controller = KMT
+	add_core = PRC
+	remove_core = CHI
+}

@@ -1,0 +1,23 @@
+owner = ENG
+controller = ENG
+add_core = AST
+trade_goods = wool
+life_rating = 30
+terrain = urban_melbourne
+1861.1.1 = {
+	state_building = {
+		level = 1
+		building = fabric_factory
+		upgrade = yes
+	}
+}
+1861.1.1 = { railroad = 1 }
+1912.10.7 = {
+	owner = AST
+	controller = AST
+state_building = {
+	level = 2
+	building = glass_factory
+	upgrade = yes
+}
+}

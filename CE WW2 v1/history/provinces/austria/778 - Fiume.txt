@@ -1,0 +1,33 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = CRO
+add_core = YUG
+trade_goods = fruit
+life_rating = 35
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = FIU
+	controller = FIU
+	add_core = FIU
+	add_core = ITA
+	remove_core = AUS
+	remove_core = KUK
+        railroad = 3
+	
+}
+1924.2.22 = {
+	owner = ITA
+	controller = ITA
+	remove_core = FIU
+}
+1946.1.1 = {
+	owner = YUG
+	controller = YUG
+}

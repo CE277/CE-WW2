@@ -1,0 +1,12 @@
+owner = POR
+controller = POR
+add_core = TMR
+trade_goods = fish
+life_rating = 35
+colonial = 2
+terrain = hills
+1912.10.7 = {
+	owner = NET
+	controller = NET
+}
+

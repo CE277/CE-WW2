@@ -1,0 +1,234 @@
+political_decisions = {
+annex_ai_new_zealand = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = AST
+			year = 1936
+			NOT = { year = 1937 }
+			exists = NZL
+			ai = no
+			NOT = { has_global_flag = ai_new_zealand_annexed }
+		}
+		
+		allow = {
+			NZL = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			NZL = {
+				annex_to = AST
+			}
+			set_global_flag = ai_new_zealand_annexed
+		}
+	}
+
+annex_ai_belgium = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = NET
+			year = 1936
+			NOT = { year = 1937 }
+			exists = BEL
+			ai = no
+			NOT = { has_global_flag = ai_belgium_annexed }
+		}
+		
+		allow = {
+			BEL = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			BEL = {
+				annex_to = NET
+			}
+			set_global_flag = ai_belgium_annexed
+		}
+	}
+
+annex_ai_egypt = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = ENG
+			year = 1936
+			NOT = { year = 1937 }
+			exists = EGY
+			ai = no
+			NOT = { has_global_flag = ai_egypt_annexed }
+		}
+		
+		allow = {
+			EGY = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			EGY = {
+				annex_to = ENG
+			}
+			set_global_flag = ai_egypt_annexed
+		}
+	}
+	RP_tech = {
+		potential = {
+			NOT = { has_country_flag = rp_tech }
+		}
+		
+		allow = {
+		
+                        }
+
+		effect = {
+			set_country_flag = rp_tech
+                        activate_technology = idealism
+		}
+	}
+	india_tech = {
+		potential = {
+                        tag = RJA
+						NOT = { has_country_flag = india_tech }
+		}
+		
+		allow = {
+			
+                        }
+
+		effect = {
+			set_country_flag = india_tech
+			prestige = 1
+                        activate_technology = basic_chemistry
+                        activate_technology = strategic_mobility
+						activate_technology = muzzle_loaded_rifles
+						activate_technology = iron_muzzle_loaded_artillery
+						activate_technology = army_professionalism
+			}	
+	}
+			
+annex_ai_luxembourg = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = NET
+			year = 1936
+			NOT = { year = 1937 }
+			exists = LUX
+			ai = no
+			NOT = { has_global_flag = ai_luxembourg_annexed }
+		}
+		
+		allow = {
+			LUX = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			LUX = {
+				annex_to = NET
+			}
+			set_global_flag = ai_luxembourg_annexed
+		}
+	}	
+annex_ai_south_africa = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = ENG
+			year = 1936
+			NOT = { year = 1937 }
+			exists = SAF
+			ai = no
+			NOT = { has_global_flag = ai_south_africa_annexed }
+		}
+		
+		allow = {
+			SAF = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			SAF = {
+				annex_to = ENG
+			}
+			add_accepted_culture = boer
+			set_global_flag = ai_south_africa_annexed
+		}
+	}	
+
+annex_ai_Oceania = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = CAN
+			year = 1936
+			NOT = { year = 1937 }
+			exists = AST
+			ai = no
+			NOT = { has_global_flag = ai_oceania_annexed }
+		}
+		
+		allow = {
+			AST = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			AST = {
+				annex_to = CAN
+			}
+			NZL = {
+				annex_to = CAN
+			}
+			add_accepted_culture = australian
+			set_global_flag = ai_oceania_annexed
+		}
+	}		
+	annex_ai_Siam = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = JAP
+			year = 1941
+			NOT = { year = 1942 }
+			exists = SIA
+			ai = no
+			NOT = { has_global_flag = ai_Siam_annexed }
+		}
+		
+		allow = {
+			SIA = {
+				ai = yes
+			}
+			year = 1941
+			NOT = { year = 1942 }
+		}
+		
+		effect = {
+			SIA = {
+				annex_to = JAP
+			}
+			set_global_flag = ai_Siam_annexed
+		}
+	}	
+}

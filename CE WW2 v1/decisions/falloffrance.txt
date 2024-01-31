@@ -1,0 +1,38 @@
+political_decisions = {
+
+	fall_of_france = {
+		picture = establishvichy
+		potential = {
+			NOT = { has_country_flag = fallfrance }
+                        tag = GER
+		}
+		allow = {
+                        FRA  = { war_with = GER }
+			government = fascist_dictatorship
+			NOT = { FRA = { controls = 425 } }
+			NOT = { FRA = { controls = 468 } }
+			NOT = { FRA = { controls = 458 } }
+		}
+		
+		effect = {
+			set_country_flag = fallfrance
+            FRA = { country_event = 19471948 }
+		}
+	}
+
+	takeindochina = {
+		picture = map_east_indies
+		potential = {
+                        tag = JAP
+                        NOT = { has_country_flag = takeindochina }
+		}
+		allow = {
+			VFR = { owns = 430 } 
+		}
+		
+		effect = {
+			set_country_flag = takeindochina
+            VFR = { country_event = 194719489 }
+		}
+	}
+}

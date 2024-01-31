@@ -1,0 +1,13 @@
+owner = AUS
+controller = AUS
+add_core = VEN
+trade_goods = iron
+life_rating = 35
+1861.1.1 = { railroad = 2 }1866.8.23 = {
+	controller = ITA
+	owner = ITA
+        railroad = 3
+        
+}
+
+

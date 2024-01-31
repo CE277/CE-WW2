@@ -1,0 +1,146 @@
+#Maastricht Treaty
+country_event = {
+	id = 443052
+	title = "EVTNAME443052"
+	desc = "EVTDESC443052"
+	picture = "maastricht_treaty"
+	major = yes
+
+	trigger = {
+		year = 1993
+		tag = NET
+		has_global_flag = eec_foundation
+		NOT = { has_global_flag = maastricht_treaty }
+			
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Great!"
+		set_global_flag = maastricht_treaty
+		prestige = 50
+		all_core = { add_core = XEU }
+		any_country = { 
+			limit = { has_country_flag = xeu_ambition
+			} 
+			all_core = { add_core = XEU }
+		}
+		ai_chance = { factor = 1 }
+  }
+
+}
+
+#The EU recommends us to change our European geopolitics
+country_event = {
+	id = 600100
+	title = "The EU recommends us to change our European geopolitics"
+	desc = "EVTDESC600100"
+	picture = "eu_commission"
+
+	trigger = {
+    		AND = {
+			has_country_modifier = xeu_member
+			has_global_flag = maastricht_treaty
+		}
+		any_owned_province = { 
+			is_capital = no
+			is_core = XEU
+			NOT = { is_core = THIS } 
+			is_colonial = no
+		}
+		is_vassal = no
+ 		war = no
+		NOT = { has_country_flag = xeu_member_compliance }
+  	}
+
+
+  	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "We will comply with the EU recommendations."
+		prestige = 75
+		badboy = -10
+		set_country_flag = xeu_member_compliance
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 0 NOT = { OR = { ruling_party_ideology = liberal ruling_party_ideology = socialist } } }
+		}
+	}
+
+	option = {
+		name = "We fought for these lands! We will not give in so easily."
+		prestige = -25
+		badboy = 1.2
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 0 OR = { ruling_party_ideology = liberal ruling_party_ideology = socialist } }
+		}
+	}
+
+}
+
+#Return of  EU member's Territories Giver
+country_event = {
+	id = 600101
+	title = "Return of $FROMCOUNTRY$'s former territories?"
+	desc = "EVTDESC1412160"
+	picture = "eu_commission"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Return the territories!"
+		prestige = 0.1
+		badboy = -10
+		relation = { who = FROM value = 100 }
+		diplomatic_influence = { who = FROM value = 100 }
+		any_owned = { limit = { is_core = FROM	NOT = { is_core = THIS } } secede_province = FROM }
+		FROM = { country_event = 600102 }
+		clr_country_flag = xeu_member_compliance
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Hold onto the territories!"
+		prestige = -100
+		badboy = 15
+		relation = { who = FROM value = -100 }
+		FROM = { country_event = 600103 }
+		clr_country_flag = xeu_member_compliance
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Return of Territories Success
+country_event = {
+	id = 600102
+	title = "$FROMCOUNTRY$ Returns $COUNTRY_ADJ$ Lands"
+	desc = "EVTDESC1412161"
+	picture = "territorial_negotiations"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent!"
+		prestige = 2
+		any_pop = { militancy = -5 }
+	}
+}
+
+#Return of Territories Failure
+country_event = {
+	id = 600103
+	title = "$FROMCOUNTRY$ Refuses to Return $COUNTRY_ADJ$ Lands"
+	desc = "EVTDESC1412162"
+	picture = "territorial_negotiations"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Terrible!"
+		ai_chance = { factor = 1 modifier = { factor = 0 stronger_army_than = FROM } }
+	}
+
+}

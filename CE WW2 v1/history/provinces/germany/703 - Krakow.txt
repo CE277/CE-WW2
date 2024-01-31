@@ -1,0 +1,23 @@
+owner = KRA
+controller = KRA
+add_core = KRA
+add_core = POL
+trade_goods = coal
+life_rating = 40
+terrain = urban_krakow
+1846.11.16 = {
+	owner = AUS
+	controller = AUS
+        railroad = 3
+	
+}
+1867.1.1 = {
+	owner = KUK
+	controller = KUK
+}
+1920.5.5 = {
+	owner = POL
+	controller = POL
+        railroad = 3
+	
+}

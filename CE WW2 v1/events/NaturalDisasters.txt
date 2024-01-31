@@ -1,0 +1,292 @@
+#Tunguska Meteor Strike
+country_event = {
+	id = 21500
+	title = "EVTNAME21500"
+	desc = "EVTDESC21500"
+	news = yes
+	news_desc_long = "EVTDESC21500_NEWS_LONG"
+	news_desc_medium = "EVTDESC21500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC21500_NEWS_SHORT"
+	picture = "destroyed_forest"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1908
+		NOT = { year = 1920 }
+		owns = 2694
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "EVTOPTA21500"
+		random_owned = { limit = { province_id = 2694 has_building = railroad } infrastructure = -6 }
+		random_owned = { limit = { province_id = 2694 has_building = fort } fort = -6 }
+		random_owned = { limit = { province_id = 2694 total_pops = 10000 } any_pop = { reduce_pop = 0.99 } }
+	}
+}
+
+#Krakatoa Explodes
+country_event = {
+	id = 21510
+	title = "EVTNAME21510"
+	desc = "EVTDESC21510"
+	news = yes
+	news_desc_long = "EVTDESC21510_NEWS_LONG"
+	news_desc_medium = "EVTDESC21510_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC21510_NEWS_SHORT"
+	picture = "pelee"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1883
+		NOT = { year = 1920 }
+		owns = 1414
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "EVTOPTA21510"
+		1414 = { any_pop = { reduce_pop = 0.96 } life_rating = -1 }
+		random_owned = { limit = { province_id = 1414 has_building = railroad } infrastructure = -1 }
+		random_owned = { limit = { province_id = 1414 has_building = fort } fort = -1 }
+		random_owned = { limit = { province_id = 1413 has_building = naval_base } naval_base = -1 }
+	}
+}
+
+# San Francisco Earthquake
+country_event = {
+	id = 21520
+	title = "EVTNAME21520"
+	desc = "EVTDESC21520"
+	news = yes
+	news_desc_long = "EVTDESC21520_NEWS_LONG"
+	news_desc_medium = "EVTDESC21520_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC21520_NEWS_SHORT"
+	picture = "earthquake"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1906
+		NOT = { year = 1920 }
+		owns = 104
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "EVTOPTA21520"
+		random_owned = { limit = { province_id = 104 has_building = railroad } infrastructure = -6 }
+		random_owned = { limit = { province_id = 104 has_building = fort } fort = -6 }
+		random_owned = { limit = { province_id = 104 has_building = naval_base } naval_base = -6 }
+		104 = { add_province_modifier = { name = earthquake_devastation duration = 365 } any_pop = { reduce_pop = 0.98 } }
+		treasury = -50000
+	}
+}
+
+# 1877 Iquique earthquake
+country_event = {
+	id = 21521
+	title = "EVTNAME21521"
+	desc = "EVTDESC21521"
+	picture = "arica_after_earthquake"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1877
+		NOT = { year = 1920 }
+		owns = 2307
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "EVTOPTA21520"
+		2307 = { infrastructure = -1 fort = -1 naval_base = -1 any_pop = { reduce_pop = 0.99 } add_province_modifier = { name = earthquake_devastation duration = 90 } }
+		2309 = { infrastructure = -3 fort = -3 naval_base = -3 any_pop = { reduce_pop = 0.99 } add_province_modifier = { name = earthquake_devastation duration = 182 } }
+		2305 = { infrastructure = -3 fort = -3 naval_base = -3 any_pop = { reduce_pop = 0.99 } add_province_modifier = { name = earthquake_devastation duration = 182 } }
+	}
+}
+
+# 1868 Arica Earthquake
+country_event = {
+	id = 21522
+	title = "EVTNAME21522"
+	desc = "EVTDESC21522"
+	picture = "arica_after_earthquake"
+	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1868
+		NOT = { year = 1920 }
+		owns = 2308
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "EVTOPTA21520"
+		2307 = { infrastructure = -4 fort = -4 naval_base = -4 any_pop = { reduce_pop = 0.98 } add_province_modifier = { name = earthquake_devastation duration = 182 } }
+		2308 = { infrastructure = -6 fort = -6 naval_base = -6 any_pop = { reduce_pop = 0.97 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
+		2578 = { infrastructure = -6 fort = -6 naval_base = -6 any_pop = { reduce_pop = 0.97 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
+		2304 = { infrastructure = -4 fort = -4 naval_base = -4 any_pop = { reduce_pop = 0.98 } add_province_modifier = { name = earthquake_devastation duration = 182 } }
+		2297 = { infrastructure = -2 fort = -2 naval_base = -2 any_pop = { reduce_pop = 0.99 } add_province_modifier = { name = earthquake_devastation duration = 90 } }
+		658 = { infrastructure = -1 fort = -1 naval_base = -1 }
+	}
+}
+
+# 1960 Valdivia earthquake
+country_event = {
+	id = 21528
+	title = "EVTNAME21528"
+	desc = "EVTDESC21528"
+	picture = "valdivia_earthquake"
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1960
+		NOT = { year = 1961 }
+		owns = 2328
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "EVTOPTA21520"
+		random_owned = {
+			limit = { province_id = 2328 has_building = railroad }
+			infrastructure = -6
+		}
+		random_owned = {
+			limit = { province_id = 2329 has_building = railroad }
+			infrastructure = -6
+		}
+		random_owned = {
+			limit = { province_id = 2331 has_building = railroad }
+			infrastructure = -6
+		}
+		random_owned = {
+			limit = { province_id = 2332 has_building = railroad }
+			infrastructure = -6
+		}
+		random_owned = {
+			limit = { province_id = 2328 has_building = fort }
+			fort = -6
+		}
+		random_owned = {
+			limit = { province_id = 2329 has_building = fort }
+			fort = -6
+		}
+		random_owned = {
+			limit = { province_id = 2331 has_building = fort }
+			fort = -6
+		}
+		random_owned = {
+			limit = { province_id = 2332 has_building = fort }
+			fort = -6
+		}
+		random_owned = {
+			limit = { province_id = 2328 has_building = naval_base }
+			naval_base = -6
+		}
+		random_owned = {
+			limit = { province_id = 2329 has_building = naval_base }
+			naval_base = -6
+		}
+		random_owned = {
+			limit = { province_id = 2331 has_building = naval_base }
+			naval_base = -6
+		}
+		random_owned = {
+			limit = { province_id = 2332 has_building = naval_base }
+			naval_base = -6
+		}
+		random_owned = {
+			limit = { province_id = 2328 }
+			random_list = {
+				50 = { any_pop = { reduce_pop = 0.9 } }
+				50 = { any_pop = { reduce_pop = 0.8 } }
+			}
+		}
+		random_owned = {
+			limit = { province_id = 2329 }
+			random_list = {
+				50 = { any_pop = { reduce_pop = 0.9 } }
+				50 = { any_pop = { reduce_pop = 0.8 } }
+			}
+		}
+		random_owned = {
+			limit = { province_id = 2332 }
+			random_list = {
+				50 = { any_pop = { reduce_pop = 0.9 } }
+				50 = { any_pop = { reduce_pop = 0.8 } }
+			}
+		}
+		any_owned = {
+			limit = { 
+				OR = {
+					province_id = 2328
+					province_id = 2329
+					province_id = 2331
+					province_id = 2332
+				}
+			}
+			 add_province_modifier = { name = earthquake_devastation duration = 730 }
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Repeatable Earthquake
+#province_event = {
+#	id = 21527
+#	title = "EVTNAME21527"
+#	desc = "EVTDESC21527"
+#	
+#	allow_multiple_instances = no
+#	
+#	trigger = {
+#		AND = {
+#			province_id = 843
+#			#year = 1881
+#			#NOT = { year = 1883 }
+#			NOT = { has_province_flag = earthquake_happened }
+#		}	
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 6
+#	}
+#	
+#	option = {
+#		name = "EVTOPTA21520"
+#		set_province_flag = earthquake_happened
+#		random = { chance = 75 add_province_modifier = { name = earthquake_devastation duration = 182 } }
+#		random = { chance = 75 any_pop = { reduce_pop = 0.99 } }
+#		random = { chance = 25 infrastructure = -1 }
+#		random = { chance = 25 fort = -1 }
+#	}
+#}
+
+

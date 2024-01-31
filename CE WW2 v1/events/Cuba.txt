@@ -1,0 +1,344 @@
+#1952 Cuban coup d'etat
+country_event = {
+	id = 800380
+	title = "1952 Cuban coup d'etat"
+	desc = "EVTDESC800380"
+	picture = "1952_cuban_coup"
+
+	trigger = {
+    		tag = CUB
+    		year = 1952 NOT = { year = 1955 }
+		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fulgencio Batista is the new Prestident."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		diplomatic_influence = {
+			who = USA
+			value = 200
+		}
+		relation = {
+			who = USA
+			value = 200
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "No."
+		add_country_modifier = { name = national_confusion duration = 3650 }
+		any_pop = { militancy = 4 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Attack on Moncada Barracks
+country_event = {
+ 	id = 800381
+	title = "Attack on Moncada Barracks"
+	desc = "EVTDESC800381"
+ 	picture = "moncada_barracks"
+
+	trigger = {
+		tag = CUB
+		year = 1953 NOT = { year = 1956 }
+		government = presidential_dictatorship
+		NOT = { government = proletarian_dictatorship }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Let's see if they will succeed."
+		any_pop = { consciousness = 2 }
+		random_list = {
+			50 = { country_event = 800382 } #Mission Successful
+			50 = { country_event = 800383 } #Mission Failure
+		}
+		set_country_flag = castro_rebellion
+		ai_chance = { factor = 1 }
+  }
+}
+
+country_event = {
+	title = "Mission Successful"
+	desc = "The Attack on Moncada Barracks was successful!"
+	id = 800382
+	picture = "moncada_barracks_successful"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = -5
+		}
+}
+
+country_event = {
+	title = "Mission Failure"
+	desc = "The Attack on Moncada Barracks failed..."
+	id = 800383
+	picture = "moncada_barracks_failure"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ok."
+		prestige = 5
+		}
+}
+
+#Castro and Che Guevara arrives
+country_event = {
+ 	id = 800384
+	title = "Castro and Che Guevara arrives"
+	desc = "EVTDESC800384"
+ 	picture = "granma_landing"
+
+	trigger = {
+		tag = CUB
+		year = 1956 NOT = { year = 1958 }
+		government = presidential_dictatorship
+		NOT = { government = proletarian_dictatorship }
+		has_country_flag = castro_rebellion
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Attack them!"
+		2212 = {
+			add_province_modifier = {
+				name = cuban_revolutionaries
+				duration = 1095
+			}
+		}
+		random_list = {
+			80 = { country_event = 800385 } #Revolutionaries escaped
+			20 = { country_event = 800386 } #We Eliminated them
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Leave them."
+		2212 = {
+			add_province_modifier = {
+				name = cuban_revolutionaries
+				duration = 1095
+			}
+		}
+		any_pop = { consciousness = 2 }
+		ai_chance = { factor = 0 }
+  	}
+
+	option = {
+		name = "Try to kill Castro and Che Guevara!"
+		2212 = {
+			add_province_modifier = {
+				name = cuban_revolutionaries
+				duration = 1095
+			}
+		}
+		random_list = {
+			98 = { country_event = 800385 } #Revolutionaries escaped
+			2 = { country_event = 800387 } #We kill their leaders
+		}
+		any_pop = { consciousness = 4 }
+		any_pop = { militancy = 5 }
+		ai_chance = { factor = 0 }
+  	}
+}
+
+country_event = {
+	title = "Revolutionaries escaped"
+	desc = "Unfortunately revolutionaries escaped into the Sierra Maestra mountains"
+	id = 800385
+	picture = "cub_revolutionaries_escaped"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Reorganization!"
+		}
+}
+
+country_event = {
+	title = "We Eliminated them"
+	desc = "We win the battle and we eliminate them"
+	id = 800386
+	picture = "cub_revolutionaries_eliminated"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good!"
+		prestige = 5
+		clr_country_flag = castro_rebellion
+		}
+}
+
+country_event = {
+	title = "We kill their leaders"
+	desc = "Castro and Che Guevara killed during the battle"
+	id = 800387
+	picture = "castro_che_guevara"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We finished with them, for ever..."
+		clr_country_flag = castro_rebellion
+		}
+}
+
+#Revolutionaries regrouped
+country_event = {
+ 	id = 800388
+	title = "Revolutionaries regrouped"
+	desc = "EVTDESC800388"
+ 	picture = "cuban_revolutionaries"
+
+	trigger = {
+		tag = CUB
+		year = 1957 NOT = { year = 1958 }
+		government = presidential_dictatorship
+		NOT = { government = proletarian_dictatorship }
+		has_country_flag = castro_rebellion
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		2211 = {
+			add_province_modifier = {
+				name = cuban_revolutionaries
+				duration = 730
+			}
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+}
+
+#Battle of Santa Clara
+country_event = {
+ 	id = 800389
+	title = "Battle of Santa Clara"
+	desc = "EVTDESC800389"
+ 	picture = "battle_of_santa_clara"
+
+	trigger = {
+		tag = CUB
+		year = 1958 NOT = { year = 1960 }
+		government = presidential_dictatorship
+		NOT = { government = proletarian_dictatorship }
+		has_country_flag = castro_rebellion
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight them!"
+		random_list = {
+			70 = { country_event = 800390 } #We lost the battle
+			30 = { country_event = 800391 } #We win the battle
+		}
+		ai_chance = { factor = 1 }
+  	}
+
+	option = {
+		name = "Retreat!"
+		set_country_flag = cuban_rebellion_succeed
+		2210 = {
+			add_province_modifier = {
+				name = cuban_revolutionaries
+				duration = 730
+			}
+		}
+		ai_chance = { factor = 0 }
+  	}
+
+}
+
+country_event = {
+	title = "We lost the battle"
+	desc = "We lost the battle of Santa Clara."
+	id = 800390
+	picture = "battle_of_santa_clara"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a disaster!"
+		set_country_flag = cuban_rebellion_succeed
+		2210 = {
+			add_province_modifier = {
+				name = cuban_revolutionaries
+				duration = 200
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "We win the battle"
+	desc = "We win the battle and the revolutionaries retreat!"
+	id = 800391
+	picture = "battle_of_santa_clara"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}
+
+#Castro comes to power
+country_event = {
+	id = 800392
+	title = "Castro comes to power"
+	desc = "EVTDESC800392"
+	picture = "cub_revolutionaries_victory"
+
+	trigger = {
+    		tag = CUB
+    		year = 1959
+		has_country_flag = cuban_rebellion_succeed
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "Viva la Revolution!"
+		country_event = 60000
+		ai_chance = { factor = 1 }
+	}
+
+}

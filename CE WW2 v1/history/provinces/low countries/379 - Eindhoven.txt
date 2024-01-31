@@ -1,0 +1,18 @@
+owner = NET
+controller = NET
+add_core = NET
+trade_goods = coal
+life_rating = 35
+1912.1.1 = {
+        railroad = 5
+	
+}
+
+
+1936.1.1 = {
+state_building = {
+	level = 3
+	building = cement_factory
+	upgrade = yes
+}
+}

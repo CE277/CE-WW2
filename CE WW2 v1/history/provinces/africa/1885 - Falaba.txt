@@ -1,0 +1,10 @@
+trade_goods = coffee
+life_rating = 15
+1885.1.1 = {
+	trade_goods = oil
+}
+1912.10.7 = {
+	owner = FRA
+	controller = FRA
+        colonial = 2
+}

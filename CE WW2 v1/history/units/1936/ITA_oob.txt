@@ -1,0 +1,520 @@
+leader = {
+	name = "Giovanni Messe"
+	date = 1939.1.1
+	type = land
+        picture = messe
+	personality = disciplined
+	background = cursed_luck
+	prestige = 0.5
+}
+
+#Starting Relations
+
+AUS = {
+	value = -125		#relation
+}
+
+FRA = {
+	value = 125		#relation
+
+}
+
+ALB = {
+	value = 125
+	level = 4
+	influence_value = 25
+}
+
+army = {
+	name = "Army 1"
+	location = 1849
+	regiment = {
+		name= "Hussars" 
+        home = 749
+		type = cavalry
+	}
+	regiment = {
+		name= "Hussars" 
+        home = 749
+		type = cavalry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Infantry" 
+        home = 749
+		type = infantry
+	}
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+	}
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+	}
+	regiment = {
+		name= "Artillery"
+        home = 749
+		type = artillery
+	}
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+	}
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+	}
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+	}
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+        }
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+        }
+	regiment = {
+		name= "Artillery" 
+        home = 749
+		type = artillery
+        }
+	regiment = {
+		name= "Artillery" 
+	    home = 749	
+		type = artillery
+        }
+}
+
+
+navy = {
+	name = "Italian Fleet"
+	location = 749
+	ship = {
+		name= "Re Galantuomo"
+		type = manowar
+	}
+
+	ship = {
+		name= "Carlo Alberto"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Duca di Genova"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Garibaldi"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Maria Adelaide"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Vittorio Emanuele"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Partenope"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Regina"
+		type = ironclad
+	}
+
+	ship = {
+		name= "San Michele"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Archimede"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Constituzione"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Ercole"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Ettore Fieramosca"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Fulminante"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Governolo"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Guiscardo"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Roberto"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Ruggiero"
+		type = ironclad
+	}
+
+	ship = {
+		name= "Tancredi"
+		type = ironclad
+	}
+	
+		ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+			ship = {
+		name= "Cruser"
+		type = cruiser
+	}
+	
+				ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+					ship = {
+		name= "Submarine"
+		type = battleship
+	}
+	
+	
+
+}
+
+navy = {
+	name = "1st Transport Squadron"
+	location = 749
+	ship = {
+		name= "1st Transport Flotilla"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+
+}
+
+
+
+navy = {
+	name = "Transportï Italiano"
+	location = 749	ship = {
+		name= "1st Transporto Roma"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "2nd Transporto Roma"
+		type = steam_transport
+	}
+
+     ship = {
+		name= "2nd Transporto Roma"
+		type = steam_transport
+	}
+     ship = {
+		name= "3nd Transporto Roma"
+		type = steam_transport
+	}
+
+     ship = {
+		name= "4nd Transporto Roma"
+		type = steam_transport
+	}
+
+    ship = {
+		   name= "5nd Transporto Roma"
+		   type = steam_transport
+	}
+
+     ship = {
+		name= "6nd Transporto Roma"
+		type = steam_transport
+	}
+
+     ship = {
+		name= "7nd Transporto Roma"
+		type = steam_transport
+	}
+
+     ship = {
+		name= "8nd Transporto Roma"
+		type = steam_transport
+	}
+
+     ship = {
+		name= "9nd Transporto Roma"
+		type = steam_transport
+	}
+
+}
+

@@ -1,0 +1,50 @@
+political_decisions = {
+
+	anton = {
+                picture = caseanton
+		potential = {
+			NOT = { has_country_flag = anton }
+                        tag = GER
+		}
+		allow = {
+                        FRA = { war_with = VFR }
+                        ALD = { all_core = { NOT = { controlled_by = VFR } } }
+						MOR = { all_core = { NOT = { controlled_by = VFR } } }
+						SYR = { all_core = { NOT = { controlled_by = VFR } } }
+		}
+		
+    effect = {
+	  FRA = { inherit = VFR }
+	  446 = { change_controller = GER }
+	  445 = { change_controller = GER }
+	  447 = { change_controller = GER }
+	  457 = { change_controller = GER }
+	  455 = { change_controller = GER }
+	  456 = { change_controller = GER }
+	  450 = { change_controller = GER }
+	  449 = { change_controller = GER }
+	  448 = { change_controller = GER }
+	  464 = { change_controller = GER }
+	  463 = { change_controller = GER }
+	  461 = { change_controller = GER }
+	  462 = { change_controller = GER }
+	  430 = { change_controller = GER }
+	  431 = { change_controller = GER }
+	  433 = { change_controller = GER }
+	  452 = { change_controller = GER }
+	  451 = { change_controller = GER }
+	  453 = { change_controller = GER }
+	  454 = { change_controller = GER }
+	  468 = { change_controller = GER }
+	  467 = { change_controller = GER }
+	  469 = { change_controller = GER }
+	  470 = { change_controller = GER }
+	  471 = { change_controller = GER }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+  }
+}
+
+		 

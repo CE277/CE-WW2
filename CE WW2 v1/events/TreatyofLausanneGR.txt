@@ -1,0 +1,109 @@
+country_event = {
+	title = "Eastern Thrace"
+	desc = "We've lost the Greco-Turkish War and we should give Eastern Trace back to Turkey."
+	id = 5000111
+	picture = "asia_minor_disaster"
+
+	trigger = {
+		tag = GRE
+		war = no		
+		TUR = {
+			owns = 860
+		}
+		GRE = {
+			owns = 828
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Give Eastern Thrace to Turkey."
+		828 = {
+			secede_province = TUR
+		}
+		858 = {
+			secede_province = TUR
+		}
+		859 = {
+			secede_province = TUR
+		}
+		TUR_855 = { remove_core = TUR }
+		prestige = -5
+		TUR = {
+			country_event = { id=5000112 days=1 }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	title = "We gained Thrace from Greece!"
+	desc = "After the Great Win against Greeks, We also annexed Thrace!"
+	id = 5000112
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}
+
+country_event = {
+	title = "Northern Epirus"
+	desc = "After the second Conference of Paris, allies decided to cede Gjirokaster to Albania."
+	id = 5000113
+	picture = "gjirokaster"
+
+	trigger = {
+		NOT = { year = 1930 }
+		tag = GRE
+		war = no
+		exists = ALB
+		GRE = { NOT = { has_country_flag = greek_epirus }}
+		TUR = {
+			owns = 860
+		}	
+		GRE = {
+			owns = 853
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Give Gjirokaster to Albania."
+		853 = {
+			secede_province = ALB
+		}
+		prestige = -1
+		ALB = {
+			country_event = { id=5000114 days=1 }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	title = "We gained Gjirokaster from Greece!"
+	desc = "After the second Conference of Paris, Allies decided to cede Gjirokaster to Albania."
+	id = 5000114
+	picture = "gjirokaster"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		prestige = 2
+		}
+}
+

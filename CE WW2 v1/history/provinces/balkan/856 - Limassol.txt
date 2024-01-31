@@ -1,0 +1,19 @@
+owner = TUR
+controller = TUR
+add_core = CYP
+add_core = GRE
+add_core = TUR
+trade_goods = fruit
+life_rating = 35
+1912.10.7 = {
+	owner = CYP
+	controller = CYP
+        railroad = 3
+	
+        naval_base = 5
+}
+1936.1.1 = {
+	remove_core = TUR
+}
+
+

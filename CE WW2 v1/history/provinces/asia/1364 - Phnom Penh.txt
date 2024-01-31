@@ -1,0 +1,13 @@
+owner = CAM
+controller = CAM
+add_core = CAM
+trade_goods = tropical_wood
+life_rating = 30
+terrain = urban_phnom_penh
+1870.1.1 = {
+	owner = FRA
+	controller = FRA
+}
+1880.1.1 = {
+	trade_goods = rubber
+}

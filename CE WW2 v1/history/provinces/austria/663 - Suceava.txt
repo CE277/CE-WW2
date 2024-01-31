@@ -1,0 +1,22 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = MOL
+add_core = ROM
+#add_core = UKR
+add_core = RUT
+trade_goods = cattle
+life_rating = 35
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = ROM
+        remove_core = KUK
+	remove_core = AUS
+	controller = ROM
+}

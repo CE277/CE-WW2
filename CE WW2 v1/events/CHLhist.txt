@@ -1,0 +1,168 @@
+#Military Coup of 1924
+country_event = {
+	id = 8003004
+  	title = "EVTNAME8003004"
+  	desc = "EVTDESC8003004"
+	picture = "1924_chilean_coup"
+
+	trigger = {
+    		tag = CHL
+    		year = 1924 NOT = { year = 1925 }
+    		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Return to Constitutionalism
+country_event = {
+	id = 8003005
+  	title = "EVTNAME8003005"
+  	desc = "EVTDESC8003005"
+	picture = "chl_return_to_constitutionalism"
+
+	trigger = {
+    		tag = CHL
+    		year = 1932 NOT = { year = 1933 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = socialist
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+  id = 8003006
+  title = "EVTNAME8003006"
+  desc = "EVTDESC8003006"
+  picture = "augusto_pinochet"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHL
+	year = 1973 NOT = { year = 1975 }
+	government = democracy
+	is_vassal = no
+	war = no
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = "Have the General lead the way!"
+	country_event = 60010
+	define_general = { name = "Augusto Pinochet" personality = energetic background = no_background }
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+    name = "Make an agreement to let Alende stay in power"
+	define_general = { name = "Salvador Allende" personality = energetic background = no_background }
+	ai_chance = { factor = 0.1 }
+  }
+}
+country_event = {
+  id = 8003008
+  title = "EVTNAME8003008"
+  desc = "EVTDESC8003008"
+  picture = "chicago_boys"
+  fire_only_once = yes
+
+  trigger = {
+    tag = CHL
+	year = 1980 
+	NOT = { year = 1981 }
+   	war = no
+	government = presidential_dictatorship
+	is_vassal = no
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+  option = {
+    	name = "Initiate reforms"
+	add_country_modifier = { name = economic_boom duration = 3500 }
+	random_pop = { limit = { type = capitalists } money = 500000 }
+	any_pop = { consciousness = 2 }
+	ai_chance = { factor = 100 }
+  }
+
+  option = {
+    name = "There's no need"
+	ai_chance = { factor = 0 }
+	any_pop = { militancy = -5 consciousness = 2 }
+  }
+}
+country_event = {
+  id = 8003009
+  title = "EVTNAME8003009"
+  desc = "EVTDESC8003009"
+  picture = "no_pinochet"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = CHL
+    	year = 1988 NOT = { year = 1989 }
+	government = presidential_dictatorship
+	is_vassal = no
+  }
+
+  mean_time_to_happen = { months = 3 }
+
+  option = {
+   	name = "We have enough of junta rule"
+	any_pop = { consciousness = 2 }
+	country_event = 60050
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+	name = "Only Pinochet can save us!"
+	any_pop = { militancy = 3 }
+	ai_chance = { factor = 0.1 }
+  }
+}

@@ -1,0 +1,77 @@
+political_decisions = {
+	
+	construct_nuclear_power_plant = {
+		picture = "nuclear_power_plant"
+		alert = no
+		potential = {
+			OR = { 
+				
+				combustion_engine = 1
+			}
+			year = 1950
+			NOT = { has_country_flag = comprehensive_nuclear_ban }
+			NOT = { has_country_flag = nuclear_power_plant }
+		}	
+		
+		allow = {
+			war = no
+			election = no
+			money = 5000000
+		}
+
+		effect = {
+			prestige = 50
+			money = -2000000
+			set_country_flag = nuclear_power_plant
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ban_nuclear_power_plant = {
+		picture = "ban_nuclear_power_plant"
+		potential = {
+			has_country_flag = comprehensive_nuclear_ban
+			has_country_flag = nuclear_power_plant
+		}	
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			clr_country_flag = nuclear_power_plant
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wind_power_ge = {
+		picture = "wind_power_ge"
+		alert = no
+		potential = {
+			green_revolution = 1
+			NOT = { has_country_flag = wind_power_ge }
+		}	
+		
+		allow = {
+			war = no
+			election = no
+			money = 4000000
+		}
+
+		effect = {
+			prestige = 50
+			money = -2000000
+			set_country_flag = wind_power_ge
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

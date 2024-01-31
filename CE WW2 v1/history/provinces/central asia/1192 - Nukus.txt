@@ -1,0 +1,16 @@
+owner = KHI
+controller = KHI
+add_core = KHI
+trade_goods = opium
+life_rating = 35
+1912.10.7 = {
+	owner = RUS
+	controller = RUS
+}
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = fabric_factory
+	upgrade = yes
+}
+}

@@ -1,0 +1,28 @@
+political_decisions = {
+	the_turning_tide = {
+		picture = "tide"
+		potential = {
+                        RUS = { war_with = GER }
+			NOT = { has_country_flag = the_turning_tide }
+			NOT = { army_risk_management = 1 }
+                        NOT = { tag = GER }
+		}
+		
+		allow = {
+                        OR = {
+						month = 7
+						}
+						
+						NOT = 
+						{ month = 12}
+						}
+
+		effect = {
+			set_country_flag = the_turning_tide 
+			prestige = 50
+			activate_technology = army_risk_management
+			
+			}
+			
+}
+}			

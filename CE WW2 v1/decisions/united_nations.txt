@@ -1,0 +1,176 @@
+political_decisions = {
+
+	join_league_nations = {
+		picture = "league_nations"
+		potential = {
+			year = 1920
+			NOT = { year = 1936 }
+			NOT = { has_global_flag = un_foundation }
+			NOT = { tag = USA }
+			has_global_flag = great_wars_enabled
+			civilized = yes
+			NOT = { has_country_modifier = member_of_league_nations }
+		}
+
+		allow = {
+			war = no
+			OR = { is_vassal = no civilized = yes ideological_thought = 1 }
+		}
+
+		effect = {
+			set_country_flag = league_of_nations
+			prestige = 40
+			any_country = {
+				limit = { has_country_modifier = member_of_league_nations }
+				relation = { who = THIS value = 25 }
+			}
+			add_country_modifier = { name = member_of_league_nations duration = 9125 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	leave_league_nations = {
+		picture = "league_nations"
+		potential = {
+			has_country_modifier = member_of_league_nations
+			government = fascist_dictatorship
+		}
+		alert = no
+		allow = {
+			war = no
+			government = fascist_dictatorship
+		}
+
+		effect = {
+			prestige = -50
+			any_country = {
+				limit = { has_country_modifier = member_of_league_nations }
+				relation = { who = THIS value = -50 }
+			}
+			remove_country_modifier = member_of_league_nations
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	join_united_nations = {
+		picture = "united_nations"
+		potential = {
+			has_global_flag = un_foundation
+			NOT = { has_country_modifier = member_of_united_nations }
+			NOT = { government = fascist_dictatorship }
+		}
+
+		allow = {
+			war = no
+			OR = { is_vassal = no civilized = yes experimental_psychology = 1 }
+		}
+
+		effect = {
+			prestige = 100
+			any_country = {
+				limit = { has_country_modifier = member_of_united_nations }
+				relation = { who = THIS value = 50 }
+			}
+			remove_country_modifier = not_member_of_united_nations
+			add_country_modifier = { name = member_of_united_nations duration = -1 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	leave_united_nations = {
+		picture = "united_nations"
+		potential = {
+			has_country_modifier = member_of_united_nations
+			government = fascist_dictatorship
+		}
+		alert = no
+		allow = {
+			war = no
+			government = fascist_dictatorship
+		}
+
+		effect = {
+			prestige = -100
+			any_country = {
+				limit = { has_country_modifier = member_of_united_nations }
+				relation = { who = THIS value = -100 }
+			}
+			remove_country_modifier = member_of_united_nations
+			add_country_modifier = { name = not_member_of_united_nations duration = -1 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	united_nations_security_council = {
+		picture = "united_nations_security_council"
+		potential = {
+			has_country_modifier = member_of_united_nations
+			
+			crisis_exist = yes
+			involved_in_crisis = no
+		}
+
+		allow = {
+			any_greater_power = {
+				involved_in_crisis = yes
+				crisis_exist = yes 
+				relation = { who = THIS value = 100 }
+			}
+			war = no
+		}
+
+		effect = {
+			add_crisis_interest = yes
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	unesco = {
+		picture = "unesco"
+		potential = {
+			year = 1956
+			has_country_modifier = member_of_united_nations
+			NOT = { has_country_modifier = unesco }
+			NOT = { badboy = 1 }
+			experimental_psychology = 1
+		}
+		allow = {
+			election = no
+			war = no
+			is_vassal = no
+			OR = { government = hms_government government = democracy }
+			NOT = { ruling_party_ideology = fascist }
+		}
+		effect = {
+			prestige = 10
+			add_country_modifier = { name = unesco duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	leave_unesco = {
+		picture = "unesco"
+		potential = {
+			has_country_modifier = unesco
+		}
+		allow = {
+			election = no
+			war = no
+			OR = { is_vassal = yes NOT = { has_country_modifier = member_of_united_nations } NOT = { OR = { government = hms_government government = democracy } } }
+		}
+		effect = {
+			remove_country_modifier = unesco
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

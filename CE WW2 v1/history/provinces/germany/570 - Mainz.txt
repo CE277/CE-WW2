@@ -1,0 +1,28 @@
+owner = HES
+controller = HES
+add_core = HES
+add_core = GER
+trade_goods = sulphur
+life_rating = 40
+1861.1.1 = { railroad = 3 }
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	remove_core = HES
+}
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = machine_parts_factory
+	upgrade = yes
+}
+}
+1946.1.1 = {
+	owner = FRA
+	controller = FRA
+}

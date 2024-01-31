@@ -1,0 +1,20 @@
+owner = CHI
+controller = CHI
+add_core = CHI
+trade_goods = tea
+life_rating = 32
+1912.10.7 = {
+	owner = JAP
+	controller = JAP
+	add_core = KMT
+}
+1936.1.1 = {
+	owner = JAP
+	controller = JAP
+	remove_core = CHI
+        colonial = 2
+}
+1947.1.1 = {
+	owner = CHI
+	controller = CHI
+}

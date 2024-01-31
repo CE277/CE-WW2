@@ -1,0 +1,20 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+trade_goods = fish
+life_rating = 35
+terrain = plains
+1890.7.1 = {
+        owner = GER
+	controller = GER
+	remove_core = ENG
+}
+1912.1.1 = {
+        railroad = 3
+	
+}
+
+1946.1.1 = {
+	owner = ENG
+	controller = ENG
+}

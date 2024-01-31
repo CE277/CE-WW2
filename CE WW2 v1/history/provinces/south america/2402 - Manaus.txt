@@ -1,0 +1,8 @@
+owner = BRZ
+controller = BRZ
+add_core = BRZ
+trade_goods = tropical_wood
+life_rating = 25
+1890.1.1 = {
+	trade_goods = rubber
+}

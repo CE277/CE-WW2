@@ -1,0 +1,16 @@
+owner = ETH
+controller = ETH
+add_core = ETH
+trade_goods = grain
+life_rating = 30
+1861.1.1 = {
+	trade_goods = precious_metal
+}
+1936.1.15 = {
+	owner = ITA
+	controller = ITA
+}
+1946.1.1 = {
+	owner = ETH
+	controller = ETH
+}

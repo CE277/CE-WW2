@@ -1,0 +1,33 @@
+army = { 
+
+name = "1st Rebels" location = 1572
+ 
+
+regiment = {
+ name= "1.73 /Green Banner"
+ type = irregular
+ home = 1572
+ }
+
+ 
+regiment = {
+ name= "2.73 /Green Banner"
+	type = irregular
+ home = 1573
+ }
+
+ 
+regiment = {
+ name= "2.82 /Green Banner"
+	type = irregular
+ home = 1574
+ }
+
+
+regiment = {
+ name= "3.82 /Green Banner"	type = irregular
+ home = 1575
+ }
+
+
+}

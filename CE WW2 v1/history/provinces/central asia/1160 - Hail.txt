@@ -1,0 +1,17 @@
+owner = NEJ
+controller = NEJ
+add_core = NEJ
+trade_goods = wool
+life_rating = 10
+1920.5.5 = {
+	owner = ARA
+	controller = ARA
+	add_core = ARA
+	remove_core = NEJ
+        colonial = 0
+state_building = {
+	level = 2
+	building = steel_factory
+	upgrade = yes
+}
+}

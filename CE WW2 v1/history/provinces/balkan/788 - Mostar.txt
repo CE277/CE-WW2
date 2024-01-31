@@ -1,0 +1,24 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = BOS
+add_core = YUG
+trade_goods = grain
+life_rating = 35
+1912.10.7 = {
+	owner = KUK
+        remove_core = TUR
+	controller = KUK
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = YUG
+        remove_core = KUK
+	controller = YUG
+state_building = {
+	level = 1
+	building = steel_factory
+	upgrade = yes
+}
+}

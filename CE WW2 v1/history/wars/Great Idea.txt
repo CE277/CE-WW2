@@ -1,0 +1,46 @@
+name = "Greco-Turkish war"
+
+1920.5.5 = {
+	add_attacker = GRE
+	add_defender = TUR
+	
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = acquire_core_state
+		actor = GRE
+		receiver = TUR
+                country = TUR
+		state_province_id = 870
+		state_province_id = 871
+	}
+
+        war_goal = {
+		casus_belli = acquire_core_state
+		actor = GRE
+		receiver = TUR
+                country = TUR
+		state_province_id = 861
+		state_province_id = 862
+		state_province_id = 863
+		state_province_id = 864
+		state_province_id = 865
+                state_province_id = 867
+	}
+
+        war_goal = {
+		casus_belli = acquire_core_state
+		actor = TUR
+		receiver = GRE
+                country = GRE
+		state_province_id = 869
+	}
+
+}
+1922.1.1 = {
+	rem_attacker = GRE
+	rem_defender = TUR
+}

@@ -1,0 +1,19 @@
+owner = BRZ
+controller = BRZ
+add_core = BRZ
+trade_goods = cattle
+life_rating = 35
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = cement_factory
+	upgrade = yes
+}
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = furniture_factory
+	upgrade = yes
+}
+}

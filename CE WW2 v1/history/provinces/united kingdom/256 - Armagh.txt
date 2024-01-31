@@ -1,0 +1,21 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+add_core = IRE
+trade_goods = cattle
+life_rating = 35
+1861.1.1 = { railroad = 3 }
+1912.1.1 = {
+        railroad = 4
+	
+}
+1919.1.1 = {
+        owner = IRE
+	controller = IRE
+	add_core = NIR
+}
+1922.12.6 = {
+        owner = ENG
+	controller = ENG
+	remove_core = IRE
+}

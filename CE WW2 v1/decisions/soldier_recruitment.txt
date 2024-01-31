@@ -1,0 +1,20 @@
+		political_decisions = {
+			soldier_recruitment = {
+				potential = {
+					NOT = {
+					has_country_flag = soldier_recruitment
+					}
+				}
+				allow = {
+                                ai = no
+				NOT = {	total_pops = 3000000 }
+				OR = {
+                                tag = ISR
+                                tag = FIN
+                                war_policy = jingoism }
+				}
+				effect = {
+				set_country_flag = soldier_recruitment
+				}
+			}
+		}

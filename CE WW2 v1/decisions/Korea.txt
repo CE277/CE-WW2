@@ -1,0 +1,40 @@
+political_decisions = {
+	claim_tsushima = { 
+		picture = tsushima_japan
+		potential = {
+			tag = KOR
+			civilized = yes
+			NOT = {
+				owns = 2589
+			}
+			NOT = { has_country_flag = korean_tsushima }
+		}
+		
+		allow = {
+			war = no
+			is_disarmed = no
+			
+			ideological_thought = 1
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+				government = fascist_dictatorship
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			badboy = 2
+			2589 = {
+				add_core = KOR
+			}
+			set_country_flag = korean_tsushima
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

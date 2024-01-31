@@ -1,0 +1,57 @@
+#Israel Event - Balance ISR
+country_event = {
+	id = 1947194736
+	title = "Indian independence!"
+	desc = "India is on the verge of independence"
+	picture = "palestine_civil_war_1948"
+
+	trigger = {
+		tag = RJA
+                war = no
+		OR = {
+		is_vassal = no
+		civilized = yes }
+		NOT = {
+			has_country_flag = indiaciv
+		}
+	}
+
+	option = {
+		name = "Freedom has come brothers and sisters!"
+                set_country_flag = indiaciv
+                release_vassal = RJA
+                change_tag = HND
+                prestige = 30
+		government = democracy
+                primary_culture = avadhi
+                add_accepted_culture = marathi
+                add_accepted_culture = panjabi
+                add_accepted_culture = kanauji
+                add_accepted_culture = bengali
+                add_accepted_culture = bihari
+                add_accepted_culture = rajput
+				add_accepted_culture = oriya
+                add_accepted_culture = gujarati
+                add_accepted_culture = tamil
+                add_accepted_culture = telegu
+                add_accepted_culture = kannada
+                add_accepted_culture = malayalam
+                add_accepted_culture = assamese
+                political_reform = landed_voting
+                ai_chance = {
+            factor = 100    
+        }
+
+	}
+
+	option = {
+		name = "We will stay loyal to the British!"
+                set_country_flag = indiaciv
+                prestige = 70
+		any_pop = {
+			militancy = 8
+		}
+
+
+	}
+}

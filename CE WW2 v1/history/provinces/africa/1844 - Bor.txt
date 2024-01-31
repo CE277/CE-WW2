@@ -1,0 +1,7 @@
+add_core = SUD
+trade_goods = grain
+life_rating = 15
+1912.10.7 = {
+	controller = ENG
+	owner = ENG
+}

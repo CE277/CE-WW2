@@ -1,0 +1,521 @@
+# Cyprus Emergency
+country_event = {
+	id = 8004100
+	title = "The Cyprus Emergency"
+	desc = "EVTDESC8004100"
+	picture = "cyprus_emergency"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		year = 1955
+		NOT = { year = 1960 }
+		is_vassal = no
+		is_our_vassal = CYP
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Enforce order!"
+		badboy = -5
+		release_vassal = CYP
+		CYP = { 
+			set_country_flag = eoka
+			government = presidential_dictatorship
+			country_event = 800050
+			ruling_party_ideology = reactionary
+			all_core = { 
+				#Nationalism increases
+				any_pop = {
+					ideology = {
+						factor = 0.1
+						value = conservative
+					}
+					ideology = {
+						factor = 0.25
+						value = reactionary
+					}
+				}
+			}
+		}
+		war = {
+			target = CYP
+			attacker_goal = {
+				casus_belli = make_puppet
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Abandon Cyprus immediately."
+		prestige_factor = -0.01
+		release_vassal = CYP
+		CYP = {
+			government = presidential_dictatorship
+			country_event = 800050
+			ruling_party_ideology = reactionary
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+# Cyprus Independence
+country_event = {
+	id = 8004101
+	title = "London and Zurich Agreements"
+	desc = "EVTDESC8004101"
+	picture = "cyprus_independence"
+
+	trigger = {
+		tag = ENG
+		year = 1960 
+		NOT = { year = 1970 }
+		CYP = { has_country_flag = eoka }
+		is_vassal = no
+		war = no
+		is_our_vassal = CYP
+		NOT = { has_country_flag = cyprus_independence }
+		NOT = { has_country_flag = cyprus_independence_refused }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Grant them independence."
+		set_country_flag = cyprus_independence
+		prestige = 25
+		release_vassal = CYP
+		CYP = { 
+			government = democracy 
+			ruling_party_ideology = conservative
+		} 
+		TUR_855 = { remove_core = GRE }
+		GRE = { create_alliance = CYP }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Delay their independence."
+		prestige = -50
+		badboy = 2.5
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "We shall never let Cyprus be free."
+		set_country_flag = cyprus_independence_refused
+		prestige = -100
+		badboy = 10
+		CYP = { 
+			all_core = { 
+				any_pop = { militancy = 10 } 
+				add_province_modifier = { name = nationalist_agitation duration = 3650 }
+			} 
+		}
+		ai_chance = { factor = 0 }
+	}
+  
+}
+
+#The 1974 Cypriot coup
+country_event = {
+  id = 8004110
+  title = "The $YEAR$ Cypriot Coup"
+  desc = "EVTDESC8004110"
+  picture = "gre_cyp_coup"
+  
+	is_triggered_only = yes
+
+	option = { 
+		name = "We shall be a pro-Greek regime."
+		
+		#Remove from sphere
+		random_owned = {
+			limit = { owner = { sphere_owner = { NOT = { tag = GRE } } } }
+			owner = { 
+				sphere_owner = {
+					diplomatic_influence = { who = CYP value = -200 } 
+				}
+			}
+		}
+		
+		#Dissolve all alliances
+		all_core = { add_core = GRE }
+		relation = { who = GRE value = 200 }
+		
+		#Option for Turkey to go to war
+		TUR = { country_event = 8004111 } 
+		
+		government = presidential_dictatorship
+		country_event = 800050
+		ruling_party_ideology = reactionary
+	
+		set_country_flag = 1974_cyp_coup
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Accept immediate enosis!"
+		
+		all_core = { 
+			add_core = GRE
+			
+			#Socialist support increases
+			any_pop = {
+				ideology = {
+					factor = 0.15
+					value = socialist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = socialist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = communist
+				}
+			}
+		}
+		
+		#Option for Turkey to go to war
+		TUR = { country_event = 8004112 } 
+		
+		GRE = { inherit = CYP }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Turkish choice to go to war - If Greek coup was resisted
+country_event = {
+  id = 8004111
+  title = "The $YEAR$ Cypriot Coup"
+  desc = "EVTDESC8004111"
+  picture = "gre_cyp_enosis_tur_response"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall intervene in North Cyprus"
+		set_country_flag = tur_cyp_gre_intervention
+		relation = { who = GRE value = -150 } 
+		badboy = -5
+		857 = { add_core = NCY }
+		war = { 
+			target = CYP  
+			attacker_goal = { casus_belli = free_peoples country = NCY state_province_id = 857 } 
+			defender_goal = { casus_belli = humiliate } 
+		}
+
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				NOT = { owns = 873 }
+			}
+		}
+	}
+
+	option = {
+		name = "Stay out of the conflagaration"
+		prestige_factor = -0.05
+		
+		#Nationalist support increases
+		any_pop = {
+			ideology = {
+				factor = 0.15
+				value = reactionary
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = reactionary
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = fascist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}
+
+#Turkish choice to go to war - If Cyprus was annexed
+country_event = {
+  id = 8004112
+  title = "The $YEAR$ Cypriot Coup"
+  desc = "EVTDESC8004112"
+  picture = "gre_cyp_enosis_TUR_response"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall intervene in Cyprus"
+		
+		set_country_flag = tur_cyp_gre_intervention
+		badboy = -5
+		war = { 
+			target = GRE
+			attacker_goal = { casus_belli = liberate_country country = CYP } 
+			defender_goal = { casus_belli = humiliate } 
+		}
+
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				NOT = { owns = 873 }
+			}
+		}
+	}
+
+	option = {
+		name = "Stay out of the conflagaration"
+		prestige_factor = -0.05
+		
+		#Nationalist support increases
+		any_pop = {
+			ideology = {
+				factor = 0.15
+				value = reactionary
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = reactionary
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = fascist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+	
+}
+
+#Turkish choice to go to war - If Greece start war against Cyprus
+country_event = {
+  id = 8004113
+  title = "Greek invasion of Cyprus"
+  desc = "EVTDESC8004113"
+  picture = "greek_invasion_cyprus"
+  
+	fire_only_once = yes
+
+	trigger = { 
+		tag = TUR
+		year = 1950
+		CYP = { has_country_flag = eoka }
+		war = no
+		is_vassal = no
+		GRE = { war_with = CYP }
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = {
+		name = "We shall establish cores in Cyprus."
+		set_country_flag = tur_cyp_gre_intervention
+		relation = { who = GRE value = -150 } 
+		badboy = 2
+		TUR_855 = { add_core = TUR }
+
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0
+				NOT = { owns = 873 }
+			}
+		}
+	}
+
+	option = {
+		name = "We shall punish Greece for that!"
+		
+		set_country_flag = tur_cyp_gre_intervention
+		badboy = -5
+		war = { 
+			target = GRE
+			attacker_goal = { casus_belli = cut_down_to_size } 
+			defender_goal = { casus_belli = humiliate } 
+		}
+
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0
+				GRE = { brigades_compare = 1.5 } 
+			}
+		}
+	}
+
+	option = {
+		name = "Stay out of the conflagaration."
+		prestige_factor = -0.05
+		
+		#Nationalist support increases
+		any_pop = {
+			ideology = {
+				factor = 0.15
+				value = reactionary
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = reactionary
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = fascist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+		}
+		
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0
+				owns = 873
+			}
+		}
+	}
+}
+
+#Division of Cyprus
+country_event = {
+	id = 8004114
+	title = "The Division of Cyprus"
+	desc = "EVTDESC8004114"
+	picture = "cyprus_division"
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = TUR
+		CYP = { has_country_flag = 1974_cyp_coup }
+		war = no
+		is_vassal = no
+		
+		#Turkey won the invasion
+		NCY = { exists = yes is_vassal = no }
+		
+		TUR = { exists = yes is_vassal = no has_country_flag = tur_cyp_gre_intervention }
+		GRE = { exists = yes is_vassal = no }
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "Federate the Turkish and Greek Cypriots."
+		prestige = 10
+		CYP = { 
+			create_vassal = NCY
+			government = democracy
+			country_event = 800054
+		}
+		NCY = {
+			government = democracy
+			country_event = 800054
+			ruling_party_ideology = reactionary
+		}
+		relation = { who = CYP value = 50 }
+		relation = { who = GRE value = -50 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Make Northern Cyprus our vassal."
+		prestige = -25
+		any_pop = { militancy = -4 }
+		CYP = { 
+			government = democracy
+			country_event = 800054
+		}
+		TUR = { create_vassal = NCY }
+		relation = { who = CYP value = -50 }
+		relation = { who = GRE value = -50 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Self-determination for the Turks"
+		prestige = -50
+		badboy = 10
+		any_pop = { militancy = -5 }
+		TUR = { inherit = NCY }
+		relation = { who = CYP value = -100 }
+		relation = { who = GRE value = -100 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Annexation of Cyprus
+country_event = {
+	id = 8004115
+	title = "The Annexation of Cyprus"
+	desc = "EVTDESC8004115"
+	picture = "hellas_cyprus_enosis"
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = GRE
+		year = 1975 
+		CYP = { 
+			has_country_flag = 1974_cyp_coup
+			war = no
+			is_vassal = no
+			exists = yes
+		}
+		
+		#Turkey lost the invasion
+		NCY = { exists = no }
+		
+		TUR = { exists = yes is_vassal = no has_country_flag = tur_cyp_gre_intervention }
+		GRE = { exists = yes is_vassal = no }
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "Hellas, Cyprus Enosis!"
+		set_country_flag = hellas_cyprus_enosis
+		badboy = 1
+		inherit = CYP		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}

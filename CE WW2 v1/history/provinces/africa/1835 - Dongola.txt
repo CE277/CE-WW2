@@ -1,0 +1,15 @@
+owner = EGY
+controller = EGY
+add_core = EGY
+add_core = SUD
+trade_goods = fruit
+life_rating = 30
+1880.1.1 = {
+	trade_goods = rubber
+}
+1912.10.7 = {
+	controller = ENG
+	owner = ENG
+        remove_core = EGY
+}
+

@@ -1,0 +1,27 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = CRO
+add_core = HUN
+add_core = YUG
+trade_goods = cattle
+life_rating = 35
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+}
+1920.5.5 = {
+	owner = YUG
+        remove_core = KUK
+	remove_core = AUS
+	remove_core = HUN
+	controller = YUG
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = regular_clothes_factory
+	upgrade = yes
+}
+}

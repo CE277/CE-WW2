@@ -1,0 +1,34 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = RUT
+add_core = SLV
+add_core = HUN
+add_core = CZH
+add_core = UKR
+trade_goods = coal
+life_rating = 35
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+}
+1920.5.5 = {
+        owner = CZH
+	controller = CZH
+	remove_core = KUK
+	remove_core = AUS
+	remove_core = HUN
+}
+1939.3.13 = {
+        owner = HUN
+	controller = HUN
+}
+1946.1.1 = {
+	owner = RUS
+	controller = RUS
+	remove_core = HUN
+	remove_core = SLV
+	remove_core = CZH
+}
+

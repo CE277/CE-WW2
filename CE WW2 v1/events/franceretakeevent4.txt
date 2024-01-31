@@ -1,0 +1,109 @@
+country_event = { 
+
+id = 1947194894
+
+major = no
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "French Retake Colony"
+desc= "Sacre Bleu"
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	option = {
+		name = "Merde"
+		2241 = {
+		secede_province = FRA
+		}
+		2246 = {
+		secede_province = FRA
+		}
+		1922 = {
+		secede_province = FRA
+		}
+		1921 = {
+		secede_province = FRA
+		}
+		1920 = {
+		secede_province = FRA
+		}
+		1919 = {
+		secede_province = FRA
+		}
+		2230 = {
+		secede_province = FRA
+		}
+		2228 = {
+		secede_province = FRA
+		}
+		        any_owned = { 
+			limit = {
+					is_core = IVC 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = NIG 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = TOG 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = MLI 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = BEN 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = TRZ 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = SNG 
+					}
+				secede_province = FRA
+				}
+		        any_owned = { 
+			limit = {
+					is_core = GNE 
+					}
+				secede_province = FRA
+				}
+						any_owned = { 
+			limit = {
+					is_core = BKF 
+					}
+				secede_province = FRA
+				}
+		1878 = {
+		secede_province = FRA
+		}
+		1885 = {
+		secede_province = FRA
+		}
+		1886 = {
+		secede_province = FRA
+		}
+                 
+                }
+		
+		
+		}

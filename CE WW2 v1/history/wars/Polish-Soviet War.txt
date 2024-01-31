@@ -1,0 +1,30 @@
+name = "Polish-Soviet War"
+
+1920.5.5 = {
+	add_attacker = POL
+	add_defender = RUS
+	
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = acquire_state
+		actor = POL
+		receiver = RUS
+                country = RUS
+		state_province_id = 718
+	}
+
+	war_goal = {
+		casus_belli = status_quo
+		actor = RUS
+		receiver = POL
+	}
+
+}
+1922.1.1 = {
+	rem_attacker = POL
+        rem_defender = RUS
+}

@@ -1,0 +1,29 @@
+owner = USAcontroller = USAadd_core = USAtrade_goods = fruitlife_rating = 25terrain = urban_miamicolony = 2is_slave = yesnaval_base = 21861.1.1 = {	colony = 0	controller = CSA	owner = CSA	add_core = CSA}
+1867.3.30 = {
+	controller = USA
+	owner = USA
+}
+1920.1.1 = {
+state_building = {
+	level = 3
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 3
+	building = canned_food_factory 
+	upgrade = yes
+}
+}
+1936.1.1 = {
+state_building = {
+	level = 2
+	building = regular_clothes_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = liquor_distillery
+	upgrade = yes
+}
+}

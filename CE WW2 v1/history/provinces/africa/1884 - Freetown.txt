@@ -1,0 +1,9 @@
+owner = ENG
+controller = ENG
+colonial = 2
+trade_goods = grain
+naval_base = 2
+life_rating = 35
+1840.1.1 = {
+	trade_goods = precious_metal
+}

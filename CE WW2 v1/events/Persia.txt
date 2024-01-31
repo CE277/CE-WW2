@@ -1,0 +1,331 @@
+################## FOREIGN COUNTRIES ##################
+# Funding of the Anglo-Persian Oil Company
+country_event = {
+	id = 110011
+	title = "EVTNAME110011"
+	desc = "EVTDESC110011"
+	picture = "irish_home_rule"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT110011OPTA"
+		treasury = 20000
+		prestige = 5
+		relation = { who = ENG value = 50 }
+		1132 = { trade_goods = oil } #Abadan
+		any_pop = { militancy = 1 }
+		ai_chance = { factor = 80 }
+	}	
+
+	option = {
+		name = "EVT110011OPTB"
+		relation = { who = ENG value = -50 }
+		any_pop = { militancy = -0.5 }
+		ai_chance = { factor = 20 }
+	}
+}
+
+# The role of the clergy / Tobacco Protest 
+country_event = {
+	id = 110020
+	title = "EVTNAME110020" # "The role of the clergy"
+	desc = "EVTDESC110020"
+	picture = "ulama"
+	
+	trigger = {
+		tag = PER
+		civilization_progress = 0.6
+		OR = {
+			has_country_modifier = western_influences
+			part_of_sphere = yes
+		}
+		civilized = no
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "EVT110020OPTA" # "Let's build the Persia of tomorrow together."
+		set_country_flag = ulama_yes
+		any_pop = { 
+			limit = { is_primary_culture = yes is_state_religion = yes type = clergymen }
+			consciousness = 5
+		}
+		any_pop = { 
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			ideology = { value = reactionary factor = 0.1 }
+		}
+		upper_house = { ideology = reactionary value = 0.3 }
+		country_event = { id = 110021 days = 14 }
+	}
+	option = {
+		name = "EVT110020OPTB" # "The state must be independent."
+		set_country_flag = ulama_no
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = 6 ideology = reactionary }
+		}
+		country_event = { id = 110022 days = 14 }
+	}
+	
+}
+
+
+# The role of the clergy / Tobacco Protest 2A
+country_event = {
+	id = 110021
+	title = "EVTNAME110021" # "The ulama agree!"
+	desc = "EVTDESC110021"
+	picture = "ulama"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT110021OPTA" # "In the name of the Prophet, we agree."
+		set_country_flag = made_deal_with_ulama
+		clr_country_flag = ulama_yes
+		remove_country_modifier = western_influences
+		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		treasury = -50000
+		prestige_factor = -0.5
+		any_country = {
+			limit = { is_greater_power = yes }
+			diplomatic_influence = { who = THIS value = -200 }
+			relation = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = { is_greater_power = yes is_sphere_leader_of = THIS }
+			treasury = 50000
+		}
+		any_pop = { 
+			limit = { is_primary_culture = yes is_state_religion = yes type = clergymen }
+			consciousness = 5
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = -3 ideology = reactionary }
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			ideology = { value = reactionary factor = 0.10 }
+		}
+		upper_house = { ideology = reactionary value = 0.2 }
+	}
+	option = {
+		name = "EVT110021OPTB" # "We do not abide to their pressure!"
+		set_country_flag = refused_deal_with_ulama
+		clr_country_flag = ulama_yes
+		country_event = { id = 110028 days = 30 }
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = 8 ideology = reactionary }
+		}
+	}	
+	
+}
+
+# The role of the clergy / Tobacco Protest 2B
+country_event = {
+	id = 110022
+	title = "EVTNAME110022" # "The ulama propose compromise!"
+	desc = "EVTDESC110022" 
+	picture = "ulama"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT110022OPTA" # "This is for the greater good. "
+		set_country_flag = made_deal_with_ulama
+		clr_country_flag = ulama_no
+		remove_country_modifier = western_influences
+		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		treasury = -50000
+		prestige_factor = -0.5
+		any_country = {
+			limit = { is_greater_power = yes }
+			diplomatic_influence = { who = THIS value = -200 }
+			relation = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = { is_greater_power = yes is_sphere_leader_of = THIS }
+			treasury = 50000
+		}
+		any_pop = { 
+			limit = { is_primary_culture = yes is_state_religion = yes type = clergymen }
+			consciousness = 5
+		}
+		any_pop = { 
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			ideology = { value = reactionary factor = 0.10 }
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = -3 ideology = reactionary }
+		}
+		upper_house = { ideology = reactionary value = 0.6 }
+	}
+	
+	option = {
+		name = "EVT110022OPTB" # "We cannot be bought!"
+		set_country_flag = refused_deal_with_ulama
+		clr_country_flag = ulama_no
+		country_event = { id = 110028 days = 30 }
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = 8 ideology = reactionary }
+		}
+	}
+	
+	option = {
+		name = "EVT110022OPTC" # "They shall submit or pay the price."
+		set_country_flag = refused_deal_with_ulama
+		country_event = { id = 110028 days = 30 }
+		clr_country_flag = ulama_no
+		any_pop = {
+			limit = {
+				is_state_religion = yes
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				OR = {
+					type = clergymen
+					type = bureaucrats
+				}
+			}
+			reduce_pop = 0.85
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = -3 ideology = reactionary }
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_consciousness = { factor = 8 ideology = reactionary }
+		}
+	}
+}
+
+# The bazaari support the ulama!
+country_event = {
+	id = 110028
+	title = "EVTNAME110028" # "The bazaari support the ulama!"
+	desc = "EVTDESC110028" 
+	picture = "PER_bazaari"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT110028OPTA" # "We cannot take it..."
+		clr_country_flag = refused_deal_with_ulama		
+		years_of_research = -1
+		remove_country_modifier = western_influences
+		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		treasury = -50000
+		prestige_factor = -0.6
+		any_country = {
+			limit = { is_greater_power = yes }
+			diplomatic_influence = { who = THIS value = -200 }
+			relation = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = { is_greater_power = yes is_sphere_leader_of = THIS }
+			treasury = 50000
+		}
+	}
+	
+	option = {
+		name = "EVT110028OPTB" # "We can take it!"
+		clr_country_flag = refused_deal_with_ulama
+		treasury = 50000
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = 8 ideology = conservative }
+		}
+		add_country_modifier = { name = bazaari_strike duration = 547 }
+	}
+	
+	option = {
+		name = "EVT110028OPTC" # "Put. This. Down."
+		clr_country_flag = refused_deal_with_ulama
+		treasury = 50000
+		any_pop = {
+			limit = {
+				is_state_religion = yes
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				OR = {
+					type = clergymen
+					type = bureaucrats
+					type = aristocrats
+					type = artisans
+				}
+			}
+			reduce_pop = 0.85
+		}
+
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_militancy = { factor = -3 ideology = conservative }
+		}
+		any_pop = {
+			limit = { is_primary_culture = yes is_state_religion = yes }
+			scaled_consciousness = { factor = 8 ideology = conservative }
+		}
+	}
+}
+	
+# Treaty of Akhal
+country_event = {
+	id = 100019
+	title = "EVTNAME100019"
+	desc = "EVTDESC100019"
+	picture = "capturing_khiva"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT100019OPTA"
+		prestige_factor = -0.25
+		1204 = { secede_province = FROM remove_core = THIS }
+		random_owned = { limit = { province_id = 686 } secede_province = FROM remove_core = THIS }
+		relation = { who = FROM value = 100 }
+		any_pop = { limit = { is_primary_culture = yes } militancy = 1 }
+		ai_chance = {
+			factor = 80
+			modifier = { factor = 1.5 in_sphere = FROM }
+			modifier = { factor = 10 vassal_of = FROM }
+		}
+	}
+	
+	option = {
+		name = "EVT100019OPTB"
+		relation = { who = FROM value = -400 }
+		FROM = { diplomatic_influence = { who = THIS value = -400 } }
+		random_country = { limit = { tag = FROM is_our_vassal = THIS } release_vassal = THIS }
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = acquire_any_state
+					state_province_id = 1204
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 1.5 part_of_sphere = yes NOT = { in_sphere = FROM } }
+			modifier = { factor = 1.25 civilized = yes }
+			modifier = { factor = 2 military_score = FROM }
+			modifier = { factor = 0.1 part_of_sphere = no }
+		}
+	}
+}

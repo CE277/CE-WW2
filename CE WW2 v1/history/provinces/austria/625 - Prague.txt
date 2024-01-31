@@ -1,0 +1,51 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = BOH
+add_core = CZH
+trade_goods = iron
+life_rating = 35
+terrain = urban_prague
+#state_building = {
+#	level = 1
+#	building = steel_factory
+#	upgrade = yes
+#}
+1861.1.1 = { railroad = 3 }
+1861.1.1 = {
+	state_building = {
+		level = 1
+		building = steel_factory
+		upgrade = yes
+	}
+	state_building = {
+		level = 1
+		building = fabric_factory
+		upgrade = yes
+	}
+}
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+        railroad = 3
+	
+}
+1920.5.5 = {
+        owner = CZH
+	controller = CZH
+	remove_core = KUK
+	remove_core = AUS
+}
+1939.1.1 = {
+	owner = BNM
+	controller = BNM
+	add_core = BNM
+}
+1946.1.1 = {
+	owner = CZH
+	controller = CZH
+	remove_core = BNM
+}
+
+

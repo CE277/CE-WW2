@@ -1,0 +1,22 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = AZB
+trade_goods = grain
+life_rating = 35
+terrain = urban_baku
+1870.1.1 = {
+	trade_goods = oil
+}
+1912.10.7 = {
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = AZB
+	controller = AZB
+}
+1920.11.29 = {
+	owner = RUS
+	controller = RUS
+}

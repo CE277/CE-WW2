@@ -1,0 +1,85 @@
+country_event = { 
+
+id = 1947194845
+
+major = no
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "Parition of Yugoslavia"
+desc= "The Axis powers have overwhelmed us and are paritioning us amongst themselves. In addition they are creating an Independent State of Croatia as a puppet."
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	     option = {
+			name = "O Boze"
+		    government = bourgeois_dictatorship
+		        any_owned = { 
+			limit = {
+					is_core = CRO
+					}
+				secede_province = CRO
+				}
+						        any_owned = { 
+			limit = {
+					is_core = BOS
+					}
+				secede_province = CRO
+				}
+		        any_owned = { 
+			limit = {
+					is_core = SLO
+					}
+				secede_province = GER
+				}
+			 2538  = { secede_province = HUN }
+			 806  = { secede_province = BUL }
+			 807  = { secede_province = BUL }
+			 799  = { secede_province = BUL }
+			 2582  = { secede_province = ITA }
+			 780  = { secede_province = ITA }
+			 791  = { secede_province = CRO }
+			GER = {
+			create_vassal = CRO
+		}
+                 
+                }
+	option = {
+		name = "We will fight for the Independence of Croatia!"
+		    government = bourgeois_dictatorship
+		        any_owned = { 
+			limit = {
+					is_core = CRO
+					}
+				secede_province = CRO
+				}
+						        any_owned = { 
+			limit = {
+					is_core = BOS
+					}
+				secede_province = CRO
+				}
+		        any_owned = { 
+			limit = {
+					is_core = SLO
+					}
+				secede_province = GER
+				}
+			 2538  = { secede_province = HUN }
+			 806  = { secede_province = BUL }
+			 807  = { secede_province = BUL }
+			 799  = { secede_province = BUL }
+			 2582  = { secede_province = ITA }
+			 780  = { secede_province = ITA }
+			 791  = { secede_province = CRO }
+			GER = {
+			create_vassal = CRO
+		}
+                change_tag_no_core_switch = CRO
+                 
+                }
+		
+		
+		}

@@ -1,0 +1,35 @@
+owner = CHI
+controller = CHI
+add_core = CHI
+add_core = TPG
+trade_goods = tea
+railroad = 2
+life_rating = 32
+1861.1.1 = {
+	controller = TPG
+	owner = TPG
+	
+}
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+}
+1920.1.1 = {
+	owner = ZHI
+	controller = ZHI
+	add_core = KMT
+}
+1928.1.1 = {
+	owner = KMT
+	controller = PRC
+	add_core = PRC
+	remove_core = CHI
+}
+1938.3.28 = {
+	owner = JAP
+	controller = JAP
+}
+1947.1.1 = {
+	owner = CHI
+	controller = CHI
+}

@@ -1,0 +1,21 @@
+owner = MGL
+controller = MGL
+add_core = CHI
+add_core = MGL
+trade_goods = coal
+life_rating = 32
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+
+}
+1927.8.1 = {
+	owner = SXI
+	controller = SXI
+	add_core = PRC
+	remove_core = CHI
+}
+1947.1.1 = {
+	owner = CHI
+	controller = CHI
+}

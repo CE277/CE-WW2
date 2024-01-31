@@ -1,0 +1,18 @@
+owner = NEJ
+controller = NEJ
+add_core = NEJ
+trade_goods = wool
+life_rating = 10
+terrain = urban_riyadh
+1920.5.5 = {
+	owner = ARA
+	controller = ARA
+	add_core = ARA
+	remove_core = NEJ
+        colonial = 2
+state_building = {
+	level = 6
+	building = small_arms_factory
+	upgrade = yes
+}
+}

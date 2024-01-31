@@ -1,0 +1,24 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = GEO
+add_core = ABK
+trade_goods = grain
+life_rating = 35
+1912.10.7 = {
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = GEO
+	controller = GEO
+}
+1920.11.29 = {
+	owner = RUS
+	controller = RUS
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+}

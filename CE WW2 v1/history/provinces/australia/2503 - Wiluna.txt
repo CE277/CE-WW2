@@ -1,0 +1,10 @@
+add_core = AST
+trade_goods = cattle
+life_rating = 20
+1840.1.1 = {
+	trade_goods = precious_metal
+}
+1912.10.7 = {
+	owner = AST
+	controller = AST
+}

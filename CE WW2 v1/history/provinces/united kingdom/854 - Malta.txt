@@ -1,0 +1,15 @@
+owner = ENG
+controller = ENG
+trade_goods = fish
+add_core = MLT
+life_rating = 35
+naval_base = 2
+1861.1.1 = { 
+	naval_base = 2 #Valetta
+}
+1912.1.1 = {
+        railroad = 3
+	
+        naval_base = 5
+}
+

@@ -1,0 +1,25 @@
+owner = CHI
+controller = CHI
+add_core = CHI
+add_core = HKG
+trade_goods = tea
+life_rating = 32
+terrain = urban_hong_kong
+1861.1.1 = {
+	owner = ENG
+	controller = ENG
+}
+1861.1.1 = { 
+	
+	naval_base = 2
+}
+1900.1.1 = {
+	trade_goods = precious_goods
+}
+1920.1.1 = {
+	add_core = KMT
+}
+1928.1.1 = {
+	add_core = PRC
+	remove_core = CHI
+}

@@ -1,0 +1,84 @@
+army = { 
+
+name = "1. Armia Polska" location = 706 
+
+leader = {
+	name = "Zygmunt Berling"
+	date = "1900.1.1"
+        prestige = 0.500
+        picture ="european_general_28"
+	type = land
+	personality = daring
+	background = brownnoser
+  }
+
+regiment = { name = "1. brygada" type = infantry home = 360 } 
+regiment = { name = "2. brygada" type = infantry home = 685 } 
+regiment = { name = "3. brygada" type = infantry home = 685 } 
+regiment = { name = "4. brygada" type = cavalry home = 699 } 
+regiment = { name = "5. brygada" type = cavalry home = 699 } 
+regiment = { name = "6. brygada" type = cavalry home = 700 } 
+regiment = { name = "7. brygada" type = artillery home = 701 } 
+regiment = { name = "8. brygada" type = artillery home = 702 } 
+regiment = { name = "9. brygada" type = artillery home = 703 }
+regiment = { name = "9. brygada" type = artillery home = 703 } 
+regiment = { name = "10. brygada" type = artillery home = 705 }
+}
+
+army = { 
+
+name = "2. Armia Polska" location = 959 
+
+leader = {
+	name = "Jozef Pilsudski"
+	date = "1900.1.1"
+        prestige = 0.500
+        picture ="european_general_29"
+	type = land
+	personality = daring
+	background = brownnoser
+  }
+
+regiment = { name = "1. brygada" type = infantry home = 715 } 
+regiment = { name = "2. brygada" type = infantry home = 937 } 
+regiment = { name = "4. brygada" type = cavalry home = 951 } 
+regiment = { name = "5. brygada" type = cavalry home = 714 } 
+regiment = { name = "6. brygada" type = cavalry home = 953 } 
+regiment = { name = "3. brygada" type = artillery home = 947 } 
+regiment = { name = "7. brygada" type = artillery home = 953 } 
+regiment = { name = "8. brygada" type = artillery home = 957 } 
+}
+
+army = {
+
+name = "Ludowe Wojsko Polskie" location = 940
+
+leader = {
+	name = "Karol Swierczewski"
+	date = "1900.1.1"
+        prestige = 0.500
+        picture ="european_general_28"
+	type = land
+	personality = vicious	
+	background = madman
+   }
+
+regiment = { name = "1. brygada" type = infantry home = 701 } 
+regiment = { name = "2. brygada" type = infantry home = 704 } 
+regiment = { name = "3. brygada" type = cavalry home = 706 } 
+regiment = { name = "4. brygada" type = cavalry home = 708 } 
+regiment = { name = "5. brygada" type = artillery home = 710 } 
+regiment = { name = "6. brygada" type = artillery home = 711 } 
+regiment = { name = "7. brygada" type = artillery home = 712 }
+regiment = { name = "7. brygada" type = artillery home = 712 }
+}
+
+leader = {
+	name = "Marian Spychalski"
+	date = "1910.1.1"
+        prestige = 0.750
+        picture ="european_general_15"
+	type = land
+	personality = skilled
+	background = school_of_the_bayonet
+  }

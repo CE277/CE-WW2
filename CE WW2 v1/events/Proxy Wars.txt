@@ -1,0 +1,25 @@
+country_event = {
+	id = 1400071
+	title = "$FROMCOUNTRY$ Supporting $COUNTRY_ADJ$ Rebels"
+	desc = "$FROMCOUNTRY$ is supporting rebel groups in our country, allowing them to be much more organised and a much greater threat to our nation."
+	picture = "rebellion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We need to fight harder!"
+		}
+}
+
+country_event = {
+	id = 1400072
+	title = "$FROMCOUNTRY$ Supporting $COUNTRY_ADJ$ Government"
+	desc = "$FROMCOUNTRY$ is supporting our government during this internal conflict."
+	picture = "rebellion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}

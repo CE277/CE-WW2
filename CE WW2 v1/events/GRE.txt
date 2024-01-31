@@ -1,0 +1,996 @@
+country_event = {
+  id = 8006216
+  title = "4th of August Regime"
+  desc = "Metaxas imposed his regime primarily to fight the turbulent social situation prevalent in Greece in the 1930s, in which political factionalization had disrupted Greek parliamentary democracy." 
+  picture = "metaxas"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+	year = 1936 NOT = { year = 1937 }
+	NOT = { ruling_party_ideology = fascist }
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+  option = {
+    name = "Greece will become a totalitarian state."
+	ruling_party_ideology = fascist
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = "Democracy!"
+	any_pop = { militancy = -2 consciousness = 5 }
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 9006216
+  title = "Liberation of Crypto-Christians"
+  desc = "Crypto-Christians are reported to many parts of the Ottoman Balkans and Anatolia. They can pray to his God now. They are so glad with this situation." 
+  picture = "crypto_christianity"
+  fire_only_once = yes
+
+  trigger = {
+	tag = GRE
+	GRE = {
+			owns = 860
+		}
+	year = 1922 NOT = { year = 1936 }
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+   option = {
+    name = "Liberty!"
+	prestige = 20
+	TUR_860 = { 
+		
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.4
+
+
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.7
+			}
+
+		}
+	TUR_863 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.6
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.4
+
+
+			}
+
+		}
+	TUR_869 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.5
+
+
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.6
+			}
+
+		}
+	TUR_873 = { 
+		any_pop = {
+ 
+			limit = { is_culture_group = turko_semitic }
+ 
+			reduce_pop = 0.8
+			}
+
+		any_pop = {
+ 
+			limit = { is_culture_group = levantine }
+ 
+			militancy = -2
+			reduce_pop = 1.2
+
+
+			}
+
+		}
+	ai_chance = { factor = 1 }
+  }
+}
+
+country_event = {
+  id = 8006218
+  title = "Abolish Totalitarianism"
+  desc = "EVTDESC8006218"
+  picture = "greek_gov_cairo"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+	year = 1941 NOT = { year = 1945 }
+	government = fascist_dictatorship
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = "Return to Constitutionalism"
+	country_event = 60070
+	ruling_party_ideology = conservative
+	political_reform = wealth_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = non_secret_ballots
+	prestige = 10
+	ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 1.5
+				is_greater_power = no
+			}
+			modifier = {
+				factor = 0
+				is_greater_power = yes
+			}
+	}
+  }
+
+  option = {
+    name = "No!"
+	any_pop = { militancy = 3.0 consciousness = 2 }
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0
+				is_greater_power = no
+			}
+ 		 }
+	}
+
+}
+
+country_event = {
+	id = 8006219
+	title = "EVTNAME8006219"	#The National Schism still exists
+	desc = "EVTDESC8006219"
+	picture = "national_schism"
+	
+	trigger = {
+		tag = GRE
+		year = 1920
+		NOT = { year = 1921}
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+	}
+		
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Ok"
+		add_country_modifier = { name = national_schism duration = 720 }
+		add_country_modifier = { name = national_confusion duration = 720 }
+	}
+}
+
+country_event = {
+	id = 8006220
+	title = "EVTNAME8006220"	#The unexpected death of King Alexander
+	desc = "EVTDESC8006220"
+	picture = "king_alexander"
+	
+	trigger = {
+		tag = GRE
+		year = 1920
+		NOT = { year = 1921}
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = { has_country_flag = death_of_king }
+	}
+		
+	mean_time_to_happen = { months = 2 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Oh my God!"
+		set_country_flag = death_of_king
+		add_country_modifier = { name = no_more_war duration = 720 }
+	}
+}
+
+country_event = {
+	id = 8006221
+	title = "EVTNAME8006221"	#Eleftherios Venizelos announced elections
+	desc = "EVTDESC8006221"
+	picture = "venizelos"
+	
+	trigger = {
+		tag = GRE
+		year = 1920
+		NOT = { year = 1921}
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		has_country_flag = death_of_king
+	}
+		
+	mean_time_to_happen = { days = 5 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Time for elections."
+		election = yes
+		add_country_modifier = { name = wartime_elections duration = 182 }
+		ai_chance = {
+				factor = 100
+		}
+	}
+
+	option = {
+		name = "We must continue to govern in time of war."
+		prestige = -10
+		any_pop = {
+				ideology = {
+					value = conservative
+					factor = 0.1
+				}
+			}
+			any_pop = {
+				scaled_militancy = {
+					ideology = conservative
+					factor = 5
+				}
+			}
+		ai_chance = {
+				factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 8006222
+	title = "EVTNAME8006222"	#King Constantine I returned
+	desc = "EVTDESC8006222"
+	picture = "king_constantine"
+	
+	trigger = {
+		tag = GRE
+		year = 1921
+		NOT = { year = 1922}
+		ruling_party_ideology = conservative
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+			government = democracy
+		}
+		has_country_flag = death_of_king
+	}
+		
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Welcome Great King!"
+		ENG = {
+			relation = {
+				who = GRE
+				value = -75
+			}
+			diplomatic_influence = {
+				who = GRE
+				value = -50
+			}
+		}
+		FRA = {
+			relation = {
+				who = GRE
+				value = -75
+			}
+			diplomatic_influence = {
+				who = GRE
+				value = -50
+			}
+		}
+		GER = {
+			relation = {
+				who = GRE
+				value = 50
+			}
+			diplomatic_influence = {
+				who = GRE
+				value = 25
+			}
+		}
+		ai_chance = {
+				factor = 80
+		}
+	}
+
+	option = {
+		name = "Ah this man..."
+		ENG = {
+			relation = {
+				who = GRE
+				value = -50
+			}
+			diplomatic_influence = {
+				who = GRE
+				value = -25
+			}
+		}
+		FRA = {
+			relation = {
+				who = GRE
+				value = -50
+			}
+			diplomatic_influence = {
+				who = GRE
+				value = -25
+			}
+		}
+		GER = {
+			relation = {
+				who = GRE
+				value = 25
+			}
+			diplomatic_influence = {
+				who = GRE
+				value = 5
+			}
+		}
+		ai_chance = {
+				factor = 20
+		}
+	}
+}
+
+country_event = {
+  id = 8006223
+ 	title = "EVTNAME8006223"	#The Dodecanese
+	desc = "EVTDESC8006223"
+	picture = "dodecanese"
+  fire_only_once = yes
+
+  trigger = {
+   	tag = ITA
+	year = 1947 
+	GRE = { 
+		war = no 
+		NOT = { government = proletarian_dictatorship }
+	}
+	ITA = { owns = 846 }
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+   option = {
+    name = "Return the islands to Greece."
+	846 = { secede_province = GRE }
+	GRE = { country_event = 8006211 }
+	prestige = 10
+	ai_chance = { factor = 0.8 }
+  }
+
+  option = {
+    name = "Transfer the islands to Turkey"
+	846 = { secede_province = TUR }
+	TUR = { country_event = 8006211 }
+	prestige = -25
+	ai_chance = { factor = 0.2 }
+  }
+
+  option = {
+    name = "We must keep the islands of strategic reasons."
+	prestige = -70
+	badboy = 5
+	ai_chance = { factor = 0 }
+  }
+}
+
+country_event = {
+  id = 8006211
+  title = "EVTNAME8006223"	#The Dodecanese
+  desc = "EVTDESC8006223"
+  picture = "dodecanese"
+  is_triggered_only = yes # GRE
+  
+  option = {
+    name = "Great!"
+	prestige = 10
+	ai_chance = { factor = 100 }
+  }
+}
+
+country_event = {
+  id = 8006224
+  title = "EVTNAME8006224"
+  desc = "EVTDESC8006224"
+  picture = "greek_junta_1967"
+  fire_only_once = yes
+
+  trigger = {
+	tag = GRE
+	year = 1966 NOT = { year = 1967 }
+	OR = {
+		government = hms_government
+		government = democracy
+	}
+  }
+
+ mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = "The trouble is breeding..."
+	prestige = -10
+  }
+}
+country_event = {
+  id = 8006225
+  title = "EVTNAME8006225"
+  desc = "EVTDESC8006225"
+  picture = "greek_junta_1967"
+  fire_only_once = yes
+
+  trigger = {
+   	tag = GRE
+	year = 1967 NOT = { year = 1968 }
+    	OR = {
+		government = hms_government
+		government = democracy
+	}
+	average_militancy = 3
+  }
+
+ mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.8
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+	}
+
+  option = {
+    name = "Colonels took over the country's governance."
+	government = presidential_dictatorship
+	ruling_party_ideology = reactionary
+	political_reform = none_voting
+	political_reform = party_appointed
+	political_reform = state_press
+	political_reform = underground_parties
+	political_reform = no_trade_unions
+	country_event = 800050
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+    name = "We will stand loyal to democracy, even corrupt one."
+	any_pop = { militancy = 5 consciousness = 1 }
+	ai_chance = { factor = 0.1 }
+  }
+}
+
+country_event = {
+  id = 8006226
+  title = "EVTNAME8006226"
+  desc = "EVTDESC8006226"
+  picture = "greek_protesters"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GRE
+	year = 1974 NOT = { year = 1975 }
+	government = presidential_dictatorship
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "It's time to return to democracy."
+	country_event = 60050
+	ruling_party_ideology = conservative
+	political_reform = wealth_voting
+	political_reform = appointed
+	political_reform = free_press
+	political_reform = non_secret_ballots
+	political_reform = non_socialist
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+    name = "The patient needs further treatment!"
+	any_pop = { militancy = 2.0 consciousness = 1 }
+	ai_chance = { factor = 0.1 }
+  }
+
+}
+
+country_event = {
+  id = 8006227
+  title = "EVTNAME8006227"
+  desc = "EVTDESC8006227"
+  picture = "greeks_deserters"
+  fire_only_once = yes
+
+  trigger = {
+	tag = GRE
+	year = 1921
+	NOT = { year = 1923 }
+	war_with = TUR
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "We must take drastic measures."
+	add_country_modifier = { name = desertion duration = 720 }
+	ai_chance = { factor = 1 }
+  }
+
+}
+
+country_event = {
+  id = 8006250
+  title = "EVTNAME8006250"	#Excavations in Vergina
+  desc = "EVTDESC8006250"
+  picture = "vergina_excavations"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1937
+	owns = 821
+	war = no
+	money = 40000
+	NOT = { has_country_flag = vergina_excavations }
+  }
+
+  mean_time_to_happen = { months = 5  }
+
+  option = {
+    name = "Let's start the excavations."
+	prestige = 10
+	treasury = -20000
+		821 = {
+			add_province_modifier = {
+				name = vergina_excavations
+				duration = 3650
+			}
+		}
+	set_country_flag = vergina_excavations
+	ai_chance = { factor = 1 }
+  }
+
+  option = {
+    name = "It's useless. We will not find anything."
+	prestige = -50
+	ai_chance = { factor = 0 }
+  }
+
+}
+
+country_event = {
+  id = 8006251
+  title = "EVTNAME8006251"	#The Ancient Macedonian capital was uncovered
+  desc = "EVTDESC8006250"
+  picture = "golden_larnax"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	owns = 821
+	war = no
+	has_country_flag = vergina_excavations
+	821 = { NOT = { has_province_modifier = vergina_excavations }}
+	NOT = { has_country_flag = macedonian_capital }
+  }
+
+  mean_time_to_happen = { months = 15  }
+
+  option = {
+    name = "Long live Macedonia!"
+	prestige = 30
+	set_country_flag = macedonian_capital
+	ai_chance = { factor = 1 }
+  }
+
+}
+
+country_event = {
+  id = 8006252
+  title = "EVTNAME8006252"	#The tomb of Philip II
+  desc = "EVTDESC8006252"
+  picture = "great_tomb"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1960
+	owns = 821
+	war = no
+	has_country_flag = macedonian_capital
+	NOT = { has_country_flag = great_tomb }
+  }
+
+  mean_time_to_happen = { months = 50  }
+
+  option = {
+    name = "Long live Macedonia!"
+	prestige = 50
+	set_country_flag = great_tomb
+	ai_chance = { factor = 1 }
+  }
+
+}
+
+country_event = {
+  id = 8006253
+  title = "EVTNAME8006253"	#Remembering the Anatolian Catastrophe
+  desc = "EVTDESC8006253"
+  picture = "smyrna_catastrophe"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1936
+	NOT = { year = 1937 }
+	NOT = { owns = 869 }
+	NOT = { owns = 860 }
+	war = no
+	NOT = { has_country_flag = anatolian_catastrophe }
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "This disaster will be unforgettable."
+	set_country_flag = anatolian_catastrophe
+	ai_chance = { factor = 1 }
+  }
+
+}
+
+country_event = {
+  id = 8006254
+  title = "EVTNAME8006254"	#First Civil War conflicts
+  desc = "EVTDESC8006254"
+  picture = "first_greek_conflicts"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1943
+	NOT = { year = 1946 }
+	NOT = { government = proletarian_dictatorship }
+	war_with = GER
+	GER = { government = fascist_dictatorship }
+	NOT = { has_country_flag = first_greek_conflicts }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "Greek resistance groups clash with each other."
+	set_country_flag = first_greek_conflicts
+	any_pop = {
+        	ideology = {
+        		value = communist
+        		factor = 0.06
+        	}
+       	}
+	any_pop = {
+		scaled_militancy = { ideology = communist factor = 5 }
+	}
+	any_pop = { militancy = 2 }
+
+	ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+  id = 8006255
+  title = "EVTNAME8006255"	#The Dekemvriana
+  desc = "EVTDESC8006255"
+  picture = "dekemvriana"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1944
+	NOT = { year = 1946 }
+	NOT = { government = proletarian_dictatorship }
+	OR = {
+		in_sphere = ENG
+		in_sphere = FRA
+	}
+	has_country_flag = first_greek_conflicts
+	NOT = { has_country_flag = the_dekemvriana }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "Greek resistance groups clash with each other."
+	set_country_flag = the_dekemvriana
+	any_pop = {
+        	ideology = {
+        		value = communist
+        		factor = 0.03
+        	}
+       	}
+	any_pop = {
+		scaled_militancy = { ideology = communist factor = 4 }
+	}
+	834 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 730
+		}
+	}
+	805 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 730
+		}
+	}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+  id = 8006256
+  title = "EVTNAME8006256"	#Treaty of Varkiza
+  desc = "EVTDESC8006256"
+  picture = "treaty_of_varkiza"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1945
+	NOT = { year = 1947 }
+	NOT = { government = proletarian_dictatorship }
+	has_country_flag = the_dekemvriana
+	OR = {
+		in_sphere = ENG
+		in_sphere = FRA
+	}
+	NOT = { has_country_flag = treaty_of_varkiza }
+  }
+
+  mean_time_to_happen = { months = 1  }
+
+  option = {
+    name = "Communists lay down their weapons."
+	set_country_flag = treaty_of_varkiza
+	any_pop = {
+        	ideology = {
+        		value = communist
+        		factor = 0.03
+        	}
+       	}
+	any_pop = {
+		scaled_militancy = { ideology = communist factor = 4 }
+	}
+	834 = {
+		remove_province_modifier = greek_communists
+	}
+	805 = {
+		remove_province_modifier = greek_communists
+	}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+  id = 8006257
+  title = "EVTNAME8006257"	#Greek Civil War
+  desc = "EVTDESC8006257"
+  picture = "greek_civil_war"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1945
+	NOT = { year = 1950 }
+	NOT = { government = proletarian_dictatorship }
+	OR = {
+		has_country_flag = treaty_of_varkiza
+		has_country_flag = first_greek_conflicts
+	}
+	NOT = { has_country_flag = greek_civil_war }
+  }
+
+  mean_time_to_happen = { months = 2  }
+
+  option = {
+    name = "The Communists declared war on the government."
+	set_country_flag = greek_civil_war
+	any_pop = {
+		scaled_militancy = { ideology = communist factor = 8 }
+	}
+	835 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	805 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	823 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	829 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	830 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	819 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	822 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	820 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	821 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	824 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	831 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	836 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	838 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	839 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	842 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+	847 = {
+		add_province_modifier = {
+			name = greek_communists
+			duration = 1825
+		}
+	}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+  id = 8006258
+  title = "EVTNAME8006258"	#The Birthplace of Democracy
+  desc = "EVTDESC8006258"
+  picture = "ancient_athens"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = GRE
+	year = 1920
+	has_country_flag = venerate_the_ancient_greeks
+	NOT = { has_country_flag = birthplace_of_democracy }
+  }
+
+  mean_time_to_happen = { months = 100  }
+
+  option = {
+    name = "We are recipients and successors of this heritage."
+	set_country_flag = birthplace_of_democracy
+	prestige = 70
+	any_pop = {
+       		ideology = {
+       			value = liberal
+       			factor = 0.05
+       		}
+	}
+	add_country_modifier = {
+		name = birthplace_of_democracy
+		duration = -1
+	}
+		ai_chance = { factor = 1 }
+	}
+}

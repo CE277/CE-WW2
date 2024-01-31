@@ -1,0 +1,219 @@
+;;;;;;;;;;;;;;;;;;;;x,,,,,
+joincomm;Eastern Bloc;;;;;;;;;;;;;;;;;;;;x,,,,,
+joindemo;Democratic Bloc;;;;;;;;;;;;;;;;;;;;x,,,,,
+joinnam;Non-Aligned Movement;;;;;;;;;;;;;;;;;;;;x,,,,,
+joincomm;Eastern Bloc;;;;;;;;;;;;;;;;;;;;x,,,,,
+nato_flag_member;NATO Member;;;;;;;;;;;;;;;;;;;;x,,,,,
+leave_alliance_nato;Leave NATO;;;;;;;;;;;;;;;;;;;;x,,,,,
+rio_pact;Rio Treaty;;;;;;;;;;;;;;;;;;;;x,,,,,
+leave_rio_pact;Leave Rio Treaty;;;;;;;;;;;;;;;;;;;;x,,,,,
+warsaw_pact;Warsaw Pact;;;;;;;;;;;;;;;;;;;;x,,,,,
+leave_warsaw_pact;Leave Warsaw Pact;;;;;;;;;;;;;;;;;;;;x,,,,,
+eec;European Economic Community;;;;;;;;;;;;;;;;;;;;x,,,,,
+xeu_member;EEC Member;;;;;;;;;;;;;;;;;;;;x,,,,,
+xeu_ambition;EU Member;;;;;;;;;;;;;;;;;;;;x,,,,,
+eeu;Eurasian Economic Union;;;;;;;;;;;;;;;;;;;;x,,,,,
+war_propaganda;War Propaganda;;;;;;;;;;;;;;;;;;;;x,,,,,
+gov_propaganda;Government Propaganda;;;;;;;;;;;;;;;;;;;;x,,,,,
+wartime_elections;Wartime Elections;;;;;;;;;;;;;;;;;;;;x,,,,,
+project_cybersyn;Project Cybersyn;;;;;;;;;;;;;;;;;;;;x,,,,,
+five_year_plan;Five-year plan;;;;;;;;;;;;;;;;;;;;x,,,,,
+cdhigh;Strong Civil Defence policy;;;;;;;;x
+cdmedium;Acceptably strong Civil Defence policy;;;;;;;;x
+cdlow;Weak Civil Defense policy;;;;;;;;x
+cd_timer;New Civil Defence Plan;;;;;;;;x;;;;;;;;;;;;;
+collectivisation;Collectivisation;;;;;;;;x;;;;;;;;;;;;;
+high_education;High education system;;;;;;;;x;;;;;;;;;;;;;
+high_health;High Healthcare;;;;;;;;x;;;;;;;;;;;;;
+parthenon;Parthenon;;;;;;;;x;;;;;;;;;;;;;
+member_of_league_nations;League of Nations member;;;;;;;;x;;;;;;;;;;;;;
+member_of_united_nations;Member of United Nations;;;;;;;;x;;;;;;;;;;;;;
+not_member_of_united_nations;Not member of United Nations;;;;;;;;x;;;;;;;;;;;;;
+imf_member;Member of IMF;;;;;;;;x;;;;;;;;;;;;;
+imf_loan;Loan from IMF;;;;;;;;x;;;;;;;;;;;;;
+ida_member;Member of IDA;;;;;;;;x;;;;;;;;;;;;;
+ida_loan;Loan from IDA;;;;;;;;x;;;;;;;;;;;;;
+unesco;Unesco;;;;;;;;x;;;;;;;;;;;;;
+regional_anti_terror;Cooperating with Regional Partners in Counter-Terrorism Operations;;;;;;;;x;;;;;;;;;;;;;
+interpol;Interpol Participant;;;;;;;;x;;;;;;;;;;;;;
+riot_control;Riot Control;;;;;;;;x;;;;;;;;;;;;;
+lost_war;Lost War;;;;;;;;x;;;;;;;;;;;;;
+recently_war;Recent War;;;;;;;;x;;;;;;;;;;;;;
+rgo_boom;RGO Productivity Gains;;;;;;;;x;;;;;;;;;;;;;
+recently_referendum;Recent Referentum;;;;;;;;x;;;;;;;;;;;;;
+anti_war_movement;Anti-war movement;;;;;;;;x;;;;;;;;;;;;;
+great_anti_war_movement;Great anti-war movement;;;;;;;;x;;;;;;;;;;;;;
+military_aid;Military Aid;;;;;;;;x;;;;;;;;;;;;;
+ayasofya_muzesi;Ayasofya Muzesi;;;;;;;;x;;;;;;;;;;;;;
+hagia_sophia;Hagia Sophia;;;;;;;;x;;;;;;;;;;;;;
+vergina_excavations;Excavations in Vergina;;;;;;;;x;;;;;;;;;;;;;
+fascist_youth;Fascist Youth;;;;;;;;x;;;;;;;;;;;;;
+death_camp;Concentration camps;;;;;;;;x;;;;;;;;;;;;;
+amele_taburlari;Amele Taburlari;;;;;;;;x;;;;;;;;;;;;;
+german_concentration_camp;German concentration camp;;;;;;;;x;;;;;;;;;;;;;
+durchgangslager_bozen;Durchgangslager Bozen;;;;;;;;x;;;;;;;;;;;;;
+state_pogrom;State Pogrom;;;;;;;;x;;;;;;;;;;;;;
+recent_pogrom;Recent Pogrom;;;;;;;;x;;;;;;;;;;;;;
+modern_airbases;Modern Air bases;;;;;;;;x;;;;;;;;;;;;;
+modern_navalbases;Modern Naval bases;;;;;;;;x;;;;;;;;;;;;;
+sphere_interference;Sphere Interference;;;;;;;;x;;;;;;;;;;;;;
+ethnic_cleansing;Ethnic Cleansing;;;;;;;;x;;;;;;;;;;;;;
+rescabinet;Recent Cabinet;;;;;;;;x;;;;;;;;;;;;;
+family_cabinet;Family Cabinet;;;;;;;;x;;;;;;;;;;;;;
+close_friends_cabinet;Close Friends Cabinet;;;;;;;;x;;;;;;;;;;;;;
+potent_partners_cabinet;Potent Partners Cabinet;;;;;;;;x;;;;;;;;;;;;;
+military_cabinet;Military Cabinet;;;;;;;;x;;;;;;;;;;;;;
+aristocratic_cabinet;Aristocratic Cabinet;;;;;;;;x;;;;;;;;;;;;;
+plus_capitalists_cabinet;Capitalists in Cabinet;;;;;;;;x;;;;;;;;;;;;;
+intellectuals_cabinet;Intellectuals and Philosophers in Cabinet;;;;;;;;x;;;;;;;;;;;;;
+lawyers_cabinet;Lawyers in Cabinet;;;;;;;;x;;;;;;;;;;;;;
+economists_cabinet;Economists in Cabinet;;;;;;;;x;;;;;;;;;;;;;
+diverse_minds_cabinet;Diverse Minds Cabinet;;;;;;;;x;;;;;;;;;;;;;
+local_representatives_cabinet;Local Representatives in Cabinet;;;;;;;;x;;;;;;;;;;;;;
+dismissed_cabinet;Dismissed Cabinet;;;;;;;;x;;;;;;;;;;;;;
+space_agency;National Aeronautic Space Agency;;;;;;;;x;;;;;;;;;;;;;
+space_public;Space programs are government funded;;;;;;;;x;;;;;;;;;;;;;
+develop_space_rocket;Developing a working space rocket;;;;;;;;x;;;;;;;;;;;;;
+space_rocket;Possess Space Rocket manufacturing skills;;;;;;;;x;;;;;;;;;;;;;
+develop_space_man;Developing a working astronaut;;;;;;;;x;;;;;;;;;;;;;
+develop_space_satellite;Developing a working space satellite;;;;;;;;x;;;;;;;;;;;;;
+develop_space_probes;Developing a working space probe;;;;;;;;x;;;;;;;;;;;;;
+develop_space_station;Developing a working space station;;;;;;;;x;;;;;;;;;;;;;
+develop_moon_mission;Planning for a Manned Mission to the Moon;;;;;;;;x;;;;;;;;;;;;;
+space_satellite;Possess Space Satellite manufacturing skills;;;;;;;;x;;;;;;;;;;;;;
+space_man;Possess capability to send astronauts into space;;;;;;;;x;;;;;;;;;;;;;
+space_station;Possess a working space station;;;;;;;;x;;;;;;;;;;;;;
+space_probe;Possess working space probes;;;;;;;;x;;;;;;;;;;;;;
+space_project_attempted;Space project attempted recently;;;;;;;;x;;;;;;;;;;;;;
+proxy_involvement;Currently Involved in a nearby civil war;;;;;;;;x;;;;;;;;;;;;;
+support_rebels;Foreign Powers backing rebels;;;;;;;;x;;;;;;;;;;;;;
+support_government;Foreign Powers backing the Government;;;;;;;;;;;;;;;;;;;;x,,,,,
+proxy_rebel;Proxy Rebels;;;;;;;;x;;;;;;;;;;;;;
+radio_propaganda;Radio Propaganda;;;;;;;;;;;;;;;;;;;;x,,,,,
+tv_propaganda;Television Propaganda;;;;;;;;x;;;;;;;;;;;;;
+currency_union;Eurozone;;;;;;;;x;;;;;;;;;;;;;
+ideological_fanaticism;Ideological Fanaticism;;;;;;;;x;;;;;;;;;;;;;
+reason_of_our_fight;Reason of our Fight;;;;;;;;x;;;;;;;;;;;;;
+coordinate_rearmament;Coordinate Rearmament;;;;;;;;x;;;;;;;;;;;;;
+egalite_Liberte_solidarite;Egalite, Liberte, Solidarite;;;;;;;;x;;;;;;;;;;;;;
+orleanist_restoration;Orleanist Restoration;;;;;;;;x;;;;;;;;;;;;;
+bonapartism;Bonapartism;;;;;;;;x;;;;;;;;;;;;;
+3rd_french_empire;Third French Empire;;;;;;;;x;;;;;;;;;;;;;
+guarantee_the_constitution;Guarantee the Constitution;;;;;;;;x;;;;;;;;;;;;;
+rebuild_the_nation;Rebuild the Nation;;;;;;;;x;;;;;;;;;;;;;
+fan_prussian_militarism;Fan Prussian Militarism;;;;;;;;x;;;;;;;;;;;;;
+a_new_germany;A New and Better Germany;;;;;;;;x;;;;;;;;;;;;;
+triumphant_will;Triumphant Will;;;;;;;;x;;;;;;;;;;;;;
+the_teutonic_spirit;The Teutonic Spirit;;;;;;;;x;;;;;;;;;;;;;
+vittoria_mutilata;Vittoria mutilata;;;;;;;;x;;;;;;;;;;;;;
+mare_nostrum;Mare Nostrum;;;;;;;;x;;;;;;;;;;;;;
+great_patriotic_spirit;Great Patriotic Spirit;;;;;;;;x;;;;;;;;;;;;;
+heir_of_rome;The Legitimate Heir of Rome;;;;;;;;x;;;;;;;;;;;;;
+greater_asian_sphere;Greater East-Asian Co-Prosperity Sphere;;;;;;;;x;;;;;;;;;;;;;
+samurai_spirit;Samurai Spirit;;;;;;;;x;;;;;;;;;;;;;
+modern_shogunate;Modern Shogunate;;;;;;;;x;;;;;;;;;;;;;
+stalin_constitution;Stalin Constitution;;;;;;;;x;;;;;;;;;;;;;
+women_in_aviation;Women in Aviation;;;;;;;;x;;;;;;;;;;;;;
+military_reorganization;Military Reorganization;;;;;;;;x;;;;;;;;;;;;;
+smersh;SMERSH;;;;;;;;x;;;;;;;;;;;;;
+permanent_revolution;Permanent Revolution;;;;;;;;x;;;;;;;;;;;;;
+new_soviet_man;New Soviet Man;;;;;;;;x;;;;;;;;;;;;;
+socialist_realism;Socialist Realism;;;;;;;;x;;;;;;;;;;;;;
+britannia_rules_the_waves;Britannia Rules the Waves;;;;;;;;x;;;;;;;;;;;;;
+reinforce_the_empire;Reinforce the Empire;;;;;;;;x;;;;;;;;;;;;;
+britons_duty;Every Man Will Do His Duty;;;;;;;;x;;;;;;;;;;;;;
+american_dream;American Dream;;;;;;;;x;;;;;;;;;;;;;
+america_first;America First;;;;;;;;x;;;;;;;;;;;;;
+global_hegemony;Global Hegemony;;;;;;;;x;;;;;;;;;;;;;
+prepare_for_the_next_war;Prepare for the Next War;;;;;;;;x;;;;;;;;;;;;;
+polish_militarism;Polish Militarism;;;;;;;;x;;;;;;;;;;;;;
+polish_revanchism;Polish Revanchism;;;;;;;;x;;;;;;;;;;;;;
+czechoslovak_legion;Czechoslovak Legion;;;;;;;;x;;;;;;;;;;;;;
+german_technology;German Technology;;;;;;;;x;;;;;;;;;;;;;
+gyor_program;Gyor Program;;;;;;;;x;;;;;;;;;;;;;
+secret_rearmament;Secret Rearmament;;;;;;;;x;;;;;;;;;;;;;
+three_principles_of_the_people;Three Principles of the People;;;;;;;;x;;;;;;;;;;;;;
+the_academica_sinica;The Academica Sinica;;;;;;;;x;;;;;;;;;;;;;
+marxist_orthodoxy;Marxist Orthodoxy;;;;;;;;x;;;;;;;;;;;;;
+agrarian_socialism;Agrarian Socialism;;;;;;;;x;;;;;;;;;;;;;
+soviet_economic_model;Soviet Economic Model;;;;;;;;x;;;;;;;;;;;;;
+maoist_economic_model;Maoist Economic Model;;;;;;;;x;;;;;;;;;;;;;
+colonial_assimilation_policy;Colonial Assimilation Policy;;;;;;;;x;;;;;;;;;;;;;
+endless_sea;Endless Sea;;;;;;;;x;;;;;;;;;;;;;
+popular_front;Popular Front;;;;;;;;x;;;;;;;;;;;;;
+estado_novo;Estado Novo;;;;;;;;x;;;;;;;;;;;;;
+proudly_alone;Proudly Alone;;;;;;;;x;;;;;;;;;;;;;
+the_phalanx_ascendant;The Phalanx Ascendant;;;;;;;;x;;;;;;;;;;;;;
+a_great_spain;A Great Spain;;;;;;;;x;;;;;;;;;;;;;
+corpo_truppe_volontarie;The Corpo Truppe Volontarie;;;;;;;;x;;;;;;;;;;;;;
+the_condor_legion;The Condor Legion;;;;;;;;x;;;;;;;;;;;;;
+national_and_popular_army_of_spain;The National And Popular Army of Spain;;;;;;;;x;;;;;;;;;;;;;
+national_recovery;National Recovery;;;;;;;;x;;;;;;;;;;;;;
+regional_defense_council_of_aragon;Regional Defense Council of Aragon;;;;;;;;x;;;;;;;;;;;;;
+mujeres_libres;Mujeres Libres;;;;;;;;x;;;;;;;;;;;;;
+agrarian_collectivization;Agrarian Collectivization;;;;;;;;x;;;;;;;;;;;;;
+freedom_of_thought;Freedom of Thought;;;;;;;;x;;;;;;;;;;;;;
+maintain_the_second_republic;Maintain the Second Republic;;;;;;;;x;;;;;;;;;;;;;
+the_spanish_red_army;The Spanish Red Army;;;;;;;;x;;;;;;;;;;;;;
+disbanded_army;Disbanded Army;;;;;;;;x;;;;;;;;;;;;;
+invite_socialist_intellectuals;Socialist Intellectuals;;;;;;;;x;;;;;;;;;;;;;
+oppose_the_royal_dictatorship;Oppose the Royal Dictatorship;;;;;;;;x;;;;;;;;;;;;;
+the_fatherland_front;The Fatherland Front;;;;;;;;x;;;;;;;;;;;;;
+overthrow_the_tsar;Try to overthrow the Tsar;;;;;;;;x;;;;;;;;;;;;;
+power_to_the_tsar;Power to the Tsar;;;;;;;;x;;;;;;;;;;;;;
+promote_bulgarian_nationalism;Promote Bulgarian Nationalism;;;;;;;;x;;;;;;;;;;;;;
+economic_protectionism;Economic Protectionism;;;;;;;;x;;;;;;;;;;;;;
+fate_of_the_balkans;The Fate of the Balkans;;;;;;;;x;;;;;;;;;;;;;
+rebuild_the_army;Rebuild the Army;;;;;;;;x;;;;;;;;;;;;;
+a_black_sea_fleet;A Black Sea Fleet;;;;;;;;x;;;;;;;;;;;;;
+bulgaria_on_the_three_seas;Bulgaria on the Three Seas;;;;;;;;x;;;;;;;;;;;;;
+greek_communists;Greek Communists;;;;;;;;x;;;;;;;;;;;;;
+venerate_the_ancient_greeks;Venerate the Ancient Greeks;;;;;;;;x;;;;;;;;;;;;;
+birthplace_of_democracy;The Birthplace of Democracy;;;;;;;;x;;;;;;;;;;;;;
+the_doubleheaded_eagle;The Double-Headed Eagle;;;;;;;;x;;;;;;;;;;;;;
+hellenic_armed_forces;Hellenic Armed Forces;;;;;;;;x;;;;;;;;;;;;;
+the_hellenic_spirit;The Hellenic Spirit;;;;;;;;x;;;;;;;;;;;;;
+greek_industrial_revolution;The Greek Industrial Revolution;;;;;;;;x;;;;;;;;;;;;;
+agricultural_communes;Agricultural Communes;;;;;;;;x;;;;;;;;;;;;;
+great_antifascist_war;Great Anti-Fascist War;;;;;;;;x;;;;;;;;;;;;;
+peace_at_home;Peace at Home;;;;;;;;x;;;;;;;;;;;;;
+learning_from_the_great_war;Learning from the Great War;;;;;;;;x;;;;;;;;;;;;;
+policy_of_etatism;Etatism;;;;;;;;x;;;;;;;;;;;;;
+fatherland_first;Fatherland First;;;;;;;;x;;;;;;;;;;;;;
+patriotism_over_internationalism;Patriotism Over Internationalism;;;;;;;;x;;;;;;;;;;;;;
+return_of_the_sultan;Return of the Sultan;;;;;;;;x;;;;;;;;;;;;;
+modernizing_the_army;Modernizing the Army;;;;;;;;x;;;;;;;;;;;;;
+technological_impetus;Technological Impetus;;;;;;;;x;;;;;;;;;;;;;
+literacy_programs;Literacy Programs;;;;;;;;x;;;;;;;;;;;;;
+medical_university;China Medical University;;;;;;;;x;;;;;;;;;;;;;
+arg_dictatorship;Consequences of Dictatorship;;;;;;;;x;;;;;;;;;;;;;
+small_global_baby_boom;Small Global Baby Boom;;;;;;;;x;;;;;;;;;;;;;
+cuban_revolutionaries;Cuban Revolutionaries;;;;;;;;x;;;;;;;;;;;;;
+spanish_nationalists;Spanish Nationalists;;;;;;;;x;;;;;;;;;;;;;
+great_depression2;Great Depression of 1929;;;;;;;;x;;;;;;;;;;;;;
+great_recession;Great Recession of 2008;;;;;;;;x;;;;;;;;;;;;;
+siege_of_madrid;Siege of Madrid;;;;;;;;x;;;;;;;;;;;;;
+territory_talk;Recent border discussions;;;;;;;;x;;;;;;;;;;;;;
+icj_in_process;ICJ in process;;;;;;;;x;;;;;;;;;;;;;
+icj_timer_land;Recently obtained ICJ territorial arbitration;;;;;;;;x;;;;;;;;;;;;;
+brasilia_under_construction;Brasilia under construction;;;;;;;;x;;;;;;;;;;;;;
+revolution_chaos;Revolution chaos;;;;;;;;x;;;;;;;;;;;;;
+fort;Military Base;;;;;;;;x;;;;;;;;;;;;;
+desertion;Desertion;;;;;;;;x;;;;;;;;;;;;;
+argentine_submarine;COFS;;;;;;;;x;;;;;;;;;;;;;
+doctrine_of_army;Doctrine of army;;;;;;;;x;;;;;;;;;;;;;
+chilean_armed_forces;Chilean Armed Forces;;;;;;;;x;;;;;;;;;;;;;
+milicia_republicana;Milicia republicana;;;;;;;;x;;;;;;;;;;;;;
+popular_unity;Popular Unity;;;;;;;;x;;;;;;;;;;;;;
+advanced_general_staff;Advanced general staff;;;;;;;;x;;;;;;;;;;;;;
+french_military_influence;French military influence;;;;;;;;x;;;;;;;;;;;;;
+brazilian_armed_forces;Brazilian Armed Forces;;;;;;;;x;;;;;;;;;;;;;
+la_violencia;La Violencia;;;;;;;;x;;;;;;;;;;;;;
+colombian_military_forces;Colombian Military Forces;;;;;;;;x;;;;;;;;;;;;;
+legacy_of_revolution;Legacy of Revolution;;;;;;;;x;;;;;;;;;;;;;
+the_mexican_miracle;The Mexican miracle;;;;;;;;x;;;;;;;;;;;;;
+dirty_war;The Dirty War;;;;;;;;x;;;;;;;;;;;;;
+heroic_military_academy;Heroic Military College;;;;;;;;x;;;;;;;;;;;;;
+the_aztec_eagle;The Aztec Eagle;;;;;;;;x;;;;;;;;;;;;;
+hispanic_culture;Hispanic Culture;;;;;;;;x;;;;;;;;;;;;;
+national_schism;National Schism;;;;;;;;x;;;;;;;;;;;;;

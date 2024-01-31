@@ -1,0 +1,25 @@
+owner = CHI
+controller = CHI
+add_core = CHI
+add_core = SXI
+trade_goods = timber
+life_rating = 32
+1920.1.1 = {
+	owner = SXI
+	controller = SXI
+
+}
+1927.8.1 = {
+	owner = SXI
+	controller = SXI
+	add_core = PRC
+	remove_core = CHI
+}
+1937.12.14 = {
+	owner = JAP
+	controller = JAP
+}
+1947.1.1 = {
+	owner = CHI
+	controller = CHI
+}

@@ -1,0 +1,98 @@
+
+
+#Leaders
+
+leader = {
+	name = "Erzerhog Albrecht"
+	date = 1861.1.1 #1840
+	type = land
+	personality = intelligent
+	background = aristocrat
+	prestige = 0.2
+}
+
+leader = {
+	name = "Eduard von Clam-Gallas"
+	date = 1852.1.1
+	type = land
+	personality = calm
+	background = cavalry_school
+	prestige = 0.2
+}
+
+leader = {
+	name = "Ludwig von Benedek"
+	date = 1849.1.1
+	type = land
+	personality = steadfast
+	background = unqualified
+	prestige = 0.2
+}
+
+leader = {
+	name = "von Gablenz"
+	date = 1854.1.1
+	type = land
+	personality = bold
+	background = cavalry_school
+	prestige = 0.2
+}
+
+leader = {
+	name = "Ramming von Riedkirchen"
+	date = 1854.1.1
+	type = land
+	personality = brash
+	background = unfit
+	prestige = 0.2
+}
+
+leader = {
+	name = "Joseph Philippovic"
+	date = 1859.1.1
+	type = land
+	personality = relentless
+	background = school_of_offense
+	prestige = 0.1
+}
+
+leader = {
+	name = "Franz von John"
+	date = 1861.1.1
+	type = land
+	personality = competent
+	background = generals_aide
+}
+
+leader = {
+	name = "Kuhn von Khunenfeld"
+	date = 1861.1.1
+	type = land
+	personality = arrogant
+	background = professor
+}
+
+leader = {
+	name = "von Tegethoff"
+	date = 1861.1.1
+	type = sea
+	personality = daring
+	background = school_of_offense
+}
+
+
+army = { 
+
+name = "Austrian Army" location = 619
+
+regiment = { name = "1. Truppe" type = cavalry home = 619 } 
+regiment = { name = "2. Truppe" type = cavalry home = 619 } 
+regiment = { name = "3. Truppe" type = cavalry home = 615 } 
+regiment = { name = "4. Truppe" type = artillery home = 621 } 
+regiment = { name = "5. Truppe" type = artillery home = 620 } 
+regiment = { name = "6. Truppe" type = artillery home = 618 } 
+regiment = { name = "7. Truppe" type = infantry home = 617 } 
+regiment = { name = "8. Truppe" type = infantry home = 616 } 
+regiment = { name = "9. Truppe" type = infantry home = 613 } 
+regiment = { name = "10. Truppe" type = infantry home = 612 }
+}

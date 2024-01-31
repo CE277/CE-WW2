@@ -1,0 +1,33 @@
+political_decisions = {
+
+	second_vienna_award = {
+		picture = secondvienna
+		potential = {
+			NOT = { has_country_flag = second_vienna }
+                        tag = GER
+		}
+		
+		allow = {
+			government = fascist_dictatorship
+			year = 1940
+			664 = { 
+				owner = { 
+					owns = 664
+					in_sphere = GER
+				}
+			}
+			641 = { 
+				owner = { 
+					owns = 641
+					in_sphere = GER
+				}
+			}
+			
+		}
+		
+		effect = {
+			set_country_flag = second_vienna
+                        ROM = { country_event = 19471947423 }
+		}
+	}
+}

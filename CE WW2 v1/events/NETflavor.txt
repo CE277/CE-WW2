@@ -1,0 +1,277 @@
+#####################################################
+#													#
+#           Netherlands events						#
+#													#
+#####################################################
+#Anglo-Dutch Treaties of 1870–71
+ country_event = {
+	id = 952503
+	title = "EVTNAME952503" 
+	desc = "EVTDESC952503"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT952503OPTA"
+		NET = { country_event = 952504 }
+		diplomatic_influence = { who = NET value = 200 }
+		ai_chance = { 
+		factor = 0 
+			modifier = {
+				factor = 10
+				relation = { who = NET value = 199 }
+			}
+		}
+	}
+	option = {
+		name = "EVT952503OPTB"
+		NET = { country_event = 952505 }
+		ai_chance = { 
+		factor = 90 
+			modifier = {
+				factor = 0
+				NOT = {
+					NET = {
+						OR = {
+						owns = 1907
+						owns = 1908
+						owns = 1909
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT952503OPTC"
+		NET = { country_event = 952506 }
+		ai_chance = { 
+		factor = 10
+		modifier = {
+				factor = 100
+				NOT = {
+					NET = {
+						OR = {
+						owns = 1907
+						owns = 1908
+						owns = 1909
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVT952503OPTD"
+		NET = { country_event = 952507 }
+		ai_chance = { 
+		factor = 0 
+			modifier = {
+				factor = 10
+				NOT = { relation = { who = NET value = -100 } }
+			}
+		}
+	}
+}
+#They accept
+country_event = {
+	id = 952504
+	title = "EVTNAME952504" 
+	desc = "EVTDESC952504"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952504OPTA"
+		FROM = {
+			leave_alliance = ATJ
+			release_vassal = ATJ
+			relation = { who = ATJ value = -400 }
+			diplomatic_influence = { who = ATJ value = -400 }
+		}
+		ATJ = { end_military_access = THIS }
+		leave_alliance = ATJ
+		relation = { who = ATJ value = -400 }
+		relation = { who = FROM value = 200 }
+		any_country = { diplomatic_influence = { who = ATJ value = -50 } }
+		casus_belli = {
+			target = ATJ
+			type = establish_protectorate_NI_casus_belli
+			months = 48
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = "EVT952504OPTB"
+		relation = { who = FROM value = -50 }
+		ai_chance = { factor = 0 }
+	}
+}
+#They want the gold coast
+country_event = {
+	id = 952505
+	title = "EVTNAME952505" 
+	desc = "EVTDESC952505"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952504OPTA"
+		FROM = {
+			country_event = 952508
+			leave_alliance = ATJ
+			release_vassal = ATJ
+			relation = { who = ATJ value = -400 }
+			diplomatic_influence = { who = ATJ value = -400 }
+		}
+		ATJ = { end_military_access = THIS }
+		leave_alliance = ATJ
+		relation = { who = ATJ value = -400 }
+		relation = { who = FROM value = 25 }
+		any_country = { diplomatic_influence = { who = ATJ value = -50 } }
+		casus_belli = {
+			target = ATJ
+			type = establish_protectorate_NI_casus_belli
+			months = 48
+		}
+		ai_chance = { factor = 0.95 }
+	}
+	option = {
+		name = "EVT952505OPTB"
+		relation = { who = FROM value = -25 }
+		FROM = { country_event = 952510 }
+		ai_chance = { factor = 0.05 }
+	}
+}
+#they want any colonies
+country_event = {
+	id = 952506
+	title = "EVTNAME952506" 
+	desc = "EVTDESC952506"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952504OPTA"
+		random_owned = {
+			limit = {
+			NOT = { province_id = 1413 }
+			is_colonial = yes
+			is_coastal = yes
+			NOT = { is_core = THIS }
+			}
+		secede_province = FROM
+		}
+		
+		random_owned = {
+			limit = {
+			NOT = { province_id = 1413 }
+			is_colonial = yes
+			is_coastal = yes
+			NOT = { is_core = THIS }
+			}
+		secede_province = FROM
+		}
+		
+		FROM = {
+			country_event = 952509
+			leave_alliance = ATJ
+			release_vassal = ATJ
+			relation = { who = ATJ value = -400 }
+			diplomatic_influence = { who = ATJ value = -400 }
+			}
+		ATJ = { end_military_access = THIS }
+		leave_alliance = ATJ
+		relation = { who = ATJ value = -400 }
+		relation = { who = FROM value = 25 }
+		any_country = { diplomatic_influence = { who = ATJ value = -50 } }
+		casus_belli = {
+			target = ATJ
+			type = establish_protectorate_NI_casus_belli
+			months = 48
+		}
+		ai_chance = { factor = 90 }
+	}
+	option = {
+		name = "EVT952505OPTB"
+		relation = { who = FROM value = -25 }
+		FROM = { country_event = 952510 }
+		ai_chance = { factor = 10 }
+	}
+}
+#They refuse
+country_event = {
+	id = 952507
+	title = "EVTNAME952507" 
+	desc = "EVTDESC952507"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952507OPTA"
+		relation = { who = FROM value = -100 }
+		casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 6
+		}
+	}
+}
+
+#The dutch agreed to cede the gold coast
+country_event = {
+	id = 952508
+	title = "EVTNAME952508" 
+	desc = "EVTDESC952508"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952504OPTA"
+		NET = {
+			any_owned = {
+				limit = {
+				OR = {
+					province_id = 1907
+					province_id = 1908
+					province_id = 1909
+					province_id = 1910
+				}
+			}
+			secede_province = THIS
+			}
+		}
+	}
+}
+#The dutch refused our terms
+country_event = {
+	id = 952509
+	title = "EVTNAME952509" 
+	desc = "EVTDESC952509"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952504OPTA"
+	}
+}
+#The dutch agreed to cede any colony
+country_event = {
+	id = 952510
+	title = "EVTNAME952510"
+	desc = "EVTDESC952510"
+	picture = "gold_coast_treaty_70"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT952510OPTA"
+	}
+}

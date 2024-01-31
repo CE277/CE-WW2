@@ -1,0 +1,23 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = GRE
+add_core = BUL
+trade_goods = grain
+life_rating = 35
+1878.3.3 = {
+	owner = BUL
+	controller = BUL
+}
+1912.10.7 = {
+        railroad = 2
+	
+}
+
+1920.5.5 = {
+	owner = GRE
+	controller = GRE
+	remove_core = TUR
+        railroad = 2
+	
+}

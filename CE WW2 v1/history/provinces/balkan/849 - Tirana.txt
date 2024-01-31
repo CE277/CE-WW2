@@ -1,0 +1,37 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = ALB
+trade_goods = grain
+life_rating = 35
+terrain = urban_tirana
+1912.10.7 = {
+	owner = ALB
+        remove_core = TUR
+	controller = ALB
+        railroad = 1
+	
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+}
+1917.1.1 = {
+	trade_goods = oil
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+}
+1939.4.9 = {
+	owner = ITA
+	controller = ITA
+}
+1946.1.1 = {
+	owner = ALB
+	controller = ALB
+}

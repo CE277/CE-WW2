@@ -1,0 +1,180 @@
+army = { 
+
+name = "Oglaigh na hEireann" location = 263 
+
+leader = {
+	name = "Cathal Brugha"
+	date = "1919.1.1"
+        prestige = 0.500
+        picture ="european_general_5"
+	type = land
+	personality = daring
+	background = brownnoser
+  }
+
+regiment = { name = "Limerick cavalry" type = cavalry home = 261 } 
+regiment = { name = "Waterford Artillery" type = artillery home = 262 } 
+regiment = { name = "Londonderry Artillery" type = artillery home = 255 }  
+regiment = { name = "Cork Infantry" type = infantry home = 260 } 
+regiment = { name = "2.Dublin Infantry" type = infantry home = 263 } 
+regiment = { name = "1.Dublin Infantry" type = infantry home = 263 }
+}
+
+army = {
+
+name = "Arm Cathartha na hEireann" location = 255
+
+leader = {
+	name = "James Larkin"
+	date = "1919.1.1"
+        prestige = 0.500
+        picture ="european_general_9"
+	type = land
+	personality = vicious	
+	background = madman
+   }
+
+regiment = { name = "Irish Citizen Army" type = irregular home = 255 } 
+}
+
+leader = {
+	name = "Michael Collins"
+	date = "1919.1.1"
+        prestige = 0.750
+        picture ="european_general_21"
+	type = land
+	personality = skilled
+	background = school_of_the_bayonet
+  }
+
+navy = {
+
+name = "Irish War Navy" location = 263
+
+	
+        leader = {
+	name = "Richard Mulcahy"
+	date = "1919.1.1"
+        prestige = 0.750
+        picture ="european_admiral_2"
+	type = land
+	personality = skilled
+	background = school_of_the_bayonet
+  }
+
+	ship = {
+		name= "Foreign ship"
+		type = ironclad
+	}
+
+	ship = {
+		name= "1. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "2. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "3. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "4. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "5. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "6. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "7. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "8. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "9. War ship"
+		type = manowar
+	}
+
+	ship = {
+		name= "10. War ship"
+		type = manowar
+	}
+
+        ship = {
+		name= "1. frigate"
+		type = frigate
+	}
+
+	ship = {
+		name= "2. frigate"
+		type = frigate
+	}
+
+        ship = {
+		name= "3. frigate"
+		type = frigate
+	}
+
+	ship = {
+		name= "4. frigate"
+		type = frigate
+	}
+
+	ship = {
+		name= "5. frigate"
+		type = frigate
+	}
+
+	ship = {
+		name= "6. frigate"
+		type = frigate
+	}
+	
+}
+
+navy = {
+
+name = "Irish Transport Navy" location = 255
+
+	ship = {
+		name= "1. transport"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "2. transport"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "3. transport"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "4. transport"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "5. transport"
+		type = steam_transport
+	}	
+}

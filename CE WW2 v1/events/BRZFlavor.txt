@@ -1,0 +1,458 @@
+#############Rise of Vargas
+
+country_event = {
+
+    id = 50002
+    title = "vargastitle"
+    desc = "vargasdesc"
+    picture = "vargas"
+
+    trigger = {
+        tag = BRZ
+        year = 1930
+	NOT = { year = 1933 }
+        government = democracy
+	is_vassal = no
+    }
+
+    mean_time_to_happen = { months = 2 }
+    fire_only_once = yes
+
+    option = {
+        name = "vargasopt1"
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        clr_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        clr_country_flag = democracy_gov
+        set_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        clr_country_flag = anarcho_liberal_gov
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+        government = presidential_dictatorship
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = yes_meeting
+        political_reform = censored_press
+        political_reform = state_controlled
+        political_reform = harassment
+        political_reform = first_past_the_post
+        ruling_party_ideology = conservative
+
+        any_owned = {
+            limit = {
+                is_colonial = no
+            }
+            any_pop = {
+                scaled_militancy = {
+                    factor = 3
+                    ideology = liberal
+                }
+                scaled_consciousness = {
+                    factor = 4
+                    ideology = liberal
+            	}
+        }
+        }
+	ai_chance = { factor = 1 }
+    }
+
+option = {
+        name = "vargasopt2"
+        any_owned = {
+            limit = {
+                is_core = RGS
+            }
+            secede_province = RGS
+        }
+        RGS = {
+            capital = 2463
+            leadership = 80
+        }
+        war = {
+            target = RGS
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = status_quo
+            }
+        }
+	ai_chance = { factor = 0 }
+        }
+    }
+
+#Construction of Brasilia finished
+country_event = {
+	id = 50003
+	title = "Construction of Brasilia finished"
+	desc = "EVTDESC50003"
+	picture = "brasilia_finished"
+
+	trigger = {
+    		tag = BRZ
+    		year = 1960 
+ 		war = no
+    		has_country_flag = construction_of_brasilia_begun
+		NOT = {
+			2421 = {
+				has_province_modifier = brasilia_under_construction
+			}
+		}
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Great! Brasilia is the new capital of country."
+		set_country_flag = brasilia_built
+		prestige = 50
+		2421 = { change_province_name = "Brasilia" }
+		2421 = {
+			life_rating = 5
+			add_province_modifier = { name = recently_built_city duration = 3650 }
+		}
+		capital = 2421
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#Constitutionalist Revolution of 1932
+country_event = {
+	id = 50004
+  	title = "Constitutionalist Revolution of 1932"
+  	desc = "EVTDESC50004"
+	picture = "brz_constitutionalist_revolution"
+
+	trigger = {
+    		tag = BRZ
+    		year = 1932 NOT = { year = 1933 }
+		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight for Constitution!"
+		random_list = {
+			10 = { country_event = 50005 } #Revolution Successful
+			90 = { country_event = 50006 } #Revolution Failure
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Abandon this action."
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = 7
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+	title = "Revolution Successful"
+	desc = "The Constitutionalist Revolution of 1932 was successful!"
+	id = 50005
+	picture = "brz_const_revolution_successful"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		country_event = 60050
+		ruling_party_ideology = liberal
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		}
+}
+
+country_event = {
+	title = "Revolution Failure"
+	desc = "The Constitutionalist Revolution of 1932 was a failure..."
+	id = 50006
+	picture = "brz_const_revolution_failure"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a disaster..."
+		}
+}
+
+#Communist uprising of 1935
+country_event = {
+	id = 50007
+  	title = "Communist uprising of 1935"
+  	desc = "EVTDESC50007"
+	picture = "brz_communist_uprising"
+
+	trigger = {
+    		tag = BRZ
+    		year = 1935 NOT = { year = 1936 }
+		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight for Communism!"
+		random_list = {
+			10 = { country_event = 50008 } #Uprising Successful
+			90 = { country_event = 50009 } #Uprising Failure
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Abandon this action."
+		any_pop = {
+			scaled_militancy = {
+				ideology = communist
+				factor = 7
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+	title = "Uprising Successful"
+	desc = "The Communist uprising of 1935 was successful!"
+	id = 50008
+	picture = "brz_communist_uprising_successful"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Viva la Revolution!"
+		country_event = 60000
+		}
+}
+
+country_event = {
+	title = "Uprising Failure"
+	desc = "The Communist uprising of 1935 was a failure..."
+	id = 50009
+	picture = "brz_communist_uprising_failure"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a disaster..."
+		}
+}
+
+#Putsch attempt by integralists in May 1938
+country_event = {
+	id = 50010
+  	title = "Putsch attempt by integralists in May 1938"
+  	desc = "EVTDESC50010"
+	picture = "brz_integralist_uprising"
+
+	trigger = {
+    		tag = BRZ
+    		year = 1938 NOT = { year = 1939 }
+		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Fight for Brazilian Integralism!"
+		random_list = {
+			5 = { country_event = 50011 } #Putsch attempt Successful
+			95 = { country_event = 50012 } #Putsch attempt Failure
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Abandon this action."
+		any_pop = {
+			scaled_militancy = {
+				ideology = fascist
+				factor = 7
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+	title = "Putsch attempt Successful"
+	desc = "The Putsch attempt of 1938 was successful!"
+	id = 50011
+	picture = "brz_integralist_uprising_successful"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Long live Integralism!"
+		country_event = 60030
+		}
+}
+
+country_event = {
+	title = "Putsch attempt Failure"
+	desc = "The Putsch attempt of 1938 was a failure..."
+	id = 50012
+	picture = "brz_communist_uprising_failure"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a disaster..."
+		}
+}
+
+#The deposition of Vargas
+country_event = {
+	id = 50013
+	title = "The Deposition of Vargas"
+	desc = "EVTDESC50013"
+	picture = "vargas_deposition"
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRZ
+		year = 1945
+		NOT = { year = 1947 }
+		government = presidential_dictatorship
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "Viva a liberdade!"
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = state_equal_weight
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		any_pop = {
+        		ideology = {
+        			value = socialist
+        			factor = 0.05
+        		}
+		militancy = -4
+        	}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 6 consciousness = 3 }
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#Military dictatorship of 1964
+country_event = {
+	id = 50014
+  	title = "Military dictatorship of 1964"
+  	desc = "EVTDESC50014"
+	picture = "1964_brz_dictatorship"
+
+	trigger = {
+    		tag = BRZ
+    		year = 1964 NOT = { year = 1965 }
+		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Castelo Branco will be the new leader of our country."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 3 consciousness = 1 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Transition towards Democracy
+country_event = {
+	id = 50015
+  	title = "Transition towards Democracy"
+  	desc = "EVTDESC50015"
+	picture = "brz_transition_democracy"
+
+	trigger = {
+    		tag = BRZ
+    		year = 1985 NOT = { year = 1990 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 7 consciousness = 3 }
+		ai_chance = { factor = 0 }
+	}
+
+}

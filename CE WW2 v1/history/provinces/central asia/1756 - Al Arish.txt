@@ -1,0 +1,11 @@
+owner = EGY
+controller = EGY
+add_core = EGY
+trade_goods = fruit
+life_rating = 35
+1912.10.7 = {
+        
+        railroad = 3
+        naval_base = 4
+}
+

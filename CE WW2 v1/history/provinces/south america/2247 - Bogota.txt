@@ -1,0 +1,14 @@
+owner = CLM
+controller = CLM
+add_core = CLM
+add_core = GCO
+trade_goods = cattle
+life_rating = 30
+terrain = urban_bogota
+1936.1.1 = {
+state_building = {
+	level = 3
+	building = regular_clothes_factory
+	upgrade = yes
+}
+}

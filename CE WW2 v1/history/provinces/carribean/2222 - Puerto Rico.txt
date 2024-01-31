@@ -1,0 +1,26 @@
+owner = SPA
+controller = SPA
+trade_goods = cotton
+life_rating = 35
+1912.10.7 = {
+	owner = USA
+	controller = USA
+        colonial = 2
+}
+1936.1.1 = {
+state_building = {
+	level = 2
+	building = machine_parts_factory 
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = regular_clothes_factory 
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = fabric_factory
+	upgrade = yes
+}
+}

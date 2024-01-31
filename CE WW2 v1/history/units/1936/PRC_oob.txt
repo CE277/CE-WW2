@@ -1,0 +1,31 @@
+army = { 
+
+name = "Chinese Workers" location = 1561
+
+leader = {
+	name = "Mao Zedong"
+	date = "1920.1.1"
+        prestige = 1
+        picture = mao
+	type = land
+	personality = hellbent
+	background = bureaucrat_speed
+  }
+
+leader = {
+	name = "Zhong Xina"
+	date = "1935.1.1"
+        picture = xina
+        prestige = 0.5
+	type = land
+	personality = audacious
+	background = cursed_luck
+  }
+
+regiment = { name = "1. Rebels" type = irregular home = 1532 } 
+regiment = { name = "2. Rebels" type = irregular home = 1561 } 
+regiment = { name = "3. Rebels" type = cavalry home = 2062 } 
+regiment = { name = "1. Rebels" type = infantry home = 1532 }
+regiment = { name = "2. Rebels" type = infantry home = 1561 } 
+regiment = { name = "3. Rebels" type = cavalry home = 2062 } 
+}

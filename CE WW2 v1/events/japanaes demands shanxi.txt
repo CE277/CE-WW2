@@ -1,0 +1,22 @@
+country_event = { 
+
+id = 1947194866
+
+major = no
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "Collapse of Shanxi Government"
+desc= "The last Chinese stronghold has fallen"
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	option = {
+		name = "Very humiliating..."
+		                
+                        1532 = { secede_province = MCK }
+                        1576 = { secede_province = MCK }
+		}
+	}

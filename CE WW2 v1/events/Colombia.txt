@@ -1,0 +1,86 @@
+#La Violencia
+country_event = {
+	id = 4003001
+  	title = "EVTNAME4003001"
+  	desc = "EVTDESC4003001"
+	picture = "la_violencia"
+
+	trigger = {
+    		tag = CLM
+    		year = 1948 NOT = { year = 1950 }
+		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "This conflict will ruin our country."
+		prestige = -30
+		add_country_modifier = {
+			name = la_violencia
+			duration = 3650
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = conservative
+				factor = 4
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = 4
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Support Conservatives."
+		prestige = -30
+		add_country_modifier = {
+			name = la_violencia
+			duration = 3650
+		}
+		any_pop = {
+			ideology = {
+				value = conservative
+				factor = 0.3
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = 7
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Support Liberals."
+		prestige = -30
+		add_country_modifier = {
+			name = la_violencia
+			duration = 3650
+		}
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.3
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = conservative
+				factor = 7
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+}

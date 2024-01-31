@@ -1,0 +1,21 @@
+political_decisions = {
+
+	franceexile = {
+                picture = franceexile
+		potential = {
+                        government = bourgeois_dictatorship
+			NOT = { has_country_flag = france_exile }
+                        tag = FRA
+		}
+		allow = {
+            government = bourgeois_dictatorship
+			controls = 425
+		}
+		effect = {
+			set_country_flag = france_exile 
+                prestige = 100
+                government = democracy
+		}
+		
+		}
+		

@@ -1,0 +1,20 @@
+owner = CLM
+controller = CLM
+add_core = CLM
+add_core = PNM
+add_core = GCO
+trade_goods = fruit
+life_rating = 30
+terrain = urban_panama_city
+1912.10.7 = {
+	controller = PNM
+	owner = PNM
+}
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+}
+

@@ -1,0 +1,12 @@
+owner = ENG
+controller = ENG
+add_core = SAF
+trade_goods = fruit
+life_rating = 35
+1867.1.1 = {
+	trade_goods = precious_goods
+}
+1912.10.7 = {
+	controller = SAF
+	owner = SAF
+}

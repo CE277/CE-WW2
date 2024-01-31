@@ -1,0 +1,154 @@
+political_decisions = {
+
+# Attempt for Space Rocket
+	space_rocket_attempt_public = {
+			picture = "space_rocket_attempt"
+			potential = {
+				NOT = { has_country_modifier = space_rocket }
+				has_country_modifier = space_agency
+				has_country_modifier = space_public
+				has_country_modifier = develop_space_rocket
+				NOT = { has_country_modifier = space_project_attempted }
+				NOT = { has_country_flag = space_attempt_fired }
+			}
+			allow = {
+				war = no
+			}
+
+			effect = {
+				set_country_flag = space_attempt_fired
+				random_list = {
+					80 = { country_event = 1400055 } #Rocket Successful
+					20 = { country_event = 1400054 } #Rocket Failure
+				}
+			}
+			ai_will_do = { factor = 1 }
+	}
+
+# Attempt for Space Satellite
+	space_satellite_attempt_public = {
+			picture = "space_satellite_attempt"
+			potential = {
+				NOT = { has_country_modifier = space_satellite }
+				has_country_modifier = space_agency
+				has_country_modifier = space_public
+				has_country_modifier = develop_space_satellite
+				NOT = { has_country_modifier = space_project_attempted }
+				NOT = { has_country_flag = space_attempt_fired }
+				}
+			allow = {
+				war = no
+			}
+
+			effect = {
+				set_country_flag = space_attempt_fired
+				random_list = {
+					40 = { country_event = 1400056 } #Satellite Successful
+					60 = { country_event = 1400057 } #Satellite Failure
+				}
+			}
+			ai_will_do = { factor = 1 }
+	}
+
+# Space man attempt 
+	space_man_attempt_public = {
+			picture = "space_man_attempt"
+			potential = {
+				NOT = { has_country_modifier = space_man }
+				has_country_modifier = space_agency
+				has_country_modifier = space_public
+				has_country_modifier = develop_space_man
+				NOT = { has_country_modifier = space_project_attempted }
+				NOT = { has_country_flag = space_attempt_fired }
+				}
+			allow = {
+				war = no
+			}
+
+			effect = {
+				set_country_flag = space_attempt_fired
+				random_list = {
+					60 = { country_event = 1400058 } #Space man Successful
+					40 = { country_event = 1400059 } #Space man Failure
+				}
+			}
+			ai_will_do = { factor = 1 }
+	}
+
+# Attempt Space station
+	space_station_attempt_public = {
+			picture = "space_station_attempt"
+			potential = {
+				NOT = { has_country_modifier = space_station }
+				has_country_modifier = space_agency
+				has_country_modifier = space_public
+				has_country_modifier = develop_space_station
+				NOT = { has_country_modifier = space_project_attempted }
+				NOT = { has_country_flag = space_attempt_fired }
+			}
+			allow = {
+				war = no
+			}
+
+			effect = {
+				set_country_flag = space_attempt_fired
+				random_list = {
+					60 = { country_event = 1400062 } #Station Successful
+					40 = { country_event = 1400063 } #Station Failure
+				}
+			}
+			ai_will_do = { factor = 1 }
+	}
+
+# Space probe attempt
+	space_probe_attempt_public = {
+			picture = "space_probe_attempt"
+			potential = {
+				NOT = { has_country_modifier = space_probe }
+				has_country_modifier = space_agency
+				has_country_modifier = space_public
+				has_country_modifier = develop_space_probe
+				NOT = { has_country_modifier = space_project_attempted }
+				NOT = { has_country_flag = space_attempt_fired }
+				}
+			allow = {
+				war = no
+			}
+
+			effect = {
+				set_country_flag = space_attempt_fired
+				random_list = {
+					25 = { country_event = 1400060 } #Space probe Successful
+					75 = { country_event = 1400061 } #Space probe Failure
+				}
+			}
+			ai_will_do = { factor = 1 }
+	}
+
+# Moon Mission attempt
+	moon_mission_attempt_public = {
+			picture = "moon_mission_attempt"
+			potential = {
+				NOT = { has_country_flag = space_moon }
+				has_country_modifier = space_agency
+				has_country_modifier = space_public
+				has_country_modifier = develop_moon_mission
+				NOT = { has_country_modifier = space_project_attempted }
+				NOT = { has_country_flag = space_attempt_fired }
+			}
+			allow = {
+				war = no
+			year = 1962
+			}
+
+			effect = {
+			set_country_flag = space_attempt_fired
+			random_list = {
+				30 = { country_event = 1400064 } #Moon Mission Successful
+				70 = { country_event = 1400065 } #Moon Mission Failure
+			}
+						}
+			ai_will_do = { factor = 1 }
+	}
+
+}

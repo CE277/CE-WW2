@@ -1,0 +1,14 @@
+owner = ABU
+controller = ABU
+add_core = ABU
+trade_goods = grain
+life_rating = 35
+terrain = urban_abu_dubai
+1910.1.1 = {
+	trade_goods = oil
+}
+1912.10.7 = {
+	owner = ENG
+	controller = ENG
+	trade_goods = oil
+}

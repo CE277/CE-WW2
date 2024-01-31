@@ -1,0 +1,13 @@
+owner = SPA
+controller = SPA
+add_core = PHL
+trade_goods = fruit
+life_rating = 30
+terrain = urban_manila
+
+naval_base = 2
+1912.10.7 = {
+	owner = USA
+	controller = USA
+        colonial = 2
+}

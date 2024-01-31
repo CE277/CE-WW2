@@ -1,0 +1,32 @@
+political_decisions = {
+
+	scorched_earth = {
+		picture = scorched
+		potential = {
+			NOT = { has_country_modifier = scorched_earth }
+                        ai = no
+                        war = yes
+		}
+		allow = {
+                        war = yes
+                        national_provinces_occupied = 0.1
+                        OR = { 
+                        government = fascist_dictatorship
+                        government = proletarian_dictatorship
+                        government = presidential_dictatorship
+                        }
+		}
+		
+		effect = {
+						add_country_modifier = {
+						name = scorched_earth
+						duration = 365
+					}
+                    any_owned = { limit = { NOT = { controlled_by = THIS } }
+infrastructure = -2
+}
+			}
+		}
+	}
+
+

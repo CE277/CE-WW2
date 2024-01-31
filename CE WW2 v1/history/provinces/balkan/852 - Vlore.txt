@@ -1,0 +1,19 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = ALB
+trade_goods = cattle
+life_rating = 35
+1912.10.7 = {
+	owner = ALB
+        remove_core = TUR
+	controller = ALB
+}
+1939.4.9 = {
+	owner = ITA
+	controller = ITA
+}
+1946.1.1 = {
+	owner = ALB
+	controller = ALB
+}

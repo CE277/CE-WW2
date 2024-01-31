@@ -1,0 +1,172 @@
+leader = {
+	name = "Juan Álvarez"
+	type = land
+	date="1836.1.1"
+	personality = skilled
+	background = elderly
+	prestige = 0.3
+}
+
+leader = {
+	name = "Miguel Mirámon"
+	type = land
+	date="1858.1.1"
+	personality = fanatic
+	background = uncommonly_young
+	prestige = 0.1
+}
+
+army = {
+	name = "Ejército de Ciudad de México"
+	location = 2172
+	regiment = {
+		name= "1.1. Division"
+		type = infantry
+		home = 2172
+	}
+
+	regiment = {
+		name= "2.1. Division"
+		type = infantry
+		home = 2172
+	}
+
+	regiment = {
+		name= "3.1. Division"
+		type = infantry
+		home = 2176
+	}
+
+	regiment = {
+		name= "4.1. Division"
+		type = cavalry
+		home = 2172
+	}
+}
+
+army = {
+	name = "Ejército del Norte"
+	location = 2159
+	regiment = {
+		name= "1.2. Division"
+		type = infantry
+		home = 2146
+	}
+
+	regiment = {
+		name= "2.2. Division"
+		type = infantry
+		home = 2159
+	}
+
+	regiment = {
+		name= "3.2. Division"
+		type = infantry
+		home = 2158
+	}
+}
+
+navy = {
+	name = "1st Transport Navy"
+	location = 2162
+	ship = {
+		name= "1st Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "2nd Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "3rd Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "4th Transport"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "5th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "6th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "7th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "8th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "9th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "10th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "11st Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "12nd Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "13rd Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "14th Transport"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "15th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "16th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "17th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "18th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "19th Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "20th Transport"
+		type = steam_transport
+	}
+
+}

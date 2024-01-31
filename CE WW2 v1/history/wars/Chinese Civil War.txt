@@ -1,0 +1,30 @@
+name = "Chinese Civil War"
+
+1927.8.1 = {
+	add_attacker = KMT
+	add_defender = PRC
+	
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = annex_core_country
+		actor = KMT
+		receiver = PRC
+                country = PRC
+		state_province_id = 1561
+	}
+
+	war_goal = {
+		casus_belli = status_quo
+		actor = PRC
+		receiver = KMT
+	}
+
+}
+1936.10.5 = {
+	rem_attacker = KMT
+        rem_defender = PRC
+}

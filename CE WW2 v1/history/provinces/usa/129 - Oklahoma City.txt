@@ -1,0 +1,29 @@
+trade_goods = grain
+life_rating = 35
+1861.1.1 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+	add_core = CHE
+}
+1867.3.30 = {
+	controller = USA
+	owner = USA
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = paper_mill
+	upgrade = yes
+}
+}

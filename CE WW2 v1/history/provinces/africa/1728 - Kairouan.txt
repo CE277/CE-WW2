@@ -1,0 +1,13 @@
+owner = TUN
+controller = TUN
+add_core = TUN
+trade_goods = fruit
+life_rating = 35
+1861.1.1 = {
+	owner = TUR
+	controller = TUR
+}
+1912.10.7 = {
+	controller = FRA
+	owner = FRA
+}

@@ -1,0 +1,12 @@
+owner = ENG
+controller = ENG
+add_core = HND
+trade_goods = dye
+life_rating = 32
+terrain = urban_calcutta
+
+1861.1.1 = { railroad = 3 }1912.10.7 = {
+	owner = RJA
+	controller = RJA
+}
+

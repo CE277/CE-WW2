@@ -1,0 +1,9 @@
+owner = RUS
+controller = RUS
+add_core = CHY
+add_core = RUS
+trade_goods = wool
+life_rating = 35
+1883.1.1 = {
+	trade_goods = oil
+}

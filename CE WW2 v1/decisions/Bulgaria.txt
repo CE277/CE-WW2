@@ -1,0 +1,684 @@
+political_decisions = {
+
+	oppose_the_royal_dictatorship = {
+		picture = "oppose_the_royal_dictatorship"
+		potential = {
+			tag = BUL
+			year = 1936
+			government = absolute_monarchy
+			NOT = { has_country_flag = power_to_the_tsar }
+			NOT = { has_country_flag = oppose_the_royal_dictatorship }
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = oppose_the_royal_dictatorship
+			prestige = 20
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.1
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = socialist
+        				factor = 0.05
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = liberal
+        				factor = 0.05
+        			}
+       			}
+			add_country_modifier = {
+				name = oppose_the_royal_dictatorship
+				duration = 365
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	appoint_communist_ministers = {
+		picture = "appoint_communist_ministers"
+		potential = {
+			tag = BUL
+			has_country_flag = oppose_the_royal_dictatorship
+			NOT = { has_country_modifier = oppose_the_royal_dictatorship }
+			NOT = { has_country_flag = democratic_principles }
+			NOT = { has_country_flag = appoint_communist_ministers }
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = appoint_communist_ministers
+			prestige = 10
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.05
+        			}
+       			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_fatherland_front = {
+		picture = "the_fatherland_front"
+		potential = {
+			tag = BUL
+			year = 1942
+			has_country_flag = appoint_communist_ministers
+			NOT = { has_country_flag = the_fatherland_front }
+		}
+		
+		allow = {
+			idealism = 1
+		}
+
+		effect = {
+			set_country_flag = the_fatherland_front
+			prestige = 20
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.35
+        			}
+       			}
+			add_country_modifier = {
+				name = the_fatherland_front
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	overthrow_the_tsar = {
+		picture = "king_boris_of_bulgaria"
+		potential = {
+			tag = BUL
+			year = 1944
+			has_country_flag = the_fatherland_front
+			NOT = { has_country_flag = overthrow_the_tsar }
+		}
+		
+		allow = {
+			idealism = 1
+			communist = 10
+		}
+
+		effect = {
+			set_country_flag = overthrow_the_tsar
+			prestige = 40
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.05
+        			}
+       			}
+			add_country_modifier = {
+				name = overthrow_the_tsar
+				duration = 1825
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	liberation_of_the_proletariat = {
+		picture = "liberation_of_the_proletariat"
+		potential = {
+			tag = BUL
+			government = proletarian_dictatorship
+			NOT = { has_country_flag = liberation_of_the_proletariat }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			experimental_psychology = 1
+		}
+
+		effect = {
+			set_country_flag = liberation_of_the_proletariat
+			prestige = 60
+			badboy = 10
+			casus_belli = {
+				target = GRE
+				type = install_communism
+				months = 48
+			}
+			casus_belli = {
+				target = YUG
+				type = install_communism
+				months = 48
+			}
+			casus_belli = {
+				target = TUR
+				type = install_communism
+				months = 48
+			}
+			casus_belli = {
+				target = ROM
+				type = install_communism
+				months = 48
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	democratic_principles = {
+		picture = "democratic_principles"
+		potential = {
+			tag = BUL
+			has_country_flag = oppose_the_royal_dictatorship
+			NOT = { has_country_modifier = oppose_the_royal_dictatorship }
+			NOT = { has_country_flag = appoint_communist_ministers }
+			NOT = { has_country_flag = democratic_principles }
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = democratic_principles
+			prestige = 10
+			any_pop = {
+        			ideology = {
+        				value = liberal
+        				factor = 0.05
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = conservative
+        				factor = 0.05
+        			}
+       			}			
+			any_pop = {
+        			ideology = {
+        				value = socialist
+        				factor = 0.05
+        			}
+       			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	form_a_popular_bloc = {
+		picture = "bul_popular_bloc"
+		potential = {
+			tag = BUL
+			has_country_flag = democratic_principles
+			NOT = { has_country_flag = form_a_popular_bloc }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			set_country_flag = form_a_popular_bloc
+			prestige = 30
+			any_pop = {
+        			ideology = {
+        				value = liberal
+        				factor = 0.20
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = conservative
+        				factor = 0.10
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = socialist
+        				factor = 0.10
+        			}
+       			}
+			add_country_modifier = {
+				name = popular_front
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	abolish_the_monarchy = {
+		picture = "king_boris_of_bulgaria"
+		potential = {
+			tag = BUL	
+			government = absolute_monarchy
+			has_country_flag = form_a_popular_bloc
+			NOT = { has_country_flag = abolish_the_monarchy }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			NOT = { vote_franschise = none_voting }
+			NOT = { political_parties = underground_parties }
+			NOT = { upper_house_composition = party_appointed }
+		}
+
+		effect = {
+			set_country_flag = abolish_the_monarchy
+			prestige = 40
+			any_pop = {
+        			ideology = {
+        				value = liberal
+        				factor = 0.10
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = conservative
+        				factor = 0.10
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = socialist
+        				factor = 0.05
+        			}
+       			}
+			random_list = {
+				60 = { country_event = 60070 } #Constitutional Monarchy
+				40 = { country_event = 60050 } #Republic
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	power_to_the_tsar = {
+		picture = "power_to_the_tsar"
+		potential = {
+			tag = BUL
+			year = 1936
+			government = absolute_monarchy
+			NOT = { has_country_flag = oppose_the_royal_dictatorship }
+			NOT = { has_country_flag = power_to_the_tsar }
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = power_to_the_tsar
+			prestige = 20
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.01
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = reactionary
+        				factor = 0.1
+        			}
+       			}
+			add_country_modifier = {
+				name = power_to_the_tsar
+				duration = 365
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	the_tsars_regime = {
+		picture = "king_boris_of_bulgaria"
+		potential = {
+			tag = BUL
+			has_country_flag = power_to_the_tsar
+			NOT = { has_country_modifier = power_to_the_tsar }
+			NOT = { has_country_flag = appoint_right_ministers }
+			NOT = { has_country_flag = the_tsars_regime }
+		}
+		
+		allow = {
+			tag = BUL
+		}
+
+		effect = {
+			set_country_flag = the_tsars_regime
+			prestige = 10
+			any_pop = {
+        			ideology = {
+        				value = reactionary
+        				factor = 0.05
+        			}
+       			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	promote_bulgarian_nationalism = {
+		picture = "bul_popular_bloc"
+		potential = {
+			tag = BUL
+			has_country_flag = the_tsars_regime
+			NOT = { has_country_flag = promote_bulgarian_nationalism }
+		}
+		
+		allow = {
+			experimental_psychology = 1
+		}
+
+		effect = {
+			set_country_flag = promote_bulgarian_nationalism
+			prestige = 20
+			any_pop = {
+        			ideology = {
+        				value = reactionary
+        				factor = 0.35
+        			}
+       			}
+			add_country_modifier = {
+				name = promote_bulgarian_nationalism
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	guardians_of_the_balkans = {
+		picture = "guardians_of_the_balkans"
+		potential = {
+			tag = BUL
+			has_country_flag = promote_bulgarian_nationalism
+			NOT = { has_country_flag = guardians_of_the_balkans }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			experimental_psychology = 1
+		}
+
+		effect = {
+			set_country_flag = guardians_of_the_balkans
+			prestige = 50
+			badboy = 10
+			casus_belli = {
+				target = GRE
+				type = make_puppet
+				months = 48
+			}
+			casus_belli = {
+				target = YUG
+				type = make_puppet
+				months = 48
+			}
+			casus_belli = {
+				target = ROM
+				type = make_puppet
+				months = 48
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	appoint_right_ministers = {
+		picture = "appoint_right_ministers"
+		potential = {
+			tag = BUL
+			has_country_flag = power_to_the_tsar
+			NOT = { has_country_modifier = power_to_the_tsar }
+			NOT = { has_country_flag = the_tsars_regime }
+			NOT = { has_country_flag = appoint_right_ministers }
+		}
+		
+		allow = {
+			tag = BUL
+		}
+
+		effect = {
+			set_country_flag = appoint_right_ministers
+			prestige = 10
+			any_pop = {
+        			ideology = {
+        				value = conservative
+        				factor = 0.05
+        			}
+				ideology = {
+        				value = fascist
+        				factor = 0.02
+        			}
+       			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	economic_protectionism = {
+		picture = "bul_economic_protectionism"
+		potential = {
+			tag = BUL
+			has_country_flag = appoint_right_ministers
+			NOT = { has_country_flag = economic_protectionism }
+		}
+		
+		allow = {
+			experimental_psychology = 1
+		}
+
+		effect = {
+			set_country_flag = economic_protectionism
+			prestige = 20
+			add_country_modifier = {
+				name = economic_protectionism
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	depose_the_tsar = {
+		picture = "king_boris_of_bulgaria"
+		potential = {
+			tag = BUL
+			OR = {	
+				government = absolute_monarchy
+				government = hms_government
+			}
+			has_country_flag = economic_protectionism
+			NOT = { has_country_flag = depose_the_tsar }
+		}
+		
+		allow = {
+			war = no
+			empiricism = 1
+		}
+
+		effect = {
+			set_country_flag = depose_the_tsar
+			prestige = 20
+			any_pop = {
+        			ideology = {
+        				value = reactionary
+        				factor = 0.05
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = fascist
+        				factor = 0.05
+        			}
+       			}
+			any_pop = {
+        			ideology = {
+        				value = conservative
+        				factor = 0.02
+        			}
+       			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_fate_of_the_balkans = {
+		picture = "fate_of_the_balkans"
+		potential = {
+			tag = BUL
+			year = 1920
+			OR = {
+				government = fascist_dictatorship
+                                ruling_party_ideology = fascist
+				government = presidential_dictatorship
+			}
+			NOT = { has_country_flag = fate_of_the_balkans }
+		}
+		
+		allow = {
+			nationalism_n_imperialism = 1
+			experimental_psychology = 1
+		}
+
+		effect = {
+			set_country_flag = fate_of_the_balkans
+			prestige = 30
+			add_country_modifier = {
+				name = fate_of_the_balkans
+				duration = 7300
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	rebuild_the_bulgarian_army = {
+		picture = "rebuild_bulgarian_army"
+		potential = {
+			tag = BUL
+			year = 1920
+			OR = {	
+				government = absolute_monarchy
+				government = hms_government
+				government = democracy
+			}
+			NOT = { has_country_flag = rebuild_the_bulgarian_army }
+		}
+		
+		allow = {
+			tag = BUL
+		}
+
+		effect = {
+			set_country_flag = rebuild_the_bulgarian_army
+			prestige = 30
+			add_country_modifier = {
+				name = rebuild_the_army
+				duration = 7300
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	a_black_sea_fleet = {
+		picture = "a_black_sea_fleet"
+		potential = {
+			tag = BUL
+			year = 1920
+			NOT = { has_country_flag = a_black_sea_fleet }
+		}
+		
+		allow = {
+			steel_steamers = 1
+			naval_risk_management = 1
+		}
+
+		effect = {
+			set_country_flag = a_black_sea_fleet
+			prestige = 30
+			add_country_modifier = {
+				name = a_black_sea_fleet
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bulgaria_on_the_three_seas = {
+		picture = "bulgaria_on_the_three_seas"
+		potential = {
+			tag = BUL
+			year = 1920
+			NOT = { has_country_flag = bulgaria_on_the_three_seas }
+		}
+		
+		allow = {
+			owns = 823
+			owns = 805
+			owns = 849
+		}
+
+		effect = {
+			set_country_flag = bulgaria_on_the_three_seas
+			prestige = 50
+			add_country_modifier = {
+				name = bulgaria_on_the_three_seas
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

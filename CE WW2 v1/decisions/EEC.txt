@@ -1,0 +1,502 @@
+political_decisions = {
+
+#
+# Member Decisions: 	
+#
+
+	xeu_ambition_founders = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				OR = { 
+					tag = BEL
+					tag = GER
+					tag = FRA
+					tag = ITA
+					tag = LUX
+					tag = NET
+				}
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				NOT = { has_country_flag = xeu_ambition }
+				NOT = { has_country_flag = xeu_ambition_founders } 
+				NOT = { has_global_flag = maastricht_treaty }		
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = xeu_ambition
+			set_country_flag = xeu_ambition_founders
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+			add_country_modifier = { name = xeu_member duration = -1 }
+			add_country_modifier = { name = eec duration = -1 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_ambition = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				OR = { 
+					tag = BEL
+					tag = GER
+					tag = DEN
+					tag = FRA
+					tag = ITA
+					tag = LUX
+					tag = NET
+					tag = IRE
+					tag = POR
+					tag = ENG
+					tag = SPA
+					tag = SPC
+					tag = GRE
+					tag = AUS
+					tag = FIN
+					tag = SWE
+					AND = { capital_scope = { continent = europe } ruling_party_ideology = liberal }
+					860 = { is_core = THIS }  					
+				}
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				NOT = { tag = TUR }
+				NOT = { has_country_flag = xeu_ambition } 
+				NOT = { has_global_flag = maastricht_treaty }		
+		}
+		allow = {
+			the_historical_theory = 1
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			war = no
+		}
+		effect = {
+			set_country_flag = xeu_ambition
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+			add_country_modifier = { name = xeu_member duration = -1 }
+			add_country_modifier = { name = eec duration = -1 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	eu_ambition = {
+		picture = "xeu_ambition"
+		potential = {
+				is_vassal = no
+				OR = { 
+					tag = BEL
+					tag = GER
+					tag = DEN
+					tag = FRA
+					tag = ITA
+					tag = LUX
+					tag = NET
+					tag = IRE
+					tag = POR
+					tag = ENG
+					tag = SPA
+					tag = SPC
+					tag = GRE
+					tag = AUS
+					tag = FIN
+					tag = SWE
+					AND = { capital_scope = { continent = europe } ruling_party_ideology = liberal }					
+				}
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				has_global_flag = maastricht_treaty
+				NOT = { tag = TUR }
+				NOT = { has_country_flag = xeu_ambition } 		
+		}
+		allow = {
+			the_historical_theory = 1
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			war = no
+		}
+		effect = {
+			set_country_flag = xeu_ambition
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				add_core = XEU
+			}
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+			add_country_modifier = { name = xeu_member duration = -1 }
+			add_country_modifier = { name = eec duration = -1 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	end_xeu_ambition = {
+		picture = "euroscepticism"
+		alert = no
+		potential = {
+			has_country_flag = xeu_ambition
+		}
+		allow = {
+			OR = { 
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } }
+				NOT = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+				}
+			}
+			war = no
+		}
+		effect = {
+			clr_country_flag = xeu_ambition
+			remove_country_modifier = xeu_member
+			remove_country_modifier = eec
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				remove_core = XEU
+			}
+			any_pop = {
+				scaled_militancy = {
+					issue = free_trade
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = free_trade
+					factor = 3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { 
+						tag = BEL
+						NOT = { government = fascist_dictatorship }
+					}
+					AND = { 
+						tag = NET
+						NOT = { government = fascist_dictatorship }
+					}
+				}
+			}	
+		}	
+	}
+
+	xeu_invite_denmark = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1973
+				tag = FRA
+				DEN = { exists = yes }
+				DEN = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }
+				NOT = { has_country_flag = xeu_denmark_invited }	
+		}
+		allow = {
+			DEN = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_denmark_invited
+			DEN = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_invite_ireland = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1973
+				tag = FRA
+				IRE = { exists = yes }
+				IRE = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }	
+				NOT = { has_country_flag = xeu_ireland_invited }	
+		}
+		allow = {
+			IRE = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_ireland_invited
+			IRE = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_invite_uk = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1973
+				tag = FRA
+				ENG = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }	
+				NOT = { has_country_flag = xeu_uk_invited }	
+		}
+		allow = {
+			ENG = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_uk_invited
+			ENG = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_invite_greece = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1981
+				tag = FRA
+				GRE = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }	
+				NOT = { has_country_flag = xeu_greece_invited }	
+		}
+		allow = {
+			GRE = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_greece_invited
+			GRE = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_invite_portugal = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1986
+				tag = FRA
+				POR = { exists = yes }
+				POR = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }
+				NOT = { has_country_flag = xeu_portugal_invited }		
+		}
+		allow = {
+			POR = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_portugal_invited
+			POR = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_invite_spain = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1986
+				tag = FRA
+				SPA = { 
+					exists = yes
+					owns = 487
+				}
+				SPA = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }	
+				NOT = { has_country_flag = xeu_spain_invited }	
+		}
+		allow = {
+			SPA = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_spain_invited
+			SPA = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_invite_espana = {
+		picture = "xeu_ambition"
+		potential = {
+				has_global_flag = eec_foundation
+				is_vassal = no
+				year = 1986
+				tag = FRA
+				SPC = { 
+					exists = yes
+					owns = 487
+				}
+				SPC = {
+					OR = {
+						government = democracy
+						government = hms_government
+					}
+					NOT = { has_country_flag = xeu_ambition }
+				} 
+				NOT = { has_global_flag = maastricht_treaty }
+				NOT = { has_country_flag = xeu_espana_invited }		
+		}
+		allow = {
+			SPC = {
+				NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xeu_ambition } } } }
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				war = no
+			}
+		}
+		effect = {
+			set_country_flag = xeu_espana_invited
+			SPC = { country_event = 443054 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	xeu_currency_union = {
+		picture = "currency_union"
+		potential = {
+			NOT = { has_country_modifier = currency_union }
+			capital_scope = { continent = europe } 		
+			has_country_flag = xeu_ambition
+		}
+		allow = {
+			has_country_flag = xeu_ambition
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			modern_stock_exchange = 1
+			election = no
+			war = no
+		}
+		effect = {
+			add_country_modifier = { name = currency_union duration = -1 }
+		}
+		ai_will_do = { factor = 1 } 
+	}
+}

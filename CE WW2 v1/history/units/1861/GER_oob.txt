@@ -1,0 +1,231 @@
+BUL = {
+        value = 150
+}
+ROM = {
+        value = 100
+}
+HUN = {
+        value = 150
+	level = 4
+	influence_value = 50
+}
+
+army = {
+	name = "Die Deutsch armee"
+	leader = {
+		name = "Rudolf Schmidt"
+		type = land
+		personality = aggressive
+		background = school_of_offense
+		date="1939.1.1"
+			}
+	location = 549
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 587
+	}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 587
+	}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 529
+	}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 530
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 534
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 534
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 536
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 536
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 539
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 539
+			}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 528
+	}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 549
+	}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 569
+	}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 529
+	}
+	regiment = {
+		name= "engineer Squadron"
+		type = engineer
+		home = 549
+	}
+}
+
+army = {
+	name = "Die Munich armee"
+	location = 599
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 602
+	}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 601
+	}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 600
+	}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 599
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 599
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 599
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 598
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 596
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 594
+			}
+	regiment = {
+		name = "Infantry Regiment"
+		type = infantry
+		home = 593
+			}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 592
+	}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 591
+	}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 590
+	}
+	regiment = {
+		name= "cavalry Squadron"
+		type = cavalry
+		home = 589
+	}
+	regiment = {
+		name= "engineer Squadron"
+		type = engineer
+		home = 586
+	}
+}
+
+navy = {
+	name = "Kriegsmarine"
+	location = 540 #Oldenburg Port
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+ship = {
+	name = "Transport Ship"
+	type = steam_transport
+	}
+}

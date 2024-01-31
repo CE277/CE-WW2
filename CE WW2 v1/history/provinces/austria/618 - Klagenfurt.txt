@@ -1,0 +1,25 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+trade_goods = coal
+life_rating = 35
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+}
+1920.5.5 = {
+        owner = AUS
+	controller = AUS
+	remove_core = KUK
+}
+1938.3.12 = {
+        owner = GER
+	controller = GER
+	add_core = GER
+}
+1946.1.1 = {
+	owner = ENG
+	controller = ENG
+	remove_core = GER
+}

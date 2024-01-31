@@ -1,0 +1,15 @@
+owner = SPA
+controller = SPA
+add_core = SPA
+trade_goods = fruit
+life_rating = 30
+1912.10.7 = {
+	owner = GER
+	controller = GER
+        colonial = 2
+}
+1920.5.5 = {
+	owner = JAP
+	controller = JAP
+        colonial = 2
+}

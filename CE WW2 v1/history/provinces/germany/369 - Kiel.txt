@@ -1,0 +1,37 @@
+owner = HOL
+controller = HOL
+add_core = HOL
+add_core = GER
+trade_goods = cattle
+life_rating = 40
+terrain = canal_kiel
+naval_base = 2
+
+1861.1.1 = { railroad = 3 }
+1861.1.1 = {
+	state_building = {
+		level = 1
+		building = steamer_shipyard
+		upgrade = yes
+	}
+}
+1867.4.16 = { owner = NGF controller = NGF add_core = NGF } 1871.1.18 = { remove_core = NGF
+	owner = GER
+	controller = GER
+	remove_core = HOL
+        railroad = 5
+	
+        naval_base = 5
+	set_province_flag = kiel_canal
+}
+1920.5.5 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+}
+1946.1.1 = {
+	owner = ENG
+	controller = ENG
+}

@@ -1,0 +1,202 @@
+political_decisions = {
+	accept_afro_americans = {
+		picture = accept_afro_americans
+		potential = {
+			tag = USA
+			NOT = { accepted_culture = afro_american }
+		}
+		allow = {
+			war = no
+			is_disarmed = no
+			election = no
+			government = democracy
+			NOT = { ruling_party_ideology = fascist }
+		}
+		effect = {
+			prestige = 20
+			badboy = -5
+			add_accepted_culture = afro_american
+			any_pop = {
+				limit = { has_pop_culture = afro_american }
+				militancy = -3
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+	}
+
+	dont_accept_afro_americans = {
+		picture = accept_afro_americans
+		potential = {
+			tag = USA
+			accepted_culture = afro_american
+		}
+		allow = {
+			war = no
+			is_disarmed = no
+			election = no
+			ruling_party_ideology = fascist
+			ideological_thought = 1
+		}
+		effect = {
+			prestige = -50
+			badboy = 5
+			remove_accepted_culture = afro_american
+			any_pop = {
+				limit = { has_pop_culture = afro_american }
+				militancy = 5
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+	}
+
+	give_rights_to_afro_americans = {
+		picture = usaseal
+		potential = {
+			tag = USA
+			accepted_culture = afro_american
+			citizens_rights = primary_culture_only
+		}
+		allow = {
+			war = no
+			is_disarmed = no
+			election = no
+			revolution_n_counterrevolution = 1
+			government = democracy
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
+			}
+		}
+		effect = {
+			prestige = 10
+			badboy = -3
+			political_reform = culture_voting_only
+			any_pop = {
+				limit = { has_pop_culture = afro_american }
+				militancy = -3
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+	}
+
+	abolish_rights_from_afro_americans = {
+		picture = usaseal
+		potential = {
+			tag = USA
+			accepted_culture = afro_american
+			citizens_rights = culture_voting_only
+		}
+		allow = {
+			war = no
+			is_disarmed = no
+			election = no
+			mass_politics = 1
+			ruling_party_ideology = fascist
+		}
+		effect = {
+			prestige = -20
+			badboy = 2
+			political_reform = primary_culture_only
+			any_pop = {
+				limit = { has_pop_culture = afro_american }
+				militancy = 3
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+	}
+
+	america_first = {
+		picture = "america_first"
+		potential = {
+			tag = USA
+			year = 1920
+			NOT = { has_country_flag = america_first }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = america_first
+			prestige = 20
+			any_pop = {
+			dominant_issue = {
+				value = jingoism
+				factor = 0.1
+				}
+			}
+			add_country_modifier = {
+				name = america_first
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	guarantee_the_american_dream = {
+		picture = "american_dream"
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = guarantee_the_american_dream }
+		}
+		
+		allow = {
+			war = no
+			empiricism = 1
+		}
+
+		effect = {
+			set_country_flag = guarantee_the_american_dream
+			prestige = 50
+			add_country_modifier = {
+				name = american_dream
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	global_hegemony = {
+		picture = "global_hegemony"
+		potential = {
+			tag = USA
+			NOT = { has_country_flag = global_hegemony }
+		}
+		
+		allow = {
+			war = no
+			rank = 1
+			mass_politics = 1
+			government_interventionism = 1
+		}
+
+		effect = {
+			set_country_flag = global_hegemony
+			prestige = 150
+			add_country_modifier = {
+				name = global_hegemony
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

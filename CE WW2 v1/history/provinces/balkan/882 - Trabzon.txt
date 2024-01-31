@@ -1,0 +1,32 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = ARM
+add_core = PNT
+trade_goods = cattle
+life_rating = 35
+terrain = urban_trabzon
+
+
+1917.1.1 = {
+	owner = PNT
+	controller = PNT
+        remove_core = ARM
+	railroad = 1
+	
+state_building = {
+	level = 1
+	building = cement_factory
+	upgrade = yes
+}
+}
+1922.8.31 = {
+	owner = TUR
+	controller = TUR
+        remove_core = PNT
+state_building = {
+	level = 1
+	building = regular_clothes_factory 
+	upgrade = yes
+}
+}

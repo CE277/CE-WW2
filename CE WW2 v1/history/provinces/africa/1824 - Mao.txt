@@ -1,0 +1,7 @@
+trade_goods = fish
+life_rating = 10
+1912.10.7 = {
+	owner = FRA
+	controller = FRA
+        colonial = 2
+}

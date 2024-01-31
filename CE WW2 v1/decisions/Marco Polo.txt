@@ -1,0 +1,20 @@
+political_decisions = {
+		marco_polo = {
+                        picture = jap1
+			potential = {
+			tag = JAP
+			KMT = { exists = yes }
+			NOT = { has_global_flag = 2nd_SinoJapanese_War }
+			}
+			allow = {
+				year = 1937
+				NOT = { year = 1938 }
+				}
+			effect = {
+				prestige = 2
+				KMT = { country_event = 16050224 }
+				}
+					}
+				}
+			}
+		}

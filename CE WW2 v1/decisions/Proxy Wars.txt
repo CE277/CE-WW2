@@ -1,0 +1,97 @@
+political_decisions = {
+
+	support_rebels = {
+		picture = "support_rebels"
+			potential = {
+				NOT = { has_country_modifier = proxy_involvement }
+				any_neighbor_country = {
+					NOT = { has_country_modifier = support_rebels } 
+					NOT = { relation = { who = THIS value = -100 } }
+					is_greater_power = no 
+					is_vassal = no 
+					revolt_percentage = 0.25 
+					capital_scope = { NOT = { controlled_by = REB } } 
+				}
+				deep_defense_system = 1
+				rank = 10
+				is_vassal = no
+			}
+
+			allow = {
+				money = 1000000
+				war = no
+				election = no
+				OR = { ai = no NOT = { war_policy = pacifism } }
+			}
+
+			effect = {
+				random_country = { 
+					limit = { 
+						neighbour = THIS
+						NOT = { has_country_modifier = support_rebels }
+						NOT = { relation = { who = THIS value = -100 } }
+						is_greater_power = no 
+						is_vassal = no 
+						revolt_percentage = 0.25 
+						capital_scope = { NOT = { controlled_by = REB } }
+					} 
+				add_country_modifier = { name = support_rebels duration = 730 }
+				country_event = 1400071
+				}
+				money = -500000
+				badboy = 5
+				prestige = -25
+				add_country_modifier = { name = proxy_involvement duration = 1825 }
+				add_country_modifier = { name = proxy_rebel duration = 1825 }
+			}
+			ai_will_do = { 
+				factor = 1 
+				modifier = { factor = 0 badboy = 0.8 } 
+			}
+	}
+
+	support_government = {
+		picture = "support_government"
+			potential = {
+				NOT = { has_country_modifier = proxy_involvement }
+				any_neighbor_country = { 
+					NOT = { has_country_modifier = support_government }
+					relation = { who = THIS value = 100 }
+					is_greater_power = no 
+					is_vassal = no 
+					revolt_percentage = 0.25  
+				}
+				deep_defense_system = 1
+				rank = 10
+				is_vassal = no
+			}
+
+			allow = {
+				money = 1000000
+				war = no
+				election = no
+				OR = { ai = no NOT = { war_policy = pacifism } }
+			}
+
+			effect = {
+				money = -500000
+				badboy = 5
+				prestige = -25
+				random_country = { 
+					limit = { 
+						neighbour = THIS
+						NOT = { has_country_modifier = support_government }
+						relation = { who = THIS value = 100 }
+						is_greater_power = no 
+						is_vassal = no 
+						revolt_percentage = 0.25 
+					} 
+				add_country_modifier = { name = support_government duration = 730 }
+				country_event = 1400072
+				}
+				add_country_modifier = { name = proxy_involvement duration = 1825 }
+			}
+			ai_will_do = { factor = 1 modifier = { factor = 0 badboy = 0.8 } }
+	}
+
+}

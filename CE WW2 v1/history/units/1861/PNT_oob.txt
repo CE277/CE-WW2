@@ -1,0 +1,35 @@
+army = {
+
+name = "Pontiako Antartiko" location = 884
+
+leader = {
+	name = "Anastasios Papadopoulos"
+	date = "1919.1.1"
+        prestige = 0.3
+        picture ="european_general_5"
+	type = land
+	personality = heroic
+	background = spoiled
+   }
+
+regiment = { name = "Antartiko Ippiko" type = cavalry home = 883 } 
+regiment = { name = "Pontioi Antartes" type = irregular home = 882 }
+regiment = { name = "Pontioi Antartes" type = irregular home = 884 }
+}
+
+army = {
+
+name = "Antartes Dytikou Pontou" location = 880
+
+leader = {
+	name = "Antonios Xatzieleytheriou"
+	date = "1919.1.1"
+        prestige = 0.3
+        picture ="european_general_4"
+	type = land
+	personality = bold
+	background = cartographer
+   }
+
+regiment = { name = "Pontioi Antartes" type = irregular home = 883 }
+}

@@ -1,0 +1,39 @@
+owner = FRM
+controller = FRM
+add_core = FRM
+add_core = GER
+trade_goods = fruit
+life_rating = 40
+terrain = urban_frankfurt
+
+
+1861.1.1 = { railroad = 3 }
+1867.4.16 = {
+	owner = NGF
+	controller = NGF
+	add_core = NGF
+}
+1871.1.18 = {
+	remove_core = NGF
+	owner = GER
+	controller = GER
+	remove_core = FRM
+        railroad = 4
+	
+}
+1920.5.5 = { 
+state_building = {
+	level = 2
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = cement_factory
+	upgrade = yes
+}
+}
+1946.1.1 = {
+	owner = USA
+	controller = USA
+}

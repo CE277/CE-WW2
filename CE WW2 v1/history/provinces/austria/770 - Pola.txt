@@ -1,0 +1,30 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = CRO
+add_core = YUG
+trade_goods = grain
+life_rating = 35
+1861.1.1 = { 
+#	naval_base = 2
+}
+1867.3.30 = {
+	owner = KUK
+	controller = KUK
+        add_core = KUK
+        railroad = 3
+	
+}
+1920.5.5 = {
+	owner = ITA
+	controller = ITA
+        add_core = ITA
+	remove_core = AUS
+	remove_core = KUK
+        railroad = 3
+	
+}
+1946.1.1 = {
+	owner = YUG
+	controller = YUG
+}

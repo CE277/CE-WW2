@@ -1,0 +1,18 @@
+political_decisions = {
+
+	italyalbania = {
+                picture = italyalbania
+		potential = {
+			NOT = { has_country_flag = italyalbania }
+                        tag = ITA
+		}
+		allow = {
+                        ALB = { in_sphere = ITA }
+			year = 1939
+		}
+		
+		effect = {
+			set_country_flag = italyalbania
+                        inherit = ALB
+		}
+         }

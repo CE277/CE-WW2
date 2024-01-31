@@ -1,0 +1,23 @@
+political_decisions = {
+
+	barbarossa = {
+		potential = {
+			NOT = { has_country_flag = barbarossa }
+                        tag = GER
+		}
+		allow = {
+                        NOT = { GER = { war_with = RUS } }
+                        controls = 706
+                        year = 1941
+                        month = 3
+		}
+		
+		effect = {
+			set_country_flag = barbarossa
+                			casus_belli = {
+				target = RUS
+				type = humiliate
+				months = 24
+			}
+		}
+         }

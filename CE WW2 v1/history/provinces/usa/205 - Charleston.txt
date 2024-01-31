@@ -1,0 +1,33 @@
+owner = USA
+controller = USA
+add_core = USA
+trade_goods = coal
+life_rating = 35
+1861.1.1 = {	controller = CSA	owner = CSA	add_core = CSA}
+1861.1.1 = { 
+	railroad = 3 
+	naval_base = 2
+	
+}1867.3.30 = {
+	controller = USA
+	owner = USA
+}
+1920.1.1 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = canned_food_factory
+	upgrade = yes
+}
+}
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = explosives_factory
+	upgrade = yes
+}
+}

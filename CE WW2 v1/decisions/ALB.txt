@@ -1,0 +1,76 @@
+political_decisions = {
+
+	recognize_greek_minority = {
+		picture = greek_minority
+		potential = {
+			tag = ALB
+			exists = GRE
+			ALB = {
+			owns = 853
+			}
+			NOT = { has_country_flag = recognize_greek_minority }
+		}
+
+		allow = {
+			war = no
+			owns = 853
+			NOT = { OR = { ruling_party_ideology = reactionery
+					ruling_party_ideology = fascist
+					}
+				}
+		}
+
+		effect = {
+			set_country_flag = recognize_greek_minority
+			prestige = 10
+			853 = {
+			add_core = NOE
+			remove_core = GRE
+			}			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	abolition_recognition = {
+		picture = greek_minority
+		potential = {
+			tag = ALB
+			exists = GRE
+			ALB = {
+			owns = 853
+			}
+			has_country_flag = recognize_greek_minority
+			NOT = { has_country_flag = abolition_recognition }
+		}
+
+		allow = {
+			war = no
+			owns = 853
+			is_secondary_power = yes
+			ideological_thought = 1
+			government = fascist_dictatorship
+		}
+
+		effect = {
+			clr_country_flag = recognize_greek_minority
+			set_country_flag = abolition_recognition
+			prestige = -15
+			badboy = 5
+			853 = {
+				remove_core = NOE
+				add_province_modifier = {
+				name = cultural_resurgence
+				duration = 3650
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

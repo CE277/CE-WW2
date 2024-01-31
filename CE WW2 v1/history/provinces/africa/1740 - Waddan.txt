@@ -1,0 +1,19 @@
+owner = TRI
+controller = TRI
+add_core = TRI
+trade_goods = wool
+life_rating = 10
+1861.1.1 = {
+	owner = TUR
+	controller = TUR
+}
+1912.10.7 = {
+	controller = ITA
+	owner = ITA
+        colonial = 2
+}
+1946.1.1 = {
+        owner = ENG
+	controller = ENG
+        colonial = 2
+}

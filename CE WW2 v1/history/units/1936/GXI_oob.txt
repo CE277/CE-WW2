@@ -1,0 +1,35 @@
+army = { 
+
+name = "1st Rebels" location = 1493
+
+regiment = { name = "1. Rebels" type = irregular home = 1493 } 
+regiment = { name = "2. Rebels" type = irregular home = 1493 } 
+regiment = { name = "1. Rebels" type = irregular home = 1493 } 
+regiment = { name = "2. Rebels" type = irregular home = 1493 } 
+regiment = { name = "1. Rebels" type = irregular home = 1493 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1494 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1494 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1494 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1494 } 
+}
+
+army = { 
+
+name = "2nd Rebels" location = 1497
+ 
+
+regiment = { name = "1. Rebels" type = irregular home = 1497
+ } 
+regiment = { name = "2. Rebels" type = irregular home = 1497
+ } 
+regiment = { name = "1. Rebels" type = irregular home = 1497
+ } 
+regiment = { name = "2. Rebels" type = irregular home = 1497
+ } 
+regiment = { name = "1. Rebels" type = irregular home = 1497
+ } 
+regiment = { name = "3. Rebels" type = cavalry home = 1500 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1500 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1500 } 
+regiment = { name = "3. Rebels" type = cavalry home = 1500 } 
+}

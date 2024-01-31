@@ -1,0 +1,21 @@
+political_decisions = {
+
+	inheritvichy = {
+                picture = egalite_Liberte_solidarite
+		potential = {
+			NOT = { has_country_flag = inheritvichy }
+                        tag = FRA
+		}
+		allow = {
+                        FRA = { war_with = VFR }
+                        FRA = { all_core = { NOT = { controlled_by = VFR } } }
+		}
+		
+		effect = {
+			set_country_flag = inheritvichy
+                        prestige = 30
+			inherit = VFR
+		}
+         }
+		 
+}

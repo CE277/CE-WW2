@@ -1,0 +1,6 @@
+owner = JAP
+controller = JAP
+add_core = JAP
+trade_goods = tea
+naval_base = 2
+life_rating = 35 1861.1.1 = { railroad = 3 }

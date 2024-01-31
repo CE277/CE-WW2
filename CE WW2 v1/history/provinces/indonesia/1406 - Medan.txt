@@ -1,0 +1,12 @@
+owner = ATJ
+controller = ATJ
+add_core = ATJ
+trade_goods = tobacco
+life_rating = 30
+1880.1.1 = {
+	trade_goods = rubber
+}
+1912.10.7 = {
+	owner = NET
+	controller = NET
+}

@@ -1,0 +1,17 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = PNT
+trade_goods = fish
+life_rating = 35
+1917.1.1 = {
+	owner = PNT
+	controller = PNT
+	railroad = 1
+	
+}
+1922.8.31 = {
+	owner = TUR
+	controller = TUR
+        remove_core = PNT
+}

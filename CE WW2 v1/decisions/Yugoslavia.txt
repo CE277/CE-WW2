@@ -1,0 +1,120 @@
+political_decisions = {
+
+	western_focus = {
+		picture = "western_guarantee"
+		potential = {
+			tag = YUG
+			year = 1920
+			NOT = { has_country_flag = western_focus }
+			NOT = { has_country_flag = recognize_the_soviet_union }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = western_focus
+			prestige = 40
+			ENG = {
+				relation = { who = THIS value = 100 }
+				diplomatic_influence = { who = THIS value = 50 }
+			}
+			FRA = {
+				relation = { who = THIS value = 150 }
+				diplomatic_influence = { who = THIS value = 100 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	recognize_the_soviet_union = {
+		picture = "recognize_the_soviet_union"
+		potential = {
+			tag = YUG
+			year = 1920
+			NOT = { has_country_flag = western_focus }
+			NOT = { has_country_flag = recognize_the_soviet_union }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = recognize_the_soviet_union
+			prestige = 40
+			RUS = {
+				relation = { who = THIS value = 150 }
+				diplomatic_influence = { who = THIS value = 100 }
+			}
+			any_pop = {
+        			ideology = {
+        				value = communist
+        				factor = 0.1
+        			}
+       			 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	claim_aegean_macedonia = {
+		picture = "greek_macedonia"
+		potential = {
+			tag = YUG
+			owns = 809
+			owns = 849
+			has_country_flag = greater_yugoslavia_claimed
+			NOT = { has_country_flag = claim_aegean_macedonia }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = claim_aegean_macedonia
+			prestige = 10
+			badboy = 5
+			TUR_805 = { add_core = YUG } #Southern Macedonia
+			823 = { add_core = YUG } #Kavala
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	establish_macedonian_cores = {
+		picture = "greater_macedonia"
+		potential = {
+			tag = YUG
+			owns = 805
+			owns = 823
+			has_country_flag = claim_aegean_macedonia
+			NOT = { has_country_flag = establish_macedonian_cores }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = establish_macedonian_cores
+			TUR_805 = { add_core = MCD } #Southern Macedonia
+			823 = { add_core = MCD } #Kavala
+			808 = { add_core = MCD } #Petrich
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

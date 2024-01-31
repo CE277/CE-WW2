@@ -1,0 +1,23 @@
+political_decisions = {
+
+	yugoexile = {
+                picture = yugexile
+		potential = {
+                        government = bourgeois_dictatorship
+			NOT = { has_country_flag = yugoexile }
+                        tag = YUG
+		}
+		allow = {
+            government = bourgeois_dictatorship
+			NOT = { YUG = { national_provinces_occupied = 0.1 } }
+                        CRO = { national_provinces_occupied = 1 }
+		}
+		effect = {
+			set_country_flag = yugoexile 
+                YUG = { country_event = 1947194879 }
+                inherit = CRO
+                prestige = 100
+		}
+		
+		}
+		

@@ -1,0 +1,189 @@
+country_event = {
+	title = "The Anatolian Question"
+	desc = "We've defeated The Young Turks and we want our ancient lands."
+	id = 5000011
+	picture = "young_turks"
+
+	trigger = {
+		tag = GRE
+		war = no		
+		ITA = {
+			owns = 872
+		}
+		GRE = {
+			owns = 867
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Request South Ionia to Italy."
+		ITA = {
+			country_event = { id=5000012 days=1 }
+		}
+		prestige = 10
+		ai_chance = {
+			factor = 100
+		}
+		any_pop = {
+			limit = {
+				culture = turkish
+			}
+			militancy = 2
+		}
+	}
+
+	option = {
+		name = "Better not."
+		badboy = -1
+		ai_chance = {
+			factor = 0
+		}
+		any_pop = {
+			limit = {
+				culture = turkish
+			}
+			militancy = -1
+		}
+	}
+}
+
+country_event = {
+	title = "The Anatolian Question"
+	desc = "We've defeated The Greeks and we want our old land."
+	id = 6000011
+	picture = "young_turks"
+
+	trigger = {
+		tag = TUR
+		war = no		
+		ITA = {
+			owns = 872
+		}
+		TUR = {
+			owns = 869
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Request South Aydin to Italy."
+		ITA = {
+			country_event = { id=6000012 days=1 }
+		}
+		prestige = 10
+		ai_chance = {
+			factor = 100
+		}
+		any_pop = {
+			limit = {
+				culture = greek
+			}
+			militancy = 2
+		}
+	}
+
+	option = {
+		name = "Better not."
+		badboy = -1
+		ai_chance = {
+			factor = 0
+		}
+		any_pop = {
+			limit = {
+				culture = greek
+			}
+			militancy = -1
+		}
+	}
+}
+
+country_event = {
+	title = "Greece wants South Ionia!"
+	desc = "They've defeated The Young Turks and they want their ancient land."
+	id = 5000012
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "South Ioania, will return to Greeks, now."
+		872 = {
+			secede_province = GRE
+		}
+		846 = {
+			secede_province = GRE
+		}
+		prestige = 10
+		any_pop = {
+			limit = {
+				religion = sunni
+			}
+			militancy = 0.5
+		}
+		GRE = {
+			country_event = { id=5000013 days=0 }
+		}
+	}
+
+}
+
+country_event = {
+	title = "Turkey wants South Aydin!"
+	desc = "They've defeated The Greeks and they want their old land."
+	id = 6000012
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "South Aydin will return to Turks, now."
+		872 = {
+			secede_province = TUR
+		}
+		prestige = 10
+		any_pop = {
+			limit = {
+				religion = orthodox
+			}
+			militancy = 0.5
+		}
+		TUR = {
+			country_event = { id=6000013 days=0 }
+		}
+	}
+
+}
+
+
+country_event = {
+	title = "Italy accepted!"
+	desc = "Italy give to Greece South Ionia!"
+	id = 5000013
+	picture = "greek_smyrna"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}
+
+country_event = {
+	title = "Italy  accepted!"
+	desc = "Italy give to Turkey South Aydin!"
+	id = 6000013
+	picture = "greek_smyrna"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}

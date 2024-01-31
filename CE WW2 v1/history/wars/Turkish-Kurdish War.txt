@@ -1,0 +1,22 @@
+name = "Turkish Liberation of Diyarbakir"
+
+1920.5.5 = {
+	add_attacker = TUR
+        add_defender = KDS
+	
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+	war_goal = {
+		casus_belli = conquest
+		actor = TUR
+		receiver = KDS
+	}
+
+}
+1922.1.1 = {
+	rem_attacker = TUR
+	rem_defender = KDS
+}

@@ -1,0 +1,25 @@
+political_decisions = {
+
+	german_victory = {
+                picture = germanvictory
+		potential = {
+			NOT = { has_country_flag = germanvictory }
+                        tag = GER
+		}
+		allow = {
+                        GER = { war_with = RUS }
+                        AND = {
+			NOT = { RUS = { controls = 1008 } }
+			NOT = { RUS = { controls = 1026 } } 
+			NOT = { RUS = { controls = 1064 } } 
+			NOT = { RUS = { controls = 1063 } } }
+		}
+		
+		effect = {
+			set_country_flag = germanvictory
+                end_war = RUS       
+            RUS = { country_event = 1947194874 }
+		}
+  }
+  
+ }

@@ -1,0 +1,18 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = POL
+trade_goods = fruit
+life_rating = 35
+1861.1.1 = { railroad = 3 }1912.10.7 = {
+        railroad = 3
+	
+}
+
+1920.5.5 = {
+	owner = POL
+	controller = POL
+	remove_core = RUS
+        railroad = 3
+	
+}

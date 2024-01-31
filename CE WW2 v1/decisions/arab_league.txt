@@ -1,0 +1,81 @@
+political_decisions = {	
+
+	xal_ambition = {
+		picture = "xal_ambition"
+		potential = {
+			OR = {
+				primary_culture = mashriqi
+				primary_culture = bedouin
+				primary_culture = misri
+			}
+			has_country_flag = arab_league
+			NOT = { has_country_flag = xal_ambition } 
+		}
+		allow = {
+			OR = { 
+				part_of_sphere = no 
+				sphere_owner = { has_country_flag = xal_ambition }
+			}
+			war = no
+		}
+		effect = {
+			set_country_flag = xal_ambition
+			any_country = { 
+				limit = {
+					has_country_flag = xal_ambition
+				}
+					relation = { who = THIS value = 200 }
+			}
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}		
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	end_xal_ambition = {
+		picture = "xal_parlament"
+		alert = no
+		potential = {
+			has_country_flag = xal_ambition
+		}
+		allow = {
+			OR = { 
+				AND = { part_of_sphere = yes 
+					sphere_owner = { 
+						NOT = { has_country_flag = xal_ambition } 
+					} 
+				}
+			NOT = { primary_culture = mashriqi primary_culture = bedouin primary_culture = misri  }
+			}
+			war = no
+		}
+		effect = {
+			clr_country_flag = xal_ambition
+			any_country = { 
+				limit = {
+					has_country_flag = xal_ambition
+				}
+					relation = { who = THIS value = -100 }
+			}
+			any_pop = {
+				scaled_militancy = {
+					issue = free_trade
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = free_trade
+					factor = 3
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}		
+}

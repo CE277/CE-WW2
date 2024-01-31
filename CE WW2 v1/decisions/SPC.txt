@@ -1,0 +1,309 @@
+political_decisions = {
+
+	unify_the_nationalist_front = {
+		picture = "nationalist_front"
+		potential = {
+			tag = SPC
+			year = 1936
+			government = fascist_dictatorship
+			NOT = { has_country_flag = unify_the_nationalist_front }
+		}
+		
+		allow = {
+			war_with = SPA
+		}
+
+		effect = {
+			set_country_flag = unify_the_nationalist_front
+			prestige = 30
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_phalanx_ascendant = {
+		picture = "the_phalanx_ascendant"
+		potential = {
+			tag = SPC
+			year = 1937
+			has_country_flag = unify_the_nationalist_front
+			has_global_flag = spanish_civil_war
+			government = fascist_dictatorship
+			NOT = { has_country_flag = the_phalanx_ascendant }
+		}
+		
+		allow = {
+			war_with = SPA
+		}
+
+		effect = {
+			set_country_flag = the_phalanx_ascendant
+			prestige = 25
+			any_pop = {
+        			ideology = {
+        				value = fascist
+        				factor = 0.1
+        			}
+       			}
+			add_country_modifier = {
+				name = the_phalanx_ascendant
+				duration = 14600
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	call_corpo_truppe_volontarie = {
+		picture = "corpo_truppe_volontarie"
+		potential = {
+			tag = SPC
+			alliance_with = ITA
+			has_global_flag = spanish_civil_war
+			NOT = { has_country_flag = call_italians }
+		}
+		
+		allow = {
+			war_with = SPA
+		}
+
+		effect = {
+			set_country_flag = call_italians
+			add_country_modifier = {
+				name = corpo_truppe_volontarie
+				duration = 1095
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_condor_legion = {
+		picture = "condor_legion"
+		potential = {
+			tag = SPC
+			has_global_flag = spanish_civil_war
+			GER = { has_country_flag = ger_support_the_spanish_nationalists }
+			NOT = { has_country_flag = the_condor_legion }
+		}
+		
+		allow = {
+			war_with = SPA
+		}
+
+		effect = {
+			set_country_flag = the_condor_legion
+			create_alliance = GER
+			add_country_modifier = {
+				name = the_condor_legion
+				duration = 730
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	national_recovery = = {
+		picture = "national_recovery"
+		potential = {
+			tag = SPC
+			government = fascist_dictatorship
+			has_country_flag = nationalists_victory
+			NOT = { has_country_flag = national_recovery }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = national_recovery
+			prestige = 5
+			add_country_modifier = {
+				name = national_recovery
+				duration = 1825
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	a_great_spain = {
+		picture = "a_great_spain"
+		potential = {
+			tag = SPC
+			year = 1936
+			government = fascist_dictatorship
+			NOT = { has_country_flag = a_great_spain }
+		}
+		
+		allow = {
+			war = no
+			SPA = { exists = no }
+		}
+
+		effect = {
+			set_country_flag = a_great_spain
+			prestige = 50
+			any_pop = {
+        			ideology = {
+        				value = fascist
+        				factor = 0.1
+        			}
+       			}
+			add_country_modifier = {
+				name = a_great_spain
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_the_aragonese_posessions = {
+		picture = "aragonese_posessions"
+		potential = {
+			tag = SPC
+			government = fascist_dictatorship
+			has_country_flag = falangist_doctrine
+			has_country_flag = nationalists_victory
+			NOT = { has_country_flag = claim_the_aragonese_posessions }
+		}
+		
+		allow = {
+			war = no
+			NOT = { alliance_with = ITA }
+			POR = { exists = no }
+			owns = 460
+			owns = 457  
+			owns = 464
+			owns = 517
+		}
+
+		effect = {
+			set_country_flag = claim_the_aragonese_posessions
+			prestige = 25
+			badboy = 20
+			SAR_765 = {
+				add_core = SPC
+			}
+			854 = {
+				add_core = SPC
+			}
+			847 = {
+				add_core = SPC
+			}
+			848 = {
+				add_core = SPC
+			}
+			TUR_855 = {
+				add_core = SPC
+			}
+			SIC_763 = {
+				add_core = SPC
+			}
+			759 = {
+				add_core = SPC
+			}
+			760 = {
+				add_core = SPC
+			}
+			casus_belli = {
+				target = ITA
+				type = place_in_the_sun
+				months = 48
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				badboy = 1
+			}	
+		}
+	}
+
+	accept_catalans_and_basques = {
+		picture = "fueros"
+		potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			owns = 492
+			owns = 498
+			OR = {	
+				NOT = { accepted_culture = catalan }
+				NOT = { accepted_culture = basque }
+			}
+			NOT = { has_country_flag = accept_catalans_and_basques }
+		}
+		allow = {
+			war = no
+			OR = {
+				government = hms_government
+				government = democracy
+			}
+			owns = 492
+			owns = 498
+		}
+		effect = {
+			set_country_flag = accept_catalans_and_basques
+			add_accepted_culture = catalan
+			add_accepted_culture = basque
+			any_pop = {
+				limit = { has_pop_culture = catalan }
+				militancy = -3
+			}
+			any_pop = {
+				limit = { has_pop_culture = basque }
+				militancy = -3
+			}
+		}
+	}
+
+	national_and_popular_army_of_spain = {
+		picture = "national_army_of_spain"
+		potential = {
+			tag = SPC
+			government = fascist_dictatorship
+			has_country_flag = a_great_spain
+			NOT = { has_country_flag = n_and_p_army_of_spain }
+		}
+		
+		allow = {
+			war = no
+			money = 200000
+			machine_guns = 1
+			army_nco_training = 1
+		}
+
+		effect = {
+			set_country_flag = n_and_p_army_of_spain
+			prestige = 70
+			treasury = -150000
+			add_country_modifier = {
+				name = national_and_popular_army_of_spain
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

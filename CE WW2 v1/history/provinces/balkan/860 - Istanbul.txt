@@ -1,0 +1,59 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+trade_goods = fruit
+life_rating = 35
+terrain = urban_istanbul
+naval_base = 2
+
+#state_building = {
+#	level = 1
+#	building = cement_factory
+#	upgrade = yes
+#}
+#state_building = {
+#	level = 1
+#	building = fabric_factory
+#	upgrade = yes
+#}
+#state_building = {
+#	level = 1
+#	building = canned_food_factory
+#	upgrade = yes
+#}
+1861.1.1 = {
+	state_building = {
+		level = 2
+		building = fabric_factory
+		upgrade = yes
+	}
+}
+1861.1.1 = {
+	naval_base = 2
+}
+
+
+1920.5.5 = {
+	owner = ENG
+	controller = ENG
+        add_core = GRE
+        railroad = 4
+	
+}
+1923.10.29 = {
+	owner = TUR
+	controller = TUR
+        remove_core = GRE
+}
+1936.1.1 = {
+state_building = {
+	level = 3
+	building = cement_factory
+	upgrade = yes
+}
+state_building = {
+	level = 4
+	building = steel_factory
+	upgrade = yes
+}
+}

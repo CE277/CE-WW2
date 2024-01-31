@@ -1,0 +1,22 @@
+owner = EGY
+controller = EGY
+add_core = TUR
+add_core = CLC
+trade_goods = wool
+life_rating = 35
+
+1861.1.1 = {
+	controller = TUR 
+	owner = TUR
+}
+1920.1.1 = {
+	owner = TUR
+	controller = FRA
+        railroad = 1
+	
+}
+1923.1.1 = {
+	controller = TUR 
+	owner = TUR
+	remove_core = CLC
+}

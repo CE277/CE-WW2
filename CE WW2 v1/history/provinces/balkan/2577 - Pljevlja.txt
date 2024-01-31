@@ -1,0 +1,18 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = MON
+add_core = YUG
+trade_goods = iron
+life_rating = 35
+1912.10.7 = {
+	owner = MON
+	controller = MON
+        remove_core = TUR
+        railroad = 2
+	
+}
+1920.5.5 = {
+	owner = YUG
+	controller = YUG
+}

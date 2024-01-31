@@ -1,0 +1,417 @@
+political_decisions = {
+
+	caucasus_oil = {
+	picture = caucasus
+		potential = {
+		                tag = GER
+                        war = yes
+			NOT = {
+				owns = 1055
+				owns = 1104
+				owns = 1102
+				owns = 1104
+				owns = 1107
+			}
+		}
+		
+		allow = {
+				NOT = { RUS = { controls = 1055 controls = 1102 controls = 1104 controls = 1107 controls = 1039 } }
+			}
+		
+		effect = {
+		1055 = {
+		secede_province = GER
+		}
+		1104 = {
+		secede_province = GER
+		}
+		1102 = {
+		secede_province = GER
+		}
+		1107 = {
+		secede_province = GER
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+		caucasus_oil1 = {
+	picture = caucasus
+		potential = {
+		                tag = RUS
+						war = yes
+			NOT = {
+				owns = 1055
+				owns = 1104
+				owns = 1102
+				owns = 1104
+				owns = 1107
+			}
+		}
+		
+		allow = {
+				NOT = { GER = { controls = 1055 controls = 1102 controls = 1104 controls = 1107 controls = 1039 } }
+			}
+		
+		effect = {
+		1055 = {
+		secede_province = RUS
+		}
+		1104 = {
+		secede_province = RUS
+		}
+		1102 = {
+		secede_province = RUS
+		}
+		1107 = {
+		secede_province = RUS
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+		galicia = {
+	picture = galicia1
+		potential = {
+		                tag = GER
+						war_with = RUS
+			NOT = {
+				owns = 702
+				owns = 951
+				owns = 953
+				owns = 952
+			}
+		}
+		
+		allow = {
+		        NOT = { RUS = { controls = 702 controls = 951 controls = 953 controls = 952 } }
+				NOT = { POL = { controls = 702 controls = 951 controls = 953 controls = 952 } }
+			}
+		
+		effect = {
+		702 = {
+		secede_province = GER
+		}
+		951 = {
+		secede_province = GER
+		}
+		953 = {
+		secede_province = GER
+		}
+		952 = {
+		secede_province = GER
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+		galicia1 = {
+	picture = galicia1
+		potential = {
+		                tag = RUS
+						war_with = GER
+			NOT = {
+				owns = 702
+				owns = 951
+				owns = 953
+				owns = 952
+			}
+		}
+		
+		allow = {
+		        NOT = { GER = { controls = 702 controls = 951 controls = 953 controls = 952 } }
+                        NOT = { POL = { controls = 702 controls = 951 controls = 953 controls = 952 } }
+			}
+		
+		effect = {
+		702 = {
+		secede_province = RUS
+		}
+		951 = {
+		secede_province = RUS
+		}
+		953 = {
+		secede_province = RUS
+		}
+		952 = {
+		secede_province = RUS
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+			norway = {
+	picture = norwayiron
+		potential = {
+                        war = yes
+			NOT = {
+				owns = 305
+				owns = 306
+				owns = 307
+			}
+		}
+		
+		allow = {
+				controls = 305
+				controls = 306
+				controls = 307
+			}
+		
+		effect = {
+		305 = {
+		secede_province = THIS
+		}
+		306 = {
+		secede_province = THIS
+		}
+		307 = {
+		secede_province = THIS
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+				sumatra = {
+	picture = coffee_in_colombia
+		potential = {
+                        war = yes
+			NOT = {
+				owns = 1401
+				owns = 1406
+				owns = 1398
+				owns = 1399
+			}
+		}
+		
+		allow = {
+				controls = 1401
+				controls = 1406
+				controls = 1398
+				controls = 1399
+			}
+		
+		effect = {
+		1401 = {
+		secede_province = THIS
+		}
+		1406 = {
+		secede_province = THIS
+		}
+		1398 = {
+		secede_province = THIS
+		}
+		1399 = {
+		secede_province = THIS
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+				java = {
+	picture = coffee_in_colombia
+		potential = {
+                        war = yes
+			NOT = {
+				owns = 1420
+				owns = 1418
+				owns = 1421
+			}
+		}
+		
+		allow = {
+				controls = 1420
+				controls = 1418
+				controls = 1421
+			}
+		
+		effect = {
+		1420 = {
+		secede_province = THIS
+		}
+		1418 = {
+		secede_province = THIS
+		}
+		1421 = {
+		secede_province = THIS
+		}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+				borneo = {
+	picture = coffee_in_colombia
+		potential = {
+                        war = yes
+			NOT = {
+				owns = 1393
+				owns = 1397
+				owns = 1425
+                owns = 1422
+				owns = 1429
+				owns = 1423
+				owns = 1424
+			}
+		}
+		
+		allow = {
+				controls = 1393
+				controls = 1397
+				controls = 1425
+				controls = 1422
+				controls = 1429
+				controls = 1423
+				controls = 1424
+			}
+		
+		effect = {
+		1393 = {
+		secede_province = THIS
+		}
+		1397 = {
+		secede_province = THIS
+		}
+		1425 = {
+		secede_province = THIS
+		}
+		1422 = {
+		secede_province = THIS
+		}
+		1429 = {
+		secede_province = THIS
+		}
+		1423 = {
+		secede_province = THIS
+		}
+		1424 = {
+		secede_province = THIS
+		}
+		
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+				malaysia = {
+	picture = coffee_in_colombia
+		potential = {
+                        war = yes
+			NOT = {
+				owns = 1385
+				owns = 2575
+			}
+		}
+		
+		allow = {
+				controls = 1385
+				controls = 2575
+			}
+		
+		effect = {
+		1390 = {
+		secede_province = THIS
+		}
+		2575 = {
+		secede_province = THIS
+		}
+		1385 = {
+		secede_province = THIS
+		}
+		1386 = {
+		secede_province = THIS
+		}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+				burma = {
+	picture = coffee_in_colombia
+		potential = {
+                        war = yes
+			NOT = {
+				owns = 1335
+			}
+		}
+		
+		allow = {
+				controls = 1335
+			}
+		
+		effect = {
+		1335 = {
+		secede_province = THIS
+		}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+				bessarabia = {
+	picture = soviet_bessarabia
+		potential = {
+                        tag = ROM
+                        war = yes
+			NOT = {
+				owns = 676
+			}
+		}
+		
+		allow = {
+			NOT = { RUS = { controls = 676 } }
+			NOT = { RUS = { controls = 678 } }
+			NOT = { RUS = { controls = 677 } }
+			}
+		
+		effect = {
+		676 = {
+		secede_province = ROM
+		}
+		677 = {
+		secede_province = ROM
+		}
+		678 = {
+		secede_province = ROM
+		}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

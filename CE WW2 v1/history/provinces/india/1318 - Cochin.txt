@@ -1,0 +1,13 @@
+owner = TRA
+controller = TRA
+add_core = HND
+add_core = TRA
+trade_goods = grain
+life_rating = 32
+1880.1.1 = {
+	trade_goods = rubber
+}
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+}

@@ -1,0 +1,25 @@
+political_decisions = {
+
+	japan_victory = {
+                picture = jap1
+		potential = {
+			NOT = { has_country_flag = japanvictory }
+                        tag = JAP
+		}
+		allow = {
+                        JAP = { war_with = KMT }
+                        AND = {
+			NOT = { KMT = { controls = 1578 } }
+			NOT = { KMT = { controls = 2221 } } 
+			KMT = { national_provinces_occupied = 0.90 } }
+		}
+		
+		effect = {
+			set_country_flag = japanvictory 
+                end_war = KMT
+		
+                       
+            KMT = { country_event = 1947194833 }
+            SXI = { country_event = 1947194866 }
+		}
+         }

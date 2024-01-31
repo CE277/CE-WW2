@@ -1,0 +1,46 @@
+political_decisions = {
+
+	modern_airbases = {
+		picture = airbase
+		potential = {
+			civilized = yes
+			NOT = { has_country_flag = modern_airbases }
+		}
+		
+		allow = {
+			money = 1000000
+			steel_railroad = 1
+			military_directionism = 1			
+		}
+		
+		effect = {
+			money = -800000
+			prestige = 70
+			add_country_modifier = { name = modern_airbases duration = -1 }
+			set_country_flag = modern_airbases
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	modern_navalbases = {
+		picture = navalbase
+		potential = {
+			civilized = yes
+			NOT = { has_country_flag = modern_navalbases }
+		}
+		
+		allow = {
+			money = 1000000
+			blue_and_brown_water_schools = 1
+			naval_nco_training = 1			
+		}
+		
+		effect = {
+			money = -800000
+			prestige = 70
+			add_country_modifier = { name = modern_navalbases duration = -1 }
+			set_country_flag = modern_navalbases
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

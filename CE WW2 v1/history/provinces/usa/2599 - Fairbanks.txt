@@ -1,0 +1,14 @@
+add_core = LSK
+trade_goods = fish
+life_rating = 15
+1861.1.1 = {
+	owner = RUS
+	controller = RUS
+}
+1867.3.30 = {
+	controller = USA
+	owner = USA
+}
+1896.1.1 = {
+	trade_goods = precious_metal
+}

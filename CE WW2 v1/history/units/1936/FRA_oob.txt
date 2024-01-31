@@ -1,0 +1,660 @@
+leader = {
+	name = "Charles De Gaulle"
+	date="1939.1.1"
+	type = land
+        picture = gaulle
+	personality = implacable
+	background = gifted_administrator
+	prestige = 1
+}
+
+#Sphere of Influence
+
+BEL = {
+	value = 150		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 25
+}
+GRE = {
+	value = 125		#relation
+	level = 4		#3=cordial, 4 = friendly, 5 sphere
+}
+LUX = {
+	value = 125		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 25
+}
+SWI = {
+	value = 125		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 25
+}
+ITA = {
+	value = 125		#relation
+}
+
+YNN = {
+	value = 75
+	influence_value = 25
+}
+
+GXI = {
+	value = 75
+	influence_value = 25
+}GER = {
+	value = -200
+	}
+
+KUK = {
+	value = -150
+	}RUS = {
+	value = 200
+	}NET = {
+	value = 150
+	}TUR = {
+	value = -100	}
+
+army = {
+	name = "Armee de France"
+	location = 425
+	regiment = {
+		name= "1.1ère  Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "2.1ère  Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "3.1ère  Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "1.2nde Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "2.2nde Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "1.1ère  Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "3.2nde Division d'Infanterie"
+		type = infantry
+		home = 412
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Char d'assaut"
+		type = tank
+		home = 399
+	}
+
+	regiment = {
+		name= "2.3ème Division d'Char d'assaut"
+		type = tank
+		home = 404
+	}
+
+	regiment = {
+		name= "3.3ème Division d'Char d'assaut"
+		type = tank
+		home = 423
+	}
+
+	regiment = {
+		name= "4.3ème Division d'Char d'assaut"
+		type = tank
+		home = 451
+	}
+
+	regiment = {
+		name= "5.3ème Division d'Char d'assaut"
+		type = tank
+		home = 455
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Ingenieur"
+		type = engineer
+		home = 458
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Artillerie"
+		type = artillery
+		home = 424
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Avions"
+		type = plane
+		home = 459
+	}
+
+	regiment = {
+		name= "2.3ème Division d'Avions"
+		type = plane
+		home = 461
+	}
+
+	regiment = {
+		name= "3.3ème Division d'Avions"
+		type = plane
+		home = 409
+	}
+
+	regiment = {
+		name= "4.3ème Division d'Avions"
+		type = plane
+		home = 410
+	}
+
+}
+
+army = {
+	name = "Armee de l'Est"
+	location = 409
+	regiment = {
+		name= "1.1ère  Division d'Infanterie"
+		type = infantry
+		home = 420
+	}
+
+	regiment = {
+		name= "2.1ère  Division d'Infanterie"
+		type = infantry
+		home = 421
+	}
+
+	regiment = {
+		name= "3.1ère  Division d'Infanterie"
+		type = infantry
+		home = 422
+	}
+
+	regiment = {
+		name= "1.2nde Division d'Infanterie"
+		type = infantry
+		home = 427
+	}
+
+	regiment = {
+		name= "2.2nde Division d'Infanterie"
+		type = infantry
+		home = 425
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Char d'assaut"
+		type = tank
+		home = 432
+	}
+
+	regiment = {
+		name= "2.3ème Division d'Char d'assaut"
+		type = tank
+		home = 434
+	}
+
+	regiment = {
+		name= "3.3ème Division d'Char d'assaut"
+		type = tank
+		home = 451
+	}
+
+	regiment = {
+		name= "4.3ème Division d'Char d'assaut"
+		type = tank
+		home = 470
+	}
+
+	regiment = {
+		name= "5.3ème Division d'Char d'assaut"
+		type = tank
+		home = 436
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Artillerie"
+		type = artillery
+		home = 441
+	}
+
+	regiment = {
+		name= "1.3ème Division d'Avions"
+		type = plane
+		home = 469
+	}
+
+	regiment = {
+		name= "2.3ème Division d'Avions"
+		type = plane
+		home = 472
+	}
+
+	regiment = {
+		name= "3.3ème Division d'Avions"
+		type = plane
+		home = 454
+	}
+
+	regiment = {
+		name= "4.3ème Division d'Avions"
+		type = plane
+		home = 439
+	}
+
+}
+
+army = {
+	name = "Troupes d'Afrique" #done
+	location = 1706
+	regiment = {
+		name= "1.La Legion Etranger"
+		type = infantry
+		home = 415
+	}
+
+	regiment = {
+		name= "2.La Legion Etranger"
+		type = infantry
+		home = 415
+	}
+
+	regiment = {
+		name= "3.La Legion Etranger"
+		type = infantry
+		home = 416
+	}
+
+	regiment = {
+		name= "1.1ère Division  d'Afrique"
+		type = infantry
+		home = 1700
+	}
+
+	regiment = {
+		name= "2.1ère Division  d'Afrique"
+		type = infantry
+		home = 1709
+	}
+
+	regiment = {
+		name= "3.1ère Division  d'Afrique"
+		type = infantry
+		home = 1705
+	}
+
+}
+
+army = {
+	name = "Troupes d'Indochine"
+	location = 1380
+	regiment = {
+		name= "1.11ème Division d'Infanterie"
+		type = infantry
+		home = 399
+	}
+
+	regiment = {
+		name= "2.11ème Division d'Infanterie"
+		type = infantry
+		home = 399
+	}
+
+	regiment = {
+		name= "3.11ème Division d'Infanterie"
+		type = infantry
+		home = 399
+	}
+
+	regiment = {
+		name= "1.12ème Division d'Infanterie"
+		type = infantry
+		home = 401
+	}
+
+	regiment = {
+		name= "2.12ème Division d'Infanterie"
+		type = infantry
+		home = 401
+	}
+
+	regiment = {
+		name= "3.12ème Division d'Infanterie"
+		type = engineer
+		home = 401
+	}
+
+}
+
+
+
+army = {
+	name = "XX. Corps" #done
+	location = 1501
+	regiment = {
+		name= "1.10ème Division d'Infanterie"
+		type = infantry
+		home = 400
+	}
+
+	regiment = {
+		name= "2.10ème Division d'Infanterie"
+		type = infantry
+		home = 400
+	}
+
+	regiment = {
+		name= "3.10ème Division d'Infanterie"
+		type = infantry
+		home = 400
+	}
+
+}navy = {
+	name = "Escadre du Nord"
+	location = 420
+	ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+		ship = {
+		name = "Gloire"
+		type = ironclad
+	}
+	
+	ship = {
+		name = "Renommée"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Impératrice Eugénie"
+		type = cruiser
+	}
+	
+	ship = {
+		name = "Foudre"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Audacieuse"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Ardente"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Impétueuse"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Souveraine"
+		type = cruiser
+	}
+	
+	ship = {
+		name = "Algésiras"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Redoubtable"
+		type = cruiser
+	}
+	
+	ship = {
+		name = "Impérial"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Ville de Nantes"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Jean Bart"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Duquesne"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Tourville"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Breslaw"
+		type = cruiser
+	}
+
+	ship = {
+		name = "Tilsitt"
+		type = manowar
+	}
+	
+	ship = {
+		name = "Donawerth"
+		type = manowar
+	}
+
+	ship = {
+		name = "Andromaque"
+		type = manowar
+	}
+
+	ship = {
+		name = "Forte"
+		type = manowar
+	}
+
+	ship = {
+		name = "Didon"
+		type = manowar
+	}
+		ship = {
+		name = "Didon"
+		type = manowar
+	}
+			ship = {
+		name = "Carrier"
+		type = monitor
+	}
+
+}
+
+
+
+	
+navy = {
+	name = "1st Transport Squadron"
+	location = 442	
+
+	ship = {
+		name= "Saone"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "Marne"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "Meuse"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "Nievre"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "Meurthe"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "Yonne"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "Européen"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "Japon"
+		type = steam_transport
+	}
+}
+
+navy = {
+	name = "Submarine Fleet"
+	location = 470	
+	ship = {
+		name= "Isis"
+		type = battleship
+	}
+
+	ship = {
+		name= "Oise"
+		type = battleship
+	}
+	
+	ship = {
+		name= "Caravane"
+		type = battleship
+	}
+
+	ship = {
+		name= "Egérie"
+		type = battleship
+	}
+	
+	ship = {
+		name= "Fortune"
+		type = battleship
+	}
+
+	ship = {
+		name= "Perdrix"
+		type = battleship
+	}
+	
+		ship = {
+		name= "Perdrix"
+		type = battleship
+	}
+	
+		ship = {
+		name= "Perdrix"
+		type = battleship
+	}
+	
+		ship = {
+		name= "Perdrix"
+		type = battleship
+	}
+	
+}
+
+navy = {
+	name = "Expédition d'Indochine"
+	location = 1380
+	
+	ship = {
+		name= "Armide"
+		type = battleship
+	}
+
+	ship = {
+		name= "Provençale"
+		type = battleship
+	}
+
+	ship = {
+		name= "Loire"
+		type = battleship
+	}
+	
+	ship = {
+		name= "Durance"
+		type = battleship
+	}
+	
+	ship = {
+		name= "Gironde"
+		type = battleship
+	}
+
+	ship = {
+		name= "Rhin"
+		type = battleship
+	}
+
+}

@@ -1,0 +1,22 @@
+political_decisions = {
+				aus_annex = {
+                                                        picture = german_sudetenland
+							potential = {
+							tag = GER
+							}
+						allow = {
+						        government = fascist_dictatorship
+							AUS = {
+							in_sphere = GER
+							}
+						}
+					effect = {
+					prestige = 75
+					inherit = AUS
+					AUS = { all_core = { add_core = GER } }
+					}
+					}
+				}
+			}
+		}
+	

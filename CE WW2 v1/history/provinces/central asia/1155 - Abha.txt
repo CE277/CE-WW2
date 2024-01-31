@@ -1,0 +1,17 @@
+owner = HDJ
+controller = HDJ
+add_core = HDJ
+trade_goods = wool
+life_rating = 35
+1912.10.7 = {
+	owner = TUR
+	controller = TUR
+}
+1920.5.5 = {
+	owner = ARA
+	controller = ARA
+	add_core = ARA
+	remove_core = HDJ
+	remove_core TUR
+        colonial = 0
+}

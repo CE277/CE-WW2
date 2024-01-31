@@ -1,0 +1,11 @@
+owner = BUN
+controller = BUN
+add_core = NAG
+add_core = HND
+trade_goods = grain
+life_rating = 32
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+        colonial = 0
+}

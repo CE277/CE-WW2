@@ -1,0 +1,62 @@
+country_event = {
+	title = "Armenian Lands"
+	desc = "We've lost the Armenian-Turkish War and we should give some of our lands back to Turkey."
+	id = 5000211
+	picture = "Marcharmenians"
+
+	trigger = {
+		tag = ARM
+		war = no
+		NOT = { year = 1928 }		
+		TUR = {
+			owns = 888
+		}
+		ARM = {
+			owns = 890
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Give Western Lands to Turkey."
+		885 = {
+			secede_province = TUR
+		}
+		886 = {
+			secede_province = TUR
+		}
+		887 = {
+			secede_province = TUR
+		}
+		890 = {
+			secede_province = TUR
+		}
+		891 = {
+			secede_province = TUR
+		}
+		prestige = -5
+		TUR = {
+			country_event = { id=5000212 days=1 }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	title = "We gained Eastern lands from Armenia!"
+	desc = "After the Great Win against Armenians, We also annexed Eastern Lands!"
+	id = 5000212
+	picture = "young_turks"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		}
+}
+

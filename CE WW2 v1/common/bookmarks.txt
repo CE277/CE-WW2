@@ -1,0 +1,35 @@
+bookmark =
+{
+	name = "Unavailable Campaign"
+	desc = "GC_DESC"
+	date = 1836.1.1
+	cameraX = 2950 
+	cameraY = 1550
+}
+
+bookmark =
+{
+	name = "Armistice"
+	desc = "After the end of the Great War, Europe is extinguished by war. Material disasters essentially affect production, which is almost halved compared to the precautionaty period."
+	date = 1920.6.1
+	cameraX = 2950 
+	cameraY = 1550
+}
+
+bookmark =
+{
+	name = "New Era"
+	desc = "In the early 20th century, fascism and totalitarian regimes take on a pro-competitive role in Europe's political life. The new era hides new aspects of modern world history."
+	date = 1936.1.1
+	cameraX = 2950 
+	cameraY = 1550
+}
+
+#bookmark =
+#{
+#	name = "ACW_NAME"
+#	desc = "ACW_DESC"
+#	date = 1861.7.1
+#	cameraX = 1270 
+#	cameraY = 1450
+#}

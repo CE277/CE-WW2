@@ -1,0 +1,136 @@
+army = { 
+
+name = "Stratia Mikras Asias" location = 869 
+
+leader = {
+	name = "Anastasios Papoulas"
+	date = "1919.1.1"
+        prestige = 0.500
+        picture ="european_general_47"
+	type = land
+	personality = daring
+	background = brownnoser
+  }
+
+regiment = { name = "Merarchia Ippikou" type = cavalry home = 805 } 
+regiment = { name = "Merarchia Ippikou" type = cavalry home = 819 } 
+regiment = { name = "Merarchia Pyrobolikou" type = artillery home = 820 } 
+regiment = { name = "Merarchia Pyrobolikou" type = artillery home = 821 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 822 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 823 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 824 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 825 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 826 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 827 }
+}
+
+army = {
+
+name = "Ellinikos Stratos" location = 858
+
+leader = {
+	name = "Georgios Hatzianestes"
+	date = "1919.1.1"
+        prestige = 0.015
+        picture ="european_general_28"
+	type = land
+	personality = vicious	
+	background = madman
+   }
+
+regiment = { name = "Merarchia Ippikou" type = cavalry home = 834 } 
+regiment = { name = "Merarchia Ippikou" type = cavalry home = 831 } 
+regiment = { name = "Merarchia Pyrobolikou" type = artillery home = 869 } 
+regiment = { name = "Merarchia Pyrobolikou" type = artillery home = 869 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 835 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 836 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 837 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 837 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 839 } 
+regiment = { name = "Merarchia Pezikou" type = infantry home = 840 }
+}
+
+leader = {
+	name = "Leonidas Paraskevopoulos"
+	date = "1919.1.1"
+        prestige = 0.750
+        picture ="european_general_24"
+	type = land
+	personality = skilled
+	background = school_of_the_bayonet
+  }
+
+navy = {
+
+name = "Basiliko Nautiko" location = 805
+
+        ship = {
+		name= "Leon"
+		type = frigate
+	}
+
+	ship = {
+		name= "Ierax"
+		type = frigate
+	}
+
+        ship = {
+		name= "Ellas"
+		type = frigate
+	}
+
+	ship = {
+		name= "Artemis"
+		type = frigate
+	}
+
+        ship = {
+		name= "Deimos"
+		type = manowar
+	}
+
+        ship = {
+		name= "Phobos"
+		type = manowar
+	}
+
+
+        ship = {
+		name= "Kanaris"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "Naxos"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "Kipros"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "Argos"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "Alexandros"
+		type = steam_transport
+	}
+
+        ship = {
+		name= "Psara"
+		type = steam_transport
+	}	
+
+        leader = {
+	name = "Alexandros Sakellariou"
+	date = "1919.1.1"
+        prestige = 0.750
+        picture ="european_admiral_29"
+	type = sea
+	personality = heroic
+	background = natural_born_leader
+  }

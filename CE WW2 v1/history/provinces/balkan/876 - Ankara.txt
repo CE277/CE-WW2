@@ -1,0 +1,37 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+trade_goods = fruit
+life_rating = 35
+terrain = urban_ankara
+
+1912.1.1 = {
+        railroad = 1
+	
+}
+
+
+1920.5.5 = {
+state_building = {
+	level = 2
+	building = fabric_factory
+	upgrade = yes
+}
+}
+
+
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = regular_clothes_factory
+	upgrade = yes
+}
+}
+
+
+

@@ -1,0 +1,20 @@
+name = "2nd Chinese Civil War"
+1945.12.1 = {
+	add_attacker = PRC
+	add_attacker = RUS
+	add_defender = KMT
+	war_goal = {
+		casus_belli = conquest
+		actor = PRC
+		receiver = KMT
+	}
+	war_goal = {
+		casus_belli = conquest
+		actor = KMT
+		receiver = PRC
+	}
+}
+1950.5.1 = {
+	rem_attacker = PRC
+	rem_defender = KMT
+}

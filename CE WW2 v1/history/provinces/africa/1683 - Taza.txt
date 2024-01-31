@@ -1,0 +1,12 @@
+owner = MOR
+controller = MOR
+add_core = MOR
+trade_goods = wool
+life_rating = 35
+1900.1.1 = {
+	trade_goods = precious_goods
+}
+1912.10.7 = {
+	owner = FRA
+	controller = FRA
+}

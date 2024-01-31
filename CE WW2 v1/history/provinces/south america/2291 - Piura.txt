@@ -1,0 +1,8 @@
+owner = PEU
+controller = PEU
+add_core = PEU
+trade_goods = wool
+life_rating = 35
+1915.1.1 = {
+	trade_goods = oil
+}

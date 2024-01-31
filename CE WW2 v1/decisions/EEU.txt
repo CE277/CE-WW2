@@ -1,0 +1,84 @@
+political_decisions = {
+
+#
+# Member Decisions: 	
+#
+	eeu_ambition = {
+		picture = "eeu_ambition"
+		potential = {
+				year = 2015
+				is_vassal = no
+				OR = { 
+					tag = ARM
+					tag = KAZ
+					tag = BYE
+					tag = RUS
+					tag = KYR
+					tag = TKS
+					tag = TCA
+				}
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+				NOT = { has_country_flag = eeu_ambition } 		
+		}
+		allow = {
+			the_historical_theory = 1
+			NOT = { AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = eeu_ambition } } } }
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+			war = no
+		}
+		effect = {
+			set_country_flag = eeu_ambition
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+			add_country_modifier = { name = eeu duration = -1 }			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	end_eeu_ambition = {
+		picture = "eeu_ambition"
+		alert = no
+		potential = {
+			has_country_flag = eeu_ambition
+		}
+		allow = {
+			OR = { 
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = eeu_ambition } } }
+				NOT = { OR = {
+				government = democracy
+				government = hms_government
+				} }
+			}
+			war = no
+		}
+		effect = {
+			clr_country_flag = eeu_ambition
+			remove_country_modifier = eec
+			any_pop = {
+				scaled_militancy = {
+					issue = free_trade
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = free_trade
+					factor = 3
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,395 @@
+province_event = {
+	
+	id = 97001
+	title = "EVTNAME97001" #Peasant Revolt
+	desc = "EVTDESC97001"
+	
+	trigger = {
+		owner = {
+			tag = POR
+			has_country_flag = maria_de_fonte_revolution
+			government = hms_government
+			NOT = { ruling_party_ideology = reactionary }
+		}
+		is_capital = no
+		is_colonial = no
+		is_core = POR
+		is_overseas = no
+		NOT = { has_province_modifier = peasant_revolt }
+		any_neighbor_province = { has_province_modifier = peasant_revolt }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = "EVT97001OPTA"
+		add_province_modifier = {
+			name = peasant_revolt
+			duration = 365
+		}
+		poor_strata = {
+			ideology = {
+				value = reactionary
+				factor = 0.3
+			}
+			consciousness = -2
+			militancy = 6
+		}
+	}
+}
+
+country_event = {
+	
+	id = 97002
+	title = "EVTNAME97002" #End of the Revolution
+	desc = "EVTDESC97002"
+	picture = "administration"
+
+	trigger = {
+		tag = POR
+		has_country_flag = maria_de_fonte_revolution
+	}
+
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 1.5
+			num_of_revolts = 1
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { government = hms_government }
+		}
+		modifier = {
+			factor = 0.1
+			ruling_party_ideology = reactionary
+		}
+	}
+	
+	immediate = {
+		clr_country_flag = maria_de_fonte_revolution
+	}
+
+	option = {
+		name = "EVT97002OPTA"
+		prestige = 10
+		any_owned = {
+			limit = { has_province_modifier = peasant_revolt }
+			remove_province_modifier = peasant_revolt
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+			}
+			militancy = -6
+			consciousness = 1
+		}
+	}
+}
+
+country_event = {
+
+	id = 97003
+	title = "EVTNAME97003" #The Emboscada
+	desc = "EVTDESC97003"
+	news = yes
+	news_desc_long = "EVTDESC97000_NEWS_LONG"
+	news_desc_medium = "EVTDESC97000_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC97000_NEWS_SHORT"
+	picture = "Lola"
+
+	trigger = {
+		tag = POR
+		has_country_flag = maria_de_fonte_revolution
+		any_owned_province = { has_province_modifier = peasant_revolt }
+		government = hms_government
+		NOT = { ruling_party_ideology = reactionary }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 0.8
+			num_of_revolts = 1
+		}
+		modifier = {
+			factor = 0.1
+			capital_scope = { controlled_by_rebels = yes }
+		}
+	}
+	
+	immediate = {
+		clr_country_flag = maria_de_fonte_revolution
+	}
+
+	option = {
+		name = "EVT97003OPTA"
+		prestige = -5
+		ruling_party_ideology = reactionary
+		political_reform = appointed
+		political_reform = harassment
+		government = prussian_constitutionalism
+		
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+		any_owned = {
+			limit = { has_province_modifier = peasant_revolt }
+			remove_province_modifier = peasant_revolt
+		}
+		any_pop = {
+			limit = {
+				location = { is_colonial = no }
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 8
+			}
+			scaled_consciousness = {
+				ideology = liberal
+				factor = 4
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -8
+			}
+		}
+		soldiers = { militancy = -4 }
+	}
+}
+
+country_event = {
+	id = 97008
+	title = "EVTNAME97008"
+	desc = "EVTDESC97008"
+	picture = "treaty"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVT97008OPTA"
+		prestige = 5
+		relation = {
+			who = FROM
+			value = 20
+		}
+		money = -100000
+		FROM = {
+			money = 100000
+			any_owned = {
+				limit = {
+					OR = {
+						region = ENG_2036
+						region = ENG_2039
+					}
+				}
+				secede_province = THIS
+			}
+		}
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0
+				NOT = { money = 100000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT97008OPTB"
+		prestige = -5
+		relation = {
+			who = FROM
+			value = -15
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}	
+}
+
+country_event = {
+	id = 97009
+	title = "EVTNAME97009"
+	desc = "EVTDESC97009"
+	picture = "treaty"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = "EVT97008OPTA"
+		prestige = 5
+		relation = {
+			who = FROM
+			value = 20
+		}
+		money = -100000
+		FROM = {
+			money = 100000
+			any_owned = {
+				limit = {
+					region = ENG_2024
+				}
+				secede_province = THIS
+			}
+		}
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0
+				NOT = { money = 100000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT97008OPTB"
+		prestige = -5
+		relation = {
+			who = FROM
+			value = -15
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}	
+}
+
+country_event = {
+
+	id = 97011
+	title = "EVTNAME97011" #Portugal Has Agreed
+	desc = "EVTDESC97011"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT97011OPTA"
+		prestige = 10
+		FROM = {
+			any_owned = {
+				limit = {
+					OR = {
+						region = ENG_2068
+						region = ENG_2014
+						region = ENG_2016
+					}
+				}
+				secede_province = THIS
+			}
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+	}
+}
+
+country_event = {
+
+	id = 97012
+	title = "EVTNAME97012" #Portugal Has Refused
+	desc = "EVTDESC97012"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT97012OPTA"
+		prestige = -10
+		casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 60
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -200
+		}
+	}
+}
+
+#Ditadura Nacional
+country_event = {
+	id = 49519
+	title = "Ditadura Nacional"
+	desc = "EVTDESC49519"
+	picture = "ditadura_nacional"
+
+	trigger = {
+    		tag = POR
+    		year = 1926
+		NOT = { year = 1928 }
+		government = democracy
+		is_vassal = no
+ 		war = no
+		NOT = { has_country_flag = ditadura_nacional }
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		set_country_flag = ditadura_nacional
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We remain a Republic."
+		add_country_modifier = { name = national_confusion duration = 3650 }
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Return to Democracy
+country_event = {
+	id = 49520
+	title = "Return to Democracy"
+	desc = "EVTDESC49520"
+	picture = "salvation"
+
+	trigger = {
+    		tag = POR
+    		year = 1974
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = liberal
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}

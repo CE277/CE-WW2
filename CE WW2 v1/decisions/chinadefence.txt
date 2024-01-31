@@ -1,0 +1,29 @@
+political_decisions = {
+	china_defence = {
+		picture = "kmt1"
+		potential = {
+                        tag = KMT
+                        KMT = { war_with = JAP }
+			NOT = { has_country_flag = china_defence }
+		}
+		
+		allow = {
+			KMT = { national_provinces_occupied = 0.3 }
+                        }
+
+		effect = {
+			set_country_flag = china_defence
+			prestige = 50
+                        activate_technology = post_napoleonic_thought
+                        activate_technology = strategic_mobility 
+                        activate_technology = point_defense_system 
+			add_country_modifier = {
+				name = desperate_defence
+				duration = 200
+			}
+			
+			}
+			
+			}
+			
+}

@@ -1,0 +1,10 @@
+trade_goods = wool
+life_rating = 10
+1912.10.7 = {
+	owner = GER
+	controller = GER
+}
+1920.5.5 = {
+	owner = SAF
+	controller = SAF
+}

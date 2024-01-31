@@ -1,0 +1,15 @@
+owner = PEU
+controller = PEU
+add_core = PEU
+add_core = CHL
+trade_goods = wool
+life_rating = 35
+1912.10.7 = {
+	owner = CHL
+	controller = CHL
+}
+1930.1.1 = {
+	owner = PEU
+	controller = PEU
+	remove_core = CHL
+}

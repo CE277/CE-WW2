@@ -1,0 +1,17 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+trade_goods = wool
+life_rating = 35
+1936.1.1 = {
+state_building = {
+	level = 1
+	building = fabric_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = regular_clothes_factory
+	upgrade = yes
+}
+}

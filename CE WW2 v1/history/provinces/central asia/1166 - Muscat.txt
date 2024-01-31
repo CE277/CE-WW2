@@ -1,0 +1,17 @@
+owner = OMA
+controller = OMA
+add_core = OMA
+trade_goods = opium
+life_rating = 35
+terrain = urban_muscat
+1912.10.7 = {
+	owner = ENG
+	controller = ENG
+}
+1936.1.1 = {
+state_building = {
+	level = 2
+	building = fertilizer_factory
+	upgrade = yes
+}
+}

@@ -1,0 +1,329 @@
+# Anglo-Irish Treaty
+country_event = {
+
+	id = 13001
+	title = "Anglo-Irish Treaty of $YEAR$" 
+	desc = "United Kingdom's government has offered a peace treaty to us, but they want to keep Northern Ireland in their territories."
+	picture = "anglo_irish_treaty"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will accept the terms."
+		set_country_flag = anglo_irish_treaty
+		prestige = 10
+		end_war = ENG
+		ENG_254 = {
+			secede_province = ENG
+			remove_core = IRE
+		}
+		ENG_258 = {
+			remove_core = ENG
+		}
+		ENG_260 = {
+			remove_core = ENG
+		}
+		ENG_263 = {
+			remove_core = ENG
+		}
+		ENG = { create_vassal = THIS }
+		IRE = {
+			government = hms_government
+			ruling_party_ideology = reactionary
+			relation = {
+				who = FROM
+				value = 200
+			}
+			create_alliance = FROM
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We are not signing this scum!"
+		prestige = 5
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 13002
+	title = "Anglo-Irish Treaty of $YEAR$" 
+	desc = "United Kingdom's government has offered a peace treaty to us, and they are recognizing us as fully independent state."
+	picture = "anglo_irish_treaty"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "These are very good news!"
+		set_country_flag = ire_intependence
+		prestige = 50
+		end_war = ENG
+		ENG_254 = {
+			remove_core = ENG
+		}
+		ENG_258 = {
+			remove_core = ENG
+		}
+		ENG_260 = {
+			remove_core = ENG
+		}
+		ENG_263 = {
+			remove_core = ENG
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+# Irish Civil War
+
+country_event = {
+
+	id = 13003
+	title = "EVTNAME13003" 
+	desc = "EVTDESC13003"
+	picture = "irish_civil_war"
+
+	trigger = {
+		year = 1922
+		NOT = { year = 1925 }
+		tag = IRE
+		has_country_flag = anglo_irish_treaty
+		NOT = { has_country_flag = irish_civil_war }
+		}
+		
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 5 }
+	
+	option = {
+		name = "EVT13003OPTA"
+		set_country_flag = irish_civil_war
+		any_pop = {
+				scaled_militancy = { ideology = liberal factor = 5 }
+				scaled_militancy = { ideology = anarcho_liberal factor = 4 }
+			}
+		any_pop = { militancy = 2 }
+		257 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+		258 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+		259 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+		260 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+		261 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+		262 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+		263 = {
+				add_province_modifier = {
+					name = irish_republicans
+					duration = 730
+				}
+		}
+
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+
+	id = 13004
+	title = "EVTNAME13004" 
+	desc = "EVTDESC13004"
+	picture = "irish_soldiers"
+
+	trigger = {
+		year = 1922
+		NOT = { year = 1925 }
+		tag = IRE
+		has_country_flag = irish_civil_war
+		NOT = { has_country_flag = ire_civil_war_one }
+		}
+		
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = "EVT13004OPTA"
+		set_country_flag = ire_civil_war_one
+		any_pop = {
+				scaled_militancy = { ideology = liberal factor = 5 }
+				scaled_militancy = { ideology = anarcho_liberal factor = 5 }
+			}
+		any_pop = { militancy = 2 consciousness = 1 }
+		257 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		}
+		258 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		}
+		259 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		}
+		260 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		}
+		261 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		262 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		}
+		263 = {
+				add_province_modifier = {
+					name = war_torn
+					duration = 365
+				}
+		}
+
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVT13004OPTB"
+		set_country_flag = ire_civil_war_one
+		prestige = -20
+		badboy = 3
+		any_pop = { 
+			limit = { 
+				ideology = {
+				factor = 0.05
+				value = anarcho_liberal
+				}
+			} 
+			reduce_pop = 0.9
+			militancy = 8
+		} 
+		
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+country_event = {
+
+	id = 13005
+	title = "EVTNAME13005" 
+	desc = "EVTDESC13005"
+	picture = "irish_army"
+
+	trigger = {
+		year = 1922
+		NOT = { year = 1925 }
+		tag = IRE
+		has_country_flag = ire_civil_war_one
+		NOT = { has_country_flag = ire_civil_war_two }
+		}
+		
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = "EVT13005OPTA"
+		set_country_flag = ire_civil_war_two
+		any_pop = {
+				scaled_militancy = { ideology = liberal factor = 5 }
+				scaled_militancy = { ideology = anarcho_liberal factor = 5 }
+			}
+		any_pop = { militancy = 3 consciousness = 2 }
+		258 = {
+				add_province_modifier = {
+					name = begin_revolution
+					duration = 365
+				}
+		}
+		259 = {
+				add_province_modifier = {
+					name = begin_revolution
+					duration = 365
+				}
+		}
+		260 = {
+				add_province_modifier = {
+					name = begin_revolution
+					duration = 365
+				}
+		}
+		262 = {
+				add_province_modifier = {
+					name = begin_revolution
+					duration = 365
+				}
+		}
+		263 = {
+				add_province_modifier = {
+					name = begin_revolution
+					duration = 365
+				}
+		}
+
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVT13005OPTB"
+		set_country_flag = ire_civil_war_two
+		prestige = -40
+		badboy = 5
+		any_pop = { 
+			limit = { 
+				ideology = {
+				factor = 0.05
+				value = anarcho_liberal
+				}
+			} 
+			reduce_pop = 0.7
+			militancy = 8
+		} 
+		
+		ai_chance = { factor = 0 }
+	}
+
+}

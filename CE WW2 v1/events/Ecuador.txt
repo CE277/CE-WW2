@@ -1,0 +1,76 @@
+#Revolutionary and Nationalist military junta of 1972
+country_event = {
+	id = 5003001
+  	title = "EVTNAME5003001"
+  	desc = "EVTDESC5003001"
+	picture = "rebellion"
+
+	trigger = {
+    		tag = ECU
+    		year = 1972 NOT = { year = 1973 }
+    		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 4 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Return to democracy
+country_event = {
+	id = 5003002
+  	title = "EVTNAME5003002"
+  	desc = "EVTDESC5003002"
+	picture = "communist_riot"
+
+	trigger = {
+    		tag = ECU
+    		year = 1979 NOT = { year = 1984 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}

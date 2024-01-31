@@ -1,0 +1,28 @@
+political_decisions = {
+
+
+
+	annexation_of_czech = {
+		picture = german_sudetenland
+		potential = {
+			NOT = { has_country_flag = czech_annex }
+                        government = fascist_dictatorship
+                        tag = GER
+		}
+		
+		allow = {
+                        has_country_flag = sudeteland_treaty
+			owns = 628
+			year = 1939
+		}
+		
+		effect = {
+			set_country_flag = czech_annex
+                        GER = { country_event = 1947194741 }
+			LIT = {
+			698 = { secede_province = GER }
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,9 @@
+owner = BRU
+controller = BRU
+add_core = BRU
+trade_goods = coffee
+life_rating = 30
+1912.10.7 = {
+	owner = ENG
+	controller = ENG
+}

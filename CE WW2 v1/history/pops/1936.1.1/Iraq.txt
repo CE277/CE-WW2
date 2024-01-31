@@ -1,0 +1,315 @@
+#Mosul Region (492000) #mashriqi-catholic = assyrian  
+#under the rule of Ottoman Empire in 1836  
+#Mosul (228000/57000 POPS)
+923 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 4910
+	 } 
+	clergymen = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 1227
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2914
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 59631
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 7365
+	 } 
+	farmers = {
+		culture = kurdish
+		religion =  sunni 
+		size = 32768
+	 } 
+}
+#Arbil (104000/26000 POPS)
+924 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 4110
+	 } 
+	clergymen = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 1027
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2439
+	 } 
+	farmers = {
+		culture = kurdish
+		religion =  sunni 
+		size = 83509
+	 } 
+}
+#Kirkuk (160000/40000 POPS)
+925 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 4910
+	 } 
+	clergymen = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 1227
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2914
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 27716
+	 } 
+	farmers = {
+		culture = kurdish
+		religion =  sunni 
+		size = 72048
+	 } 
+}
+#Iraq Region (644000)
+#under the rule of Ottoman Empire in 1836
+#Baghdad (268000/67000 POPS)
+926 = {
+	capitalists = {
+		culture = sephardic
+		religion =  jewish 
+		size = 1278
+	 } 
+	capitalists = {
+		culture = sephardic
+		religion =  jewish 
+		size = 19810
+	 } 
+	capitalists = {
+		culture = sephardic
+		religion = jewish 
+		size = 49
+	 } 
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 10630
+	 } 
+	clergymen = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2657
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 6310
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 24123
+	 } 
+	soldiers = {
+		culture = mashriqi
+		religion = sunni
+		size = 25000
+	 } 
+	farmers = {
+		culture = sephardic
+		religion = jewish 
+		size = 747
+	 } 
+	farmers = {
+		culture = bedouin
+		religion =  shiite 
+		size = 150000
+	 } 
+}
+#Samarra (92000/23000 POPS)
+927 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2110
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 1252
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 40397
+	 } 
+	farmers = {
+		culture = kurdish
+		religion =  sunni 
+		size = 2475
+	 } 
+}
+#Mendeli (84000/21000 POPS)
+928 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2160
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 1282
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 17053
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 26460
+	 } 
+}
+#Karbala (100000/25000 POPS)
+929 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 5840
+	 } 
+	clergymen = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 1460
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 3466
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 118660
+	 } 
+}
+#Kut (100000/25000 POPS)
+930 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 3270
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 1941
+	 } 
+	farmers = {
+		culture = bedouin
+		religion =  shiite 
+		size = 66441
+	 } 
+}
+#Badiyat al-Sham Region (8000)  #see Jordan.txt, Syria.txt & Saudi Arabia.txt for balance of region
+#under the "rule" of Egypt in 1836
+#Rutbah (8000/2000 POPS) #now part of Iraq
+931 = {
+	aristocrats = {
+		culture = bedouin
+		religion =  sunni 
+		size = 2350
+	 } 
+	artisans = {
+		culture = bedouin
+		religion =  sunni 
+		size = 1395
+	 } 
+	farmers = {
+		culture = bedouin
+		religion =  sunni 
+		size = 47749
+	 } 
+}
+#Basra Region (388000) #see Gulf States.txt for balance of region  
+#under the rule of Ottoman Empire in 1836
+#Basra (140000/35000 POPS)
+932 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 3800
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 2256
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 77209
+	 } 
+}
+#Nasiriyya (152000/38000 POPS)
+933 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 2750
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  shiite 
+		size = 1632
+	 } 
+	farmers = {
+		culture = bedouin
+		religion =  shiite 
+		size = 55876
+	 } 
+}
+#Najaf (96000/24000 POPS)
+934 = {
+	aristocrats = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 4710
+	 } 
+	clergymen = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 1177
+	 } 
+	artisans = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 2796
+	 } 
+	farmers = {
+		culture = bedouin
+		religion =  shiite 
+		size = 1859
+	 } 
+	farmers = {
+		culture = mashriqi
+		religion =  sunni 
+		size = 93840
+	 } 
+
+}

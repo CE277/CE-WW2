@@ -1,0 +1,17 @@
+owner = XBI
+controller = XBI
+add_core = CHI
+add_core = XBI
+trade_goods = coal
+life_rating = 32
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+}
+1927.8.1 = {
+	owner = PRC
+	controller = PRC
+	add_core = PRC
+	remove_core = CHI
+	remove_core = XBI
+}

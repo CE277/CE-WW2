@@ -1,0 +1,58 @@
+leader = {
+	name = "Anastasios Papadopoulos"
+	date = 1833.1.1
+	type = land
+	personality = aweless
+	background = powerful_friends
+	prestige = 0.3
+}
+
+leader = {
+	name = "Nikolaos Kapetanidis"
+	date = 1844.1.1
+	type = sea
+	personality = audacious
+	background = expert_raider
+	prestige = 0.2
+}
+
+leader = {
+	name = "Hatzieleutheriou"
+	date = 1854.1.1
+	type = land
+	personality = impulsive
+	background = corrupt
+	prestige = 0.1
+}
+
+leader = {
+	name = "Giorgos Amarantidis"
+	date = 1861.1.1
+	type = land
+	personality = unruly
+	background = generals_aide
+}
+
+army = {
+	name = "Pontiako Antartiko"
+	location = 882
+	regiment = {
+		name= "Antartes Trapezountos"
+		type = infantry
+		home = 882
+	}
+
+	regiment = {
+		name= "Antartes Kerasountos"
+		type = infantry
+		home = 884	}
+
+	regiment = {
+		name= "Taxiarhia Pyrovolikou"
+		type = infantry
+		home = 833
+	}
+
+
+}
+

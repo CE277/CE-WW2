@@ -1,0 +1,176 @@
+country_event = { 
+
+id = 1947194874
+
+major = yes
+news = yes
+news_desc_long = "EVTDESC1_NEWS_LONG"
+news_desc_medium = "EVTDESC1_NEWS_MEDIUM"
+news_desc_short = "EVTDESC1_NEWS_SHORT"
+title = "The German Victory in the East"
+desc= "The Germans have pushed past the urals and destroyed any hope of the Soviets to push them back."
+
+	fire_only_once = yes
+        
+    is_triggered_only = yes
+	option = {
+		name = "Very humiliating..."
+
+                        984 = { secede_province = FIN }
+                        982 = { secede_province = FIN }
+                        983 = { secede_province = FIN }
+                        2587 = { secede_province = FIN }
+                        984 = { secede_province = FIN }
+			339 = { secede_province = FIN }
+			995 = { secede_province = FIN }
+			988 = { secede_province = FIN }
+			677 = { secede_province = ROM }
+			675 = { secede_province = ROM }
+                        678 = { secede_province = ROM }
+			994 = { secede_province = GER }
+			996 = { secede_province = GER }
+			997 = { secede_province = GER }
+			2580 = { secede_province = GER }
+			1006 = { secede_province = GER }
+                        1003 = { secede_province = GER }
+                        1004 = { secede_province = GER }
+                        1005 = { secede_province = GER }
+                        1007 = { secede_province = GER }
+                        999 = { secede_province = GER }
+                        1000 = { secede_province = GER }
+                        943 = { secede_province = GER }
+                        1016 = { secede_province = GER }
+                        1014 = { secede_province = GER }
+                        1015 = { secede_province = GER }
+                        1010 = { secede_province = GER }
+                        1009 = { secede_province = GER }
+                        1017 = { secede_province = GER }
+                        997 = { secede_province = GER }
+                        1018 = { secede_province = GER }
+                        1019 = { secede_province = GER }
+                        1045 = { secede_province = GER }
+                        1046 = { secede_province = GER }
+                        1047 = { secede_province = GER }
+                        979 = { secede_province = GER }
+                        1049 = { secede_province = GER }
+                        1048 = { secede_province = GER }
+                        1051 = { secede_province = GER }
+                        1050 = { secede_province = GER }
+                        1056 = { secede_province = GER }
+                        1054 = { secede_province = GER }
+                        1055 = { secede_province = GER }
+						1057 = { secede_province = GER }
+                        1053 = { secede_province = GER }
+                        1052 = { secede_province = GER }
+                        1041 = { secede_province = GER }
+                        1036 = { secede_province = GER }
+                        1040 = { secede_province = GER }
+                        1039 = { secede_province = GER }
+                        998 = { secede_province = GER }
+                        992 = { secede_province = GER }
+						989 = { secede_province = GER }
+                        1001 = { secede_province = GER }
+                        993 = { secede_province = GER }
+						1008 = { secede_province = GER }
+                        1013 = { secede_province = GER }
+                        1022 = { secede_province = GER }
+						1011 = { secede_province = GER }
+						1012 = { secede_province = GER }
+                        1038 = { secede_province = GER }
+                        1037 = { secede_province = GER }
+                        1021 = { secede_province = GER }
+                        1025 = { secede_province = GER }
+                        1182 = { secede_province = GER }
+                        2610 = { secede_province = GER }
+                        1183 = { secede_province = GER }
+                        1060 = { secede_province = GER }
+                        1044 = { secede_province = GER }
+                        1043 = { secede_province = GER }
+                        1035 = { secede_province = GER }
+                        1034 = { secede_province = GER }
+                        1042 = { secede_province = GER }
+                        1032 = { secede_province = GER }
+                        1030 = { secede_province = GER }
+                        1033 = { secede_province = GER }
+                        1020 = { secede_province = GER }
+                        1028 = { secede_province = GER }
+                        1027 = { secede_province = GER }
+                        1023 = { secede_province = GER }
+                        1024 = { secede_province = GER }
+                        991 = { secede_province = GER }
+                        990 = { secede_province = GER }
+                        987 = { secede_province = GER }
+                        1031 = { secede_province = GER }
+                        1026 = { secede_province = GER }
+                        1029 = { secede_province = GER }
+                        2700 = { secede_province = GER }
+                        2689 = { secede_province = GER }
+                        2687 = { secede_province = GER }
+                        2688 = { secede_province = GER }
+                        2699 = { secede_province = GER }
+                        986 = { secede_province = GER }
+                        985 = { secede_province = GER }
+                        981 = { secede_province = GER }
+                        2588 = { secede_province = GER }
+						977 = { secede_province = GER }
+						
+						
+						
+						
+		any_owned = { 
+			limit = {
+					is_core = UKR
+					}
+				secede_province = GER
+				}
+						any_owned = { 
+			limit = {
+					is_core = POL
+					}
+				secede_province = GER
+				}
+			any_owned = { 
+			limit = {
+					is_core = LAT
+					}
+				secede_province = GER
+				}
+		any_owned = { 
+			limit = {
+					is_core = LIT
+					}
+				secede_province = GER
+				}
+		any_owned = { 
+			limit = {
+					is_core = AZB
+					}
+				secede_province = GER
+				}
+		any_owned = { 
+			limit = {
+					is_core = ARM
+					}
+				secede_province = GER
+				}
+		any_owned = { 
+			limit = {
+					is_core = GEO
+					}
+				secede_province = GER
+				}
+		any_owned = { 
+			limit = {
+					is_core = BYE
+					}
+				secede_province = GER
+				}
+						any_owned = { 
+			limit = {
+					is_core = EST
+					}
+				secede_province = GER
+				}
+		
+		}
+	}

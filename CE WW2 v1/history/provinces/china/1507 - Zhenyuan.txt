@@ -1,0 +1,21 @@
+owner = YNN
+controller = YNN
+add_core = CHI
+add_core = YNN
+trade_goods = tea
+life_rating = 32
+1912.10.7 = {
+	owner = CHI
+	controller = CHI
+}
+1920.1.1 = {
+	owner = GUI
+	controller = GUI
+	add_core = KMT
+}
+1928.1.1 = {
+	owner = KMT
+	controller = PRC
+	add_core = PRC
+	remove_core = CHI
+}

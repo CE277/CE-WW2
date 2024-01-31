@@ -1,0 +1,19 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = EST
+add_core = UBD
+trade_goods = grain
+life_rating = 35
+terrain = urban_tallinn
+
+naval_base = 2
+1920.5.5 = {
+        owner = EST
+	controller = EST
+	remove_core = RUS
+}
+1946.1.1 = {
+        owner = RUS
+	controller = RUS
+}

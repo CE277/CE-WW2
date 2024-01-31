@@ -1,0 +1,438 @@
+country_event = {
+
+	id = 46600 
+	news = yes
+	news_desc_long = "EVTDESC46600_NEWS_LONG"
+	news_desc_medium = "EVTDESC46600_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46600_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = ARG
+			tag = ARC
+			tag = LPL
+		}
+		year = 1851
+		NOT = {
+			year = 1855
+			has_country_flag = Alberdi
+		}
+		war = no
+		is_ideology_enabled = anarcho_liberal
+		government = democracy #only fire if ARG is a republic 
+		}
+ 
+	mean_time_to_happen =  {
+		months = 8
+
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1852
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1853
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1854
+		}
+	}
+
+	title = "EVTNAME46600"
+	desc = "EVTDESC46600"
+	picture = "Alberdi"
+	
+	option = {
+		name = "EVTOPTA46600" 
+		prestige = 2
+		any_pop = {
+			consciousness = 1
+			militancy = -1
+		}
+		bureaucrats = {
+			consciousness = 1
+		}
+		officers = {
+			consciousness = 1
+		}
+		aristocrats = {
+			consciousness = 1
+		}
+		clergymen = {
+			consciousness = 1
+		}
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+		}
+		set_country_flag = Alberdi
+	}
+
+	option = {
+		name = "EVTOPTB46600" 
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+			consciousness = 2
+			scaled_militancy = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 2
+				ideology = anarcho_liberal
+			}
+		}
+		set_country_flag = Alberdi
+	}
+}
+
+country_event = {
+
+	id = 46601
+	news = yes
+	news_desc_long = "EVTDESC46601_NEWS_LONG"
+	news_desc_medium = "EVTDESC46601_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46601_NEWS_SHORT" 
+
+	trigger = {
+		OR = {
+			tag = ARG
+			tag = ARC
+			tag = LPL
+		}
+		year = 1844
+		is_ideology_enabled = anarcho_liberal
+		NOT = {
+			year = 1850
+			has_country_flag = Facundo
+			}
+		OR = {
+			government = presidential_dictatorship  #book is reaction against strong-man rule
+			government = absolute_monarchy
+			}  
+		}
+ 
+	mean_time_to_happen =  {
+		months = 8
+
+		modifier = {
+			factor = 0.8 #increase likelihood to happen
+			year = 1845
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1846
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1847
+		}
+	}
+
+	title = "EVTNAME46601"
+	desc = "EVTDESC46601"
+	picture = "Facundo"
+
+	option = {
+		name = "EVTOPTA46601" 
+		any_country = {
+			limit = {
+				exists = yes
+				OR = {
+					tag = SBA
+					tag = ENT
+					tag = CRT
+				}
+			}
+		any_pop = {
+			consciousness = 1
+			ideology = {
+				value = liberal
+				factor = 0.2
+			}
+			scaled_consciousness = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_consciousness = {
+				factor = 2
+				ideology = anarcho_liberal
+				}
+			}
+		}
+		
+		any_pop = {
+			consciousness = 1
+			ideology = {
+				value = liberal
+				factor = 0.2
+			}
+			scaled_consciousness = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_consciousness = {
+				factor = 2
+				ideology = anarcho_liberal
+			}
+		}
+		set_country_flag = Facundo
+	}
+
+}
+
+country_event = {
+	id = 97091
+	title = "EVTNAME97091" #Transferring Sovereignty
+	desc = "EVTDESC97091"
+	picture = "danishgovernment"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT97091OPTA" #Sign the treaty
+		set_country_flag = argentina_united_externally
+		relation = { who = FROM value = 50 }
+		FROM = { 
+			any_owned = {
+				limit = {
+					NOT = { province_id = 2131 }
+					OR = {
+						is_core = CRT
+						is_core = ENT
+						is_core = SBA
+						is_core = ARC
+						is_core = ARG
+					}
+				}
+				secede_province = THIS
+			}
+		}
+		any_owned = {
+			remove_core = CRT
+			remove_core = ENT
+			remove_core = SBA
+		}
+	}
+}
+
+#1930 Argentine coup d'etat
+country_event = {
+  id = 97092
+  title = "1930 Argentine coup d'etat"
+  desc = "EVTDESC97092" 
+  picture = "september_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ARG
+	year = 1930 NOT = { year = 1931 }
+	NOT = { ruling_party_ideology = fascist }
+  }
+
+  mean_time_to_happen = { months = 1 }
+
+  option = {
+   	name = "Argentina will become a totalitarian state."
+	government = fascist_dictatorship
+	ruling_party_ideology = fascist
+	political_reform = none_voting
+	political_reform = party_appointed
+	political_reform = state_press
+	political_reform = underground_parties
+	political_reform = no_trade_unions
+	country_event = 800051
+	add_country_modifier = { name = arg_dictatorship duration = 3650 }
+	ai_chance = { factor = 1 }
+  }
+
+}
+
+#Return to Republic
+country_event = {
+	id = 970921
+	title = "Return to Republic"
+	desc = "EVTDESC970921"
+	picture = "Demonstration"
+
+	trigger = {
+    		tag = ARG
+    		year = 1932 NOT = { year = 1933 }
+    		government = fascist_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = gerrymandering
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#1943 Argentine coup d'etat
+country_event = {
+	id = 97093
+	title = "1943 Argentine coup d'etat"
+	desc = "EVTDESC97093"
+	picture = "1943_argentine_coup"
+
+	trigger = {
+    		tag = ARG
+    		year = 1943 NOT = { year = 1944 }
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		government = fascist_dictatorship
+		ruling_party_ideology = fascist
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800051
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Stick to the status quo."
+		add_country_modifier = { name = national_confusion duration = 3650 }
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1976 Argentine Military coup d'etat
+country_event = {
+	id = 97094
+	title = "1976 Argentine Military coup d'etat"
+	desc = "EVTDESC97094"
+	picture = "1976_argentine_coup"
+
+	trigger = {
+    		tag = ARG
+    		year = 1976 NOT = { year = 1977 }
+		OR = {
+    			government = fascist_dictatorship
+			government = democracy
+		}
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Continue the Peronist Movement!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1983 Argentine New democracy
+country_event = {
+	id = 97095
+	title = "Argentine New Democracy"
+	desc = "EVTDESC97095"
+	picture = "argentine_new_democracy"
+
+	trigger = {
+    		tag = ARG
+    		year = 1983 NOT = { year = 1990 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = socialist
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#A Major non-NATO ally
+country_event = {
+	id = 97096
+	title = "A Major non-NATO ally"
+	desc = "EVTDESC97096"
+	picture = "non_nato_ally"
+
+	trigger = {
+    		tag = ARG
+    		year = 1998 NOT = { year = 2000 }
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "We will keep the same path."
+		prestige = 10
+		ai_chance = { factor = 1 }
+	}
+
+}

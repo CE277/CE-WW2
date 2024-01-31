@@ -1,0 +1,82 @@
+political_decisions = {
+	defend_peruvian_territory = {
+		picture = "peruvian_territory"
+		potential = {
+			tag = PEU
+			year = 1940
+			NOT = { has_country_flag = defend_peruvian_territory }
+		}
+		
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = defend_peruvian_territory
+			prestige = 25
+			relation = {
+				who = ECU
+				value = -100
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	streamlining_of_general_staff = {
+		picture = "peu_general_staff"
+		potential = {
+			tag = PEU
+			NOT = { has_country_flag = advanced_general_staff }
+		}
+		
+		allow = {
+			war = no
+			military_statistics = 1
+			army_decision_making = 1
+		}
+
+		effect = {
+			set_country_flag = advanced_general_staff
+			prestige = 20
+			add_country_modifier = {
+				name = advanced_general_staff
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	french_military_influence = {
+		picture = "peu_french_military_influence"
+		potential = {
+			tag = PEU
+			NOT = { has_country_flag = peu_french_military_influence }
+		}
+		
+		allow = {
+			war = no
+			is_disarmed = no
+			relation = { who = FRA value = 100 }
+		}
+
+		effect = {
+			set_country_flag = peu_french_military_influence
+			prestige = 35
+			add_country_modifier = {
+				name = french_military_influence
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+          

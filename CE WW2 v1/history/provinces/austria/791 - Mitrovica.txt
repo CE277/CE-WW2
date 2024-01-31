@@ -1,0 +1,23 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = SER
+add_core = HUN
+add_core = YUG
+trade_goods = timber
+life_rating = 35
+1861.1.1 = { railroad = 3 }
+1867.3.30 = {
+	owner = KUK
+        add_core = KUK
+	controller = KUK
+        railroad = 3
+	
+}
+1920.5.5 = {
+	owner = YUG
+        remove_core = KUK
+	remove_core = AUS
+	controller = YUG
+	remove_core = HUN
+}

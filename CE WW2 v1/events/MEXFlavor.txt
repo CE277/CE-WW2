@@ -1,0 +1,720 @@
+#############################################################
+#															#
+#                  		Mexico Events						#
+#															#
+#############################################################
+
+country_event = {
+	id = 44800
+	title = "EVTNAME44800" #Madero's Manifesto
+	desc = "EVTDESC44800"
+	picture = "Madero"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		year = 1909
+		war = no
+		NOT = {
+			year = 1913
+			government = democracy
+			government = hms_government
+			poor_strata_everyday_needs = 0.75 #will not fire if poor are getting 75%+ everyday needs
+		}
+	}
+	
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1911
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1912
+		}
+	}
+
+	option = {
+		name = "EVTOPTA44800" #Diaz vows to remain President
+		farmers = {
+			militancy = 3
+			consciousness = 3
+		}
+		labourers = {
+			militancy = 3
+			consciousness = 3
+		}
+		craftsmen = {
+			militancy = 3
+			consciousness = 3
+		}
+		artisans = {
+			militancy = 3
+			consciousness = 3
+		}
+		set_country_flag = Madero
+	}
+
+	option = {
+		name = "EVTOPTB44800" #Diaz steps down
+		prestige = -25
+		officers = {
+			militancy = 3
+			consciousness = 3
+		}
+		aristocrats = {
+			militancy = 3
+			consciousness = 3
+		}
+		capitalists = {
+			militancy = 3
+			consciousness = 3
+		}
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_weighted_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = non_socialist
+		political_reform = gerrymandering
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+		country_event = 800054
+	}
+}
+
+country_event = {
+	id = 44801
+	title = "EVTNAME44801" #Madero Enlists Supporters
+	desc = "EVTDESC44801"
+	picture = "Riot"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		year = 1911
+		war = no
+		has_country_flag = Madero
+		NOT = {
+			year = 1914
+			government = democracy
+			government = hms_government
+			poor_strata_everyday_needs = 0.95 #will not fire if poor are getting 95%+ everyday needs
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	option = {
+		name = "EVTOPTA44801" #Viva la revolucion!
+		2137 = { #Hermosillo Sonora
+			any_pop = {
+				militancy = 8
+			}
+		}
+		2139 = { #N Baja 
+			any_pop = {
+				militancy = 8
+			}
+		}
+		2142 = { #Chihuahua
+			any_pop = {
+				militancy = 8
+			}
+		}
+		2143 = { #Nogales
+			any_pop = {
+				militancy = 8
+			}
+		}
+		set_country_flag = MaderoRevolt
+	}
+}
+
+country_event = {
+	id = 44802
+	title = "EVTNAME44802" #Peasant Army Under Zapata Joins the Revolucion
+	desc = "EVTDESC44802"
+	picture = "churchmexico"
+
+	 fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1911
+		has_country_flag = MaderoRevolt
+		NOT = {
+			year = 1915
+			government = democracy
+			government = hms_government
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	option = {
+		name = "EVTOPTA44802" #Viva Zapata!
+		2177 = { # N Oaxaca
+			any_pop = {
+				militancy = 8
+			}
+		}
+		2178 = { #S Oaxaca
+			any_pop = {
+				militancy = 8
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = 44803
+	title = "EVTNAME44803" #Jose Posada
+	desc = "EVTDESC44803"
+	picture = "Posada"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		has_country_flag = MaderoRevolt
+		year = 1911
+		NOT = {
+			government = democracy
+			government = hms_government
+			year = 1915
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	option = {
+		name = "EVTOPTA44803" 
+		farmers = {
+			consciousness = 3
+		}
+		labourers = {
+			consciousness = 3
+		}
+		craftsmen = {
+			consciousness = 3
+		}
+		artisans = {
+			consciousness = 3
+		}
+	}
+}
+
+province_event = {
+	
+	id = 44810
+	title = "EVTNAME44810" #Rebellion in $STATENAME$
+	desc = "EVTDESC44810"
+	
+	trigger = {
+		owner = {
+			tag = MEX
+			government = presidential_dictatorship
+			has_country_modifier = fight_the_power
+		}
+		culture = mexican
+		NOT = {
+			has_province_modifier = peasant_revolt
+			region = MEX_2159
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 1.5
+			has_country_flag = texas_recaptured
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_province = { has_province_modifier = peasant_revolt }
+		}
+		modifier = {
+			factor = 1.5
+			reactionary = 20
+		}
+		modifier = {
+			factor = 1.5
+			reactionary = 30
+		}
+		modifier = {
+			factor = 1.2
+			conservative = 20
+		}
+		modifier = {
+			factor = 1.2
+			conservative = 30
+		}
+		modifier = {
+			factor = 0.8
+			liberal = 20
+		}
+		modifier = {
+			factor = 0.8
+			liberal = 30
+		}
+		modifier = {
+			factor = 0.5
+			is_colonial = yes
+		}
+		modifier = {
+			factor = 2
+			owner = { average_militancy = 2 }
+		}
+		modifier = {
+			factor = 3
+			owner = { average_militancy = 2.5 }
+		}
+		modifier = {
+			factor = 5
+			owner = { num_of_revolts = 1 }
+		}
+	}
+
+	option = {
+		name = "EVT44810OPTA"
+		owner = {
+			upper_house = {
+				ideology = reactionary
+				value = 0.4
+			}
+			rich_strata = {
+				ideology = {
+					value = reactionary
+					factor = 0.2
+				}
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = {
+					name = peasant_revolt
+					duration = 1095
+				}
+			}
+			farmers = {
+				limit = { is_primary_culture = yes }
+				militancy = 2
+				consciousness = 4
+			}
+			labourers = {
+				limit = { is_primary_culture = yes }
+				militancy = 2
+				consciousness = 4
+			}
+			artisans = {
+				limit = { is_primary_culture = yes }
+				militancy = 2
+				consciousness = 4
+			}
+		}
+	}				
+}
+
+country_event = {
+	
+	id = 44825
+	title = "EVTNAME44825" #The Treaty of Guadalupe Hidalgo
+	desc = "EVTDESC44825"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT44825OPTA"
+		set_country_flag = treaty_of_guadalupe_hidalgo
+		prestige_factor = -0.5
+		treasury = 100000
+		random_owned = {
+			limit = {
+				owner = { war_with = USA }
+			}
+			owner = { end_war = USA }
+			any_country = {
+				limit = {
+					war_with = THIS
+					alliance_with = USA
+				}
+				end_war = THIS
+			}
+		}
+		all_core = {
+			limit = {
+				OR = {
+					region = TEX_132
+					region = MEX_94
+					region = MEX_97
+					region = MEX_85
+					region = USA_106
+					region = USA_111
+					region = USA_126
+					region = USA_129
+					province_id = 100
+					province_id = 101
+					province_id = 103
+					province_id = 104
+					province_id = 105
+					province_id = 2148
+				}
+			}
+			remove_core = MEX
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = USA
+					region = TEX_132
+					region = MEX_94
+					region = MEX_97
+					region = MEX_85
+					region = USA_106
+					region = USA_111
+					region = USA_126
+					region = USA_129
+					province_id = 100
+					province_id = 101
+					province_id = 103
+					province_id = 104
+					province_id = 105
+					province_id = 2148
+				}
+			}
+			secede_province = USA
+		}
+		
+		USA = { country_event = 44826 }
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+
+	option = {
+		name = "EVT44825OPTB"
+		war_exhaustion = 20
+		USA = { country_event = 44827 }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+
+	id = 44826
+	title = "EVTNAME44826" #Mexico Agrees
+	desc = "EVTDESC44826"
+	news = yes
+	news_title = "EVTNAME44825"
+	news_desc_long = "EVTDESC44826_NEWS_LONG"
+	news_desc_medium = "EVTDESC44826_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC44826_NEWS_SHORT"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT44826OPTA"
+		prestige = 20
+		random_owned = { limit = { owner = { ai = no } } owner = { treasury = -100000 } }
+		random_owned = {
+			limit = { owner = { ai = yes } }
+			owner = { set_variable = { which = owed_cash_money value = 100 } } 
+		}
+		any_owned = { limit = { is_core = MEX } secede_province = MEX }
+		diplomatic_influence = {
+			who = FROM
+			value = 400
+		}
+		relation = {
+			who = FROM
+			value = 200
+		}
+	}
+}
+
+country_event = {
+
+	id = 44827
+	title = "EVTNAME44827" #Mexico Refuses
+	desc = "EVTDESC44827"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT44827OPTA"
+		war_exhaustion = -20
+	}
+}
+
+country_event = {
+  id = 44828
+  title = "EVTNAME44828"	#Legacy of Revolution
+  desc = "EVTDESC44828"
+  picture = "mexican_revolution"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = MEX
+	year = 1920
+	NOT = { year = 1921 }
+	war = no
+	NOT = { has_country_flag = nem_mexican_revolution_completed }
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = "Our legacy is glorious!"
+	set_country_flag = nem_mexican_revolution_completed
+	add_country_modifier = {
+			name = legacy_of_revolution
+			duration = 7200
+		}
+	ai_chance = { factor = 1 }
+  }
+
+}
+
+#Mexican miracle of 1954
+country_event = {
+	id = 44829
+	title = "EVTNAME44829"
+	desc = "EVTDESC44829"
+	picture = "mexicano_miracle"
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1954
+		NOT = { year = 1960 }
+		war = no
+		OR = { 
+			economic_policy = interventionism
+			economic_policy = state_capitalism
+		}
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "It is a great time for Mexico!"
+		prestige = 75
+		add_country_modifier = { name = the_mexican_miracle duration = 5840 }
+	}
+	
+}
+
+#Dirty War of 1960
+country_event = {
+	id = 44830
+	title = "EVTNAME44830"
+	desc = "EVTDESC44830"
+	picture = "mex_dirty_war"
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1960
+		NOT = { year = 1965 }
+		ruling_party_ideology = conservative
+		war = no
+		is_vassal = no
+		government = democracy
+		NOT = { has_country_flag = mex_dirty_war_ongoing }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "It is a necessary evil."
+		badboy = 5
+		government = presidential_dictatorship
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		add_country_modifier = { name = dirty_war duration = 6000 }
+		relation = { who = USA value = 100 }
+		USA = { diplomatic_influence = { who = THIS value = 100 } }
+		set_country_flag = mex_dirty_war_ongoing
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "We believe in human rights!"
+		
+		any_pop = {
+			ideology = { factor = 0.10 value = socialist }
+		}
+
+		relation = { who = USA value = -100 }
+		USA = { diplomatic_influence = { who = THIS value = -50 } }
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Tlatelolco massacre of 1968
+country_event = {
+	id = 44831
+	title = "EVTNAME44831"
+	desc = "EVTDESC44831"
+	picture = "mex_tlatelolco_massacre"
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1968
+		NOT = { year = 1969 }
+		ruling_party_ideology = conservative
+		government = presidential_dictatorship
+		is_vassal = no
+		has_country_modifier = dirty_war
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "It was a necessary evil"
+		prestige_factor = -0.025
+		badboy = 5
+		add_country_modifier = { name = revolution_chaos duration = 720 }
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+		}
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Apologise for the massacre"
+		prestige_factor = -0.10
+		badboy = 3
+		any_pop = {
+			ideology = { factor = 0.15 value = socialist }
+		}
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#The Corpus Christi Massacre of 1971
+country_event = {
+	id = 44832
+	title = "EVTNAME44832"
+	desc = "EVTDESC44832"
+	picture = "mex_corpus_massacre"
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1971
+		NOT = { year = 1972 }
+		ruling_party_ideology = conservative
+		government = presidential_dictatorship
+		is_vassal = no
+		has_country_modifier = dirty_war
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "It was a necessary evil"
+		prestige_factor = -0.025
+		badboy = 5
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+		}
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Apologise for the massacre"
+		prestige_factor = -0.10
+		badboy = 3
+		any_pop = {
+			ideology = { factor = 0.15 value = socialist }
+		}
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#End of the dirty war and limited democratisation
+country_event = {
+	id = 44833
+	title = "EVTNAME44833"
+	desc = "EVTDESC44833"
+	picture = "mex_tlatelolco_massacre"
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		year = 1978
+		NOT = { year = 1983 }
+		government = presidential_dictatorship
+		is_vassal = no
+		NOT = { has_country_modifier = dirty_war } 
+		NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist } }
+		has_country_flag = mex_dirty_war_ongoing
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "The left wing guerillas have been crushed!"
+		badboy = 5
+		country_event = 800054
+		clr_country_flag = mex_dirty_war_ongoing
+		any_pop = {
+			ideology = { factor = -0.05 value = communist }
+		}
+	}
+	
+}

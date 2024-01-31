@@ -1,0 +1,388 @@
+#Discovery of Troy
+country_event = {
+
+	id = 31100
+	title = "EVTNAME31100"
+	desc = "EVTDESC31100"
+	news = yes
+	news_desc_long = "EVTDESC31100_NEWS_LONG"
+	news_desc_medium = "EVTDESC31100_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC31100_NEWS_SHORT"
+	picture = "troy"
+	
+	trigger = {
+		has_country_flag = search_for_the_aegean_civilizations
+		year = 1872
+	}
+	
+	fire_only_once = yes
+	allow_multiple_instances = no
+ 
+	mean_time_to_happen =  {
+		months = 24
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1873
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1874
+		}
+		
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			is_greater_power = yes
+		}
+		
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			education_spending = 0.7
+		}
+		
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			education_spending = 0.8
+		}
+		
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			education_spending = 0.9
+		}
+	}
+
+	option = {
+		name = "EVTOPTA31100"
+		set_global_flag = troy_discovered
+		prestige = 25
+	}
+}
+
+country_event = {
+	id = 31101 #setup by GER33005
+	trigger = {
+		tag = TUR 
+		war = no
+		year = 1903
+		owns = 926 #Baghdad
+		is_vassal = no
+		has_global_flag = BerlinBaghdadRail
+		OR = {
+			government = absolute_monarchy
+			government = hms_government
+			}
+		NOT = {
+			year = 1910
+			alliance_with = ENG
+			alliance_with = FRA
+			alliance_with = RUS
+			alliance_with = GER
+			has_country_flag = BerlinBaghdadRail
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1904
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1908
+		}
+	}
+
+	title = "EVTNAME33005"
+	desc = "EVTDESC33005"
+	picture = "bagdadrailway"
+
+	option = {
+		name = "EVTOPTA31101" 
+		prestige = 10
+		set_country_flag = BerlinBaghdadRail
+		relation = { who = GER value = 100 }
+		relation = { who = ENG value = -75 }
+		relation = { who = RUS value = -75 }
+	}
+}
+
+country_event = {
+		
+	id = 31102 # Flight to Ankara
+	
+	trigger = {
+		tag = TUR
+		NOT = { is_greater_power = yes }
+		capital = 860
+		NOT = { owns = 817 }
+		NOT = { owns = 816 }
+		NOT = { owns = 830 }
+		owns = 876
+
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	title = "EVTNAME31102" #Flight from Istanbul
+	desc = "EVTDESC31102" #Our position in Istanbul is no longer secure. We should move our government to a safer place.
+	picture = "administration"
+		
+	option = {
+		name = "EVTOPTA31102" #We have been ultimately driven from Europe...
+		prestige = -10
+		capital = 876
+	}
+}
+
+#Treaty of Moscow 1921
+country_event = {
+	id = 31103
+	title = "Treaty of Moscow 1921"
+	desc = "EVTDESC325465"
+	picture = "treaty_of_moscow_1921"
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign the Treaty."
+		prestige = 20
+	relation = { who = RUS value = 100 }
+	1096 = { remove_core = TUR }
+	add_country_modifier = {
+			name = military_aid
+			duration = 730
+		}
+	set_country_flag = treaty_of_moscow_1921
+
+	ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Refuse the Treaty."
+		prestige = -20
+		relation = { who = RUS value = -100 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1960 Turkish Military coup d'etat
+country_event = {
+	id = 31104
+	title = "1960 Turkish Military Coup d'Etat"
+	desc = "EVTDESC31104"
+	picture = "1960_turkish_coup"
+
+	trigger = {
+    		tag = TUR
+    		year = 1960 NOT = { year = 1970 }
+		government = democracy
+		is_vassal = no
+ 		war = no
+		has_country_flag = kemalism_and_the_modern_movement
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Stick to the status quo."
+		add_country_modifier = { name = national_confusion duration = 3650 }
+		any_pop = { militancy = 2 consciousness = 1 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1961 Turkish General Election
+country_event = {
+	id = 311041
+	title = "Turkish General Election"
+	desc = "EVTDESC311041"
+	picture = "1961_turkish_general_elections"
+
+	trigger = {
+    		tag = TUR
+    		year = 1961
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = liberal
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+#1980 Turkish Military coup d'etat
+country_event = {
+	id = 31105
+	title = "1980 Turkish Military Coup d'Etat"
+	desc = "EVTDESC31105"
+	picture = "1980_turkish_coup"
+
+	trigger = {
+    		tag = TUR
+    		year = 1980 NOT = { year = 1990 }
+    		government = democracy
+		is_vassal = no
+ 		war = no
+		has_country_flag = kemalism_and_the_modern_movement
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#1983 Turkish General Election
+country_event = {
+	id = 31106
+	title = "1983 Turkish General Election"
+	desc = "EVTDESC31106"
+	picture = "turkish_general_elections"
+
+	trigger = {
+    		tag = TUR
+    		year = 1983 NOT = { year = 1990 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = liberal
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Babamizi Kaybettike
+country_event = {
+	id = 31107
+	title = "Babamizi Kaybettike"
+	desc = "EVTDESC31107"
+	picture = "babamizi_kaybettike"
+	
+	trigger = {
+		tag = TUR
+		year = 1938
+		NOT = { year = 1939 }
+		NOT = { has_country_flag = death_of_kemal }
+	}
+		
+	mean_time_to_happen = { months = 1 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = "Oh no my Allah!"
+		set_country_flag = death_of_kemal
+		add_country_modifier = { name = no_more_war duration = 720 }
+	}
+}
+
+#Reclaim the Fallen Empire
+country_event = {
+	id = 31108
+	title = "Reclaim the Fallen Empire"
+	desc = "EVTDESC31108"
+	picture = "turkish_general_elections"
+	major = yes
+
+	trigger = {
+    		tag = TUR
+    		has_country_flag = return_of_the_sultan
+		has_country_modifier = return_of_the_sultan
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 25 }
+
+	option = {
+		name = "Our Great Empire returned!"
+		set_country_flag = the_fallen_empire
+		country_event = 60070
+		ruling_party_ideology = conservative
+		political_reform = appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		ai_chance = { factor = 1 }
+	}
+
+}

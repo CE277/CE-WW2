@@ -1,0 +1,12 @@
+owner = HAN
+controller = HAN
+add_core = HAN
+add_core = GER
+trade_goods = cattle
+life_rating = 40
+1861.1.1 = { 
+controller = GER 
+owner = GER
+remove_core = HAN
+railroad = 3
+ }

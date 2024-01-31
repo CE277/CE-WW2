@@ -1,0 +1,64 @@
+leader = {
+	name = "Carl Gustaf Emil Mannerheim"
+        picture = "mannerheim"
+	date = 1936.1.1
+	type = land
+	personality = implacable
+	background = school_of_defense
+	prestige = 1
+}
+
+leader = {
+	name = "Hjalmar Siilasvuo"
+	date = 1936.1.1
+	type = land
+        picture = fin2
+	personality = spirited
+	background = school_of_defense
+	prestige = 0.1
+}
+
+army = {
+	name = "Finland Helsinki Army"
+	location = 343
+	regiment = {
+		name= "Regiment nr1"
+		type = irregular
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = irregular
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = irregular
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = infantry
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = infantry
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = infantry
+		home = 343
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = infantry
+		home = 343
+	}
+}

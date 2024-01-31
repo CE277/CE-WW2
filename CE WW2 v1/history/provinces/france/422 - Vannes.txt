@@ -1,0 +1,12 @@
+owner = FRA
+controller = FRA
+add_core = FRA
+add_core = BRT
+trade_goods = fish
+life_rating = 32
+
+1912.1.1 = {
+        railroad = 3
+	
+}
+

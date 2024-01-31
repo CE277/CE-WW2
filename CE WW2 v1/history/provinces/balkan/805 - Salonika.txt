@@ -1,0 +1,26 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = GRE
+trade_goods = tobacco
+life_rating = 35
+terrain = urban_thessaloniki
+1878.3.3 = {
+	owner = BUL
+	controller = BUL
+}
+1912.10.7 = {
+	owner = GRE
+	controller = GRE
+        railroad = 1
+	
+}
+1920.5.5 = {
+	remove_core = TUR
+        naval_base = 2
+state_building = {
+	level = 1
+	building = clipper_shipyard
+	upgrade = yes
+}
+}

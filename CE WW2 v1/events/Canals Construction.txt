@@ -1,0 +1,40 @@
+#The Canals are Seized - Bankrupt
+country_event = {
+	id = 36980
+	title = "EVTNAME36980"
+	desc = "EVTDESC36980"
+	picture = "suez_canal_built"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT36980OPTA"
+		random_country = {
+			limit = { tag = FROM NOT = { is_sphere_leader_of = THIS } }
+			money = -200000
+			THIS = { money = 200000 }
+		}
+	}
+}
+
+#The Suez Canal Company
+country_event = {
+	id = 36981
+	title = "EVTNAME36981"
+	desc = "EVTDESC36981"
+	picture = "Suez3"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT36981OPTA"
+		treasury = 20000
+		relation = { who = FROM value = 100 }
+		FROM = { diplomatic_influence = { who = THIS value = 400 } }
+		any_country = {
+			limit = { NOT = { tag = FROM } is_greater_power = yes }
+			diplomatic_influence = { who = THIS value = -50 }
+		}
+	}
+}
+

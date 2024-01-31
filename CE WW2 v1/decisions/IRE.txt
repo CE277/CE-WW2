@@ -1,0 +1,93 @@
+political_decisions = {
+
+	reclaim_northern_ireland = {
+		picture = north_ireland
+		potential = {
+			tag = IRE
+			ENG_254 = {
+				NOT = { is_core = IRE }
+			}
+			OR = {
+				government = presidential_dictatorship
+				government = fascist_dictatorship
+			}
+			NOT = { has_country_flag = reclaim_northern_ireland }
+			NOT = { 
+				owns = 254
+			}
+		}
+		
+		allow = {
+			is_secondary_power = yes
+			OR = {
+				government = presidential_dictatorship
+				government = fascist_dictatorship
+			}
+		}
+		
+		effect = {
+			prestige = 10
+			badboy = 3
+			ENG_254 = {
+				add_core = IRE
+			}
+			set_country_flag = reclaim_northern_ireland
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	great_irish_indepentence = {
+		picture = ireland_map
+		potential = {
+			tag = IRE
+			ENG_254 = {
+				is_core = ENG
+			}
+			NOT = { has_country_flag = reclaim_northern_ireland }
+			NOT = { has_country_flag = anglo_irish_treaty }
+			NOT = { has_country_flag = ire_intependence }
+			NOT = { has_country_flag = great_irish_indepentence }
+			owns = 254
+		}
+		
+		allow = {
+			owns = 254
+			war = no
+		}
+		
+		effect = {
+			prestige = 30
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				remove_core = ENG
+			}
+			set_country_flag = great_irish_indepentence
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	bunreachthead = {
+		picture = bunreachthead
+		potential = {
+			tag = IRE
+			is_vassal = yes
+			NOT = { has_country_flag = bunreachthead }
+		}
+		
+		allow = {
+			year = 1937
+			ruling_party_ideology = liberal
+			war = no
+		}
+		
+		effect = {
+			prestige = 20
+			country_event = 60050
+			ENG = { country_event = 110091 }
+			set_country_flag = bunreachthead
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

@@ -1,0 +1,12 @@
+owner = EGY
+controller = EGY
+add_core = EGY
+add_core = SUD
+trade_goods = wool
+life_rating = 30
+1912.10.7 = {
+	controller = ENG
+	owner = ENG
+        remove_core = EGY
+}
+

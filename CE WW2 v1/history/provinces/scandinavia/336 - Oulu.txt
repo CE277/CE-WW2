@@ -1,0 +1,15 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = FIN
+add_core = SWE
+trade_goods = timber
+life_rating = 35
+1920.5.5 = {
+        remove_core = SWE
+	remove_core = RUS
+	owner = FIN
+	controller = FIN
+}
+
+

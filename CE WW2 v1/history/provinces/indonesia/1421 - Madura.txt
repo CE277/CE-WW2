@@ -1,0 +1,7 @@
+owner = NET
+controller = NET
+trade_goods = sulphur
+life_rating = 30
+1880.1.1 = {
+	trade_goods = rubber
+}

@@ -1,0 +1,16 @@
+owner = POR
+controller = POR
+add_core = CHI
+colonial = 2
+trade_goods = tea
+life_rating = 32
+1900.1.1 = {
+	trade_goods = precious_goods
+}
+1920.1.1 = {
+	add_core = KMT
+}
+1928.1.1 = {
+	add_core = PRC
+	remove_core = CHI
+}

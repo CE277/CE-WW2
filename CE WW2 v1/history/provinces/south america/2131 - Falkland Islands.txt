@@ -1,0 +1,11 @@
+owner = ENG
+controller = ENG
+add_core = ARG
+colonial = 2
+trade_goods = wool
+life_rating = 30
+1912.1.1 = {
+        railroad = 3
+	
+}
+

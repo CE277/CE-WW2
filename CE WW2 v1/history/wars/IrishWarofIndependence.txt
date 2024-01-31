@@ -1,0 +1,22 @@
+name = "Irish War of Independence"
+
+1919.1.1 = {
+	add_attacker = ENG
+	add_defender = IRE
+	# actor
+	# receiver
+	# casus_belli - cb type
+	# country - 3rd party
+	# state_province_id - target state capital
+
+        war_goal = {
+		casus_belli = annex_core_country
+		actor = ENG
+		receiver = IRE
+	}
+}
+
+1922.7.11 = {
+	rem_attacker = ENG
+	rem_defender = IRE
+}

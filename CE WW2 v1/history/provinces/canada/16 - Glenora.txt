@@ -1,0 +1,10 @@
+owner = ENG
+controller = ENG
+add_core = CAN
+add_core = COL
+trade_goods = timber
+life_rating = 30
+1912.10.7 = {
+	controller = CAN
+	owner = CAN
+}

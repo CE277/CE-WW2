@@ -1,0 +1,15 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = IRQ
+add_core = KDS
+trade_goods = sulphur
+life_rating = 35
+1920.5.5 = {
+	controller = IRQ
+	owner = IRQ
+	remove_core = TUR
+}
+1927.1.1 = {
+	trade_goods = oil
+}

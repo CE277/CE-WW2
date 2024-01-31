@@ -1,0 +1,11 @@
+owner = ENG
+controller = ENG
+add_core = BLZ
+colonial = 2
+trade_goods = fruit
+life_rating = 30
+1912.1.1 = {
+        railroad = 2
+	
+}
+

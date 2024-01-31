@@ -1,0 +1,13 @@
+owner = ENG
+controller = ENG
+add_core = JOH
+trade_goods = tropical_wood
+life_rating = 30
+1880.1.1 = {
+	trade_goods = rubber
+}
+1912.10.7 = {
+	owner = ENG
+	controller = ENG
+        colonial = 2
+}

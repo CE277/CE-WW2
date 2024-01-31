@@ -1,0 +1,18 @@
+owner = TUR
+controller = TUR
+add_core = TUR
+add_core = BUL
+trade_goods = tobacco
+life_rating = 35
+1912.10.7 = {
+	owner = BUL
+        remove_core = TUR
+	controller = BUL
+        railroad = 2
+	
+}
+1878.3.3 = {
+	owner = BUL
+	controller = BUL
+	remove_core = TUR
+}

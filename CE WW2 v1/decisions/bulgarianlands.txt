@@ -1,0 +1,20 @@
+political_decisions = {
+
+	bulgariagreece = {
+                picture = greater_bulgaria
+		potential = {
+			NOT = { has_country_flag = bulgariagreece }
+                        tag = BUL
+		}
+		allow = {
+                BUL = { war_with = GRE }
+		BUL = { all_core = { NOT = { controlled_by = GRE } } }
+		}
+		effect = {
+		set_country_flag = bulgariagreece
+                GRE = { country_event = 1947194846 }
+		}
+		
+		}
+}
+		

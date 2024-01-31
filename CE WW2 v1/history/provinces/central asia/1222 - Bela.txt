@@ -1,0 +1,11 @@
+owner = MAK
+controller = MAK
+add_core = PAK
+add_core = MAK
+add_core = HND
+trade_goods = tea
+life_rating = 35
+1912.10.7 = {
+	owner = RJA
+	controller = RJA
+}

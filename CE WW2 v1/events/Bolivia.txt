@@ -1,0 +1,76 @@
+#1964 Bolivian coup d'etat
+country_event = {
+	id = 6003001
+  	title = "EVTNAME6003001"
+  	desc = "EVTDESC6003001"
+	picture = "1964_bolivian_coup"
+
+	trigger = {
+    		tag = BOL
+    		year = 1964 NOT = { year = 1965 }
+    		government = democracy
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = underground_parties
+		political_reform = no_trade_unions
+		country_event = 800050
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Democratic transition
+country_event = {
+	id = 6003002
+  	title = "EVTNAME6003002"
+  	desc = "EVTDESC6003002"
+	picture = "bol_return_to_democracy"
+
+	trigger = {
+    		tag = BOL
+    		year = 1982 NOT = { year = 1984 }
+    		government = presidential_dictatorship
+		is_vassal = no
+ 		war = no
+  	}
+
+	fire_only_once = yes
+
+  	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Ok."
+		country_event = 60050
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = appointed
+		political_reform = non_secret_ballots
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "The government will remains the same!"
+		any_pop = { militancy = 5 consciousness = 2 }
+		ai_chance = { factor = 0 }
+	}
+
+}

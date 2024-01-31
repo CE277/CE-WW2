@@ -1,0 +1,16 @@
+owner = MOL
+controller = MOL
+add_core = MOL
+add_core = ROM
+trade_goods = grain
+life_rating = 35
+
+1861.1.1 = {
+	controller = ROM
+	owner = ROM
+        railroad = 2
+	
+}
+1877.1.1 = {
+	trade_goods = oil
+}
