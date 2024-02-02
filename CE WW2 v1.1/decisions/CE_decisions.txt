@@ -283,6 +283,7 @@ annex_ai_Oceania = {
 			HUN = {
 				annex_to = ROM
 			}
+		    add_accepted_culture = hungarian
 			set_global_flag = ai_hungary_annexed
 		}
 	}
