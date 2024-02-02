@@ -99,6 +99,8 @@ prestige = 30
 
 1936.1.1 = {
 
+	oob = "/1936/CAN_oob.txt"
+
 # Inventions
 protected_cruisers = yes
 pre_dreadnought = yes

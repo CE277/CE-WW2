@@ -20,8 +20,8 @@ leader = {
 	date = 1939.1.1
 	type = land
         picture = yamashita
-	personality = implacable
-	background = expert_raider
+	personality = defence_3.1
+	background = attack_5.1
 	prestige = 1
 }
 
@@ -30,8 +30,8 @@ leader = {
 	date = 1939.1.1
 	type = land
         picture = iwane
-	personality = daring
-	background = expert_raider
+	personality = no_personality
+	background = attack_5.1
 	prestige = 0.5
 }
 
@@ -40,8 +40,8 @@ leader = {
 	date = 1939.1.1
 	type = land
         picture = okamura
-	personality = au_fait
-	background = spoiled
+	personality = no_personality
+	background = attack_5.1
 	prestige = 0.5
 }
 
@@ -50,8 +50,8 @@ leader = {
 	date = 1939.1.1
 	type = land
         picture = tojo
-	personality = politician
-	background = unflinching
+	personality = no_personality
+	background = attack_3.1
 	prestige = 0.5
 }
 
@@ -60,8 +60,8 @@ leader = {
 	date = 1939.1.1
 	type = land
         picture = tadamichi
-	personality = cautious
-	background = resolute
+	personality = defence_5.1
+	background = no_background
 	prestige = 0.5
 }
 
@@ -70,8 +70,8 @@ leader = {
 	date = 1939.1.1
 	type = sea
         picture = yamamoto
-	personality = implacable
-	background = expert_raider
+	personality = defence_3.1
+	background = attack_5.1
 	prestige = 0.5
 }
 

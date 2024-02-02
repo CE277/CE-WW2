@@ -3,8 +3,8 @@ leader = {
 	date = 1939.1.1
 	type = land
         picture = messe
-	personality = disciplined
-	background = cursed_luck
+	personality = defence_2.1
+	background = attack_4.1
 	prestige = 0.5
 }
 

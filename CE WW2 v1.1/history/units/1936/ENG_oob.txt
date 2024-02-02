@@ -3,8 +3,8 @@ leader = {
 	date="1939.1.1"
 	type = land
         picture = monty
-	personality = implacable
-	background = school_of_firepower
+	personality = defence_3.1
+	background = attack_4.1
 	prestige = 0.1
 }
 

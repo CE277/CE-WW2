@@ -826,8 +826,8 @@ leader = {
 	picture = zhukov
 	date = 1936.1.1
 	type = land
-	personality = audacious
-	background = cursed_luck
+	personality = defence_4.1
+	background = attack_4.1
 	prestige = 0.4
 }
 
@@ -836,8 +836,8 @@ leader = {
 	picture = russian_general_1
 	date = 1916.1.1
 	type = land
-	personality = daring
-	background = gifted_administrator
+	personality = no_personality
+	background = attack_3.1
 	prestige = 0.3
 }
 
@@ -846,8 +846,8 @@ leader = {
 	picture = russian_general_2
 	date = 1915.1.1
 	type = land
-	personality = earnest
-	background = cavalry_school
+	personality = no_personality
+	background = attack_2.1
 	prestige = 0.1
 }
 
@@ -856,8 +856,8 @@ leader = {
 	picture = russian_general_4
 	date = 1920.1.1
 	type = land
-	personality = intelligent
-	background = diplomat
+	personality = no_personality
+	background = no_background
 	prestige = 0.1
 }
 
@@ -866,8 +866,8 @@ leader = {
 	picture = stalin
 	date = 1939.1.1
 	type = land
-	personality = merciless
-	background = sycophant
+	personality = defence_2.1
+	background = attack_2.1
 	prestige = 1
 }
 
@@ -876,8 +876,8 @@ leader = {
 	picture = konev
 	date = 1939.1.1
 	type = land
-	personality = daring
-	background = school_of_firepower
+	personality = no_personality
+	background = attack_4.1
 	prestige = 0.3
 }
 
@@ -886,7 +886,7 @@ leader = {
 	picture = russian_general_9
 	date = 1918.1.1
 	type = sea
-	personality = active_p
-	background = cartographer
+	personality = no_personality
+	background = no_background
 	prestige = 0.1
 }

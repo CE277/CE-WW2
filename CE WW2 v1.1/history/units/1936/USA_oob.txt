@@ -6,8 +6,8 @@ leader = {
 	date="1939.1.1"
 	type = land
         picture = patton
-	personality = chivalrous
-	background = cavalry_school
+	personality = no_personality
+	background = attack_4.1
 	prestige = 0.5
 }
 
@@ -16,8 +16,8 @@ leader = {
 	date="1939.1.1"
 	type = land
         picture = eisenhower
-	personality = implacable
-	background = natural_born_leader
+	personality = defence_3.1
+	background = attack_4.1
 	prestige = 0.5
 }
 
@@ -26,8 +26,8 @@ leader = {
 	date="1939.1.1"
 	type = land
         picture = macarthur
-	personality = merciless
-	background = expert_raider
+	personality = defence_2.1
+	background = attack_4.1
 	prestige = 0.5
 }
 JAP = {
@@ -90,8 +90,8 @@ leader = {
 	name = "William T. Sherman"
 	type = land
 	date="1836.1.1"
-	personality = audacious
-	background = school_of_offense
+	personality = defence_2.1
+	background = attack_3.1
 	picture="european_general_31"
 }
 
@@ -99,8 +99,8 @@ leader = {
 	name = "Philip Sheridan"
 	type = land
 	date="1836.1.1"
-	personality = audacious
-	background = cavalry_school
+	personality = defence_2.1
+	background = attack_4.1
 	picture="european_general_13"
 }
 
@@ -108,8 +108,8 @@ leader = {
 	name = "William S. Rosecrans"
 	type = land
 	date="1836.1.1"
-	personality = disciplined
-	background = engineer
+	personality = no_personality
+	background = attack_2.1
 	picture="european_general_15"
 }
 
@@ -117,8 +117,8 @@ leader = {
 	name = "Irvin McDowell"
 	type = land
 	date="1836.1.1"
-	personality = bastard
-	background = generals_aide
+	personality = no_personality
+	background = no_background
 	picture="european_general_52"
 }
 
@@ -130,8 +130,8 @@ army = {
 		type = land
 		date="1861.1.1"
 		prestige = 0.05
-		personality = meticulous
-		background = armchair_general
+		personality = no_personality
+		background = no_background
 		picture="european_general_6"
 	}
 	
@@ -165,8 +165,8 @@ army = {
 		type = land
 		date="1836.1.1"
 		prestige = 0.15
-		personality = timid
-		background = gifted_administrator
+		personality = no_personality
+		background = attack_minus_1.1
 		picture="european_admiral_17"
 	}
 	
@@ -247,8 +247,8 @@ army = {
 		type = land
 		date="1861.1.1"
 		prestige = 0.05
-		personality = polite
-		background = engineer
+		personality = no_personality
+		background = no_background
 		picture="european_admiral_10"
 	}
 	
@@ -288,8 +288,8 @@ army = {
 		type = land
 		date="1836.1.1"
 		prestige = 0.15
-		personality = aggressive
-		background = natural_born_leader
+		personality = no_personality
+		background = attack_2.1
 		picture="european_general_44"
 	}
 	
@@ -322,8 +322,8 @@ army = {
 		type = land
 		date="1861.1.1"
 		prestige = 0.05
-		personality = careful
-		background = diplomat
+		personality = no_personality
+		background = no_background
 		picture="european_general_37"
 	}
 
@@ -404,8 +404,8 @@ navy = {
 		type = sea
 		date="1821.1.1"
 		prestige = 0.05
-		personality = skilled
-		background = drillmaster
+		personality = no_personality
+		background = attack_1.1
 		picture="european_admiral_0"
 	}
 	
@@ -1199,8 +1199,8 @@ navy = {
 		type = sea
 		date="1836.1.1"
 		prestige = 0.05
-		personality = openminded
-		background = drillmaster
+		personality = no_personality
+		background = no_background
 		picture="european_admiral_22"
 	}
 	
@@ -1387,8 +1387,8 @@ navy = {
 		type = sea
 		date="1836.1.1"
 		prestige = 0.15
-		personality = au_fait
-		background = innovative_tactician
+		personality = no_personality
+		background = attack_4.1
 		picture="european_admiral_22"
 	}
 	
@@ -1413,8 +1413,8 @@ navy = {
 		type = sea
 		date="1821.1.1"
 		prestige = 0.1
-		personality = earnest
-		background = school_of_offense
+		personality = no_personality
+		background = attack_1.1
 		picture="european_admiral_19"
 	}
 	

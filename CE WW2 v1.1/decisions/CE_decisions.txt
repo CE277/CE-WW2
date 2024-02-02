@@ -231,4 +231,59 @@ annex_ai_Oceania = {
 			set_global_flag = ai_Siam_annexed
 		}
 	}	
+	annex_ai_bulgaria = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = ROM
+			year = 1936
+			NOT = { year = 1937 }
+			exists = BUL
+			ai = no
+			NOT = { has_global_flag = ai_bulgaria_annexed }
+		}
+		
+		allow = {
+			BUL = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			BUL = {
+				annex_to = ROM
+			}
+			add_accepted_culture = bulgarian
+			set_global_flag = ai_bulgaria_annexed
+		}
+	}
+ annex_ai_hungary = {
+		picture = dreams_of_empire
+		alert = yes
+		potential = {
+			tag = ROM
+			year = 1936
+			NOT = { year = 1937 }
+			exists = HUN
+			ai = no
+			NOT = { has_global_flag = ai_hungary_annexed }
+		}
+		
+		allow = {
+			HUN = {
+				ai = yes
+			}
+			year = 1936
+			NOT = { year = 1937 }
+		}
+		
+		effect = {
+			HUN = {
+				annex_to = ROM
+			}
+			set_global_flag = ai_hungary_annexed
+		}
+	}
 }

@@ -3,8 +3,8 @@ leader = {
         picture = "mannerheim"
 	date = 1936.1.1
 	type = land
-	personality = implacable
-	background = school_of_defense
+	personality = defence_5.1
+	background = attack_3.1
 	prestige = 1
 }
 
@@ -13,8 +13,8 @@ leader = {
 	date = 1936.1.1
 	type = land
         picture = fin2
-	personality = spirited
-	background = school_of_defense
+	personality = defence_5.1
+	background = no_background
 	prestige = 0.1
 }
 

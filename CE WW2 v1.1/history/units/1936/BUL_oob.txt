@@ -8,8 +8,8 @@ leader = {
         prestige = 0.3
         picture ="european_general_7"
 	type = land
-	personality = heroic
-	background = expert_raider
+	personality = no_personality
+	background = attack_2.1
    }
 
 regiment = { name = "Hussars Brigada" type = cavalry home = 809 } 
