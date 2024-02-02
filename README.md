@@ -21,3 +21,9 @@ Changelog: v1
 - Japan given decision to annex AI Siam in 1941
 - Tornio in Finland is now not blue bordered (makes the Finland front 3 tiles wide for winter war)
 - Blitzkrieg removal now fixed. Decision appears after August 1941 if Soviets are at war with Germany must be taken before 1942
+
+Changelog v1.1:
+
+
+- Colour coded generals added (Credit to Hussar for this one)
+- Hungary and Bulgaria if AI may be annexed by Romania through day 1 decision
