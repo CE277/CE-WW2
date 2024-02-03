@@ -23,6 +23,7 @@ annex_ai_new_zealand = {
 			NZL = {
 				annex_to = AST
 			}
+			NZL = { all_core = { add_core = THIS } }
 			set_global_flag = ai_new_zealand_annexed
 		}
 	}
@@ -51,6 +52,7 @@ annex_ai_belgium = {
 			BEL = {
 				annex_to = NET
 			}
+			BEL = { all_core = { add_core = THIS } }
 			set_global_flag = ai_belgium_annexed
 		}
 	}
@@ -141,6 +143,7 @@ annex_ai_luxembourg = {
 			LUX = {
 				annex_to = NET
 			}
+			LUX = { all_core = { add_core = THIS } }
 			set_global_flag = ai_luxembourg_annexed
 		}
 	}	
@@ -148,7 +151,7 @@ annex_ai_south_africa = {
 		picture = dreams_of_empire
 		alert = yes
 		potential = {
-			tag = ENG
+			tag = CAN
 			year = 1936
 			NOT = { year = 1937 }
 			exists = SAF
@@ -166,8 +169,9 @@ annex_ai_south_africa = {
 		
 		effect = {
 			SAF = {
-				annex_to = ENG
+				annex_to = CAN
 			}
+			SAF = { all_core = { add_core = THIS } }
 			add_accepted_culture = boer
 			set_global_flag = ai_south_africa_annexed
 		}
@@ -200,6 +204,8 @@ annex_ai_Oceania = {
 			NZL = {
 				annex_to = CAN
 			}
+			AST = { all_core = { add_core = THIS } }
+			NZL = { all_core = { add_core = THIS } }
 			add_accepted_culture = australian
 			set_global_flag = ai_oceania_annexed
 		}
@@ -255,6 +261,7 @@ annex_ai_Oceania = {
 			BUL = {
 				annex_to = ROM
 			}
+			BUL = { all_core = { add_core = THIS } }
 			add_accepted_culture = bulgarian
 			set_global_flag = ai_bulgaria_annexed
 		}
@@ -283,6 +290,7 @@ annex_ai_Oceania = {
 			HUN = {
 				annex_to = ROM
 			}
+			HUN = { all_core = { add_core = THIS } }
 		    add_accepted_culture = hungarian
 			set_global_flag = ai_hungary_annexed
 		}
