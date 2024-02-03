@@ -27,3 +27,12 @@ Changelog v1.1:
 
 - Colour coded generals added (Credit to Hussar for this one)
 - Hungary and Bulgaria if AI may be annexed by Romania through day 1 decision
+
+V1.2
+
+- Canada prestige set to 0
+- UK leaders added
+- Leadership event added day 1 
+- Tanks set to be a cavalry unit type
+- Canada will annex SAF through a day 1 decision now not UK
+- All day 1 annexation decisions now give cores to country except Siam, Egypt ones

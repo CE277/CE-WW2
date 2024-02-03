@@ -1,0 +1,47 @@
+country_event = {
+
+	id = 9999165
+	title = "100 leadership for GPs" 
+	desc = "100 leadership"
+	picture = "administration"
+	
+	fire_only_once = yes
+
+	trigger = {
+		is_greater_power = yes
+		ai = no
+	}
+	
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "k"
+		leadership = 100
+	}
+}
+
+country_event = {
+
+	id = 9999164
+	title = "60 leadership for GPs" 
+	desc = "60 leadership"
+	picture = "administration"
+	
+	fire_only_once = yes
+
+	trigger = {
+		is_greater_power = no
+		ai = no
+	}
+	
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "k"
+		leadership = 60
+	}
+}		
